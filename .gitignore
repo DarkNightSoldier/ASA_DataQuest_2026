@@ -1,0 +1,63 @@
+# ---------- R ----------
+.Rhistory
+.RData
+*.RData
+*.Rdata
+*.rds.tmp
+.Rproj.user/
+.Ruserdata
+renv/library/
+renv/staging/
+renv/local/
+renv/sandbox/
+
+# ---------- Python / Jupyter ----------
+.ipynb_checkpoints/
+__pycache__/
+venv*/
+.venv/
+
+# ---------- Node / reveal.js (vendorizado, se reinstala con npm install) ----------
+node_modules/
+slides/vendor/
+
+# ---------- Datos crudos grandes ----------
+# Los CSV de la ONU (> 40 MB) NO se versionan: los scripts los leen desde la
+# carpeta padre (../WPP2024_*.csv.gz). Ver data/raw/README.md y data/README.md.
+data/raw/*
+!data/raw/README.md
+!data/raw/WB_income_groups.csv
+!data/raw/WPP2024_Demographic_Indicators_notes.csv
+!data/raw/wb_api_income_*.csv
+
+# ---------- Datos procesados pesados ----------
+# Los parquet grandes (panel país-año) NO se versionan: se regeneran con
+# `Rscript R/01_preparar_datos.R` (ver data/README.md). Las tablas pequeñas de
+# referencia (lookup, diccionario) sí se versionan.
+data/processed/*.parquet
+data/clean/*.parquet
+
+# ---------- Comprimidos y binarios grandes ----------
+*.gz
+!data/clean/*.csv.gz
+!data/processed/*.csv.gz
+*.zip
+*.7z
+*.tar
+*.mov
+*.mkv
+# Los MP4/GIF de figures/animated/ sí se versionan si pesan <= 10 MB
+# (comprobar tamaño antes de cada commit); los de video/final/ no.
+video/final/*.mp4
+figures/frames/
+
+# ---------- Temporales ----------
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+figures/tmp/
+notebook/*_files/
+notebook/*_cache/
+*.log
+!docs/instalacion_log.txt

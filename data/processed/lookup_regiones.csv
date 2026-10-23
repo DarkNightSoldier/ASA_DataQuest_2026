@@ -1,0 +1,238 @@
+ISO3,nombre,region_sdg,subregion,ingreso_bm,continente,pob_2023,pob_1m
+ABW,Aruba,Latin America and the Caribbean,Caribbean,High income,Americas,107939,FALSE
+AFG,Afghanistan,Central and Southern Asia,Southern Asia,Low income,Asia,41454761,TRUE
+AGO,Angola,Sub-Saharan Africa,Middle Africa,Lower middle income,Africa,36749906,TRUE
+AIA,Anguilla,Latin America and the Caribbean,Caribbean,Not classified,Americas,14410,FALSE
+ALB,Albania,Europe and Northern America,Southern Europe,Upper middle income,Europe,2811655,TRUE
+AND,Andorra,Europe and Northern America,Southern Europe,High income,Europe,80856,FALSE
+ARE,United Arab Emirates,Northern Africa and Western Asia,Western Asia,High income,Asia,10642081,TRUE
+ARG,Argentina,Latin America and the Caribbean,South America,Upper middle income,Americas,45538401,TRUE
+ARM,Armenia,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,2943393,TRUE
+ASM,American Samoa,Oceania (excluding Australia and New Zealand),Polynesia,High income,Oceania,47521,FALSE
+ATG,Antigua and Barbuda,Latin America and the Caribbean,Caribbean,High income,Americas,93316,FALSE
+AUS,Australia,Australia/New Zealand,Australia/New Zealand,High income,Oceania,26451124,TRUE
+AUT,Austria,Europe and Northern America,Western Europe,High income,Europe,9130429,TRUE
+AZE,Azerbaijan,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,10318207,TRUE
+BDI,Burundi,Sub-Saharan Africa,Eastern Africa,Low income,Africa,13689450,TRUE
+BEL,Belgium,Europe and Northern America,Western Europe,High income,Europe,11712893,TRUE
+BEN,Benin,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,14111034,TRUE
+BES,"Bonaire, Sint Eustatius and Saba",Latin America and the Caribbean,Caribbean,Not classified,Americas,29898,FALSE
+BFA,Burkina Faso,Sub-Saharan Africa,Western Africa,Low income,Africa,23025776,TRUE
+BGD,Bangladesh,Central and Southern Asia,Southern Asia,Lower middle income,Asia,171466990,TRUE
+BGR,Bulgaria,Europe and Northern America,Eastern Europe,High income,Europe,6795803,TRUE
+BHR,Bahrain,Northern Africa and Western Asia,Western Asia,High income,Asia,1569666,TRUE
+BHS,Bahamas,Latin America and the Caribbean,Caribbean,High income,Americas,399440,FALSE
+BIH,Bosnia and Herzegovina,Europe and Northern America,Southern Europe,Upper middle income,Europe,3185073,TRUE
+BLM,Saint Barthélemy,Latin America and the Caribbean,Caribbean,Not classified,Americas,11085,FALSE
+BLR,Belarus,Europe and Northern America,Eastern Europe,Upper middle income,Europe,9115680,TRUE
+BLZ,Belize,Latin America and the Caribbean,Central America,Upper middle income,Americas,411106,FALSE
+BMU,Bermuda,Europe and Northern America,NA,High income,Americas,64697.99999999999,FALSE
+BOL,Bolivia (Plurinational State of),Latin America and the Caribbean,South America,Lower middle income,Americas,12244160,TRUE
+BRA,Brazil,Latin America and the Caribbean,South America,Upper middle income,Americas,211140729,TRUE
+BRB,Barbados,Latin America and the Caribbean,Caribbean,High income,Americas,282336,FALSE
+BRN,Brunei Darussalam,Eastern and South-Eastern Asia,South-Eastern Asia,High income,Asia,458949,FALSE
+BTN,Bhutan,Central and Southern Asia,Southern Asia,Lower middle income,Asia,786385,FALSE
+BWA,Botswana,Sub-Saharan Africa,Southern Africa,Upper middle income,Africa,2480244,TRUE
+CAF,Central African Republic,Sub-Saharan Africa,Middle Africa,Low income,Africa,5152420,TRUE
+CAN,Canada,Europe and Northern America,NA,High income,Americas,39299104,TRUE
+CHE,Switzerland,Europe and Northern America,Western Europe,High income,Europe,8870561,TRUE
+CHL,Chile,Latin America and the Caribbean,South America,High income,Americas,19658835,TRUE
+CHN,China,Eastern and South-Eastern Asia,Eastern Asia,Upper middle income,Asia,1422584933,TRUE
+CIV,Côte d'Ivoire,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,31165654,TRUE
+CMR,Cameroon,Sub-Saharan Africa,Middle Africa,Lower middle income,Africa,28372687,TRUE
+COD,Democratic Republic of the Congo,Sub-Saharan Africa,Middle Africa,Low income,Africa,105789731,TRUE
+COG,Congo,Sub-Saharan Africa,Middle Africa,Lower middle income,Africa,6182885,TRUE
+COK,Cook Islands,Oceania (excluding Australia and New Zealand),Polynesia,Not classified,Oceania,14222,FALSE
+COL,Colombia,Latin America and the Caribbean,South America,Upper middle income,Americas,52321152,TRUE
+COM,Comoros,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,850387,FALSE
+CPV,Cabo Verde,Sub-Saharan Africa,Western Africa,Upper middle income,Africa,522330.00000000006,FALSE
+CRI,Costa Rica,Latin America and the Caribbean,Central America,High income,Americas,5105526,TRUE
+CUB,Cuba,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,11019930,TRUE
+CUW,Curaçao,Latin America and the Caribbean,Caribbean,High income,Americas,185427,FALSE
+CYM,Cayman Islands,Latin America and the Caribbean,Caribbean,High income,Americas,73038,FALSE
+CYP,Cyprus,Northern Africa and Western Asia,Western Asia,High income,Asia,1344976,TRUE
+CZE,Czechia,Europe and Northern America,Eastern Europe,High income,Europe,10809716,TRUE
+DEU,Germany,Europe and Northern America,Western Europe,High income,Europe,84548231,TRUE
+DJI,Djibouti,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,1152944,TRUE
+DMA,Dominica,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,66510,FALSE
+DNK,Denmark,Europe and Northern America,Northern Europe,High income,Europe,5948136,TRUE
+DOM,Dominican Republic,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,11331266,TRUE
+DZA,Algeria,Northern Africa and Western Asia,Northern Africa,Upper middle income,Africa,46164219,TRUE
+ECU,Ecuador,Latin America and the Caribbean,South America,Upper middle income,Americas,17980083,TRUE
+EGY,Egypt,Northern Africa and Western Asia,Northern Africa,Lower middle income,Africa,114535772,TRUE
+ERI,Eritrea,Sub-Saharan Africa,Eastern Africa,Low income,Africa,3470390,TRUE
+ESH,Western Sahara,Northern Africa and Western Asia,Northern Africa,Not classified,Africa,579729,FALSE
+ESP,Spain,Europe and Northern America,Southern Europe,High income,Europe,47911580,TRUE
+EST,Estonia,Europe and Northern America,Northern Europe,High income,Europe,1367196,TRUE
+ETH,Ethiopia,Sub-Saharan Africa,Eastern Africa,Low income,Africa,128691692,TRUE
+FIN,Finland,Europe and Northern America,Northern Europe,High income,Europe,5601185,TRUE
+FJI,Fiji,Oceania (excluding Australia and New Zealand),Melanesia,Upper middle income,Oceania,924146,FALSE
+FLK,Falkland Islands (Malvinas),Latin America and the Caribbean,South America,Not classified,Americas,3477,FALSE
+FRA,France,Europe and Northern America,Western Europe,High income,Europe,66438822,TRUE
+FRO,Faroe Islands,Europe and Northern America,Northern Europe,High income,Europe,54714,FALSE
+FSM,Micronesia (Fed. States of),Oceania (excluding Australia and New Zealand),Micronesia,Upper middle income,Oceania,112630,FALSE
+GAB,Gabon,Sub-Saharan Africa,Middle Africa,Upper middle income,Africa,2484788,TRUE
+GBR,United Kingdom,Europe and Northern America,Northern Europe,High income,Europe,68682962,TRUE
+GEO,Georgia,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,3807492,TRUE
+GGY,Guernsey,Europe and Northern America,Northern Europe,Not classified,Europe,64016.99999999999,FALSE
+GHA,Ghana,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,33787914,TRUE
+GIB,Gibraltar,Europe and Northern America,Southern Europe,High income,Europe,38471,FALSE
+GIN,Guinea,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,14405468,TRUE
+GLP,Guadeloupe,Latin America and the Caribbean,Caribbean,Not classified,Americas,376516,FALSE
+GMB,Gambia,Sub-Saharan Africa,Western Africa,Low income,Africa,2697846,TRUE
+GNB,Guinea-Bissau,Sub-Saharan Africa,Western Africa,Low income,Africa,2153339,TRUE
+GNQ,Equatorial Guinea,Sub-Saharan Africa,Middle Africa,Upper middle income,Africa,1847549,TRUE
+GRC,Greece,Europe and Northern America,Southern Europe,High income,Europe,10242908,TRUE
+GRD,Grenada,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,117081,FALSE
+GRL,Greenland,Europe and Northern America,NA,High income,Americas,55922,FALSE
+GTM,Guatemala,Latin America and the Caribbean,Central America,Upper middle income,Americas,18124838,TRUE
+GUF,French Guiana,Latin America and the Caribbean,South America,Not classified,Americas,303402,FALSE
+GUM,Guam,Oceania (excluding Australia and New Zealand),Micronesia,High income,Oceania,166506,FALSE
+GUY,Guyana,Latin America and the Caribbean,South America,High income,Americas,826353,FALSE
+HKG,"China, Hong Kong SAR",Eastern and South-Eastern Asia,Eastern Asia,High income,Asia,7442734,TRUE
+HND,Honduras,Latin America and the Caribbean,Central America,Lower middle income,Americas,10644851,TRUE
+HRV,Croatia,Europe and Northern America,Southern Europe,High income,Europe,3896023,TRUE
+HTI,Haiti,Latin America and the Caribbean,Caribbean,Lower middle income,Americas,11637398,TRUE
+HUN,Hungary,Europe and Northern America,Eastern Europe,High income,Europe,9686464,TRUE
+IDN,Indonesia,Eastern and South-Eastern Asia,South-Eastern Asia,Upper middle income,Asia,281190067,TRUE
+IMN,Isle of Man,Europe and Northern America,Northern Europe,High income,Europe,84165,FALSE
+IND,India,Central and Southern Asia,Southern Asia,Lower middle income,Asia,1438069596,TRUE
+IRL,Ireland,Europe and Northern America,Northern Europe,High income,Europe,5196630,TRUE
+IRN,Iran (Islamic Republic of),Central and Southern Asia,Southern Asia,Upper middle income,Asia,90608707,TRUE
+IRQ,Iraq,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,45074049,TRUE
+ISL,Iceland,Europe and Northern America,Northern Europe,High income,Europe,387558,FALSE
+ISR,Israel,Northern Africa and Western Asia,Western Asia,High income,Asia,9256314,TRUE
+ITA,Italy,Europe and Northern America,Southern Europe,High income,Europe,59499453,TRUE
+JAM,Jamaica,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,2839786,TRUE
+JEY,Jersey,Europe and Northern America,Northern Europe,Not classified,Europe,103674,FALSE
+JOR,Jordan,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,11439214,TRUE
+JPN,Japan,Eastern and South-Eastern Asia,Eastern Asia,High income,Asia,124370947,TRUE
+KAZ,Kazakhstan,Central and Southern Asia,Central Asia,Upper middle income,Asia,20330104,TRUE
+KEN,Kenya,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,55339003,TRUE
+KGZ,Kyrgyzstan,Central and Southern Asia,Central Asia,Lower middle income,Asia,7073516,TRUE
+KHM,Cambodia,Eastern and South-Eastern Asia,South-Eastern Asia,Lower middle income,Asia,17423880,TRUE
+KIR,Kiribati,Oceania (excluding Australia and New Zealand),Micronesia,Lower middle income,Oceania,132530,FALSE
+KNA,Saint Kitts and Nevis,Latin America and the Caribbean,Caribbean,High income,Americas,46758,FALSE
+KOR,Republic of Korea,Eastern and South-Eastern Asia,Eastern Asia,High income,Asia,51748739,TRUE
+KWT,Kuwait,Northern Africa and Western Asia,Western Asia,High income,Asia,4838782,TRUE
+LAO,Lao People's Democratic Republic,Eastern and South-Eastern Asia,South-Eastern Asia,Lower middle income,Asia,7664992,TRUE
+LBN,Lebanon,Northern Africa and Western Asia,Western Asia,Lower middle income,Asia,5773492,TRUE
+LBR,Liberia,Sub-Saharan Africa,Western Africa,Low income,Africa,5493031,TRUE
+LBY,Libya,Northern Africa and Western Asia,Northern Africa,Upper middle income,Africa,7305659,TRUE
+LCA,Saint Lucia,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,179285,FALSE
+LIE,Liechtenstein,Europe and Northern America,Western Europe,High income,Europe,39598,FALSE
+LKA,Sri Lanka,Central and Southern Asia,Southern Asia,Upper middle income,Asia,22971617,TRUE
+LSO,Lesotho,Sub-Saharan Africa,Southern Africa,Lower middle income,Africa,2311472,TRUE
+LTU,Lithuania,Europe and Northern America,Northern Europe,High income,Europe,2854099,TRUE
+LUX,Luxembourg,Europe and Northern America,Western Europe,High income,Europe,665098,FALSE
+LVA,Latvia,Europe and Northern America,Northern Europe,High income,Europe,1882396,TRUE
+MAC,"China, Macao SAR",Eastern and South-Eastern Asia,Eastern Asia,High income,Asia,713912,FALSE
+MAF,Saint Martin (French part),Latin America and the Caribbean,Caribbean,High income,Americas,27515,FALSE
+MAR,Morocco,Northern Africa and Western Asia,Northern Africa,Lower middle income,Africa,37712505,TRUE
+MCO,Monaco,Europe and Northern America,Western Europe,High income,Europe,38956,FALSE
+MDA,Republic of Moldova,Europe and Northern America,Eastern Europe,Upper middle income,Europe,3067070,TRUE
+MDG,Madagascar,Sub-Saharan Africa,Eastern Africa,Low income,Africa,31195932,TRUE
+MDV,Maldives,Central and Southern Asia,Southern Asia,Upper middle income,Asia,525994,FALSE
+MEX,Mexico,Latin America and the Caribbean,Central America,Upper middle income,Americas,129739759,TRUE
+MHL,Marshall Islands,Oceania (excluding Australia and New Zealand),Micronesia,Upper middle income,Oceania,38827,FALSE
+MKD,North Macedonia,Europe and Northern America,Southern Europe,Upper middle income,Europe,1831802,TRUE
+MLI,Mali,Sub-Saharan Africa,Western Africa,Low income,Africa,23769127,TRUE
+MLT,Malta,Europe and Northern America,Southern Europe,High income,Europe,532956,FALSE
+MMR,Myanmar,Eastern and South-Eastern Asia,South-Eastern Asia,Lower middle income,Asia,54133798,TRUE
+MNE,Montenegro,Europe and Northern America,Southern Europe,Upper middle income,Europe,633552,FALSE
+MNG,Mongolia,Eastern and South-Eastern Asia,Eastern Asia,Upper middle income,Asia,3431932,TRUE
+MNP,Northern Mariana Islands,Oceania (excluding Australia and New Zealand),Micronesia,High income,Oceania,45143,FALSE
+MOZ,Mozambique,Sub-Saharan Africa,Eastern Africa,Low income,Africa,33635160,TRUE
+MRT,Mauritania,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,5022442,TRUE
+MSR,Montserrat,Latin America and the Caribbean,Caribbean,Not classified,Americas,4420,FALSE
+MTQ,Martinique,Latin America and the Caribbean,Caribbean,Not classified,Americas,346002,FALSE
+MUS,Mauritius,Sub-Saharan Africa,Eastern Africa,Upper middle income,Africa,1273588,TRUE
+MWI,Malawi,Sub-Saharan Africa,Eastern Africa,Low income,Africa,21104482,TRUE
+MYS,Malaysia,Eastern and South-Eastern Asia,South-Eastern Asia,Upper middle income,Asia,35126298,TRUE
+MYT,Mayotte,Sub-Saharan Africa,Eastern Africa,Not classified,Africa,316015,FALSE
+NAM,Namibia,Sub-Saharan Africa,Southern Africa,Lower middle income,Africa,2963095,TRUE
+NCL,New Caledonia,Oceania (excluding Australia and New Zealand),Melanesia,High income,Oceania,289870,FALSE
+NER,Niger,Sub-Saharan Africa,Western Africa,Low income,Africa,26159867,TRUE
+NGA,Nigeria,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,227882945,TRUE
+NIC,Nicaragua,Latin America and the Caribbean,Central America,Lower middle income,Americas,6823613,TRUE
+NIU,Niue,Oceania (excluding Australia and New Zealand),Polynesia,Not classified,Oceania,1817,FALSE
+NLD,Netherlands,Europe and Northern America,Western Europe,High income,Europe,18092524,TRUE
+NOR,Norway,Europe and Northern America,Northern Europe,High income,Europe,5519167,TRUE
+NPL,Nepal,Central and Southern Asia,Southern Asia,Lower middle income,Asia,29694614,TRUE
+NRU,Nauru,Oceania (excluding Australia and New Zealand),Micronesia,High income,Oceania,11875,FALSE
+NZL,New Zealand,Australia/New Zealand,Australia/New Zealand,High income,Oceania,5172836,TRUE
+OMN,Oman,Northern Africa and Western Asia,Western Asia,High income,Asia,5049269,TRUE
+PAK,Pakistan,Central and Southern Asia,Southern Asia,Lower middle income,Asia,247504495,TRUE
+PAN,Panama,Latin America and the Caribbean,Central America,High income,Americas,4458759,TRUE
+PER,Peru,Latin America and the Caribbean,South America,Upper middle income,Americas,33845617,TRUE
+PHL,Philippines,Eastern and South-Eastern Asia,South-Eastern Asia,Upper middle income,Asia,114891199,TRUE
+PLW,Palau,Oceania (excluding Australia and New Zealand),Micronesia,High income,Oceania,17727,FALSE
+PNG,Papua New Guinea,Oceania (excluding Australia and New Zealand),Melanesia,Lower middle income,Oceania,10389635,TRUE
+POL,Poland,Europe and Northern America,Eastern Europe,High income,Europe,38762844,TRUE
+PRI,Puerto Rico,Latin America and the Caribbean,Caribbean,High income,Americas,3242022,TRUE
+PRK,Dem. People's Republic of Korea,Eastern and South-Eastern Asia,Eastern Asia,Low income,Asia,26418204,TRUE
+PRT,Portugal,Europe and Northern America,Southern Europe,High income,Europe,10430738,TRUE
+PRY,Paraguay,Latin America and the Caribbean,South America,Upper middle income,Americas,6844146,TRUE
+PSE,State of Palestine,Northern Africa and Western Asia,Western Asia,Lower middle income,Asia,5409202,TRUE
+PYF,French Polynesia,Oceania (excluding Australia and New Zealand),Polynesia,High income,Oceania,281118,FALSE
+QAT,Qatar,Northern Africa and Western Asia,Western Asia,High income,Asia,2979082,TRUE
+REU,Réunion,Sub-Saharan Africa,Eastern Africa,Not classified,Africa,874883,FALSE
+ROU,Romania,Europe and Northern America,Eastern Europe,High income,Europe,19118479,TRUE
+RUS,Russian Federation,Europe and Northern America,Eastern Europe,High income,Europe,145440500,TRUE
+RWA,Rwanda,Sub-Saharan Africa,Eastern Africa,Low income,Africa,13954472,TRUE
+SAU,Saudi Arabia,Northern Africa and Western Asia,Western Asia,High income,Asia,33264292,TRUE
+SDN,Sudan,Northern Africa and Western Asia,Northern Africa,Low income,Africa,50042791,TRUE
+SEN,Senegal,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,18077573,TRUE
+SGP,Singapore,Eastern and South-Eastern Asia,South-Eastern Asia,High income,Asia,5789090,TRUE
+SHN,Saint Helena,Sub-Saharan Africa,Western Africa,Not classified,Africa,5288,FALSE
+SLB,Solomon Islands,Oceania (excluding Australia and New Zealand),Melanesia,Lower middle income,Oceania,800006,FALSE
+SLE,Sierra Leone,Sub-Saharan Africa,Western Africa,Low income,Africa,8460512,TRUE
+SLV,El Salvador,Latin America and the Caribbean,Central America,Upper middle income,Americas,6309624,TRUE
+SMR,San Marino,Europe and Northern America,Southern Europe,High income,Europe,33733,FALSE
+SOM,Somalia,Sub-Saharan Africa,Eastern Africa,Low income,Africa,18358615,TRUE
+SPM,Saint Pierre and Miquelon,Europe and Northern America,NA,Not classified,Americas,5681,FALSE
+SRB,Serbia,Europe and Northern America,Southern Europe,Upper middle income,Europe,6773201,TRUE
+SSD,South Sudan,Sub-Saharan Africa,Eastern Africa,Low income,Africa,11483374,TRUE
+STP,Sao Tome and Principe,Sub-Saharan Africa,Middle Africa,Lower middle income,Africa,230871,FALSE
+SUR,Suriname,Latin America and the Caribbean,South America,Upper middle income,Americas,628886,FALSE
+SVK,Slovakia,Europe and Northern America,Eastern Europe,High income,Europe,5518054,TRUE
+SVN,Slovenia,Europe and Northern America,Southern Europe,High income,Europe,2118396,TRUE
+SWE,Sweden,Europe and Northern America,Northern Europe,High income,Europe,10551494,TRUE
+SWZ,Eswatini,Sub-Saharan Africa,Southern Africa,Lower middle income,Africa,1230506,TRUE
+SXM,Sint Maarten (Dutch part),Latin America and the Caribbean,Caribbean,High income,Americas,42749,FALSE
+SYC,Seychelles,Sub-Saharan Africa,Eastern Africa,High income,Africa,127951,FALSE
+SYR,Syrian Arab Republic,Northern Africa and Western Asia,Western Asia,Low income,Asia,23594623,TRUE
+TCA,Turks and Caicos Islands,Latin America and the Caribbean,Caribbean,High income,Americas,46198,FALSE
+TCD,Chad,Sub-Saharan Africa,Middle Africa,Low income,Africa,19319064,TRUE
+TGO,Togo,Sub-Saharan Africa,Western Africa,Lower middle income,Africa,9304338,TRUE
+THA,Thailand,Eastern and South-Eastern Asia,South-Eastern Asia,Upper middle income,Asia,71702435,TRUE
+TJK,Tajikistan,Central and Southern Asia,Central Asia,Lower middle income,Asia,10389798,TRUE
+TKL,Tokelau,Oceania (excluding Australia and New Zealand),Polynesia,Not classified,Oceania,2398,FALSE
+TKM,Turkmenistan,Central and Southern Asia,Central Asia,Upper middle income,Asia,7364438,TRUE
+TLS,Timor-Leste,Eastern and South-Eastern Asia,South-Eastern Asia,Lower middle income,Asia,1384286,TRUE
+TON,Tonga,Oceania (excluding Australia and New Zealand),Polynesia,Upper middle income,Oceania,104598,FALSE
+TTO,Trinidad and Tobago,Latin America and the Caribbean,Caribbean,High income,Americas,1502932,TRUE
+TUN,Tunisia,Northern Africa and Western Asia,Northern Africa,Lower middle income,Africa,12200431,TRUE
+TUR,Türkiye,Northern Africa and Western Asia,Western Asia,Upper middle income,Asia,87270502,TRUE
+TUV,Tuvalu,Oceania (excluding Australia and New Zealand),Polynesia,Upper middle income,Oceania,9816,FALSE
+TWN,"China, Taiwan Province of China",Eastern and South-Eastern Asia,Eastern Asia,Not classified,Asia,23317145,TRUE
+TZA,United Republic of Tanzania,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,66617606,TRUE
+UGA,Uganda,Sub-Saharan Africa,Eastern Africa,Low income,Africa,48656601,TRUE
+UKR,Ukraine,Europe and Northern America,Eastern Europe,Upper middle income,Europe,37732836,TRUE
+URY,Uruguay,Latin America and the Caribbean,South America,High income,Americas,3388080,TRUE
+USA,United States of America,Europe and Northern America,NA,High income,Americas,343477335,TRUE
+UZB,Uzbekistan,Central and Southern Asia,Central Asia,Lower middle income,Asia,35652307,TRUE
+VAT,Holy See,Europe and Northern America,Southern Europe,Not classified,Europe,496,FALSE
+VCT,Saint Vincent and the Grenadines,Latin America and the Caribbean,Caribbean,Upper middle income,Americas,101323,FALSE
+VEN,Venezuela (Bolivarian Republic of),Latin America and the Caribbean,South America,Lower middle income,Americas,28300854,TRUE
+VGB,British Virgin Islands,Latin America and the Caribbean,Caribbean,High income,Americas,38985,FALSE
+VIR,United States Virgin Islands,Latin America and the Caribbean,Caribbean,High income,Americas,85701,FALSE
+VNM,Viet Nam,Eastern and South-Eastern Asia,South-Eastern Asia,Upper middle income,Asia,100352192,TRUE
+VUT,Vanuatu,Oceania (excluding Australia and New Zealand),Melanesia,Lower middle income,Oceania,320408,FALSE
+WLF,Wallis and Futuna Islands,Oceania (excluding Australia and New Zealand),Polynesia,Not classified,Oceania,11370,FALSE
+WSM,Samoa,Oceania (excluding Australia and New Zealand),Polynesia,Upper middle income,Oceania,216663,FALSE
+XKX,Kosovo (under UNSC res. 1244),Europe and Northern America,Southern Europe,Upper middle income,Europe,1700031,TRUE
+YEM,Yemen,Northern Africa and Western Asia,Western Asia,Low income,Asia,39390799,TRUE
+ZAF,South Africa,Sub-Saharan Africa,Southern Africa,Upper middle income,Africa,63212384,TRUE
+ZMB,Zambia,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,20723965,TRUE
+ZWE,Zimbabwe,Sub-Saharan Africa,Eastern Africa,Lower middle income,Africa,16340822,TRUE

@@ -1,0 +1,297 @@
+ISO3,iso2,nombre,region,ingreso_api,ingreso_id,lending
+ABW,AW,Aruba,Latin America & Caribbean ,High income,HIC,Not classified
+AFE,ZH,Africa Eastern and Southern,Aggregates,Aggregates,NA,Aggregates
+AFG,AF,Afghanistan,"Middle East, North Africa, Afghanistan & Pakistan",Low income,LIC,IDA
+AFR,A9,Africa,Aggregates,Aggregates,NA,Aggregates
+AFW,ZI,Africa Western and Central,Aggregates,Aggregates,NA,Aggregates
+AGO,AO,Angola,Sub-Saharan Africa ,Lower middle income,LMC,IBRD
+ALB,AL,Albania,Europe & Central Asia,Upper middle income,UMC,IBRD
+AND,AD,Andorra,Europe & Central Asia,High income,HIC,Not classified
+ARB,1A,Arab World,Aggregates,Aggregates,NA,Aggregates
+ARE,AE,United Arab Emirates,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+ARG,AR,Argentina,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+ARM,AM,Armenia,Europe & Central Asia,Upper middle income,UMC,IBRD
+ASM,AS,American Samoa,East Asia & Pacific,High income,HIC,Not classified
+ATG,AG,Antigua and Barbuda,Latin America & Caribbean ,High income,HIC,IBRD
+AUS,AU,Australia,East Asia & Pacific,High income,HIC,Not classified
+AUT,AT,Austria,Europe & Central Asia,High income,HIC,Not classified
+AZE,AZ,Azerbaijan,Europe & Central Asia,Upper middle income,UMC,IBRD
+BDI,BI,Burundi,Sub-Saharan Africa ,Low income,LIC,IDA
+BEA,B4,East Asia & Pacific (IBRD-only countries),Aggregates,Aggregates,NA,Aggregates
+BEC,B7,Europe & Central Asia (IBRD-only countries),Aggregates,Aggregates,NA,Aggregates
+BEL,BE,Belgium,Europe & Central Asia,High income,HIC,Not classified
+BEN,BJ,Benin,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+BFA,BF,Burkina Faso,Sub-Saharan Africa ,Low income,LIC,IDA
+BGD,BD,Bangladesh,South Asia,Lower middle income,LMC,IDA
+BGR,BG,Bulgaria,Europe & Central Asia,High income,HIC,IBRD
+BHI,B1,IBRD countries classified as high income,Aggregates,Aggregates,NA,Aggregates
+BHR,BH,Bahrain,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+BHS,BS,"Bahamas, The",Latin America & Caribbean ,High income,HIC,Not classified
+BIH,BA,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,UMC,IBRD
+BLA,B2,Latin America & the Caribbean (IBRD-only countries),Aggregates,Aggregates,NA,Aggregates
+BLR,BY,Belarus,Europe & Central Asia,Upper middle income,UMC,IBRD
+BLZ,BZ,Belize,Latin America & Caribbean ,Upper middle income,UMC,Blend
+BMN,B3,"Middle East, North Africa, Afghanistan & Pakistan (IBRD only)",Aggregates,Aggregates,NA,Aggregates
+BMU,BM,Bermuda,North America,High income,HIC,Not classified
+BOL,BO,Bolivia,Latin America & Caribbean ,Lower middle income,LMC,IBRD
+BRA,BR,Brazil,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+BRB,BB,Barbados,Latin America & Caribbean ,High income,HIC,IBRD
+BRN,BN,Brunei Darussalam,East Asia & Pacific,High income,HIC,Not classified
+BSS,B6,Sub-Saharan Africa (IBRD-only countries),Aggregates,Aggregates,NA,Aggregates
+BTN,BT,Bhutan,South Asia,Lower middle income,LMC,IDA
+BWA,BW,Botswana,Sub-Saharan Africa ,Upper middle income,UMC,IBRD
+CAA,C9,Sub-Saharan Africa (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CAF,CF,Central African Republic,Sub-Saharan Africa ,Low income,LIC,IDA
+CAN,CA,Canada,North America,High income,HIC,Not classified
+CEA,C4,East Asia and the Pacific (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CEB,B8,Central Europe and the Baltics,Aggregates,Aggregates,NA,Aggregates
+CEU,C5,Europe and Central Asia (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CHE,CH,Switzerland,Europe & Central Asia,High income,HIC,Not classified
+CHI,JG,Channel Islands,Europe & Central Asia,High income,HIC,Not classified
+CHL,CL,Chile,Latin America & Caribbean ,High income,HIC,IBRD
+CHN,CN,China,East Asia & Pacific,Upper middle income,UMC,IBRD
+CIV,CI,Cote d'Ivoire,Sub-Saharan Africa ,Lower middle income,LMC,Blend
+CLA,C6,Latin America and the Caribbean (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CME,C7,Middle East and North Africa (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CMR,CM,Cameroon,Sub-Saharan Africa ,Lower middle income,LMC,Blend
+COD,CD,"Congo, Dem. Rep.",Sub-Saharan Africa ,Low income,LIC,IDA
+COG,CG,"Congo, Rep.",Sub-Saharan Africa ,Lower middle income,LMC,Blend
+COL,CO,Colombia,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+COM,KM,Comoros,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+CPV,CV,Cabo Verde,Sub-Saharan Africa ,Upper middle income,UMC,Blend
+CRI,CR,Costa Rica,Latin America & Caribbean ,High income,HIC,IBRD
+CSA,C8,South Asia (IFC classification),Aggregates,Aggregates,NA,Aggregates
+CSS,S3,Caribbean small states,Aggregates,Aggregates,NA,Aggregates
+CUB,CU,Cuba,Latin America & Caribbean ,Upper middle income,UMC,Not classified
+CUW,CW,Curacao,Latin America & Caribbean ,High income,HIC,Not classified
+CYM,KY,Cayman Islands,Latin America & Caribbean ,High income,HIC,Not classified
+CYP,CY,Cyprus,Europe & Central Asia,High income,HIC,Not classified
+CZE,CZ,Czechia,Europe & Central Asia,High income,HIC,Not classified
+DEA,D4,East Asia & Pacific (IDA-eligible countries),Aggregates,Aggregates,NA,Aggregates
+DEC,D7,Europe & Central Asia (IDA-eligible countries),Aggregates,Aggregates,NA,Aggregates
+DEU,DE,Germany,Europe & Central Asia,High income,HIC,Not classified
+DJI,DJ,Djibouti,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,IDA
+DLA,D2,Latin America & the Caribbean (IDA-eligible countries),Aggregates,Aggregates,NA,Aggregates
+DMA,DM,Dominica,Latin America & Caribbean ,Upper middle income,UMC,Blend
+DMN,D3,"Middle East, North Africa, Afghanistan & Pakistan (IDA total)",Aggregates,Aggregates,NA,Aggregates
+DNK,DK,Denmark,Europe & Central Asia,High income,HIC,Not classified
+DNS,N6,IDA countries in Sub-Saharan Africa not classified as fragile situations ,Aggregates,Aggregates,NA,Aggregates
+DOM,DO,Dominican Republic,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+DSA,D5,South Asia (IDA-eligible countries),Aggregates,Aggregates,NA,Aggregates
+DSF,F6,IDA countries in Sub-Saharan Africa classified as fragile situations ,Aggregates,Aggregates,NA,Aggregates
+DSS,D6,Sub-Saharan Africa (IDA-eligible countries),Aggregates,Aggregates,NA,Aggregates
+DZA,DZ,Algeria,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,UMC,IBRD
+EAP,4E,East Asia & Pacific (excluding high income),Aggregates,Aggregates,NA,Aggregates
+EAR,V2,Early-demographic dividend,Aggregates,Aggregates,NA,Aggregates
+EAS,Z4,East Asia & Pacific,Aggregates,Aggregates,NA,Aggregates
+ECA,7E,Europe & Central Asia (excluding high income),Aggregates,Aggregates,NA,Aggregates
+ECS,Z7,Europe & Central Asia,Aggregates,Aggregates,NA,Aggregates
+ECU,EC,Ecuador,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+EGY,EG,"Egypt, Arab Rep.","Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,IBRD
+EMU,XC,Euro area,Aggregates,Aggregates,NA,Aggregates
+ERI,ER,Eritrea,Sub-Saharan Africa ,Low income,LIC,IDA
+ESP,ES,Spain,Europe & Central Asia,High income,HIC,Not classified
+EST,EE,Estonia,Europe & Central Asia,High income,HIC,Not classified
+ETH,ET,Ethiopia,Sub-Saharan Africa ,Low income,LIC,IDA
+EUU,EU,European Union,Aggregates,Aggregates,NA,Aggregates
+FCV,F2,"Fragility, Conflict, and Violence (FCV) situations",Aggregates,Aggregates,NA,Aggregates
+FIN,FI,Finland,Europe & Central Asia,High income,HIC,Not classified
+FJI,FJ,Fiji,East Asia & Pacific,Upper middle income,UMC,Blend
+FRA,FR,France,Europe & Central Asia,High income,HIC,Not classified
+FRO,FO,Faroe Islands,Europe & Central Asia,High income,HIC,Not classified
+FSM,FM,"Micronesia, Fed. Sts.",East Asia & Pacific,Upper middle income,UMC,IDA
+FXS,6F,"IDA countries classified as fragile situations, excluding Sub-Saharan Africa",Aggregates,Aggregates,NA,Aggregates
+GAB,GA,Gabon,Sub-Saharan Africa ,Upper middle income,UMC,IBRD
+GBR,GB,United Kingdom,Europe & Central Asia,High income,HIC,Not classified
+GEO,GE,Georgia,Europe & Central Asia,Upper middle income,UMC,IBRD
+GHA,GH,Ghana,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+GIB,GI,Gibraltar,Europe & Central Asia,High income,HIC,Not classified
+GIN,GN,Guinea,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+GMB,GM,"Gambia, The",Sub-Saharan Africa ,Low income,LIC,IDA
+GNB,GW,Guinea-Bissau,Sub-Saharan Africa ,Low income,LIC,IDA
+GNQ,GQ,Equatorial Guinea,Sub-Saharan Africa ,Upper middle income,UMC,IBRD
+GRC,GR,Greece,Europe & Central Asia,High income,HIC,Not classified
+GRD,GD,Grenada,Latin America & Caribbean ,Upper middle income,UMC,Blend
+GRL,GL,Greenland,Europe & Central Asia,High income,HIC,Not classified
+GTM,GT,Guatemala,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+GUM,GU,Guam,East Asia & Pacific,High income,HIC,Not classified
+GUY,GY,Guyana,Latin America & Caribbean ,High income,HIC,IDA
+HIC,XD,High income,Aggregates,Aggregates,NA,Aggregates
+HKG,HK,"Hong Kong SAR, China",East Asia & Pacific,High income,HIC,Not classified
+HND,HN,Honduras,Latin America & Caribbean ,Lower middle income,LMC,IDA
+HPC,XE,Heavily indebted poor countries (HIPC),Aggregates,Aggregates,NA,Aggregates
+HRV,HR,Croatia,Europe & Central Asia,High income,HIC,IBRD
+HTI,HT,Haiti,Latin America & Caribbean ,Lower middle income,LMC,IDA
+HUN,HU,Hungary,Europe & Central Asia,High income,HIC,Not classified
+IBB,ZB,"IBRD, including blend",Aggregates,Aggregates,NA,Aggregates
+IBD,XF,IBRD only,Aggregates,Aggregates,NA,Aggregates
+IBT,ZT,IDA & IBRD total,Aggregates,Aggregates,NA,Aggregates
+IDA,XG,IDA total,Aggregates,Aggregates,NA,Aggregates
+IDB,XH,IDA blend,Aggregates,Aggregates,NA,Aggregates
+IDN,ID,Indonesia,East Asia & Pacific,Upper middle income,UMC,IBRD
+IDX,XI,IDA only,Aggregates,Aggregates,NA,Aggregates
+IMN,IM,Isle of Man,Europe & Central Asia,High income,HIC,Not classified
+IND,IN,India,South Asia,Lower middle income,LMC,IBRD
+INX,XY,Not classified,Aggregates,Aggregates,NA,Aggregates
+IRL,IE,Ireland,Europe & Central Asia,High income,HIC,Not classified
+IRN,IR,"Iran, Islamic Rep.","Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,UMC,IBRD
+IRQ,IQ,Iraq,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,UMC,IBRD
+ISL,IS,Iceland,Europe & Central Asia,High income,HIC,Not classified
+ISR,IL,Israel,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+ITA,IT,Italy,Europe & Central Asia,High income,HIC,Not classified
+JAM,JM,Jamaica,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+JOR,JO,Jordan,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,UMC,IBRD
+JPN,JP,Japan,East Asia & Pacific,High income,HIC,Not classified
+KAZ,KZ,Kazakhstan,Europe & Central Asia,Upper middle income,UMC,IBRD
+KEN,KE,Kenya,Sub-Saharan Africa ,Lower middle income,LMC,Blend
+KGZ,KG,Kyrgyz Republic,Europe & Central Asia,Lower middle income,LMC,IDA
+KHM,KH,Cambodia,East Asia & Pacific,Lower middle income,LMC,IDA
+KIR,KI,Kiribati,East Asia & Pacific,Lower middle income,LMC,IDA
+KNA,KN,St. Kitts and Nevis,Latin America & Caribbean ,High income,HIC,IBRD
+KOR,KR,"Korea, Rep.",East Asia & Pacific,High income,HIC,Not classified
+KWT,KW,Kuwait,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+LAC,XJ,Latin America & Caribbean (excluding high income),Aggregates,Aggregates,NA,Aggregates
+LAO,LA,Lao PDR,East Asia & Pacific,Lower middle income,LMC,IDA
+LBN,LB,Lebanon,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,IBRD
+LBR,LR,Liberia,Sub-Saharan Africa ,Low income,LIC,IDA
+LBY,LY,Libya,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,UMC,IBRD
+LCA,LC,St. Lucia,Latin America & Caribbean ,Upper middle income,UMC,Blend
+LCN,ZJ,Latin America & Caribbean ,Aggregates,Aggregates,NA,Aggregates
+LDC,XL,Least developed countries: UN classification,Aggregates,Aggregates,NA,Aggregates
+LIC,XM,Low income,Aggregates,Aggregates,NA,Aggregates
+LIE,LI,Liechtenstein,Europe & Central Asia,High income,HIC,Not classified
+LKA,LK,Sri Lanka,South Asia,Upper middle income,UMC,IDA
+LMC,XN,Lower middle income,Aggregates,Aggregates,NA,Aggregates
+LMY,XO,Low & middle income,Aggregates,Aggregates,NA,Aggregates
+LSO,LS,Lesotho,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+LTE,V3,Late-demographic dividend,Aggregates,Aggregates,NA,Aggregates
+LTU,LT,Lithuania,Europe & Central Asia,High income,HIC,Not classified
+LUX,LU,Luxembourg,Europe & Central Asia,High income,HIC,Not classified
+LVA,LV,Latvia,Europe & Central Asia,High income,HIC,Not classified
+MAC,MO,"Macao SAR, China",East Asia & Pacific,High income,HIC,Not classified
+MAF,MF,St. Martin (French part),Latin America & Caribbean ,High income,HIC,Not classified
+MAR,MA,Morocco,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,IBRD
+MCO,MC,Monaco,Europe & Central Asia,High income,HIC,Not classified
+MDA,MD,Moldova,Europe & Central Asia,Upper middle income,UMC,IBRD
+MDE,M1,Middle East (developing only),Aggregates,Aggregates,NA,Aggregates
+MDG,MG,Madagascar,Sub-Saharan Africa ,Low income,LIC,IDA
+MDV,MV,Maldives,South Asia,Upper middle income,UMC,IDA
+MEA,ZQ,"Middle East, North Africa, Afghanistan & Pakistan",Aggregates,Aggregates,NA,Aggregates
+MEX,MX,Mexico,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+MHL,MH,Marshall Islands,East Asia & Pacific,Upper middle income,UMC,IDA
+MIC,XP,Middle income,Aggregates,Aggregates,NA,Aggregates
+MKD,MK,North Macedonia,Europe & Central Asia,Upper middle income,UMC,IBRD
+MLI,ML,Mali,Sub-Saharan Africa ,Low income,LIC,IDA
+MLT,MT,Malta,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+MMR,MM,Myanmar,East Asia & Pacific,Lower middle income,LMC,IDA
+MNA,XQ,"Middle East, North Africa, Afghanistan & Pakistan (excluding high income)",Aggregates,Aggregates,NA,Aggregates
+MNE,ME,Montenegro,Europe & Central Asia,Upper middle income,UMC,IBRD
+MNG,MN,Mongolia,East Asia & Pacific,Upper middle income,UMC,IBRD
+MNP,MP,Northern Mariana Islands,East Asia & Pacific,High income,HIC,Not classified
+MOZ,MZ,Mozambique,Sub-Saharan Africa ,Low income,LIC,IDA
+MRT,MR,Mauritania,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+MUS,MU,Mauritius,Sub-Saharan Africa ,Upper middle income,UMC,IBRD
+MWI,MW,Malawi,Sub-Saharan Africa ,Low income,LIC,IDA
+MYS,MY,Malaysia,East Asia & Pacific,Upper middle income,UMC,IBRD
+NAC,XU,North America,Aggregates,Aggregates,NA,Aggregates
+NAF,M2,North Africa,Aggregates,Aggregates,NA,Aggregates
+NAM,NA,Namibia,Sub-Saharan Africa ,Lower middle income,LMC,IBRD
+NCL,NC,New Caledonia,East Asia & Pacific,High income,HIC,Not classified
+NER,NE,Niger,Sub-Saharan Africa ,Low income,LIC,IDA
+NGA,NG,Nigeria,Sub-Saharan Africa ,Lower middle income,LMC,Blend
+NIC,NI,Nicaragua,Latin America & Caribbean ,Lower middle income,LMC,IDA
+NLD,NL,Netherlands,Europe & Central Asia,High income,HIC,Not classified
+NOR,NO,Norway,Europe & Central Asia,High income,HIC,Not classified
+NPL,NP,Nepal,South Asia,Lower middle income,LMC,IDA
+NRS,6X,Non-resource rich Sub-Saharan Africa countries,Aggregates,Aggregates,NA,Aggregates
+NRU,NR,Naoero,East Asia & Pacific,High income,HIC,IBRD
+NXS,6N,"IDA countries not classified as fragile situations, excluding Sub-Saharan Africa",Aggregates,Aggregates,NA,Aggregates
+NZL,NZ,New Zealand,East Asia & Pacific,High income,HIC,Not classified
+OED,OE,OECD members,Aggregates,Aggregates,NA,Aggregates
+OMN,OM,Oman,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+OSS,S4,Other small states,Aggregates,Aggregates,NA,Aggregates
+PAK,PK,Pakistan,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,Blend
+PAN,PA,Panama,Latin America & Caribbean ,High income,HIC,IBRD
+PER,PE,Peru,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+PHL,PH,Philippines,East Asia & Pacific,Upper middle income,UMC,IBRD
+PLW,PW,Palau,East Asia & Pacific,High income,HIC,IBRD
+PNG,PG,Papua New Guinea,East Asia & Pacific,Lower middle income,LMC,Blend
+POL,PL,Poland,Europe & Central Asia,High income,HIC,IBRD
+PRE,V1,Pre-demographic dividend,Aggregates,Aggregates,NA,Aggregates
+PRI,PR,Puerto Rico (US),Latin America & Caribbean ,High income,HIC,Not classified
+PRK,KP,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,LIC,Not classified
+PRT,PT,Portugal,Europe & Central Asia,High income,HIC,Not classified
+PRY,PY,Paraguay,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+PSE,PS,West Bank and Gaza,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,Not classified
+PSS,S2,Pacific island small states,Aggregates,Aggregates,NA,Aggregates
+PST,V4,Post-demographic dividend,Aggregates,Aggregates,NA,Aggregates
+PYF,PF,French Polynesia,East Asia & Pacific,High income,HIC,Not classified
+QAT,QA,Qatar,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+ROU,RO,Romania,Europe & Central Asia,High income,HIC,IBRD
+RRS,R6,Resource rich Sub-Saharan Africa countries,Aggregates,Aggregates,NA,Aggregates
+RUS,RU,Russian Federation,Europe & Central Asia,High income,HIC,IBRD
+RWA,RW,Rwanda,Sub-Saharan Africa ,Low income,LIC,IDA
+SAS,8S,South Asia,Aggregates,Aggregates,NA,Aggregates
+SAU,SA,Saudi Arabia,"Middle East, North Africa, Afghanistan & Pakistan",High income,HIC,Not classified
+SDN,SD,Sudan,Sub-Saharan Africa ,Low income,LIC,IDA
+SEN,SN,Senegal,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+SGP,SG,Singapore,East Asia & Pacific,High income,HIC,Not classified
+SLB,SB,Solomon Islands,East Asia & Pacific,Lower middle income,LMC,IDA
+SLE,SL,Sierra Leone,Sub-Saharan Africa ,Low income,LIC,IDA
+SLV,SV,El Salvador,Latin America & Caribbean ,Upper middle income,UMC,IBRD
+SMR,SM,San Marino,Europe & Central Asia,High income,HIC,Not classified
+SOM,SO,"Somalia, Fed. Rep.",Sub-Saharan Africa ,Low income,LIC,IDA
+SRB,RS,Serbia,Europe & Central Asia,Upper middle income,UMC,IBRD
+SSA,ZF,Sub-Saharan Africa (excluding high income),Aggregates,Aggregates,NA,Aggregates
+SSD,SS,South Sudan,Sub-Saharan Africa ,Low income,LIC,IDA
+SSF,ZG,Sub-Saharan Africa ,Aggregates,Aggregates,NA,Aggregates
+SST,S1,Small states,Aggregates,Aggregates,NA,Aggregates
+STP,ST,Sao Tome and Principe,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+SUR,SR,Suriname,Latin America & Caribbean ,Upper middle income,UMC,Blend
+SVK,SK,Slovak Republic,Europe & Central Asia,High income,HIC,Not classified
+SVN,SI,Slovenia,Europe & Central Asia,High income,HIC,Not classified
+SWE,SE,Sweden,Europe & Central Asia,High income,HIC,Not classified
+SWZ,SZ,Eswatini,Sub-Saharan Africa ,Lower middle income,LMC,Blend
+SXM,SX,Sint Maarten (Dutch part),Latin America & Caribbean ,High income,HIC,Not classified
+SXZ,A4,Sub-Saharan Africa excluding South Africa,Aggregates,Aggregates,NA,Aggregates
+SYC,SC,Seychelles,Sub-Saharan Africa ,High income,HIC,IBRD
+SYR,SY,Syrian Arab Republic,"Middle East, North Africa, Afghanistan & Pakistan",Low income,LIC,IDA
+TCA,TC,Turks and Caicos Islands,Latin America & Caribbean ,High income,HIC,Not classified
+TCD,TD,Chad,Sub-Saharan Africa ,Low income,LIC,IDA
+TEA,T4,East Asia & Pacific (IDA & IBRD countries),Aggregates,Aggregates,NA,Aggregates
+TEC,T7,Europe & Central Asia (IDA & IBRD countries),Aggregates,Aggregates,NA,Aggregates
+TGO,TG,Togo,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+THA,TH,Thailand,East Asia & Pacific,Upper middle income,UMC,IBRD
+TJK,TJ,Tajikistan,Europe & Central Asia,Lower middle income,LMC,IDA
+TKM,TM,Turkmenistan,Europe & Central Asia,Upper middle income,UMC,IBRD
+TLA,T2,Latin America & the Caribbean (IDA & IBRD countries),Aggregates,Aggregates,NA,Aggregates
+TLS,TL,Timor-Leste,East Asia & Pacific,Lower middle income,LMC,Blend
+TMN,T3,"Middle East, North Africa, Afghanistan & Pakistan (IDA & IBRD)",Aggregates,Aggregates,NA,Aggregates
+TON,TO,Tonga,East Asia & Pacific,Upper middle income,UMC,IDA
+TSA,T5,South Asia (IDA & IBRD),Aggregates,Aggregates,NA,Aggregates
+TSS,T6,Sub-Saharan Africa (IDA & IBRD countries),Aggregates,Aggregates,NA,Aggregates
+TTO,TT,Trinidad and Tobago,Latin America & Caribbean ,High income,HIC,IBRD
+TUN,TN,Tunisia,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,LMC,IBRD
+TUR,TR,Turkiye,Europe & Central Asia,Upper middle income,UMC,IBRD
+TUV,TV,Tuvalu,East Asia & Pacific,Upper middle income,UMC,IDA
+TZA,TZ,Tanzania,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+UGA,UG,Uganda,Sub-Saharan Africa ,Low income,LIC,IDA
+UKR,UA,Ukraine,Europe & Central Asia,Upper middle income,UMC,IBRD
+UMC,XT,Upper middle income,Aggregates,Aggregates,NA,Aggregates
+URY,UY,Uruguay,Latin America & Caribbean ,High income,HIC,IBRD
+USA,US,United States,North America,High income,HIC,Not classified
+UZB,UZ,Uzbekistan,Europe & Central Asia,Lower middle income,LMC,Blend
+VCT,VC,St. Vincent and the Grenadines,Latin America & Caribbean ,Upper middle income,UMC,Blend
+VEN,VE,"Venezuela, RB",Latin America & Caribbean ,Lower middle income,LMC,IBRD
+VGB,VG,British Virgin Islands,Latin America & Caribbean ,High income,HIC,Not classified
+VIR,VI,Virgin Islands (U.S.),Latin America & Caribbean ,High income,HIC,Not classified
+VNM,VN,Viet Nam,East Asia & Pacific,Upper middle income,UMC,IBRD
+VUT,VU,Vanuatu,East Asia & Pacific,Lower middle income,LMC,IDA
+WLD,1W,World,Aggregates,Aggregates,NA,Aggregates
+WSM,WS,Samoa,East Asia & Pacific,Upper middle income,UMC,IDA
+XKX,XK,Kosovo,Europe & Central Asia,Upper middle income,UMC,IDA
+XZN,A5,Sub-Saharan Africa excluding South Africa and Nigeria,Aggregates,Aggregates,NA,Aggregates
+YEM,YE,"Yemen, Rep.","Middle East, North Africa, Afghanistan & Pakistan",Low income,LIC,IDA
+ZAF,ZA,South Africa,Sub-Saharan Africa ,Upper middle income,UMC,IBRD
+ZMB,ZM,Zambia,Sub-Saharan Africa ,Lower middle income,LMC,IDA
+ZWE,ZW,Zimbabwe,Sub-Saharan Africa ,Lower middle income,LMC,Blend

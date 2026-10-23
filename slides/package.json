@@ -1,0 +1,11 @@
+{
+  "name": "asa-dataquest-2026-slides",
+  "version": "1.0.0",
+  "description": "Diapositivas reveal.js para ASA International DataQuest 2026 (WPP2024). Vendorizado via npm; node_modules/ no se versiona.",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "reveal.js": "^6.0.2",
+    "flag-icons": "^7.6.0"
+  }
+}

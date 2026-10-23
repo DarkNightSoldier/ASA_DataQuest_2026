@@ -1,0 +1,156 @@
+=============================================================================
+LOG DE INSTALACIÓN DE PAQUETES R — ASA DataQuest 2026
+Máquina: Kali GNU/Linux Rolling, R 4.6.1, sin sudo.
+=============================================================================
+
+RESUMEN: 56 de 56 paquetes instalados (ver docs/paquetes_estado.csv).
+Última ejecución idempotente de `Rscript R/00_instalar_paquetes.R`: 0.2 min
+(todo ya estaba instalado; solo verificó y confirmó los rpath de carga).
+
+-----------------------------------------------------------------------------
+HISTORIAL DE PROBLEMAS ENCONTRADOS Y RESUELTOS (orden cronológico, resumen)
+Los logs completos de compilación (varios MB de salida de gcc) no se
+versionan aquí por tamaño; este resumen conserva el diagnóstico y la causa
+real de cada fallo, con referencias a SETUP.md para la receta exacta.
+-----------------------------------------------------------------------------
+
+1. "units"/"sf"/"terra" fallaban con Ncpus > 1 aunque las librerías del
+   sistema (sysdeps-r) sí estaban. CAUSA: con Ncpus > 1, R arma un Makefile
+   paralelo para instalar varios paquetes a la vez y ese proceso no propaga
+   bien CPATH/PKG_CONFIG_PATH/LIBRARY_PATH a cada sub-proceso. SOLUCIÓN:
+   options(Ncpus = 1) para compilar (ver SETUP.md, sección "Importante
+   sobre la instalación en paralelo").
+
+2. "s2" (dependencia de "sf") y "RcppParallel"/"nloptr" (dependencias de
+   "lme4") fallaban por falta de `cmake` (no hay paquete de sistema sin
+   sudo). SOLUCIÓN: cmake instalado como *wheel* de PyPI en un venv
+   dedicado, `~/.local/share/r-build-tools` (ver SETUP.md sección 1).
+
+3. "gifski" fallaba por falta de `cargo`/`rustc`. SOLUCIÓN: `rustup`
+   instalado en espacio de usuario (`~/.cargo`, `~/.rustup`) con el
+   instalador oficial, sin sudo (ver SETUP.md sección 1).
+
+4. "ggbump" y "ggstream" fallaban con "not available for this version of R":
+   en realidad fueron ARCHIVADOS de CRAN en nov/dic-2025 por falta de
+   mantenimiento (no es un problema de esta máquina). SOLUCIÓN: se
+   instalan desde GitHub (davidsjoberg/ggbump, davidsjoberg/ggstream), que
+   sigue manteniendo el código.
+
+5. "units", "magick", "av" compilaban bien ("* DONE") pero NO cargaban en
+   una sesión nueva de R: `libudunits2.so.0: cannot open shared object
+   file`. CAUSA: esas librerías (extraídas sin sudo en ~/.local/opt/
+   sysdeps-r) no están en el cache de `ldconfig`, y el .so resultante no
+   trae un rpath propio. `Sys.setenv(LD_LIBRARY_PATH=...)` NO sirve para
+   esto una vez el proceso de R ya arrancó (el enlazador dinámico de Linux
+   fija esa variable una sola vez, al inicio del proceso). SOLUCIÓN:
+   incrustar el rpath correcto en cada .so con `patchelf --set-rpath`
+   (automatizado e idempotente en R/00_instalar_paquetes.R, sección "4c").
+   Mismo problema en "RcppParallel" (dependencia de "dtwclust") con su
+   propio libtbbmalloc.so.
+
+6. "av" además fallaba en la COMPILACIÓN: el runtime de ffmpeg instalado en
+   el sistema es 8.1.2 pero el único `-dev` del repo de Kali es 9.0.2 (ABIs
+   distintas). SOLUCIÓN: se descargó también el RUNTIME 9.0.2 bajo sus
+   nombres de paquete nuevos (libavcodec63, libavformat63, libavutil61,
+   libavfilter12, libswscale10, libswresample7 -- paquetes DISTINTOS de los
+   libavcodec62 etc. ya instalados, así que no se tocó nada del sistema) y
+   se extrajeron ambos (runtime 9.0.2 + dev 9.0.2) al prefijo de usuario.
+   Los .pc de ffmpeg además traen libdir/includedir grabados a fuego en
+   /usr/... (no usan ${prefix}), así que hubo que corregirlos con sed.
+   Receta completa en SETUP.md sección 3.1.
+
+7. "ggimage" (vía "gdtools"→cairo) fallaba primero por falta de cabeceras
+   de cairo/fontconfig/freetype/pixman/x11/xcb (mismo patrón: -dev sin
+   sudo, extraído a sysdeps-r), y LUEGO, tras arreglar eso, fallaba el
+   ENLAZADO con "cannot find -lcairo" aunque el -L apuntaba al lugar
+   correcto. CAUSA: el paquete -dev de cairo trae `libcairo.so` como un
+   symlink SIN VERSIÓN que apunta a `libcairo.so.2`, asumiendo que el
+   paquete runtime (que trae ese .so.2 real) está instalado en la MISMA
+   carpeta -- cosa que no pasa si solo se extrajo el -dev al prefijo
+   aislado. Eran 11 symlinks rotos en total (cairo, cairo-gobject,
+   cairo-script-interpreter, fontconfig, freetype, pixman-1, X11,
+   xcb-render, xcb-shm, Xext, Xrender). SOLUCIÓN: re-apuntar cada symlink
+   roto al .so.N real que YA estaba instalado como paquete runtime del
+   sistema (ninguno de estos requirió descargar un runtime nuevo, a
+   diferencia de ffmpeg). Receta completa en SETUP.md sección 3.1.
+
+-----------------------------------------------------------------------------
+SALIDA COMPLETA DE LA ÚLTIMA EJECUCIÓN (idempotente, 2026-10-22, 0.2 min)
+-----------------------------------------------------------------------------
+== Instalación de paquetes R == 2026-10-22 19:25:24 
+R: R version 4.6.1 (2026-06-24) 
+Librería de usuario: /home/darkns/R/x86_64-pc-linux-gnu-library/4.6 
+Usando cabeceras del sistema extraídas en: /home/darkns/.local/opt/sysdeps-r 
+cmake disponible en: /home/darkns/.local/share/r-build-tools/bin 
+cargo disponible en: /home/darkns/.cargo/bin 
+Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+
+-- Todos los paquetes CRAN base ya estaban instalados.
+
+Kernel 'ir' ya registrado para Jupyter.
+
+-- Arreglando rpath de carga en tiempo de ejecución (patchelf) --
+
+== Resumen ==
+           paquete instalado   version
+         tidyverse      TRUE     2.0.0
+        data.table      TRUE  1.18.6.1
+           janitor      TRUE     2.2.1
+          jsonlite      TRUE     2.0.0
+              here      TRUE     1.0.2
+              renv      TRUE     1.3.1
+           remotes      TRUE     2.5.0
+       nanoparquet      TRUE     0.5.2
+         patchwork      TRUE     1.3.2
+           ggrepel      TRUE     0.9.8
+            scales      TRUE     1.4.0
+           viridis      TRUE     0.6.5
+      RColorBrewer      TRUE     1.1.3
+          ggthemes      TRUE     7.0.0
+         gganimate      TRUE    1.0.11
+            plotly      TRUE    4.12.1
+       htmlwidgets      TRUE     1.6.4
+          ggridges      TRUE     0.5.7
+        ggalluvial      TRUE    0.12.6
+        treemapify      TRUE     2.6.1
+              maps      TRUE     3.4.3
+           mapproj      TRUE    1.2.12
+       countrycode      TRUE     1.9.0
+        factoextra      TRUE     2.2.0
+        FactoMineR      TRUE      2.18
+           cluster      TRUE   2.1.8.3
+          dtwclust      TRUE     6.0.0
+               fda      TRUE     6.3.0
+           fda.usc      TRUE     2.2.0
+          forecast      TRUE     9.0.2
+           tseries      TRUE   0.10.63
+               plm      TRUE     2.6.7
+              lme4      TRUE     2.0.6
+            fixest      TRUE    0.14.2
+              mgcv      TRUE     1.9.4
+             broom      TRUE    1.0.13
+        kableExtra      TRUE     1.4.1
+                gt      TRUE     1.4.0
+             knitr      TRUE      1.51
+         rmarkdown      TRUE      2.31
+          IRkernel      TRUE     1.3.2
+             units      TRUE     1.0.1
+                sf      TRUE     1.1.3
+             terra      TRUE    1.9.50
+     rnaturalearth      TRUE     1.2.0
+ rnaturalearthdata      TRUE     1.0.0
+        transformr      TRUE     0.1.5
+          geofacet      TRUE     0.2.4
+            magick      TRUE     2.9.1
+           ggimage      TRUE     0.3.8
+            gifski      TRUE  1.32.0.2
+                av      TRUE     0.9.6
+             arrow      TRUE    25.0.1
+           ggflags      TRUE     0.0.4
+            ggbump      TRUE 0.1.99999
+          ggstream      TRUE     0.1.0
+
+Instalados: 56 de 56 
+Duración: 0.2 min
