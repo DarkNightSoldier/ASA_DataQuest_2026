@@ -1,0 +1,162 @@
+ISO3_code,Location,region_sdg,ingreso,grupo,keep_share,fanny_max,silueta
+AFG,Afghanistan,Central and Southern Asia,Low income,Recent movers,1,0.657,0.429
+AGO,Angola,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.712,0.458
+ALB,Albania,Europe and Northern America,Upper middle income,Fast movers,0.973,0.531,0.256
+ARE,United Arab Emirates,Northern Africa and Western Asia,High income,Migration-led,1,0.293,0.343
+ARG,Argentina,Latin America and the Caribbean,Upper middle income,Early movers,0.963,0.435,0.172
+ARM,Armenia,Northern Africa and Western Asia,Upper middle income,Fast movers,0.775,0.488,0.042
+AUS,Australia,Australia/New Zealand,High income,Early movers,1,0.763,0.505
+AUT,Austria,Europe and Northern America,High income,Early movers,1,0.925,0.626
+AZE,Azerbaijan,Northern Africa and Western Asia,Upper middle income,Fast movers,0.964,0.672,0.478
+BDI,Burundi,Sub-Saharan Africa,Low income,Recent movers,1,0.813,0.517
+BEL,Belgium,Europe and Northern America,High income,Early movers,1,0.94,0.638
+BEN,Benin,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.868,0.528
+BFA,Burkina Faso,Sub-Saharan Africa,Low income,Recent movers,1,0.856,0.539
+BGD,Bangladesh,Central and Southern Asia,Lower middle income,Fast movers,0.981,0.658,0.148
+BGR,Bulgaria,Europe and Northern America,High income,Early movers,1,0.905,0.607
+BHR,Bahrain,Northern Africa and Western Asia,High income,Migration-led,0.993,0.374,-0.048
+BIH,Bosnia and Herzegovina,Europe and Northern America,Upper middle income,Early movers,0.975,0.428,0.258
+BLR,Belarus,Europe and Northern America,Upper middle income,Early movers,1,0.87,0.569
+BOL,Bolivia (Plurinational State of),Latin America and the Caribbean,Lower middle income,Fast movers,0.616,0.672,0.045
+BRA,Brazil,Latin America and the Caribbean,Upper middle income,Fast movers,0.973,0.764,0.515
+BWA,Botswana,Sub-Saharan Africa,Upper middle income,Fast movers,0.601,0.479,0.028
+CAF,Central African Republic,Sub-Saharan Africa,Low income,Recent movers,1,0.587,0.379
+CAN,Canada,Europe and Northern America,High income,Early movers,1,0.816,0.544
+CHE,Switzerland,Europe and Northern America,High income,Early movers,1,0.893,0.606
+CHL,Chile,Latin America and the Caribbean,High income,Fast movers,0.575,0.641,0.034
+CHN,China,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.973,0.694,0.257
+CIV,Côte d'Ivoire,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.687,0.422
+CMR,Cameroon,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.83,0.495
+COD,Democratic Republic of the Congo,Sub-Saharan Africa,Low income,Recent movers,1,0.823,0.514
+COG,Congo,Sub-Saharan Africa,Lower middle income,Recent movers,0.997,0.541,0.309
+COL,Colombia,Latin America and the Caribbean,Upper middle income,Fast movers,0.975,0.708,0.525
+CRI,Costa Rica,Latin America and the Caribbean,High income,Fast movers,0.968,0.696,0.316
+CUB,Cuba,Latin America and the Caribbean,Upper middle income,Early movers,0.972,0.493,0.32
+CYP,Cyprus,Northern Africa and Western Asia,High income,Early movers,0.995,0.554,0.353
+CZE,Czechia,Europe and Northern America,High income,Early movers,1,0.951,0.643
+DEU,Germany,Europe and Northern America,High income,Early movers,1,0.911,0.622
+DJI,Djibouti,Sub-Saharan Africa,Lower middle income,Migration-led,0.965,0.339,-0.03
+DNK,Denmark,Europe and Northern America,High income,Early movers,1,0.951,0.649
+DOM,Dominican Republic,Latin America and the Caribbean,Upper middle income,Fast movers,1,0.475,0.471
+DZA,Algeria,Northern Africa and Western Asia,Upper middle income,Fast movers,0.995,0.578,0.258
+ECU,Ecuador,Latin America and the Caribbean,Upper middle income,Fast movers,1,0.514,0.522
+EGY,Egypt,Northern Africa and Western Asia,Lower middle income,Fast movers,0.995,0.701,0.206
+ERI,Eritrea,Sub-Saharan Africa,Low income,Recent movers,1,0.686,0.414
+ESP,Spain,Europe and Northern America,High income,Early movers,1,0.897,0.601
+EST,Estonia,Europe and Northern America,High income,Early movers,1,0.863,0.574
+ETH,Ethiopia,Sub-Saharan Africa,Low income,Recent movers,1,0.841,0.524
+FIN,Finland,Europe and Northern America,High income,Early movers,1,0.945,0.641
+FRA,France,Europe and Northern America,High income,Early movers,1,0.943,0.638
+GAB,Gabon,Sub-Saharan Africa,Upper middle income,Recent movers,0.856,0.452,0.029
+GBR,United Kingdom,Europe and Northern America,High income,Early movers,1,0.931,0.626
+GEO,Georgia,Northern Africa and Western Asia,Upper middle income,Early movers,0.995,0.451,0.25
+GHA,Ghana,Sub-Saharan Africa,Lower middle income,Recent movers,0.992,0.553,0.32
+GIN,Guinea,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.829,0.514
+GMB,Gambia,Sub-Saharan Africa,Low income,Recent movers,1,0.714,0.43
+GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,Recent movers,1,0.592,0.361
+GNQ,Equatorial Guinea,Sub-Saharan Africa,Upper middle income,Recent movers,1,0.383,0.179
+GRC,Greece,Europe and Northern America,High income,Early movers,1,0.858,0.581
+GTM,Guatemala,Latin America and the Caribbean,Upper middle income,Recent movers,0.613,0.626,-0.003
+HKG,"China, Hong Kong SAR",Eastern and South-Eastern Asia,High income,Early movers,0.995,0.523,0.347
+HND,Honduras,Latin America and the Caribbean,Lower middle income,Fast movers,0.958,0.655,0.117
+HRV,Croatia,Europe and Northern America,High income,Early movers,1,0.885,0.593
+HTI,Haiti,Latin America and the Caribbean,Lower middle income,Recent movers,0.961,0.509,0.173
+HUN,Hungary,Europe and Northern America,High income,Early movers,1,0.935,0.629
+IDN,Indonesia,Eastern and South-Eastern Asia,Upper middle income,Fast movers,1,0.487,0.474
+IND,India,Central and Southern Asia,Lower middle income,Fast movers,0.995,0.633,0.334
+IRL,Ireland,Europe and Northern America,High income,Early movers,1,0.615,0.386
+IRN,Iran (Islamic Republic of),Central and Southern Asia,Upper middle income,Fast movers,0.997,0.497,0.387
+IRQ,Iraq,Northern Africa and Western Asia,Upper middle income,Recent movers,0.935,0.527,0.084
+ISR,Israel,Northern Africa and Western Asia,High income,Early movers,0.953,0.394,0.08
+ITA,Italy,Europe and Northern America,High income,Early movers,1,0.926,0.635
+JAM,Jamaica,Latin America and the Caribbean,Upper middle income,Fast movers,0.972,0.532,0.333
+JOR,Jordan,Northern Africa and Western Asia,Upper middle income,Migration-led,0.869,0.356,-0.116
+JPN,Japan,Eastern and South-Eastern Asia,High income,Early movers,1,0.864,0.591
+KAZ,Kazakhstan,Central and Southern Asia,Upper middle income,Fast movers,0.97,0.484,0.202
+KEN,Kenya,Sub-Saharan Africa,Lower middle income,Recent movers,0.995,0.559,0.329
+KGZ,Kyrgyzstan,Central and Southern Asia,Lower middle income,Fast movers,1,0.438,0.37
+KHM,Cambodia,Eastern and South-Eastern Asia,Lower middle income,Recent movers,0.965,0.4,0.087
+KOR,Republic of Korea,Eastern and South-Eastern Asia,High income,Early movers,0.489,0.545,-0.007
+KWT,Kuwait,Northern Africa and Western Asia,High income,Migration-led,0.99,0.327,0.262
+LAO,Lao People's Democratic Republic,Eastern and South-Eastern Asia,Lower middle income,Recent movers,0.964,0.511,0.187
+LBN,Lebanon,Northern Africa and Western Asia,Lower middle income,Fast movers,0.977,0.623,0.437
+LBR,Liberia,Sub-Saharan Africa,Low income,Recent movers,1,0.795,0.489
+LBY,Libya,Northern Africa and Western Asia,Upper middle income,Fast movers,0.995,0.521,0.252
+LKA,Sri Lanka,Central and Southern Asia,Upper middle income,Fast movers,0.967,0.743,0.323
+LSO,Lesotho,Sub-Saharan Africa,Lower middle income,Recent movers,0.964,0.43,0.116
+LTU,Lithuania,Europe and Northern America,High income,Early movers,1,0.8,0.53
+LVA,Latvia,Europe and Northern America,High income,Early movers,1,0.825,0.553
+MAR,Morocco,Northern Africa and Western Asia,Lower middle income,Fast movers,0.998,0.647,0.378
+MDA,Republic of Moldova,Europe and Northern America,Upper middle income,Early movers,0.973,0.384,0.168
+MDG,Madagascar,Sub-Saharan Africa,Low income,Recent movers,1,0.801,0.47
+MEX,Mexico,Latin America and the Caribbean,Upper middle income,Fast movers,1,0.501,0.515
+MKD,North Macedonia,Europe and Northern America,Upper middle income,Early movers,0.966,0.455,0.177
+MLI,Mali,Sub-Saharan Africa,Low income,Recent movers,1,0.789,0.512
+MMR,Myanmar,Eastern and South-Eastern Asia,Lower middle income,Fast movers,0.998,0.562,0.335
+MNG,Mongolia,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.995,0.616,0.272
+MOZ,Mozambique,Sub-Saharan Africa,Low income,Recent movers,1,0.739,0.467
+MRT,Mauritania,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.698,0.408
+MUS,Mauritius,Sub-Saharan Africa,Upper middle income,Fast movers,0.96,0.72,0.237
+MWI,Malawi,Sub-Saharan Africa,Low income,Recent movers,1,0.718,0.449
+MYS,Malaysia,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.981,0.598,0.443
+NAM,Namibia,Sub-Saharan Africa,Lower middle income,Recent movers,0.965,0.47,0.148
+NER,Niger,Sub-Saharan Africa,Low income,Recent movers,1,0.767,0.503
+NGA,Nigeria,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.844,0.531
+NIC,Nicaragua,Latin America and the Caribbean,Lower middle income,Fast movers,0.998,0.661,0.26
+NLD,Netherlands,Europe and Northern America,High income,Early movers,1,0.933,0.629
+NOR,Norway,Europe and Northern America,High income,Early movers,1,0.919,0.616
+NPL,Nepal,Central and Southern Asia,Lower middle income,Recent movers,0.569,0.566,-0.014
+NZL,New Zealand,Australia/New Zealand,High income,Early movers,1,0.756,0.49
+OMN,Oman,Northern Africa and Western Asia,High income,Fast movers,0.993,0.421,0.114
+PAK,Pakistan,Central and Southern Asia,Lower middle income,Recent movers,0.974,0.503,0.286
+PAN,Panama,Latin America and the Caribbean,High income,Fast movers,0.968,0.708,0.468
+PER,Peru,Latin America and the Caribbean,Upper middle income,Fast movers,0.998,0.495,0.498
+PHL,Philippines,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.995,0.556,0.332
+PNG,Papua New Guinea,Oceania (excluding Australia and New Zealand),Lower middle income,Recent movers,0.947,0.491,0.093
+POL,Poland,Europe and Northern America,High income,Early movers,1,0.886,0.573
+PRI,Puerto Rico,Latin America and the Caribbean,High income,Early movers,0.97,0.396,0.207
+PRK,Dem. People's Republic of Korea,Eastern and South-Eastern Asia,Low income,Fast movers,0.933,0.594,0.105
+PRT,Portugal,Europe and Northern America,High income,Early movers,1,0.804,0.532
+PRY,Paraguay,Latin America and the Caribbean,Upper middle income,Fast movers,0.997,0.458,0.386
+PSE,State of Palestine,Northern Africa and Western Asia,Lower middle income,Recent movers,0.939,0.385,0.057
+QAT,Qatar,Northern Africa and Western Asia,High income,Migration-led,1,0.301,0.344
+ROU,Romania,Europe and Northern America,High income,Early movers,1,0.867,0.565
+RUS,Russian Federation,Europe and Northern America,High income,Early movers,1,0.828,0.535
+RWA,Rwanda,Sub-Saharan Africa,Low income,Recent movers,1,0.674,0.417
+SAU,Saudi Arabia,Northern Africa and Western Asia,High income,Migration-led,0.938,0.375,-0.034
+SDN,Sudan,Northern Africa and Western Asia,Low income,Recent movers,1,0.616,0.356
+SEN,Senegal,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.746,0.439
+SGP,Singapore,Eastern and South-Eastern Asia,High income,Early movers,0.953,0.402,0.144
+SLE,Sierra Leone,Sub-Saharan Africa,Low income,Recent movers,1,0.666,0.419
+SLV,El Salvador,Latin America and the Caribbean,Upper middle income,Fast movers,0.995,0.518,0.302
+SOM,Somalia,Sub-Saharan Africa,Low income,Recent movers,1,0.728,0.469
+SRB,Serbia,Europe and Northern America,Upper middle income,Early movers,1,0.919,0.619
+SSD,South Sudan,Sub-Saharan Africa,Low income,Recent movers,1,0.627,0.412
+SVK,Slovakia,Europe and Northern America,High income,Early movers,1,0.886,0.572
+SVN,Slovenia,Europe and Northern America,High income,Early movers,1,0.958,0.651
+SWE,Sweden,Europe and Northern America,High income,Early movers,1,0.895,0.606
+SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,Recent movers,0.973,0.416,0.205
+SYR,Syrian Arab Republic,Northern Africa and Western Asia,Low income,Fast movers,0.98,0.447,0.088
+TCD,Chad,Sub-Saharan Africa,Low income,Recent movers,1,0.766,0.499
+TGO,Togo,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.774,0.461
+THA,Thailand,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.96,0.693,0.306
+TJK,Tajikistan,Central and Southern Asia,Lower middle income,Fast movers,0.968,0.592,0.108
+TKM,Turkmenistan,Central and Southern Asia,Upper middle income,Fast movers,0.998,0.634,0.366
+TLS,Timor-Leste,Eastern and South-Eastern Asia,Lower middle income,Recent movers,1,0.574,0.339
+TTO,Trinidad and Tobago,Latin America and the Caribbean,High income,Fast movers,0.967,0.644,0.214
+TUN,Tunisia,Northern Africa and Western Asia,Lower middle income,Fast movers,1,0.502,0.48
+TUR,Türkiye,Northern Africa and Western Asia,Upper middle income,Fast movers,0.98,0.684,0.538
+TWN,"China, Taiwan Province of China",Eastern and South-Eastern Asia,Not classified,Early movers,0.96,0.526,0.114
+TZA,United Republic of Tanzania,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.834,0.494
+UGA,Uganda,Sub-Saharan Africa,Low income,Recent movers,1,0.833,0.519
+UKR,Ukraine,Europe and Northern America,Upper middle income,Early movers,1,0.777,0.517
+URY,Uruguay,Latin America and the Caribbean,High income,Early movers,1,0.719,0.456
+USA,United States of America,Europe and Northern America,High income,Early movers,1,0.88,0.573
+UZB,Uzbekistan,Central and Southern Asia,Lower middle income,Fast movers,0.998,0.495,0.423
+VEN,Venezuela (Bolivarian Republic of),Latin America and the Caribbean,Lower middle income,Fast movers,0.968,0.549,0.459
+VNM,Viet Nam,Eastern and South-Eastern Asia,Upper middle income,Fast movers,0.976,0.688,0.536
+XKX,Kosovo (under UNSC res. 1244),Europe and Northern America,Upper middle income,Fast movers,1,0.447,0.408
+YEM,Yemen,Northern Africa and Western Asia,Low income,Recent movers,1,0.682,0.423
+ZAF,South Africa,Sub-Saharan Africa,Upper middle income,Fast movers,0.998,0.512,0.318
+ZMB,Zambia,Sub-Saharan Africa,Lower middle income,Recent movers,1,0.726,0.446
+ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,Recent movers,0.971,0.432,0.217
