@@ -35,7 +35,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "cdr_prt": {
     "value": 11.113,
@@ -73,7 +74,8 @@
     "used_in": ["slide3.build1.footnote"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "cdr_tcd": {
     "value": 11.032,
@@ -111,7 +113,8 @@
     "used_in": ["slide3.build1.footnote"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "eigen_null_p95_12": {
     "value": [1.5848, 1.4284, 1.3106, 1.2232],
@@ -149,7 +152,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "eigen_pca_12": {
     "value": [6.8008, 2.1462, 1.1537, 0.8302],
@@ -187,7 +191,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "hyp_q2_status": {
     "value": [
@@ -268,7 +273,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "index_eff_weights": {
     "value": {
@@ -312,7 +318,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "index_highlight": {
     "value": "United Arab Emirates",
@@ -350,7 +357,8 @@
     "used_in": ["appendix.bump"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "index_most_uncertain": {
     "value": [
@@ -453,7 +461,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_chance": {
     "value": 3.125,
@@ -491,7 +500,8 @@
     "used_in": ["slide3.build2", "fig08"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_lex": {
     "value": 17.3913043478261,
@@ -529,7 +539,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_medage": {
     "value": 15.0310559006211,
@@ -567,7 +578,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_pc1": {
     "value": 20.3726708074534,
@@ -605,7 +617,8 @@
     "used_in": ["slide3.build2", "fig08"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_pc12": {
     "value": 43.2298136645963,
@@ -643,7 +656,8 @@
     "used_in": ["slide3.build2", "fig08"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_pc12_minus_tfr": {
     "value": 30.0621118012422,
@@ -681,7 +695,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_pc123": {
     "value": 64.7204968944099,
@@ -719,7 +734,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_tfr": {
     "value": 13.167701863354,
@@ -757,7 +773,8 @@
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_tfr_cdr": {
     "value": 31.055900621118,
@@ -795,7 +812,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "knn_tfr_cnmr": {
     "value": 21.9875776397516,
@@ -833,7 +851,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lex_gap_prt_tcd": {
     "value": 27.2907,
@@ -871,7 +890,8 @@
     "used_in": ["slide3.build1.footnote"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_are_12": {
     "value": ["Oman", "Kuwait", "Bahrain", "Saudi Arabia", "Qatar"],
@@ -909,7 +929,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_are_12_iso": {
     "value": ["OMN", "KWT", "BHR", "SAU", "QAT"],
@@ -947,7 +968,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_are_tfr": {
     "value": ["Lithuania", "Italy", "Belarus", "Japan", "Thailand"],
@@ -985,7 +1007,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_are_tfr_iso": {
     "value": ["LTU", "ITA", "BLR", "JPN", "THA"],
@@ -1023,7 +1046,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_12": {
     "value": ["Iran (Islamic Republic of)", "Peru", "Ecuador", "Panama", "Tunisia"],
@@ -1061,7 +1085,8 @@
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_12_iso": {
     "value": ["IRN", "PER", "ECU", "PAN", "TUN"],
@@ -1099,7 +1124,8 @@
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_overlap": {
     "value": 0,
@@ -1137,7 +1163,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_pc12": {
     "value": ["Iran (Islamic Republic of)", "Ecuador", "Peru", "Panama", "Israel"],
@@ -1175,7 +1202,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_pc12_iso": {
     "value": ["IRN", "ECU", "PER", "PAN", "ISR"],
@@ -1213,7 +1241,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_tfr": {
     "value": ["France", "Australia", "Türkiye", "United States of America", "New Zealand"],
@@ -1251,7 +1280,8 @@
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lookalikes_col_tfr_iso": {
     "value": ["FRA", "AUS", "TUR", "USA", "NZL"],
@@ -1289,7 +1319,8 @@
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_band_tfr": {
     "value": 39,
@@ -1327,7 +1358,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cnmr_winsorized_2023": {
     "value": 7,
@@ -1365,7 +1397,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_dims_parallel": {
     "value": 2,
@@ -1403,7 +1436,8 @@
     "used_in": ["slide3.build3", "fig09", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_knn_tfr_zero": {
     "value": 90,
@@ -1441,7 +1475,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_pairs_twins": {
     "value": 12880,
@@ -1479,7 +1514,8 @@
     "used_in": ["slide3.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_pcs_70": {
     "value": 2,
@@ -1517,7 +1553,8 @@
     "used_in": ["slide3.build3", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_tests_q2": {
     "value": 7,
@@ -1555,7 +1592,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "nat_max_band": {
     "value": 12.408,
@@ -1593,7 +1631,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "nat_min_band": {
     "value": -5.935,
@@ -1631,7 +1670,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "omega": {
     "value": 0.953669427327399,
@@ -1669,7 +1709,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "partial_r_tfr_lex": {
     "value": 0.0957812616785273,
@@ -1707,7 +1748,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pc1_var": {
     "value": 56.6735086062963,
@@ -1745,7 +1787,8 @@
     "used_in": ["slide3.build3", "fig09"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pc12_var": {
     "value": 74.5584405301283,
@@ -1783,7 +1826,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pc2_var": {
     "value": 17.8849319238319,
@@ -1821,7 +1865,8 @@
     "used_in": ["fig09", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pc2_var_no_gulf": {
     "value": 13.3037171462401,
@@ -1859,7 +1904,8 @@
     "used_in": ["slide3.build3", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_nat_medage_band": {
     "value": -0.909694220780212,
@@ -1897,7 +1943,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_tfr_pc1": {
     "value": -0.944774736164088,
@@ -1935,7 +1982,8 @@
     "used_in": ["slide3.build3", "fig09"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_tfr_pc2": {
     "value": 0.0334787165655158,
@@ -1973,7 +2021,8 @@
     "used_in": ["slide3.build3", "fig09"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_all": {
     "value": 0.985853690237514,
@@ -2011,7 +2060,8 @@
     "used_in": ["slide3.build1.footnote", "fig07"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_ladder_tfr_cdr": {
     "value": 0.696517628917462,
@@ -2049,7 +2099,8 @@
     "used_in": ["slide3.build1.footnote"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_nat_tfr_belowrepl": {
     "value": 0.360287319949302,
@@ -2087,7 +2138,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_nat_tfr_medage_belowrepl": {
     "value": 0.82592981954767,
@@ -2125,7 +2177,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oot_growth_today": {
     "value": -0.158097831378948,
@@ -2163,7 +2216,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oot_medage": {
     "value": 0.473228664355076,
@@ -2201,7 +2255,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oot_tfr": {
     "value": 0.477629552164492,
@@ -2239,7 +2294,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oot_tfr_cdr": {
     "value": 0.567219228198055,
@@ -2277,7 +2333,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oot_tfr_cdr_cnmr": {
     "value": 0.471302830736315,
@@ -2315,7 +2372,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_chg2050": {
     "value": 0.881030904621359,
@@ -2353,7 +2411,8 @@
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_chg2050_cv": {
     "value": 0.878419977878847,
@@ -2391,7 +2450,8 @@
     "used_in": ["slide3.build1", "fig07"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_chg2050_cv_loso": {
     "value": 0.867514530252745,
@@ -2429,7 +2489,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_chg27_observed": {
     "value": {
@@ -2440,7 +2501,7 @@
     "unit": "R2",
     "fmt": "0.00",
     "say": null,
-    "def": "Adjusted R² of the OBSERVED % population change over 27 years (origin 1950–1996) on TFR at the origin (min / median / max across origins); compare with 0.88 for the UN-projected 2023→2050 change",
+    "def": "Adjusted R² of the OBSERVED % population change over 27 years (origin 1950–1996) on TFR at the origin (OLS, one regression per origin year; min / median / max across origins); change = 100 × (population on 1 July of year t + 27 / population on 1 July of year t − 1), the same 1 July convention as the UN-projected 2023→2050 change (adjusted R² 0.88)",
     "filter": "161 countries ≥ 1 M; UN estimates 1950–2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -2471,7 +2532,8 @@
     "used_in": ["slide3.build1.footnote", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_cnmr": {
     "value": -0.00126774884178693,
@@ -2509,7 +2571,8 @@
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_cnmr_by_year": {
     "value": {
@@ -2551,7 +2614,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_cnmr_cv": {
     "value": -0.0268493717298124,
@@ -2589,7 +2653,8 @@
     "used_in": ["slide3.build1", "fig07"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_cnmr_cv_loso": {
     "value": -0.0614328350527766,
@@ -2627,7 +2692,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_growth": {
     "value": 0.589933990054387,
@@ -2665,7 +2731,8 @@
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_growth_by_year": {
     "value": {
@@ -2707,7 +2774,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_growth_cv": {
     "value": 0.581303269451663,
@@ -2745,7 +2813,8 @@
     "used_in": ["slide3.build1", "fig07"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_growth_cv_loso": {
     "value": 0.550744868478105,
@@ -2783,7 +2852,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_medage": {
     "value": 0.771149426913637,
@@ -2821,7 +2891,8 @@
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_medage_by_year": {
     "value": {
@@ -2863,7 +2934,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_medage_cv": {
     "value": 0.76561255611944,
@@ -2901,7 +2973,8 @@
     "used_in": ["slide3.build1", "fig07"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_tfr_medage_cv_loso": {
     "value": 0.738445821489669,
@@ -2939,7 +3012,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rank_range_ukr": {
     "value": {
@@ -2980,7 +3054,8 @@
     "used_in": ["appendix.bump"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "recov_pc1": {
     "value": 0.566735086062964,
@@ -3018,7 +3093,8 @@
     "used_in": ["slide3.build2.note", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "recov_pc12": {
     "value": 0.745584405301283,
@@ -3056,7 +3132,8 @@
     "used_in": ["slide3.build2.note", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "recov_tfr": {
     "value": 0.508568936576768,
@@ -3094,7 +3171,8 @@
     "used_in": ["slide3.build2.note", "notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_cdr_lex_1950": {
     "value": -0.973921670117322,
@@ -3132,7 +3210,8 @@
     "used_in": ["slide3.build1.footnote", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_cdr_lex_2023": {
     "value": 0.0672317598572176,
@@ -3170,7 +3249,8 @@
     "used_in": ["slide3.build1.footnote", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_cdr_lex_2050": {
     "value": 0.440764061971058,
@@ -3208,7 +3288,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_cdr_medage_2023": {
     "value": 0.457499424890729,
@@ -3246,7 +3327,8 @@
     "used_in": ["slide3.build1.footnote"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_index_le60": {
     "value": 0.866695422130205,
@@ -3284,7 +3366,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_rank_7var_min": {
     "value": 0.9698642742121,
@@ -3322,7 +3405,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_rank_7var": {
     "value": 9.3167701863354,
@@ -3360,14 +3444,15 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_rank_mc20": {
     "value": 21.7391304347826,
     "unit": "%",
     "fmt": "0",
     "say": "one country in five",
-    "def": "Share of countries whose 90 % rank interval is wider than 20 places across 2,000 index designs (5 indicators; Dirichlet(5) weights; z / min–max / rank normalization; arithmetic / geometric; growth included at random)",
+    "def": "Share of countries whose 90 % rank interval (5th to 95th percentile of their ranks, R quantile type 7) is wider than 20 places across 2,000 random index designs (seed 2026): 5 indicators oriented so that higher = more advanced; Dirichlet(5) weights; normalization z / min–max / percentile rank and aggregation arithmetic / geometric, each drawn with equal probability; population growth included with probability 0.5; the geometric mean is taken on min–max scores (also when z is drawn) or on rank scores, floored at 0.01",
     "filter": "161 countries ≥ 1 M people (2023); UN estimates for 2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -3398,7 +3483,8 @@
     "used_in": ["slide3.build4", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_rank_mc20_sens": {
     "value": {
@@ -3441,7 +3527,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twin_growth_are": {
     "value": 3.704,
@@ -3479,7 +3566,8 @@
     "used_in": ["slide3.build2", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twin_growth_blr": {
     "value": -0.653,
@@ -3517,7 +3605,8 @@
     "used_in": ["slide3.build2", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twin_tfr_are": {
     "value": 1.2,
@@ -3555,7 +3644,8 @@
     "used_in": ["slide3.build2", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twin_tfr_blr": {
     "value": 1.2076,
@@ -3593,7 +3683,8 @@
     "used_in": ["slide3.build2", "narration.s3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twins": {
     "value": [
@@ -3692,7 +3783,8 @@
     "used_in": ["slide3.build2", "fig08"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twins_lex_medage": {
     "value": [
@@ -3791,7 +3883,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "twins_other_rules": {
     "value": [
@@ -3860,7 +3953,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "vif_max_12": {
     "value": 334.775435621831,
@@ -3898,7 +3992,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_rho_cdr_lex_cross0": {
     "value": 2022,
@@ -3936,6 +4031,7 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   }
 }

@@ -35,7 +35,8 @@
     "used_in": ["slide1.build5", "slide4.ethics"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "china_share_natchange_upmid": {
     "value": 29.5514,
@@ -73,7 +74,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "cnmr_are_2023": {
     "value": 28.19,
@@ -111,7 +113,8 @@
     "used_in": ["slide1.build5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "cover_flags": {
     "value": ["DE", "ES", "BE"],
@@ -149,7 +152,8 @@
     "used_in": ["cover.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "cox_hr_income_step": {
     "value": 2.3732,
@@ -187,7 +191,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "dur53_chn": {
     "value": 5.1026,
@@ -225,7 +230,8 @@
     "used_in": ["slide2.build1", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "dur53_egy": {
     "value": 32.748,
@@ -263,7 +269,8 @@
     "used_in": ["slide2.build1", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "dur53_fastest_ge10m": {
     "value": "CHN",
@@ -301,7 +308,8 @@
     "used_in": ["slide2.build1", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "dur53_slowest_ge10m": {
     "value": "EGY",
@@ -339,7 +347,8 @@
     "used_in": ["slide2.build1", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_momentum": {
     "value": ["India", "Brazil", "Mexico"],
@@ -377,7 +386,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_A": {
     "value": ["United States of America", "Egypt", "Iran (Islamic Republic of)"],
@@ -415,7 +425,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_A_iso3": {
     "value": ["USA", "EGY", "IRN"],
@@ -453,7 +464,8 @@
     "used_in": ["slide1.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_B": {
     "value": ["India", "Indonesia", "Pakistan"],
@@ -491,7 +503,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_B_iso3": {
     "value": ["IND", "IDN", "PAK"],
@@ -529,7 +542,8 @@
     "used_in": ["slide1.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_C": {
     "value": ["Germany", "Spain", "Belgium"],
@@ -567,7 +581,8 @@
     "used_in": ["slide1.build4", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_C_iso3": {
     "value": ["DEU", "ESP", "BEL"],
@@ -605,7 +620,8 @@
     "used_in": ["slide1.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_D": {
     "value": ["China", "Russian Federation", "Japan"],
@@ -643,7 +659,8 @@
     "used_in": ["slide1.build4", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_D_iso3": {
     "value": ["CHN", "RUS", "JPN"],
@@ -681,7 +698,8 @@
     "used_in": ["slide1.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_E": {
     "value": ["Nepal", "Azerbaijan", "Uruguay"],
@@ -719,7 +737,8 @@
     "used_in": ["slide1.build4", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "examples_type_E_iso3": {
     "value": ["NPL", "AZE", "URY"],
@@ -757,14 +776,15 @@
     "used_in": ["slide1.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "fig04_highlight_iso3": {
     "value": ["CHN", "COL", "EGY"],
     "unit": null,
     "fmt": "text",
     "say": null,
-    "def": "Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3, among those that reached 3",
+    "def": "Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3 (smoothed, last crossings), among the 36 that reached 3 by 2023; 'median' = the country whose duration is closest to the median duration (18.66 years; with an even number of countries the median falls between two of them)",
     "filter": "161 countries >= 1 M, estimates 1950-2023; TFR smoothed with cubic B-splines (2nd-derivative penalty, lambda = 10)",
     "n": 36,
     "universe": "161 countries ≥ 1 M",
@@ -795,7 +815,8 @@
     "used_in": ["slide2.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "gam_tfr_q5_100_high": {
     "value": 3.805,
@@ -833,7 +854,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "gam_tfr_q5_100_low": {
     "value": 5.9053,
@@ -871,7 +893,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "growth_are_2023": {
     "value": 3.704,
@@ -909,7 +932,8 @@
     "used_in": ["slide1.build5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "identity_residual_max": {
     "value": 4.862,
@@ -947,7 +971,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "india_share_natchange_lowmid": {
     "value": 40.1744,
@@ -985,7 +1010,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "km_dur53_1975_1990": {
     "value": 18.3497,
@@ -1023,7 +1049,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "km_dur53_post1990": {
     "value": 24.1495,
@@ -1061,7 +1088,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "km_dur53_pre1975": {
     "value": 19.5076,
@@ -1099,7 +1127,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "km_dur53_upto1990": {
     "value": 18.8403,
@@ -1137,7 +1166,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lag_onset_lower_bound": {
     "value": 22,
@@ -1175,7 +1205,8 @@
     "used_in": ["slide2.build2", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lag_onset_turnbull_mass_beyond": {
     "value": 0.6351,
@@ -1213,7 +1244,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lag_threshold_100_4_km": {
     "value": 14,
@@ -1251,14 +1283,15 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lisa_cnmr_hh_fdr": {
     "value": 7,
     "unit": "countries",
     "fmt": "0",
     "say": null,
-    "def": "Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5, conditional permutation) that survive Benjamini-Hochberg FDR at 5%",
+    "def": "Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5 with equal weights, conditional permutation with 999 draws; one-sided 'folded' pseudo p-value in the direction of the observed local I, (1 + number of permuted values at least as extreme) / (999 + 1), as in GeoDa) that survive Benjamini-Hochberg FDR at 5% over the 161 local tests",
     "filter": "161 countries >= 1 M, mean of annual estimates 2010-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -1289,7 +1322,8 @@
     "used_in": ["slide2.build4", "notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "lisa_cnmr_hh_fdr_iso3": {
     "value": ["ARE", "BHR", "IRN", "KWT", "OMN", "QAT", "SAU"],
@@ -1327,7 +1361,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "logrank_income_chisq": {
     "value": 73.3556,
@@ -1365,7 +1400,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_hi_countryfe_slope": {
     "value": -0.1561,
@@ -1403,7 +1439,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_hi_within_slope": {
     "value": 0.0072,
@@ -1441,7 +1478,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_share_between": {
     "value": 0.3268,
@@ -1479,7 +1517,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_share_between_excl_gulf": {
     "value": 0.0696,
@@ -1517,7 +1556,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_share_within": {
     "value": 0.8531,
@@ -1555,7 +1595,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "mig_share_within_excl_gulf": {
     "value": 0.7926,
@@ -1593,7 +1634,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "momentum_clock_chn_years": {
     "value": 30,
@@ -1631,7 +1673,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "momentum_clock_years_range": {
     "value": "32–40",
@@ -1669,7 +1712,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "momentum_years_to_peak_range": {
     "value": "24–34",
@@ -1707,7 +1751,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_cnmr_2023": {
     "value": 0.1143,
@@ -1745,7 +1790,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_cnmr_2023_nogulf": {
     "value": -0.0283,
@@ -1783,7 +1829,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_growth_2023": {
     "value": 0.5925,
@@ -1821,7 +1868,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_growth_rank_1950": {
     "value": 0.3392,
@@ -1859,7 +1907,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_growth_rank_2023": {
     "value": 0.6926,
@@ -1897,7 +1946,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_lex_2023": {
     "value": 0.6879,
@@ -1935,7 +1985,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_medage_2023": {
     "value": 0.7695,
@@ -1973,7 +2024,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "moran_tfr_2023": {
     "value": 0.735,
@@ -2011,7 +2063,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_below_repl_by_type": {
     "value": {
@@ -2055,7 +2108,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_below_repl_growing_2023": {
     "value": 84,
@@ -2093,7 +2147,8 @@
     "used_in": ["cover.build3", "narration.cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_below_repl_natural_growth_2023": {
     "value": 66,
@@ -2131,7 +2186,8 @@
     "used_in": ["cover.build3", "narration.cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_below_replacement_2023": {
     "value": 130,
@@ -2169,7 +2225,8 @@
     "used_in": ["cover.build2", "narration.cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cens_der": {
     "value": 26,
@@ -2207,7 +2264,8 @@
     "used_in": ["slide2.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cens_der_ssa": {
     "value": 23,
@@ -2245,7 +2303,8 @@
     "used_in": ["slide2.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cens_izq": {
     "value": 45,
@@ -2283,7 +2342,8 @@
     "used_in": ["slide2.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cnmr_sign_uncertain_2050": {
     "value": 155,
@@ -2321,7 +2381,8 @@
     "used_in": ["slide4.table"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_countries": {
     "value": 237,
@@ -2359,7 +2420,8 @@
     "used_in": ["slide1.build0", "cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_countries_1m": {
     "value": 161,
@@ -2397,7 +2459,8 @@
     "used_in": ["slide1.build0"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_cruce_tfr4_obs": {
     "value": 90,
@@ -2435,7 +2498,8 @@
     "used_in": ["slide2.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_dir_uncertain_2050": {
     "value": 77,
@@ -2473,7 +2537,8 @@
     "used_in": ["slide1.build5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_ge1m": {
     "value": 161,
@@ -2511,7 +2576,8 @@
     "used_in": ["slide1.build0", "slide1.build5", "slide3", "slide4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_grow_only_migration_2023": {
     "value": 18,
@@ -2549,7 +2615,8 @@
     "used_in": ["cover.build3", "slide1.build3", "slide1.message", "narration.cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_grow_only_migration_2023_1m": {
     "value": 11,
@@ -2587,7 +2654,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_grow_only_migration_sens_range": {
     "value": "15–25",
@@ -2625,7 +2693,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_hist_typeE_tfr3": {
     "value": 31,
@@ -2663,7 +2732,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_momentum_countries": {
     "value": 22,
@@ -2701,7 +2771,8 @@
     "used_in": ["slide1.build3", "narration.slide1", "slide4.table"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_momentum_emig": {
     "value": 18,
@@ -2739,7 +2810,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_mort_first_onset": {
     "value": 106,
@@ -2777,7 +2849,8 @@
     "used_in": ["slide2.build2", "slide2.message", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_onset": {
     "value": 109,
@@ -2815,7 +2888,8 @@
     "used_in": ["slide2.build2", "slide2.message", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_q5_falling_1950": {
     "value": 92,
@@ -2853,7 +2927,8 @@
     "used_in": ["slide2.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_sovereign": {
     "value": 195,
@@ -2891,7 +2966,8 @@
     "used_in": ["slide1.build0", "cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_states": {
     "value": 195,
@@ -2929,7 +3005,8 @@
     "used_in": ["slide1.build0", "cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_territories": {
     "value": 42,
@@ -2967,7 +3044,8 @@
     "used_in": ["slide1.build0", "cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_tests_q1": {
     "value": {
@@ -3011,7 +3089,8 @@
     "used_in": ["notebook.T17"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_A": {
     "value": 71,
@@ -3049,7 +3128,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_A_1m": {
     "value": 48,
@@ -3087,7 +3167,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_AB": {
     "value": 165,
@@ -3125,7 +3206,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_AB_1m": {
     "value": 120,
@@ -3163,7 +3245,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_B": {
     "value": 94,
@@ -3201,7 +3284,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_B_1m": {
     "value": 72,
@@ -3239,7 +3323,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_C": {
     "value": 18,
@@ -3277,7 +3362,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_C_1m": {
     "value": 11,
@@ -3315,7 +3401,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_D": {
     "value": 35,
@@ -3353,7 +3440,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_D_1m": {
     "value": 24,
@@ -3391,7 +3479,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_E": {
     "value": 19,
@@ -3429,7 +3518,8 @@
     "used_in": ["slide1.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_E_1m": {
     "value": 6,
@@ -3467,7 +3557,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "n_type_E_tfr_ge21": {
     "value": 6,
@@ -3505,7 +3596,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_between_halfq5": {
     "value": -1.0523,
@@ -3543,7 +3635,8 @@
     "used_in": ["slide2.build3", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_eurna_halfq5": {
     "value": 0.391,
@@ -3581,7 +3674,8 @@
     "used_in": ["slide2.build3", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_forward_sd": {
     "value": 0.2823,
@@ -3619,7 +3713,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_high_halfq5": {
     "value": -0.2768,
@@ -3657,7 +3752,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_i2_income": {
     "value": 0.6923,
@@ -3695,7 +3791,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_i2_region": {
     "value": 0.9056,
@@ -3733,7 +3830,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_lead": {
     "value": 0.282,
@@ -3771,7 +3869,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_low_income_halfq5": {
     "value": -0.9476,
@@ -3809,7 +3908,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_lowmid_halfq5": {
     "value": 0.0695,
@@ -3847,7 +3947,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_placebo_hi": {
     "value": 0.2554,
@@ -3885,7 +3986,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_placebo_lo": {
     "value": -0.2488,
@@ -3923,7 +4025,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_ratio_between_within": {
     "value": 2.5416,
@@ -3961,7 +4064,8 @@
     "used_in": ["slide2.build3", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_reverse_sd": {
     "value": 0.2157,
@@ -3999,7 +4103,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_ssa_halfq5": {
     "value": -1.1974,
@@ -4037,7 +4142,8 @@
     "used_in": ["slide2.build3", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_upmid_halfq5": {
     "value": 0.1103,
@@ -4075,7 +4181,8 @@
     "used_in": ["slide2.build3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_within_halfq5": {
     "value": -0.414,
@@ -4113,7 +4220,8 @@
     "used_in": ["slide2.build3", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "panel_within_over_between": {
     "value": 0.3935,
@@ -4151,7 +4259,8 @@
     "used_in": ["narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pct_var_fase": {
     "value": 79.8259,
@@ -4189,7 +4298,8 @@
     "used_in": ["slide2.build1", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pct_var_fase_c3": {
     "value": 70.7834,
@@ -4227,7 +4337,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pct_var_fase_c5": {
     "value": 76.5393,
@@ -4265,7 +4376,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_are_2050": {
     "value": 15.3674,
@@ -4303,7 +4415,8 @@
     "used_in": ["slide1.build5", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_are_2050_pi95_high": {
     "value": 33.2637,
@@ -4341,7 +4454,8 @@
     "used_in": ["slide1.build5", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_are_2050_pi95_low": {
     "value": 8.8863,
@@ -4379,7 +4493,8 @@
     "used_in": ["slide1.build5", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_are_2050_zero_mig": {
     "value": 12.3933,
@@ -4417,7 +4532,8 @@
     "used_in": ["slide1.build5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_are_2100": {
     "value": 26.1343,
@@ -4455,7 +4571,8 @@
     "used_in": ["notebook.T13"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "pop_momentum_bn": {
     "value": 2.201,
@@ -4493,7 +4610,8 @@
     "used_in": ["slide1.build3", "narration.slide1", "slide4.table"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "q5_drop_at_tfr_onset": {
     "value": 49.8865,
@@ -4531,7 +4649,8 @@
     "used_in": ["slide2.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_cnmr_1950_2023": {
     "value": 0.1386,
@@ -4569,7 +4688,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_cnmr_decades_max": {
     "value": 0.6916,
@@ -4607,7 +4727,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_cnmr_decades_min": {
     "value": 0.3169,
@@ -4645,7 +4766,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_cnmr_decades_recent": {
     "value": 0.6916,
@@ -4683,7 +4805,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r_tfr_decades_min": {
     "value": 0.9481,
@@ -4721,7 +4844,8 @@
     "used_in": ["slide2.build4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_fase_kr": {
     "value": 0.5578,
@@ -4759,7 +4883,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_in_m0": {
     "value": 0.0853,
@@ -4797,7 +4922,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_in_m1": {
     "value": 0.0856,
@@ -4835,7 +4961,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_in_m2": {
     "value": 0.1234,
@@ -4873,7 +5000,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_in_m3": {
     "value": 0.2084,
@@ -4911,7 +5039,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_in_m4": {
     "value": 0.2183,
@@ -4949,7 +5078,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oos_m0": {
     "value": 0.0723,
@@ -4987,7 +5117,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oos_m1": {
     "value": 0.0622,
@@ -5025,7 +5156,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oos_m2": {
     "value": 0.0835,
@@ -5063,7 +5195,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oos_m3": {
     "value": 0.1098,
@@ -5101,7 +5234,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "r2_oos_m4": {
     "value": 0.0659,
@@ -5139,7 +5273,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_q5_cnmr_within_high": {
     "value": -0.0748,
@@ -5177,7 +5312,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_q5_cnmr_within_low": {
     "value": 0.0754,
@@ -5215,7 +5351,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_q5_cnmr_within_lowmid": {
     "value": 0.1619,
@@ -5253,7 +5390,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_q5_cnmr_within_upmid": {
     "value": 0.1724,
@@ -5291,7 +5429,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "rho_q5_cnmr_world": {
     "value": -0.4513,
@@ -5329,7 +5468,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "shapley_mig_by_income_2023": {
     "value": {
@@ -5372,7 +5512,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "shapley_mig_high_2023": {
     "value": 0.505,
@@ -5410,7 +5551,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_cnmr_sign_kept": {
     "value": 76.3975,
@@ -5448,7 +5590,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_countries_mig_dominant_by_region": {
     "value": {
@@ -5495,7 +5638,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_high_2000_2023": {
     "value": 70.6835,
@@ -5533,7 +5677,8 @@
     "used_in": ["slide1.build2", "slide1.message", "narration.slide1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_high_2010_2023": {
     "value": 77.5404,
@@ -5571,7 +5716,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_high_sens_range": {
     "value": "64–78",
@@ -5609,7 +5755,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_high_un_agg": {
     "value": 63.9873,
@@ -5647,7 +5794,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_low_2000_2023": {
     "value": -3.677,
@@ -5685,7 +5833,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_lowmid_2000_2023": {
     "value": -8.5812,
@@ -5723,7 +5872,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_region_2000_2023": {
     "value": {
@@ -5770,7 +5920,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mig_upmid_2000_2023": {
     "value": -4.6122,
@@ -5808,7 +5959,8 @@
     "used_in": ["slide1.build2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mort_first": {
     "value": 97.2477,
@@ -5846,7 +5998,8 @@
     "used_in": ["slide2.build2", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mort_first_both_observed": {
     "value": 97.1963,
@@ -5884,7 +6037,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "share_mort_first_threshold_range": {
     "value": [15.9, 100],
@@ -5922,7 +6076,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "tfr_are_2023": {
     "value": 1.2,
@@ -5960,7 +6115,8 @@
     "used_in": ["slide1.build5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "type_concordance_2023_2021_23": {
     "value": 88.6076,
@@ -5998,7 +6154,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "world_pop_1950_bn": {
     "value": 2.4931,
@@ -6036,7 +6193,8 @@
     "used_in": ["cover.build1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "world_pop_2023_bn": {
     "value": 8.0917,
@@ -6074,7 +6232,8 @@
     "used_in": ["cover.build1", "narration.cover"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "year_europe_natneg": {
     "value": 2015,
@@ -6112,7 +6271,8 @@
     "used_in": ["notebook.T15"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_fert_onset_by_region": {
     "value": {
@@ -6158,7 +6318,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_fert_onset_high": {
     "value": 1970,
@@ -6196,7 +6357,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_fert_onset_low": {
     "value": 2000,
@@ -6234,7 +6396,8 @@
     "used_in": ["slide2.build2", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_fert_onset_lowmid": {
     "value": 1984,
@@ -6272,7 +6435,8 @@
     "used_in": ["slide2.build2", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   },
   "yr_fert_onset_upmid": {
     "value": 1970,
@@ -6310,6 +6474,7 @@
     "used_in": ["slide2.build2", "narration.slide2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": null
   }
 }

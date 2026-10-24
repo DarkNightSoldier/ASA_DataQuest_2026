@@ -5,6 +5,11 @@ los datos de *World Population Prospects 2024* (UN DESA, Population
 Division). Entrega: vídeo de 5 minutos + diapositivas (portada + hasta 4 de
 contenido + referencias), antes del último viernes de octubre de 2026.
 
+## Equipo
+
+**UNALSta-R** — Daniel C. Kwan, David S. Merchán, Jhon A. Mora y Alejandro Higuera.
+Estudiantes de Estadística, Universidad Nacional de Colombia, sede Bogotá. Detalle y metadatos en `docs/equipo.md`.
+
 ## Objetivo
 
 Responder, con datos de 237 países y 1950–2100, tres preguntas centrales (ver

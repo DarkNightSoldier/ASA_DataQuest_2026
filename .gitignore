@@ -61,3 +61,9 @@ notebook/*_files/
 notebook/*_cache/
 *.log
 !docs/instalacion_log.txt
+
+# ---------- Diapositivas / vídeo (regenerables) ----------
+video/raw/
+slides/export/pages/
+slides/dev/screenshots/steps/
+slides/js/numbers_data.js

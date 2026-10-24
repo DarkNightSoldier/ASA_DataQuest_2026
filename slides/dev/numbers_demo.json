@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "demo": true,
+    "note": "DEMO ONLY — invented values to test rendering of slides/index.html. NOT results. The real file is figures/numbers.json, produced by R/05_numbers_json.R. numbers.js loads this file only if ../figures/numbers.json and js/numbers_data.js are missing, and then shows a 'Demo numbers · not real' ribbon.",
+    "created": "2026-10-23"
+  },
+  "world_pop_2023_bn": {"value": 8.88, "unit": "bn", "fmt": "1", "say": "almost nine billion", "def": "DEMO — invented", "demo": true, "verified": false},
+  "n_below_replacement_2023": {"value": 111, "unit": "countries", "fmt": "0", "say": "one hundred eleven", "def": "DEMO — invented", "demo": true, "verified": true},
+  "n_below_repl_growing_2023": {"value": 77, "fmt": "0", "def": "DEMO — invented", "demo": true, "verified": false},
+  "n_below_repl_natural_growth_2023": {"value": 55, "fmt": "0", "def": "DEMO — invented", "demo": true, "verified": false},
+  "n_grow_only_migration_2023": {"value": 22, "fmt": "0", "sens_low": 11, "sens_high": 33, "def": "DEMO — invented", "demo": true, "verified": false},
+  "cover_flags": {"value": ["DE", "ES", "BE"], "def": "DEMO — invented list (ISO2)", "demo": true, "verified": false},
+  "share_mig_high_2000_2023": {"value": 66.6, "unit": "%", "fmt": "0", "say": "about two in three", "sens_low": 55.5, "sens_high": 77.7, "def": "DEMO — invented", "demo": true, "verified": false},
+  "twin_growth_blr": {"value": -0.44, "unit": "%", "fmt": "2", "def": "DEMO — invented negative value (tests U+2212 minus)", "demo": true, "verified": false},
+  "lookalikes_col_12": {"value": ["IRN", "PER", "ECU", "PAN", "TUN"], "def": "DEMO — invented list (ISO3)", "demo": true, "verified": false},
+  "team_name": {"value": "DEMO", "def": "DEMO — placeholder team name", "demo": true, "verified": false}
+}

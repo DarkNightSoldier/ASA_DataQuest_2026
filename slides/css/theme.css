@@ -1,0 +1,493 @@
+/* =============================================================================
+   theme.css — tema propio para las diapositivas del ASA DataQuest 2026
+   Lienzo 1920×1080 (reveal.js, margin 0). Todos los tamaños en px de diapositiva.
+   Reglas: docs/00_storyboard_diapositivas.md §8–§9 · docs/05_catalogo_visualizacion.md §4
+   - Fuente única Lato (instalada en el sistema); respaldo Noto Sans.
+   - Colores con significado único en todo el vídeo (Okabe-Ito + Tol). La paleta de
+     regiones e ingreso se define solo para el notebook/apéndice: NO usar en el vídeo.
+   - Modo vídeo: se reserva una franja para subtítulos (--cap-band).
+   - Modo PDF (?print-pdf → html.is-print): sin subtítulos, estado final de cada build,
+     transitorios (.print-hide) ocultos, solo-impresión (.print-only) visibles.
+   ============================================================================= */
+
+/* ---------- Fuentes (locales; sin descargas) ---------- */
+@font-face { font-family: "DeckLato"; font-weight: 400; font-style: normal;
+  src: local("Lato Regular"), local("Lato-Regular"), local("Lato"); }
+@font-face { font-family: "DeckLato"; font-weight: 400; font-style: italic;
+  src: local("Lato Italic"), local("Lato-Italic"); }
+@font-face { font-family: "DeckLato"; font-weight: 700; font-style: normal;
+  src: local("Lato Bold"), local("Lato-Bold"); }
+@font-face { font-family: "DeckLato"; font-weight: 900; font-style: normal;
+  src: local("Lato Black"), local("Lato-Black"); }
+
+:root {
+  /* ---------- Tipografía ---------- */
+  --font: "DeckLato", "Lato", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --fs-cover-title: 104px;
+  --fs-title: 46px;        /* 44–56 px (§8) */
+  --fs-qchip: 26px;
+  --fs-pcodes: 18px;
+  --fs-body: 30px;         /* 28–32 px */
+  --fs-head: 23px;         /* titular-mensaje de cada gráfica */
+  --fs-text: 22px;
+  --fs-note: 20px;         /* mínimo en el PDF (§9) */
+  --fs-foot: 18px;         /* pie fijo, notas finas */
+  --fs-caption: 34px;      /* subtítulos (§8) */
+  --fs-table: 20px;
+
+  /* ---------- Neutros ---------- */
+  --bg: #FFFFFF;
+  --ink: #15233B;          /* tinta oscura neutra (rótulos, mensaje) */
+  --text: #1C1C1C;
+  --muted: #5B6068;
+  --muted-2: #767B83;
+  --rule: #D6D8DC;
+  --panel: #F3F4F6;
+  --panel-2: #E9EBEF;
+
+  /* ---------- Componentes y tipos de palanca (Okabe-Ito, Slides 0–2) ---------- */
+  --c-births: #0072B2;      /* nacimientos · saldo natural · crece por nacimientos (A+B) */
+  --c-migration: #56B4E9;   /* migración neta · crece solo por llegadas (C) */
+  --c-deaths: #E69F00;      /* defunciones · decrece: muertes > nacimientos (D) · Q5 */
+  --c-emigration: #CC79A7;  /* decrece: salen más de los que llegan (E) */
+  --c-small: #999999;       /* microestados (< 1 M) / sin dato */
+  --c-type-ab: var(--c-births);
+  --c-type-c: var(--c-migration);
+  --c-type-d: var(--c-deaths);
+  --c-type-e: var(--c-emigration);
+  --c-type-na: var(--c-small);
+
+  /* ---------- Grupos de trayectoria (Paul Tol, Slide 4) ---------- */
+  --c-early: #332288;
+  --c-fast: #117733;
+  --c-recent: #DDCC77;
+  --c-migled: #88CCEE;
+
+  /* ---------- Proyección ---------- */
+  --c-proj: #B0B0B0;
+  --c-proj-bg: #F0F0F0;
+
+  /* ---------- Ingreso (viridis de R/config.R) — SOLO notebook/apéndice ----------
+     En el vídeo los grupos de ingreso se rotulan con texto, nunca con color,
+     para no chocar con la semántica azul/celeste/naranja/púrpura. */
+  --c-low: #440154;
+  --c-lower: #3B528B;
+  --c-upper: #21908C;
+  --c-high: #5DC863;
+  --c-noinc: #BBBBBB;
+
+  /* ---------- Regiones SDG (Okabe-Ito de R/config.R) — SOLO notebook/apéndice ---------- */
+  --c-region-ssa: #E69F00;
+  --c-region-nawa: #D55E00;
+  --c-region-csa: #CC79A7;
+  --c-region-esea: #0072B2;
+  --c-region-lac: #009E73;
+  --c-region-oce: #F0E442;
+  --c-region-anz: #56B4E9;
+  --c-region-euna: #000000;
+
+  /* ---------- Rejilla ---------- */
+  --safe: 64px;            /* márgenes seguros (§8) */
+  --pad-top: 46px;
+  --cap-band: 104px;       /* franja reservada a subtítulos en modo vídeo */
+  --foot-bottom: 30px;
+  --gap: 12px;
+}
+
+/* Modo PDF: sin franja de subtítulos y algo más de aire abajo */
+html.is-print { --cap-band: 0px; --foot-bottom: 26px; }
+
+/* ---------- Base reveal ---------- */
+html, body { background: var(--bg); }
+.reveal-viewport { background: var(--bg); }
+.reveal {
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: lining-nums;
+}
+.reveal .slides { text-align: left; }
+.reveal .slides > section { padding: 0; width: 1920px; height: 1080px; }
+.reveal .slides section * { box-sizing: border-box; }
+.reveal p { margin: 0; line-height: 1.28; }
+.reveal h1, .reveal h2, .reveal h3 { margin: 0; font-family: var(--font); color: var(--ink);
+  text-transform: none; letter-spacing: 0; text-shadow: none; }
+.reveal b, .reveal strong { font-weight: 700; }
+.reveal .fragment { transition: opacity .55s ease, visibility .55s ease, transform .55s ease; }
+.reveal.record-mode, .reveal.record-mode * { cursor: none !important; }
+
+/* ---------- Marco de cada diapositiva (no usar padding en <section>: el modo
+   impresión de reveal lo anula; el marco interno lleva la rejilla) ---------- */
+.frame {
+  position: absolute; left: 0; top: 0; width: 1920px; height: 1080px;
+  padding: var(--pad-top) var(--safe) 0 var(--safe);
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto var(--cap-band) auto;
+  row-gap: var(--gap);
+  overflow: hidden;
+}
+.frame > .content { position: relative; min-height: 0; min-width: 0; }
+.capband { pointer-events: none; }
+
+/* ---------- Cabecera: rótulo "Question N" + códigos P + navegador Q1–Q3 + título ---------- */
+.hdr { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto auto;
+  column-gap: 24px; row-gap: 8px; align-items: center; }
+.hdr-row { display: flex; align-items: center; gap: 14px; }
+.qchip { display: inline-block; background: var(--ink); color: #fff; font-weight: 900;
+  font-size: var(--fs-qchip); letter-spacing: .02em; padding: 5px 16px 6px; border-radius: 6px; line-height: 1.1; }
+.pcodes { color: var(--muted-2); font-size: var(--fs-pcodes); font-weight: 700; letter-spacing: .06em; }
+.title { grid-column: 1 / -1; font-weight: 900; font-size: var(--fs-title); line-height: 1.1;
+  color: var(--ink); text-wrap: balance; }
+.method { grid-column: 1 / -1; font-size: var(--fs-foot); color: var(--muted); letter-spacing: .01em; }
+.qnav { display: flex; gap: 8px; justify-self: end; grid-column: 2; grid-row: 1; }
+.qnav span { font-size: 18px; font-weight: 700; color: var(--muted); border: 2px solid var(--rule);
+  border-radius: 999px; padding: 3px 14px; line-height: 1.2; background: #fff; }
+.qnav span.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+/* ---------- Pie fijo (ethics badge PIE-0) ---------- */
+.ftr { display: flex; justify-content: space-between; align-items: baseline;
+  font-size: var(--fs-foot); color: var(--muted-2); margin-bottom: var(--foot-bottom);
+  border-top: 1px solid var(--rule); padding-top: 8px; line-height: 1.2; }
+.ftr .pageno { font-weight: 700; letter-spacing: .05em; }
+
+/* ---------- Mensaje de una línea + sello ---------- */
+.msgrow { display: flex; align-items: center; gap: 24px; min-height: 0; }
+.msg { flex: 1; font-size: 26px; font-weight: 700; color: var(--ink); line-height: 1.25;
+  border-left: 8px solid var(--ink); padding: 4px 0 4px 18px; text-wrap: pretty; }
+.stamp { flex: none; font-size: 19px; font-weight: 900; color: var(--ink); border: 2.5px solid var(--ink);
+  border-radius: 8px; padding: 6px 12px; letter-spacing: .03em; text-transform: uppercase; line-height: 1.15;
+  max-width: 300px; text-align: center; }
+.stamp small { display: block; font-size: 15px; font-weight: 700; letter-spacing: .08em; opacity: .85; margin-top: 2px; }
+/* recuadro de respuesta (Slides 2–4): sustituye a la línea de mensaje */
+.msgrow.answer { gap: 0; background: var(--panel); border-radius: 10px; border-left: 8px solid var(--ink); align-items: center; }
+.msgrow.answer .stamp { background: var(--ink); color: #fff; border: 0; margin: 8px 0 8px 12px; padding: 8px 14px; max-width: 250px; }
+.msgrow.answer .msg { border-left: 0; font-size: 23px; line-height: 1.25; padding: 8px 18px; }
+
+/* ---------- Bloques de texto ---------- */
+.head { font-size: var(--fs-head); font-weight: 700; color: var(--ink); line-height: 1.2; text-wrap: pretty; }
+.txt { font-size: var(--fs-text); line-height: 1.28; color: var(--text); }
+.note { font-size: var(--fs-note); line-height: 1.28; color: var(--muted); }
+.fn { font-size: var(--fs-foot); line-height: 1.3; color: var(--muted); }
+.big { font-weight: 900; }
+.k-births { color: var(--c-births); font-weight: 900; }
+.k-deaths { color: #B87A00; font-weight: 900; }     /* naranja oscurecido solo para TEXTO (contraste) */
+.k-mig { color: #1F86C2; font-weight: 900; }        /* celeste oscurecido solo para TEXTO */
+.arrow-up::before { content: "▲"; font-size: .8em; margin-right: 4px; color: var(--c-births); }
+.arrow-down::before { content: "▼"; font-size: .8em; margin-right: 4px; color: var(--c-deaths); }
+
+/* Chips de color semántico (texto sobre relleno, contraste AA) */
+.chip { display: inline-flex; align-items: center; gap: 10px; border-radius: 8px; padding: 6px 14px;
+  font-weight: 700; line-height: 1.15; }
+.chip.t-ab { background: var(--c-type-ab); color: #fff; }
+.chip.t-c  { background: var(--c-type-c); color: #0B2233; }
+.chip.t-d  { background: var(--c-type-d); color: #241600; }
+.chip.t-e  { background: var(--c-type-e); color: #2A0F20; }
+.sw { display: inline-block; width: 26px; height: 26px; border-radius: 5px; flex: none; }
+.sw.t-ab { background: var(--c-type-ab); } .sw.t-c { background: var(--c-type-c); }
+.sw.t-d { background: var(--c-type-d); }   .sw.t-e { background: var(--c-type-e); }
+.sw.t-na { background: var(--c-type-na); }
+.sw.g-early { background: var(--c-early); } .sw.g-fast { background: var(--c-fast); }
+.sw.g-recent { background: var(--c-recent); } .sw.g-migled { background: var(--c-migled); }
+
+/* ---------- Banderas (flag-icons) siempre con ISO3 ---------- */
+.flags { display: inline-flex; flex-wrap: wrap; gap: 6px 10px; vertical-align: middle; }
+.flagchip { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: .8em;
+  letter-spacing: .03em; color: var(--ink); white-space: nowrap; }
+.flagchip .fi { width: 1.5em; height: 1.125em; line-height: 1.125em; border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.18); background-size: cover; }
+.flagchip .iso { font-variant-numeric: tabular-nums; }
+
+/* ---------- Ranuras de figura y marcadores de posición ---------- */
+.slot { position: relative; margin: 0; min-height: 0; min-width: 0; overflow: hidden; }
+.slot > img, .slot > video, .slot > .fig-ph { position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; display: block; }
+.fig-ph { display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: repeating-linear-gradient(135deg, #E4E6EA 0 18px, #ECEEF1 18px 36px);
+  border: 2px dashed #A9AEB6; border-radius: 10px; color: #4A4F57; text-align: center; padding: 12px; }
+.fig-ph .ph-name { font-weight: 900; font-size: 22px; color: #2E333B; word-break: break-all; }
+.fig-ph .ph-path { font-size: 16px; font-family: "DejaVu Sans Mono", monospace; color: #5B6068; word-break: break-all; }
+.fig-ph .ph-size { font-size: 16px; font-weight: 700; color: #5B6068; }
+.overlay-fig { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+
+/* ---------- Cifras desde numbers.json ---------- */
+.num { white-space: nowrap; }
+html:not(.is-print):not(.qa-off) .num.missing,
+html:not(.is-print):not(.qa-off) .flags.missing { outline: 2px dashed #CC79A7; outline-offset: 2px; border-radius: 3px; }
+html:not(.is-print):not(.qa-off) .num.unverified { text-decoration: underline dotted #D55E00 2px; text-underline-offset: 5px; }
+html:not(.is-print):not(.qa-off) .num.unverified::after { content: "?"; font-size: 13px; line-height: 15px; font-weight: 900;
+  display: inline-block; width: 15px; height: 15px; text-align: center; color: #fff; background: #D55E00; border-radius: 50%;
+  margin-left: 2px; vertical-align: super; font-family: var(--font); font-style: normal; }
+html:not(.is-print):not(.qa-off) .flags.unverified { outline: 2px dotted #D55E00; outline-offset: 3px; border-radius: 4px; }
+.demo-ribbon { position: fixed; bottom: 26px; right: -70px; z-index: 50; transform: rotate(-35deg);
+  background: #CC79A7; color: #fff; font: 900 18px/1 var(--font); letter-spacing: .08em; padding: 8px 80px;
+  text-transform: uppercase; box-shadow: 0 2px 8px rgba(0,0,0,.25); pointer-events: none; }
+.demo-ribbon[hidden] { display: none; }
+
+/* ---------- Barra de subtítulos (fuera de .slides; escala con el visor 16:9) ---------- */
+.caption-bar {
+  --u: min(calc(100vw / 1920), calc(100vh / 1080));
+  position: fixed; z-index: 40; left: 0; right: 0; margin: 0 auto; width: fit-content; box-sizing: border-box;
+  bottom: calc((100vh - 1080 * var(--u)) / 2 + 78 * var(--u));
+  max-width: calc(1560 * var(--u)); min-height: calc(50 * var(--u));
+  padding: calc(8 * var(--u)) calc(26 * var(--u));
+  background: rgba(16, 24, 38, .78); color: #fff; border-radius: calc(10 * var(--u));
+  font-family: var(--font); font-weight: 700; font-size: calc(var(--fs-caption-n, 34) * var(--u));
+  line-height: 1.22; text-align: center; text-wrap: balance;
+  transition: opacity .25s ease; pointer-events: none;
+}
+.caption-bar.empty, html.captions-off .caption-bar, html.is-print .caption-bar { opacity: 0; }
+html.is-print .caption-bar { display: none !important; }
+
+/* ---------- Visibilidad por modo ---------- */
+.print-only { display: none !important; }
+html.is-print .print-only { display: revert !important; }
+html.is-print .print-only.flexed { display: flex !important; }
+html.is-print .print-hide { display: none !important; }
+
+/* =============================================================================
+   PORTADA
+   ============================================================================= */
+.cover .frame { grid-template-rows: auto minmax(0, 1fr) var(--cap-band) auto; }
+.cover .bg-dots { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.cover .bg-dots.fig-ph { opacity: .55; border: 0; border-radius: 0; }
+.cover .bg-dots.fig-ph .ph-name, .cover .bg-dots.fig-ph .ph-path, .cover .bg-dots.fig-ph .ph-size {
+  position: relative; top: -340px; opacity: .8; }
+.cover .frame > :not(.bg-dots) { position: relative; z-index: 1; }
+.cover .kicker { font-size: 22px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.cover .stage { display: grid; min-height: 0; }
+.cover .stage > * { grid-area: 1 / 1; }
+.hook { align-self: center; display: flex; flex-direction: column; gap: 26px; max-width: 1500px; }
+.hook .counter-wrap { display: flex; align-items: baseline; gap: 22px; }
+.hook .counter { font-size: 190px; font-weight: 900; color: var(--ink); line-height: .9; font-variant-numeric: tabular-nums; }
+.hook .counter-unit { font-size: 58px; font-weight: 900; color: var(--ink); }
+.hook .counter-year { font-size: 28px; color: var(--muted); font-weight: 700; margin-left: 12px; font-variant-numeric: tabular-nums; }
+.hook .line { font-size: 50px; font-weight: 900; color: var(--ink); line-height: 1.12; }
+.hook .line .n { font-size: 1.15em; }
+.hook .sub { font-size: 22px; color: var(--muted); margin-top: 6px; font-weight: 400; }
+.hook .split { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 14px; font-size: 32px; }
+.hook .split .chip { font-size: 32px; padding: 10px 20px; }
+.hook .split .chip .n { font-size: 44px; font-weight: 900; }
+.hook .split .flags { font-size: 30px; }
+.hook .punch { font-size: 72px; font-weight: 900; color: var(--ink); }
+.titleblock { align-self: center; display: flex; flex-direction: column; gap: 30px; max-width: 1560px; }
+.cover-title { font-size: var(--fs-cover-title); font-weight: 900; line-height: 1.0; color: var(--ink); letter-spacing: -.01em; }
+.cover-title .eight { color: var(--c-births); }
+.cover-sub { font-size: 34px; line-height: 1.3; color: var(--text); max-width: 1400px; }
+.cover-summary { font-size: 26px; font-weight: 700; color: var(--ink); }
+.cover-summary .t-ab-txt { color: var(--c-births); } .cover-summary .t-c-txt { color: #1F86C2; }
+.cover-questions { font-size: 22px; color: var(--muted); line-height: 1.35; }
+.cover-questions b { color: var(--ink); }
+.cover-questions .pc { color: var(--muted-2); font-size: 18px; font-weight: 700; letter-spacing: .05em; }
+.cover .teamline { font-size: 22px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 12px;
+  margin-bottom: var(--foot-bottom); }
+.cover .teamline b { color: var(--ink); }
+
+/* =============================================================================
+   SLIDE 1 — palancas (P7 · P4)
+   ============================================================================= */
+.grid-s1 { display: grid; height: 100%; column-gap: 34px; row-gap: 12px;
+  grid-template-columns: minmax(0, 41fr) minmax(0, 59fr);
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  grid-template-areas: "eq eq" "f01 map" "f01 leg" "ann leg"; }
+.s1 .equation { grid-area: eq; display: flex; align-items: baseline; gap: 34px; flex-wrap: wrap; }
+.s1 .equation .eqn { font-size: 34px; font-weight: 900; color: var(--ink); }
+.s1 .equation .eqn .op { color: var(--muted); font-weight: 700; padding: 0 6px; }
+.s1 .equation .def { font-size: 22px; color: var(--muted); }
+.s1 .f01 { grid-area: f01; display: grid; grid-template-rows: auto minmax(0, 1fr); row-gap: 6px; min-height: 0; }
+.s1 .ann01 { grid-area: ann; position: relative; background: var(--panel); border-radius: 10px; padding: 12px 16px 12px; }
+.s1 .ann01::before { content: ""; position: absolute; top: -14px; left: var(--arrow-x, 84%);
+  border: 14px solid transparent; border-top: 0; border-bottom-color: var(--panel); }
+.s1 .ann01 .head { font-size: 22px; }
+.s1 .f01 .head { font-size: 23px; }
+.s1 .mapbox { grid-area: map; position: relative; min-height: 0; }
+.s1 .mapbox > .slot { position: absolute; inset: 0; }
+.s1 .legend { grid-area: leg; display: flex; flex-direction: column; gap: 3px; align-self: end; }
+.lg-row { display: grid; grid-template-columns: 24px minmax(0, 330px) 56px minmax(0, 1fr); align-items: center;
+  column-gap: 12px; font-size: 21px; min-height: 31px; }
+.lg-row .sw { width: 24px; height: 24px; }
+.lg-row .lg-lab { font-weight: 700; color: var(--ink); line-height: 1.15; }
+.lg-row .lg-n { font-weight: 900; font-size: 26px; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+.lg-row .lg-ex { font-size: 19px; color: var(--text); line-height: 1.2; }
+.lg-row .lg-ex .flags { font-size: 21px; }
+.s1 .legend .fn { margin-top: 2px; }
+.uae-card { grid-area: map; align-self: end; justify-self: stretch; height: 226px; z-index: 4; margin: 0;
+  background: rgba(255,255,255,.97); border: 1.5px solid var(--rule); border-radius: 12px;
+  box-shadow: 0 -4px 22px rgba(20,30,50,.14); padding: 10px 14px; display: grid; overflow: hidden;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); column-gap: 14px; min-height: 0; }
+.uae-card .uae-txt { display: flex; flex-direction: column; gap: 4px; justify-content: center; min-width: 0; }
+.uae-card .head { font-size: 19px; line-height: 1.18; }
+.uae-card .fn { font-size: 18px; line-height: 1.22; }
+.uae-card .slot { min-height: 0; }
+.uae-card .range { font-size: 21px; font-weight: 900; color: var(--ink); }
+/* b0: tarjetas de preguntas (se encogen hacia el navegador al pasar a b1) */
+.qcards { grid-area: 1 / 1 / -1 / -1; z-index: 6; background: var(--bg); display: grid;
+  grid-template-rows: minmax(0, 1fr) auto; row-gap: 26px; transform-origin: 100% 0; }
+.qcards.visible { transform: translate(0, -120px) scale(.18); }
+.qcards .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; min-height: 0; }
+.qcard { background: var(--panel); border-radius: 16px; padding: 30px 30px 26px; display: flex; flex-direction: column; gap: 16px; }
+.qcard svg { width: 78px; height: 78px; stroke: var(--ink); fill: none; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.qcard .qk { font-size: 24px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.qcard .qq { font-size: 36px; font-weight: 900; color: var(--ink); line-height: 1.16; }
+.qcard .qp { font-size: 18px; color: var(--muted-2); font-weight: 700; letter-spacing: .06em; margin-top: auto; }
+.datacard { border: 2px solid var(--rule); border-radius: 14px; padding: 16px 22px; display: flex; flex-wrap: wrap;
+  gap: 8px 26px; font-size: 22px; color: var(--text); }
+.datacard .dk { font-weight: 900; color: var(--ink); margin-right: 6px; }
+.datacard .gr { display: inline-block; width: 40px; height: 14px; background: var(--c-proj); border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+
+/* =============================================================================
+   SLIDE 2 — mismo camino, distinta velocidad (P7 · P1)
+   ============================================================================= */
+.grid-s2 { display: grid; height: 100%; row-gap: 18px;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 0fr);
+  transition: grid-template-rows .9s ease; }
+/* b1: fig04 sola a toda la anchura y altura (héroe); b2: estado final de la fila superior */
+.s2.ge-2 .grid-s2 { grid-template-rows: minmax(0, 1.55fr) minmax(0, 1fr); }
+.s2 .row-top { display: grid; column-gap: 32px; min-height: 0; grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0fr); transition: grid-template-columns .9s ease; }
+.s2.ge-2 .row-top { grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); }
+.s2 .row-bot { display: grid; column-gap: 32px; min-height: 0; overflow: hidden; grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 58fr) minmax(0, 42fr); }
+.blk { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; row-gap: 8px; min-height: 0; min-width: 0; }
+.blk > .head { grid-row: 1; }
+.blk > .slot { grid-row: 2; }
+.blk > :last-child:not(.slot):not(.head) { grid-row: 3; }
+.blk .txtgroup { display: flex; flex-direction: column; gap: 4px; }
+.s2 .speed { font-size: 21px; font-weight: 700; color: var(--ink); }
+.s2 .txt { font-size: 20px; }
+.s2 .blk05 .slot { position: relative; }
+.callout { position: absolute; z-index: 3; background: rgba(255,255,255,.95); border: 2px solid var(--ink);
+  border-radius: 10px; padding: 6px 12px; font-size: 20px; font-weight: 700; color: var(--ink); line-height: 1.2;
+  max-width: 330px; }
+.s2 .callout { left: var(--tau0-x, 52%); top: 6%; }
+.chipbox { background: var(--panel); border-radius: 14px; padding: 12px 18px; display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+.chipbox .head { font-size: 24px; }
+.chipbox .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.chipbox .ck { font-size: 18px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.chipbox .cv { font-size: 20px; line-height: 1.28; }
+.chipbox .cv .big { font-size: 24px; }
+
+/* =============================================================================
+   SLIDE 3 — ¿un solo indicador? (P8 · P5)
+   ============================================================================= */
+.grid-s3 { display: grid; height: 100%; row-gap: 14px; grid-template-rows: minmax(0, 1fr) auto; }
+/* columnas fijas: las tres piezas aparecen en su sitio, de izquierda a derecha */
+.s3 .row-main { display: grid; column-gap: 30px; min-height: 0; grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 33fr) minmax(0, 31fr) minmax(0, 36fr); }
+.s3 .blk08 { display: flex; flex-direction: column; gap: 12px; min-width: 0; min-height: 0; }
+.s3 .blk08 > .fragment:not(.card) { display: flex; flex-direction: column; gap: 10px; }
+.s3 .blk08 .card .fn { font-size: 17px; }
+.s3 .metric { font-size: 20px; }
+.s3 .metric { font-weight: 700; color: var(--ink); line-height: 1.24; }
+.s3 .metric .big { font-size: 25px; }
+.card { border: 1.5px solid var(--rule); border-radius: 14px; padding: 9px 14px; display: flex; flex-direction: column; gap: 4px; background: #fff; }
+.card .card-k { font-size: 17px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.card .card-v { font-size: 20px; line-height: 1.25; }
+.card .flags { font-size: 22px; }
+.twin-pair { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; }
+.twin-pair .vs { color: var(--muted); font-weight: 400; }
+.p5strip { display: flex; align-items: center; gap: 18px; background: var(--panel); border-radius: 12px; padding: 12px 18px; }
+.p5strip .p5k { flex: none; font-size: 18px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.p5strip .txt { font-size: 22px; }
+
+/* =============================================================================
+   SLIDE 4 — cuatro caminos (P6 · P1) + recomendaciones + ética
+   ============================================================================= */
+.grid-s4 { display: grid; height: 100%; row-gap: 14px;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 0fr) minmax(0, 0fr);
+  transition: grid-template-rows .9s ease; }
+/* b1–b2: figuras (ranura de diseño); b3: entra la tabla; b4: la ética sustituye a la tabla */
+.s4.ge-3 .grid-s4 { grid-template-rows: minmax(0, 0.85fr) minmax(0, 1fr) minmax(0, 0fr); }
+.s4.ge-4 .grid-s4 { grid-template-rows: minmax(0, 0.85fr) minmax(0, 0fr) minmax(0, 1fr); }
+.s4 .row-top { display: grid; column-gap: 30px; min-height: 0; grid-template-rows: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); }
+/* en vídeo, desde b3 la leyenda y las notas ya narradas se retiran para dejar sitio a la figura */
+html:not(.is-print) .s4.ge-3 .blk10 .glegend, html:not(.is-print) .s4.ge-3 .blk10 .nb,
+html:not(.is-print) .s4.ge-3 .blk11 .fn, html:not(.is-print) .s4.ge-3 .blk11 > .head { display: none; }
+.s4 .blk10 { grid-template-rows: minmax(0, 1fr) auto auto; }
+.s4 .blk10 > .slot { grid-row: 1; }
+.s4 .blk10 > .glegend { grid-row: 2; }
+.s4 .blk10 > .nb { grid-row: 3; }
+.glegend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.gitem { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; font-size: 18px; min-width: 0; }
+.gitem .sw { width: 22px; height: 22px; }
+.gitem .gname { font-weight: 900; color: var(--ink); font-size: 20px; }
+.gitem .gmeta { color: var(--muted); font-weight: 400; font-size: 18px; white-space: nowrap; }
+.gitem .flags { font-size: 18px; }
+.s4 .nb { display: flex; flex-direction: column; gap: 2px; }
+.s4 .nb .head { font-size: 21px; }
+.s4 .tblwrap { min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }
+.watch { width: 100%; border-collapse: collapse; font-size: var(--fs-table); line-height: 1.22; table-layout: fixed; }
+.watch th { text-align: left; font-size: 17px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted); border-bottom: 2px solid var(--ink); padding: 4px 8px 6px; }
+.watch td { vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--rule); }
+.watch td:first-child { font-weight: 700; color: var(--ink); }
+.watch .road { white-space: normal; }
+.watch tr.row { opacity: 0; transform: translateY(8px); transition: opacity .5s ease, transform .5s ease; }
+.s4.ge-3 .watch tr.row { opacity: 1; transform: none; }
+.s4.ge-3 .watch tr.row:nth-child(2) { transition-delay: .5s; }
+.s4.ge-3 .watch tr.row:nth-child(3) { transition-delay: 1s; }
+.s4.ge-3 .watch tr.row:nth-child(4) { transition-delay: 1.5s; }
+.s4.ge-3 .watch tr.row:nth-child(5) { transition-delay: 2s; }
+.ethics { min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 10px; }
+.ethics .eth-hd { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.ethics .eth-title { font-size: 28px; font-weight: 900; color: var(--ink); }
+.ethics .cards5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; min-height: 0; }
+.ecard { background: var(--panel); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.ecard .et { font-size: 24px; font-weight: 900; color: var(--ink); line-height: 1.15; }
+.ecard .ex { font-size: 21px; line-height: 1.26; }
+.ecard .ec { font-size: 18px; color: var(--muted-2); font-weight: 700; margin-top: auto; }
+.callback { position: absolute; inset: 0; z-index: 30; background: var(--ink); color: #fff; border-radius: 0;
+  display: flex; align-items: center; justify-content: center; padding: 120px 160px; }
+.callback p { font-size: 70px; font-weight: 900; line-height: 1.15; text-wrap: balance; color: #fff; }
+.callback p .soft { color: #A9C8E8; }
+
+/* =============================================================================
+   REFERENCIAS
+   ============================================================================= */
+.refs .cols2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; height: 100%; align-content: start; }
+.refs h3 { font-size: 22px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.refs ul { list-style: none; margin: 0 0 22px; padding: 0; }
+.refs li { font-size: 22px; line-height: 1.3; margin: 0 0 8px; padding-left: 18px; position: relative; color: var(--text); }
+.refs li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 2px; background: var(--ink); }
+.refs .disclaimer { font-size: 18px; color: var(--muted); }
+
+/* =============================================================================
+   MODO PDF — estado final legible en una página (§9)
+   ============================================================================= */
+html.is-print .reveal .fragment { transition: none !important; }
+html.is-print .grid-s1 { grid-template-rows: auto minmax(0, 1fr) auto auto;
+  grid-template-areas: "eq eq" "f01 map" "ann leg" "uae uae"; }
+html.is-print .s1 .legend { align-self: start; }
+html.is-print .uae-card { grid-area: uae; align-self: stretch; justify-self: stretch; width: auto; height: 172px;
+  box-shadow: none; grid-template-columns: minmax(0, 1fr) 560px; }
+html.is-print .s2 .grid-s2 { grid-template-rows: minmax(0, 1.5fr) minmax(0, 1fr); transition: none; }
+html.is-print .s2 .row-top { grid-template-columns: minmax(0, 44fr) minmax(0, 56fr); transition: none; }
+html.is-print .s3 .row-main { grid-template-columns: minmax(0, 33fr) minmax(0, 31fr) minmax(0, 36fr); transition: none; }
+html.is-print .s4 .grid-s4 { grid-template-rows: minmax(0, 1fr) auto auto; transition: none; }
+html.is-print .s4 .row-top { grid-template-columns: minmax(0, 55fr) minmax(0, 45fr); transition: none; }
+html.is-print .s4 .blk11 > .head { font-size: 21px; }
+html.is-print .s4 .watch tr.row { opacity: 1; transform: none; }
+html.is-print .ethics { gap: 6px; }
+html.is-print .ethics .eth-title { font-size: 22px; }
+html.is-print .ethics .stamp { font-size: 17px; padding: 3px 10px; max-width: none; }
+html.is-print .ethics > .fn { display: none; }
+/* PDF: franja mínima de ética (títulos + códigos ASA; docs/04_etica_ASA_aplicada.md §3.1 "versión mínima");
+   el texto completo de cada tarjeta se ve en el vídeo (build 4) */
+html.is-print .ethics .cards5 { display: flex; flex-wrap: wrap; gap: 6px 10px; }
+html.is-print .ecard { padding: 4px 12px; flex-direction: row; align-items: baseline; gap: 8px; border-radius: 8px; }
+html.is-print .ecard .et { font-size: 20px; }
+html.is-print .ecard .ec { font-size: 18px; margin-top: 0; }
+html.is-print .ecard .ex { display: none; }
+/* PDF: la leyenda de grupos va dentro de fig10 (etiqueta por panel, storyboard §5) → se oculta aquí */
+html.is-print .s4 .glegend { display: none; }
+html.is-print .ethics { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
+html.is-print .ethics .eth-hd { flex: none; }
+html.is-print .s4 .nb .head { font-size: 20px; }
+html.is-print .s4 .method { line-height: 1.2; }
+html.is-print .s4 .watch td { padding: 3px 8px; line-height: 1.18; }
+html.is-print .s4 .msgrow.answer .msg { font-size: 21px; padding: 4px 16px; }
+html.is-print .s4 .msgrow.answer .stamp { padding: 4px 12px; margin: 4px 0 4px 10px; }
+html.is-print .gitem { flex-wrap: nowrap; }
+html.is-print .watch td { padding: 4px 8px; }

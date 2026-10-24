@@ -1,0 +1,38 @@
+{
+  "team_name": "UNALSta-R",
+  "members": [
+    "Daniel C. Kwan",
+    "David S. Merchán",
+    "Jhon A. Mora",
+    "Alejandro Higuera"
+  ],
+  "institution": "Universidad Nacional de Colombia",
+  "institution_en": "Universidad Nacional de Colombia, Bogotá campus",
+  "sede": "Bogotá",
+  "program": "Estadística",
+  "program_en": "Statistics",
+  "affiliation_line": "UNALSta-R · Statistics students · Universidad Nacional de Colombia, Bogotá",
+  "country": "Colombia",
+  "contact_email": "alejoh1029@gmail.com",
+  "competition": "ASA International DataQuest 2026",
+  "data": "UN World Population Prospects 2024, Medium variant, CC BY 3.0 IGO",
+  "repo_url": null,
+  "repo": null,
+  "submission_deadline": "2026-10-30",
+  "hyp_file_date": "2026-10-23",
+  "hyp_file_sha256_short": "83f98f6e1a3d",
+  "n_states": 195,
+  "n_territories": 42,
+  "world_pop_1950_bn": 2.49,
+  "are_revision_pct": null,
+  "momentum_years_range": null,
+  "n_census_pre2009": null,
+  "_notas": {
+    "sede_program_affiliation_line": "Confirmado por el equipo: estudiantes de Estadística de la Universidad Nacional de Colombia, sede Bogotá. 'affiliation_line' es el texto exacto en inglés para la portada de las diapositivas; 'program_en' e 'institution_en' son sus componentes.",
+    "repo_url_y_repo": "Pendiente de crear el repositorio publico. 'repo' = 'usuario/repositorio' (la diapositiva escribe github.com/<repo>); 'repo_url' = URL completa.",
+    "hyp_file_sha256_short": "Primeros 12 caracteres de sha256sum docs/hipotesis_preinscritas.md (hash completo 83f98f6e1a3dbbcfa07b8435db7d11cc3eacc79faee9875591652bcbad3bb4b5, calculado el 2026-10-23). Recalcular si el archivo se modifica.",
+    "n_states_n_territories": "Sobre las 237 ubicaciones con ISO3 de data/processed/lookup_regiones.csv (= paises.parquet). Estados = 193 miembros de la ONU + 2 observadores (Santa Sede VAT, Estado de Palestina PSE) = 195; territorios = 42 ubicaciones que no son miembros ni observadores (dependencias, regiones administrativas especiales y areas, incl. Kosovo XKX, Taiwan TWN, Sahara Occidental ESH), lista ISO3 explicita TERRITORIOS_42 en R/02_q1_palancas.R. Verificacion cruzada: countrycode (un.name.en) reconoce 193 de los 195 Estados y ninguno de los 42 territorios; las excepciones son VAT y PSE (observadores).",
+    "world_pop_1950_bn": "Fila Location == 'World', Time == 1950 de data/processed/agregados.parquet: TPopulation1July = 2 493 093 (miles) / 1e6 = 2.49 miles de millones.",
+    "are_revision_pct_momentum_years_range_n_census_pre2009": "Pendiente del notebook/etica (docs/04_etica_ASA_aplicada.md); se rellenan desde R/05_numbers_json.R, no a mano."
+  }
+}

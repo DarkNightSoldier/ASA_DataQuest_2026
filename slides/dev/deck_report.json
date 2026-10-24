@@ -1,0 +1,334 @@
+{
+  "numbers_source": "dev/numbers_demo.json",
+  "missing_keys": [
+    "are_revision_pct",
+    "cdr_prt",
+    "cdr_tcd",
+    "cluster_examples_early",
+    "cluster_examples_fast",
+    "cluster_examples_migration",
+    "cluster_examples_recent",
+    "cluster_pop_bn",
+    "cluster_sizes",
+    "cnmr_are_2023",
+    "dur53_chn",
+    "dur53_egy",
+    "examples_momentum",
+    "examples_type_C",
+    "examples_type_D",
+    "examples_type_E",
+    "growth_are_2023",
+    "hyp_file_date",
+    "hyp_file_sha256_short",
+    "join_same_road.say",
+    "join_same_road_null.say",
+    "knn_chance",
+    "knn_pc12",
+    "knn_tfr",
+    "lag_onset_lower_bound",
+    "lex_gap_prt_tcd",
+    "lookalikes_col_tfr",
+    "momentum_years_range",
+    "moran_cnmr_2023",
+    "moran_cnmr_2023_nogulf",
+    "moran_tfr_2023",
+    "n_cens_der",
+    "n_cens_izq",
+    "n_census_pre2009",
+    "n_dims_parallel",
+    "n_dir_uncertain_2050",
+    "n_ge1m",
+    "n_momentum_countries",
+    "n_mort_first_onset",
+    "n_natneg_2023",
+    "n_natneg_2050",
+    "n_onset",
+    "n_q5_falling_1950",
+    "n_sdg32_above",
+    "n_sdg32_above_2030",
+    "n_sdg32_on_pace",
+    "n_states",
+    "n_territories",
+    "n_twin_pairs",
+    "n_type_AB",
+    "n_type_C",
+    "n_type_D",
+    "n_type_E",
+    "panel_between_halfq5",
+    "panel_ssa_halfq5",
+    "panel_within_halfq5",
+    "pc1_var",
+    "pc1_var_sens_range",
+    "pct_var_fase",
+    "pop_are_2050",
+    "pop_are_2050_pi95_high",
+    "pop_are_2050_pi95_low",
+    "pop_momentum_bn",
+    "q5_drop_at_tfr_onset",
+    "q5_ratio_p90p10_1950",
+    "q5_ratio_p90p10_2023",
+    "r2_all",
+    "r_cnmr_decades_recent",
+    "r_tfr_decades_min",
+    "r_tfr_pc1",
+    "r_tfr_pc2",
+    "rec_rows",
+    "repo",
+    "sd_le65_1950",
+    "sd_le65_2023",
+    "sd_lex_1950",
+    "sd_lex_2023",
+    "sd_medage_1950",
+    "sd_medage_2023",
+    "share_between_groups.say",
+    "share_keep_ge_0.8",
+    "share_mort_first",
+    "share_pop_natneg_2023",
+    "share_rank_mc20",
+    "tfr_are_2023",
+    "twin_growth_are",
+    "twin_tfr_are",
+    "twin_tfr_blr",
+    "yr_fert_onset_low",
+    "yr_fert_onset_lowmid",
+    "yr_fert_onset_upmid",
+    "yrs_medage30_40_early",
+    "yrs_medage30_40_recent"
+  ],
+  "unverified_keys": [
+    "cover_flags",
+    "lookalikes_col_12",
+    "n_below_repl_growing_2023",
+    "n_below_repl_natural_growth_2023",
+    "n_grow_only_migration_2023",
+    "n_grow_only_migration_sens_range",
+    "share_mig_high_2000_2023",
+    "share_mig_high_sens_range",
+    "team_name",
+    "twin_growth_blr",
+    "world_pop_2023_bn"
+  ],
+  "figures": {
+    "ok": [],
+    "poster": [],
+    "missing": [
+      "fig02_lever_map_2023",
+      "fig00_world_dots",
+      "fig03_uae_fan_2050",
+      "fig11_divergence_fan",
+      "fig05_mortality_first_event_time",
+      "fig06_within_vs_across_forest",
+      "fig01_growth_components_by_income",
+      "fig07_single_indicator_scorecard",
+      "fig04_same_road_registration",
+      "fig10_trajectory_groups",
+      "fig09_pca_two_dimensions",
+      "fig02b_lever_map_zoom"
+    ],
+    "optional_missing": [
+      "fig02_lever_map_2023_momentum",
+      "fig00_world_dots_growing",
+      "fig00_world_dots_below_replacement"
+    ]
+  },
+  "n_steps": 32,
+  "steps": [
+    {
+      "id": "cover.b1",
+      "h": 0,
+      "f": -1,
+      "build": "1"
+    },
+    {
+      "id": "cover.b2",
+      "h": 0,
+      "f": 0,
+      "build": "2"
+    },
+    {
+      "id": "cover.b3",
+      "h": 0,
+      "f": 1,
+      "build": "3"
+    },
+    {
+      "id": "cover.b4",
+      "h": 0,
+      "f": 2,
+      "build": "4"
+    },
+    {
+      "id": "cover.b5",
+      "h": 0,
+      "f": 3,
+      "build": "5"
+    },
+    {
+      "id": "s1.b0",
+      "h": 1,
+      "f": -1,
+      "build": "0"
+    },
+    {
+      "id": "s1.b1",
+      "h": 1,
+      "f": 0,
+      "build": "1"
+    },
+    {
+      "id": "s1.b2",
+      "h": 1,
+      "f": 1,
+      "build": "2"
+    },
+    {
+      "id": "s1.b3",
+      "h": 1,
+      "f": 2,
+      "build": "3"
+    },
+    {
+      "id": "s1.b3b",
+      "h": 1,
+      "f": 3,
+      "build": "3"
+    },
+    {
+      "id": "s1.b4a",
+      "h": 1,
+      "f": 4,
+      "build": "4"
+    },
+    {
+      "id": "s1.b4b",
+      "h": 1,
+      "f": 5,
+      "build": "4"
+    },
+    {
+      "id": "s1.b4c",
+      "h": 1,
+      "f": 6,
+      "build": "4"
+    },
+    {
+      "id": "s1.b5a",
+      "h": 1,
+      "f": 7,
+      "build": "5"
+    },
+    {
+      "id": "s1.b5b",
+      "h": 1,
+      "f": 8,
+      "build": "5"
+    },
+    {
+      "id": "s2.b0",
+      "h": 2,
+      "f": -1,
+      "build": "0"
+    },
+    {
+      "id": "s2.b1",
+      "h": 2,
+      "f": 0,
+      "build": "1"
+    },
+    {
+      "id": "s2.b2",
+      "h": 2,
+      "f": 1,
+      "build": "2"
+    },
+    {
+      "id": "s2.b3",
+      "h": 2,
+      "f": 2,
+      "build": "3"
+    },
+    {
+      "id": "s2.b4",
+      "h": 2,
+      "f": 3,
+      "build": "4"
+    },
+    {
+      "id": "s3.b0",
+      "h": 3,
+      "f": -1,
+      "build": "0"
+    },
+    {
+      "id": "s3.b1",
+      "h": 3,
+      "f": 0,
+      "build": "1"
+    },
+    {
+      "id": "s3.b2",
+      "h": 3,
+      "f": 1,
+      "build": "2"
+    },
+    {
+      "id": "s3.b3",
+      "h": 3,
+      "f": 2,
+      "build": "3"
+    },
+    {
+      "id": "s3.b4",
+      "h": 3,
+      "f": 3,
+      "build": "4"
+    },
+    {
+      "id": "s4.b0",
+      "h": 4,
+      "f": -1,
+      "build": "0"
+    },
+    {
+      "id": "s4.b1",
+      "h": 4,
+      "f": 0,
+      "build": "1"
+    },
+    {
+      "id": "s4.b2",
+      "h": 4,
+      "f": 1,
+      "build": "2"
+    },
+    {
+      "id": "s4.b3",
+      "h": 4,
+      "f": 2,
+      "build": "3"
+    },
+    {
+      "id": "s4.b4",
+      "h": 4,
+      "f": 3,
+      "build": "4"
+    },
+    {
+      "id": "s4.b5",
+      "h": 4,
+      "f": 4,
+      "build": "5"
+    },
+    {
+      "id": "refs",
+      "h": 5,
+      "f": -1,
+      "build": "0"
+    }
+  ],
+  "console": [
+    "warning: [numbers] 'share_mig_high_2000_2023.say' already starts with 'about'; the duplicate is dropped (storyboard: say without 'about')",
+    "warning: [numbers] 'share_mig_high_2000_2023.say' already starts with 'about'; the duplicate is dropped (storyboard: say without 'about')",
+    "warning: [numbers] missing keys (93): are_revision_pct, cdr_prt, cdr_tcd, cluster_examples_early, cluster_examples_fast, cluster_examples_migration, cluster_examples_recent, cluster_pop_bn, cluster_sizes, cnmr_are_2023, dur53_chn, dur53_egy, examples_momentum, examples_type_C, examples_type_D, examples_type_E, growth_are_2023, hyp_file_date, hyp_file_sha256_short, join_same_road.say, join_same_road_null.say, knn_chance, knn_pc12, knn_tfr, lag_onset_lower_bound, lex_gap_prt_tcd, lookalikes_col_tfr, momentum_years_range, moran_cnmr_2023, moran_cnmr_2023_nogulf, moran_tfr_2023, n_cens_der, n_cens_izq, n_census_pre2009, n_dims_parallel, n_dir_uncertain_2050, n_ge1m, n_momentum_countries, n_mort_first_onset, n_natneg_2023, n_natneg_2050, n_onset, n_q5_falling_1950, n_sdg32_above, n_sdg32_above_2030, n_sdg32_on_pace, n_states, n_territories, n_twin_pairs, n_type_AB, n_type_C, n_type_D, n_type_E, panel_between_halfq5, panel_ssa_halfq5, panel_within_halfq5, pc1_var, pc1_var_sens_range, pct_var_fase, pop_are_2050, pop_are_2050_pi95_high, pop_are_2050_pi95_low, pop_momentum_bn, q5_drop_at_tfr_onset, q5_ratio_p90p10_1950, q5_ratio_p90p10_2023, r2_all, r_cnmr_decades_recent, r_tfr_decades_min, r_tfr_pc1, r_tfr_pc2, rec_rows, repo, sd_le65_1950, sd_le65_2023, sd_lex_1950, sd_lex_2023, sd_medage_1950, sd_medage_2023, share_between_groups.say, share_keep_ge_0.8, share_mort_first, share_pop_natneg_2023, share_rank_mc20, tfr_are_2023, twin_growth_are, twin_tfr_are, twin_tfr_blr, yr_fert_onset_low, yr_fert_onset_lowmid, yr_fert_onset_upmid, yrs_medage30_40_early, yrs_medage30_40_recent"
+  ]
+}

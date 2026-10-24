@@ -1,0 +1,147 @@
+{
+  "_comment": "PLANTILLA (slides-scaffold, 2026-10-23): duraciones de docs/00_storyboard_diapositivas.md v2.1 §0–§5 (4:50 + 3 s de referencias). El agente de guion la copia a slides/script/video_timings.json y ajusta 'duration' a la voz grabada. 'captions' (opcional) fija bloques de subtítulo con t = segundos desde el inicio del paso; si falta, los bloques ' | ' del data-caption se reparten por igual en la duración. Los id son los data-step de slides/index.html (window.deckSteps()). Los pasos *.b0 de 0,6 s cubren el fundido entre diapositivas.",
+  "version": 1,
+  "storyboard": "v2.1",
+  "default_step_s": 4,
+  "total_s": 293.0,
+  "steps": [
+    {
+      "id": "cover.b1",
+      "duration": 4
+    },
+    {
+      "id": "cover.b2",
+      "duration": 8,
+      "captions": [
+        {
+          "t": 0,
+          "text": "In 2023, {n_below_replacement_2023} of 237 countries and areas had below-replacement fertility:"
+        },
+        {
+          "t": 4.5,
+          "text": "too few children to replace their parents."
+        }
+      ]
+    },
+    {
+      "id": "cover.b3",
+      "duration": 9
+    },
+    {
+      "id": "cover.b4",
+      "duration": 3
+    },
+    {
+      "id": "cover.b5",
+      "duration": 3
+    },
+    {
+      "id": "s1.b0",
+      "duration": 25
+    },
+    {
+      "id": "s1.b1",
+      "duration": 6
+    },
+    {
+      "id": "s1.b2",
+      "duration": 14
+    },
+    {
+      "id": "s1.b3",
+      "duration": 4
+    },
+    {
+      "id": "s1.b3b",
+      "duration": 5
+    },
+    {
+      "id": "s1.b4a",
+      "duration": 6
+    },
+    {
+      "id": "s1.b4b",
+      "duration": 5
+    },
+    {
+      "id": "s1.b4c",
+      "duration": 6
+    },
+    {
+      "id": "s1.b5a",
+      "duration": 4
+    },
+    {
+      "id": "s1.b5b",
+      "duration": 9
+    },
+    {
+      "id": "s2.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s2.b1",
+      "duration": 16.4
+    },
+    {
+      "id": "s2.b2",
+      "duration": 10
+    },
+    {
+      "id": "s2.b3",
+      "duration": 9
+    },
+    {
+      "id": "s2.b4",
+      "duration": 18
+    },
+    {
+      "id": "s3.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s3.b1",
+      "duration": 15.4
+    },
+    {
+      "id": "s3.b2",
+      "duration": 8
+    },
+    {
+      "id": "s3.b3",
+      "duration": 7
+    },
+    {
+      "id": "s3.b4",
+      "duration": 22
+    },
+    {
+      "id": "s4.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s4.b1",
+      "duration": 26.4
+    },
+    {
+      "id": "s4.b2",
+      "duration": 5
+    },
+    {
+      "id": "s4.b3",
+      "duration": 17
+    },
+    {
+      "id": "s4.b4",
+      "duration": 13
+    },
+    {
+      "id": "s4.b5",
+      "duration": 10
+    },
+    {
+      "id": "refs",
+      "duration": 3
+    }
+  ]
+}
