@@ -58,8 +58,11 @@ CAMPOS_NUMBERS <- c(
   "status", "hypothesis_id",
   "p_value", "p_adj", "p_adj_method",
   "source_cell", "used_in",
-  "verified", "verified_by", "verified_on"
+  "verified", "verified_by", "verified_on", "nota_qa"
 )
+# `nota_qa` (QA-stats, docs/QA_stats.md): motivo por el que una clave sigue sin
+# verificar o advertencia para el guion; lo rellena R/qa_verificacion.R desde
+# docs/qa/verificacion_consolidada.csv (nunca los scripts de análisis).
 
 # Valores permitidos de `method` (plan §4).
 METODOS_VALIDOS <- c(
@@ -590,7 +593,7 @@ registrar_cifra <- function(registro, clave, value, unit, fmt, def, filter,
   permitidos_extra <- setdiff(CAMPOS_NUMBERS,
                               c("value", "unit", "fmt", "def", "filter", "source_cell", "used_in",
                                 "ci_low", "ci_high", "method", "B", "seed", "sens_low", "sens_high",
-                                "status", "verified", "verified_by", "verified_on"))
+                                "status", "verified", "verified_by", "verified_on", "nota_qa"))
   malos <- setdiff(names(extra), permitidos_extra)
   if (length(extra) > 0 && (is.null(names(extra)) || any(names(extra) == ""))) {
     stop("Todos los campos extra deben ir con nombre (p. ej. n = 161).", call. = FALSE)

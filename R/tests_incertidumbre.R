@@ -318,7 +318,7 @@ prueba("P11", {
   comprobar(jsonlite::validate(paste(txt1, collapse = "\n")), "P11l: el archivo es JSON válido")
   crudo <- jsonlite::fromJSON(ruta, simplifyVector = FALSE)
   comprobar(all(vapply(crudo, function(x) identical(names(x), CAMPOS_NUMBERS), logical(1))),
-            "P11m: en el JSON cada clave trae los 36 campos en orden")
+            sprintf("P11m: en el JSON cada clave trae los %d campos en orden", length(CAMPOS_NUMBERS)))
   comprobar(is.null(crudo$r2_tfr_medage$pi80_low) && is.null(crudo$r2_tfr_medage$verified_by) &&
               identical(crudo$r2_tfr_medage$verified, FALSE),
             "P11n: NA -> null, verified_by -> null, verified -> false")

@@ -1651,7 +1651,10 @@ cat_sec("16. numbers_q3.json")
 reg <- nuevo_registro()
 U1 <- UNIVERSO_1M; U237 <- UNIVERSO_237
 F161 <- "161 countries ≥ 1 M (2023), UN estimates 1950-2023"
-NOTA_RASGOS <- "32 features = decade means (1950s ... 2010s, 2020-23) of TFR, LEx, median age and net migration rate (winsorized ±3 SD of the panel), z-scored over the whole 161 x 1950-2023 panel"
+# QA-stats (docs/QA_stats.md): la estandarización se declara entera (z sobre las celdas anuales y DESPUÉS medias por década).
+NOTA_RASGOS <- paste("32 features = decade means (1950s ... 2010s, 2020-23) of TFR, LEx, median age and net migration rate",
+                     "(winsorized ±3 SD of the panel); each indicator is first z-scored with the mean and SD of all 161 x 74",
+                     "annual country-year values (1950-2023), then averaged by decade")
 ub1 <- c("slide4.build1", "narration.s4")
 fx <- function(x) formatear_cifra(x, "0.00")
 
@@ -1680,7 +1683,8 @@ reg <- registrar_cifra(reg, "cluster_names", I(NIVELES_GRUPO), "names", "text",
                             regla_grupos$cnmr_mediana_2000_23, ifelse(is.na(regla_grupos$anio_mediano_tfr4), "not crossed", regla_grupos$anio_mediano_tfr4),
                             regla_grupos$mayoria_bajo4_1950), collapse = "; "))
 reg <- registrar_cifra(reg, "cluster_sizes", stats::setNames(as.integer(tam_grupos), names(tam_grupos)), "countries", "0",
-  "Number of countries in each trajectory group (k-means k = 4)", F161, "T11.3", ub1,
+  sprintf("Number of countries in each trajectory group (k-means k = 4, nstart %d, seed %d, Euclidean distance on the 32 trajectory features). %s",
+          NSTART_KMEANS, SEMILLA, NOTA_RASGOS), F161, "T11.3", ub1,
   method = "sensitivity", status = "descriptive", n = N_PAISES_1M, universe = U1,
   sens_note = sprintf("FPCA + k-means sizes: %s; Ward: %s; PAM: %s",
                       paste(sort(table(fpca$cl), decreasing = TRUE), collapse = "/"),
@@ -1771,7 +1775,9 @@ reg <- registrar_cifra(reg, "share_keep_ge_0.8", 100 * share_keep, "%", "0",
   sens_note = sprintf("70 %% subsamples (B = 200): %.0f %%; 90 %% subsamples (B = 200): %.0f %%", 100 * share_keep_sens[1], 100 * share_keep_sens[2]),
   status = "exploratory", n = N_PAISES_1M, universe = U1)
 reg <- registrar_cifra(reg, "borderline_countries", I(nombre_pais(iso_frontera)), "countries", "text",
-  sprintf("Countries that stay in their group in fewer than 80 %% of %d subsamples (hatched/lighter on the map); ISO3: %s", B_KEEP,
+  sprintf(paste("Countries that stay in their group in fewer than 80 %% of %d random 80 %% subsamples of countries (without replacement;",
+                "k-means k = 4 re-run with nstart 20; labels matched to the main partition with the Hungarian algorithm; seed %d),",
+                "hatched/lighter on the map; ISO3: %s"), B_KEEP, SEMILLA,
           paste(iso_frontera, collapse = ", ")), F161, "T11.5", c("slide4.build1", "notebook.Q3"),
   method = "sensitivity", B = B_KEEP, seed = SEMILLA, status = "descriptive", n = length(iso_frontera), universe = U1)
 reg <- registrar_cifra(reg, "share_sil_lt_0.1", 100 * mean(sil_ind < 0.1), "%", "0",
@@ -1833,9 +1839,17 @@ reg <- registrar_cifra(reg, "knn_vote_accuracy", acc_vecinos, "share", "0.00",
   sens_note = sprintf("sens = permutation mean and 97.5 %%; majority class %.2f; leave-one-out majority of the SDG region %.2f, of the income group %.2f, of region x income %.2f",
                       base_mayor, acc_region, acc_ingreso, acc_reg_ing),
   status = "exploratory", hypothesis_id = "H25", n = N_PAISES_1M, universe = U1)
+# QA-stats (docs/QA_stats.md): el denominador excluye a los países solos en su región SDG (no tienen voto).
+voto_region_qa <- mayoria_loo(g_chr, info_w$region_sdg)
+sin_voto_region <- rownames(W5)[is.na(voto_region_qa)]
 reg <- registrar_cifra(reg, "region_vote_accuracy", acc_region, "share", "0.00",
-  "Share of countries whose group equals the leave-one-out majority group of its SDG region (reference so as not to overstate geography)",
-  F161, "T7.J", c("slide4.build1", "notebook.Q3"), method = "descriptive", status = "exploratory", n = N_PAISES_1M, universe = U1)
+  sprintf(paste("Share of countries whose group equals the leave-one-out majority group of the other countries of its SDG region",
+                "(reference so as not to overstate geography; ties go to the first group in the order %s); denominator %d countries:",
+                "%s %s alone in its SDG region and has no leave-one-out vote"),
+          paste(NIVELES_GRUPO, collapse = ", "), sum(!is.na(voto_region_qa)),
+          paste(nombre_pais(sin_voto_region), collapse = ", "), ifelse(length(sin_voto_region) == 1, "is", "are")),
+  F161, "T7.J", c("slide4.build1", "notebook.Q3"), method = "descriptive", status = "exploratory",
+  n = sum(!is.na(voto_region_qa)), universe = U1)
 
 # --- 16.3 Divergencia P1 (T12) -----------------------------------------------
 ic_sd <- function(v, s) extraer_ic(ic_p1[[v]], s)
@@ -1878,11 +1892,11 @@ reg <- registrar_cifra(reg, "q5_ratio_p90p10_2023", q5r("r2023")$valor, "ratio",
   sens_note = sprintf("237: %.1f; UN medium 2050: %.1f", d1("Q5", 2023, "razon_p90p10", UNIVERSO_237), d1("Q5", 2050, "razon_p90p10")),
   say = sprintf("%s times", formatear_cifra(q5r("r2023")$valor, "0")))
 reg <- registrar_cifra(reg, "q5_ratio_p90p10_peak", q5_pico$razon_p90p10, "ratio", "0",
-  sprintf("Maximum over 1950-2023 (UN estimates) of the P90/P10 ratio of under-five mortality across countries, reached in %d", q5_pico$Time),
+  sprintf("Maximum over 1950-2023 (UN estimates) of the P90/P10 ratio of under-five mortality across countries (P90 and P10 with R's default quantile, type 7), reached in %d", q5_pico$Time),
   F161, "T12.2", c("slide4.build2", "notebook.Q3"), method = "descriptive", status = "exploratory", n = N_PAISES_1M, universe = U1,
   sens_note = sprintf("237 countries and areas: %.1f in %d; 2023: %.1f (161)", q5_pico_237$razon_p90p10, q5_pico_237$Time, d1("Q5", 2023, "razon_p90p10")))
 reg <- registrar_cifra(reg, "q5_ratio_p90p10_peak_year", q5_pico$Time, "year", "0",
-  "Year (1950-2023, UN estimates) in which the P90/P10 ratio of under-five mortality across countries peaked", F161, "T12.2",
+  "Year (1950-2023, UN estimates) in which the P90/P10 ratio of under-five mortality across countries peaked (P90 and P10 with R's default quantile, type 7)", F161, "T12.2",
   c("slide4.build2", "notebook.Q3"), method = "descriptive", status = "exploratory", n = N_PAISES_1M, universe = U1)
 reg <- registrar_cifra(reg, "q5_gap_p90p10_1950", q5r("gap1950")$valor, "per 1,000", "0",
   "Absolute gap P90 - P10 of under-five mortality across countries, 1950", F161, "T12.2", "notebook.Q3",
@@ -1943,8 +1957,12 @@ reg <- registrar_cifra(reg, "yrs_medage30_40_fast_started", med_fast_iniciados, 
   ic = ic_env_fast_ini, status = "exploratory", n = nrow(env_fast_iniciados), universe = U1,
   variant_source = "WPP2024 Medium", say = sprintf("about %s", formatear_cifra(med_fast_iniciados, "0")))
 reg <- registrar_cifra(reg, "yrs_medage30_40_cohort_1990_2023", med_reciente, "years", "0",
-  sprintf("Median years from median age 30 to 40 among countries (any road) that first reached 30 in 1990-2023 (%d countries; %d reach 40 only in the UN medium projection)",
-          n_reciente, n_y40_proy_reciente), "161 countries ≥ 1 M; estimates ≤ 2023 + UN medium projection ≥ 2024 (partly projected)", "T15.4",
+  # QA-stats (docs/QA_stats.md): se dice quién entra en la mediana (solo los que llegan a 40 antes de 2100).
+  sprintf(paste("Median years from median age 30 to 40 among countries (any road) that first reached 30 in 1990-2023 AND reach 40 by 2100",
+                "(%d of the %d that reached 30 in 1990-2023; %s never reach 40 by 2100 and are left out; %d reach 40 only in the UN medium projection)"),
+          n_reciente, sum(envejec$cohorte_30 == "reached 30 in 1990-2023"),
+          paste(envejec$ISO3_code[envejec$cohorte_30 == "reached 30 in 1990-2023" & is.na(envejec$y_medage40)], collapse = ", "),
+          n_y40_proy_reciente), "161 countries ≥ 1 M; estimates ≤ 2023 + UN medium projection ≥ 2024 (partly projected)", "T15.4",
   c("notebook.Q3", "slide4.alt"), ic = ic_reciente, status = "exploratory", n = n_reciente, universe = U1,
   sens_low = min(med_reciente, km_env_med[2]), sens_high = max(med_reciente, km_env_med[2]),
   sens_note = sprintf("Kaplan-Meier with censoring at 2100: %.1f", km_env_med[2]),
@@ -1985,7 +2003,9 @@ cp <- function(g, col) comp_proy[[col]][comp_proy$grupo == g]
 reg <- registrar_cifra(reg, "growth_2024_2050_by_group", comp_proy |> dplyr::transmute(grupo = as.character(grupo),
                          natural_pct = round(nat_pct_pob, 1), migration_pct = round(mig_pct_pob, 1), total_pct = round(cambio_pct_pob, 1),
                          natural_bn = round(nat_bn, 3), migration_bn = round(mig_bn, 3)), "table", "text",
-  "Population change 2024-2050 by trajectory group, split into natural change (Σ NatChange) and net migration (Σ NetMigrations), as % of the 2024 population (sums of persons)",
+  paste("Population change 2024-2050 by trajectory group: sums over the 27 annual values 2024-2050 of natural change (Σ NatChange),",
+        "net migration (Σ NetMigrations) and total change (Σ PopChange), as % of the group's population on 1 July 2024",
+        "(TPopulation1July; sums of persons)"),
   "161 countries ≥ 1 M, UN medium projection 2024-2050", "T15.1", c("slide4.table", "notebook.Q3"), method = "sensitivity",
   status = "descriptive", n = N_PAISES_1M, universe = U1, variant_source = "WPP2024 Medium",
   sens_note = paste(sprintf("without %s: natural %.1f %%, migration %.1f %%", comp_proy_sin_mayor$excluido,
@@ -1993,12 +2013,13 @@ reg <- registrar_cifra(reg, "growth_2024_2050_by_group", comp_proy |> dplyr::tra
 reg <- registrar_cifra(reg, "growth_2000_2023_by_group", comp_est |> dplyr::transmute(grupo = as.character(grupo),
                          natural_pct = round(nat_pct_pob, 1), migration_pct = round(mig_pct_pob, 1), total_pct = round(cambio_pct_pob, 1),
                          share_migration_pct = round(share_mig, 1)), "table", "text",
-  "Population change 2000-2023 (UN estimates) by trajectory group, split into natural change and net migration, as % of the 2000 population",
+  "Population change 2000-2023 (UN estimates) by trajectory group: sums over 2000-2023 of natural change and net migration, as % of the group's population on 1 July 2000",
   "161 countries ≥ 1 M, UN estimates 2000-2023", "T15.1", "notebook.Q3", method = "descriptive", status = "descriptive",
   n = N_PAISES_1M, universe = U1)
 reg <- registrar_cifra(reg, "medage_2050_by_group", as.list(stats::setNames(round(edad_grupo$mediana[edad_grupo$Time == 2050], 1),
                                                                             as.character(edad_grupo$grupo[edad_grupo$Time == 2050]))), "years", "0",
-  "Median across countries of median age in 2050 (UN medium projection), by trajectory group", "161 countries ≥ 1 M, UN medium projection 2050",
+  "Median across countries of median age in 2050 (UN medium projection), by trajectory group (main k-means k = 4 partition; see cluster_sizes for how the 32 features are standardized)",
+  "161 countries ≥ 1 M, UN medium projection 2050",
   "T15.2", c("slide4.build1", "notebook.Q3"), method = "sensitivity", status = "descriptive", n = N_PAISES_1M, universe = U1,
   variant_source = "WPP2024 Medium",
   sens_note = paste(sprintf("%s: 2023 median %.1f; population-weighted mean 2050 %.1f", edad_grupo$grupo[edad_grupo$Time == 2050],
@@ -2094,7 +2115,10 @@ reg <- registrar_cifra(reg, "n_ssa", ssa_237, "countries and areas", "0",
   c("slide4.ethics_card", "notebook.Q3"), method = "none_census", status = "descriptive", n = N_PAISES, universe = U237,
   sens_note = sprintf("%d with ≥ 1 M people, spread over the roads: %s", sum(ssa_caminos), paste(sprintf("%s %d", names(ssa_caminos), ssa_caminos), collapse = ", ")))
 reg <- registrar_cifra(reg, "momentum_years_range", sprintf("%d–%d", mom_p25, mom_p75), "years", "text",
-  "Years from 2023 to the projected population peak (UN medium, maximum over 2023-2100) in the countries below replacement that still grow from births without net immigration (lever type B & TFR < 2.1): population-weighted 25th-75th percentile",
+  paste("Years from 2023 to the projected population peak (UN medium, maximum over 2023-2100) in the countries below replacement",
+        "that still grow from births without net immigration (lever type B & TFR < 2.1): population-weighted 25th-75th percentile",
+        "(weights = population on 1 July 2023; weighted percentile = first value, in ascending order, whose cumulative population",
+        "share reaches p, without interpolation)"),
   "22 countries and areas (type B & TFR < 2.1, 2023)", "T16.2", c("slide4.table", "narration.s4"),
   method = "sensitivity", status = "descriptive", n = nrow(inercia_pico), universe = U237, variant_source = "WPP2024 Medium",
   sens_low = min(mom_rango_sin_ind[1], mom_mediana_simple), sens_high = max(mom_p75, mom_desde21),

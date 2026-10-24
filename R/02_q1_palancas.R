@@ -978,7 +978,11 @@ informar("LISA CNMR 2010-23: %d países con p < 0,05; %d sobreviven a FDR (%s); 
          sum(lisa_tab$sig_05[lisa_tab$ventana == "2010-2023"]), nrow(fdr_todos), paste(sprintf("%s %s", fdr_todos$ISO3_code, fdr_todos$cuadrante), collapse = ", "),
          paste(hh_fdr$ISO3_code, collapse = ", "), nrow(fdr_23))
 anotar("lisa_cnmr_hh_fdr", value = nrow(hh_fdr), unit = "countries", fmt = "0", method = "permutation", B = B_PERM_Q1, seed = SEM,
-       def = "Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5, conditional permutation) that survive Benjamini-Hochberg FDR at 5%",
+       # QA-stats (docs/QA_stats.md): se declara la convención del p-valor (de un lado, "folded").
+       def = sprintf(paste("Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5 with equal weights,",
+                           "conditional permutation with %d draws; one-sided 'folded' pseudo p-value in the direction of the observed local I,",
+                           "(1 + number of permuted values at least as extreme) / (%d + 1), as in GeoDa) that survive Benjamini-Hochberg FDR",
+                           "at 5%% over the %d local tests"), B_PERM_Q1, B_PERM_Q1, nrow(v1023)),
        filter = "161 countries >= 1 M, mean of annual estimates 2010-2023", source_cell = "Q1-4.2",
        used_in = c("slide2.build4", "notebook.T7"),
        sens_note = sprintf("ISO3: %s; with p < 0.05 (no correction): %d countries in any quadrant; all quadrants after FDR: %s; single year 2023: %d after FDR",
@@ -1501,7 +1505,12 @@ for (lado in c("rapido", "lento")) {
          n = nrow(d53_10m), universe = UNIVERSO_1M)
 }
 anotar("fig04_highlight_iso3", value = I(unname(resaltar)), unit = NA, fmt = "text", method = "descriptive",
-       def = "Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3, among those that reached 3",
+       # QA-stats (docs/QA_stats.md): con n par la mediana cae entre dos países; la regla toma el más cercano.
+       def = sprintf(paste("Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3 (smoothed, last crossings),",
+                           "among the %d that reached 3 by 2023; 'median' = the country whose duration is closest to the median duration",
+                           "(%.2f years%s)"),
+                     nrow(d53_10m), median(d53_10m$dur_5a3),
+                     if (nrow(d53_10m) %% 2 == 0) "; with an even number of countries the median falls between two of them" else ""),
        filter = F_FDA, source_cell = "Q1-6.4", used_in = c("slide2.build1"), status = "descriptive",
        sens_note = paste(sprintf("%s %.1f yrs", d53_10m$ISO3_code[d53_10m$ISO3_code %in% resaltar], d53_10m$dur_5a3[d53_10m$ISO3_code %in% resaltar]), collapse = "; "),
        n = nrow(d53_10m), universe = UNIVERSO_1M)

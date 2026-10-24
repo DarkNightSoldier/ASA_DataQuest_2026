@@ -1,0 +1,53 @@
+clave,valor_notebook,valor_independiente,coincide,definicion_clara,nota
+n_below_replacement_2023,130,130,TRUE,TRUE,""
+n_type_B,94,94,TRUE,TRUE,""
+n_grow_only_migration_2023_1m,11,11,TRUE,TRUE,""
+examples_type_C_iso3,"DEU, ESP, BEL","DEU, ESP, BEL",TRUE,TRUE,""
+examples_type_E_iso3,"NPL, AZE, URY","NPL, AZE, URY",TRUE,TRUE,""
+examples_momentum,"India, Brazil, Mexico","India, Brazil, Mexico",TRUE,TRUE,n_momentum = 22 (>= 1 M: 13); estricta NetMig<0: 18
+pop_momentum_bn,2.2 (2.201),2.2010,TRUE,TRUE,22 países; suma TPopulation1July 2023
+n_sdg32_above,70,70,TRUE,TRUE,>= 1 M: 62
+n_shrinking_2050,98,98,TRUE,TRUE,>= 1 M: 55 (proyección Medium)
+n_states,195,195,TRUE,TRUE,42 territorios todos presentes en WPP; VAT y PSE entre los 195; lista de 193 miembros revisada a mano
+twin_growth_blr,-0.653,-0.653,TRUE,TRUE,ARE 2023: 3.704; TFR BLR 1.208 / ARE 1.200
+world_peak_bn,10.29 (10.289315244),10.289315 (año 2084),TRUE,TRUE,máximo 1950-2100 en 2084
+share_mig_high_un_agg,64.0 (63.9873),63.9873,TRUE,TRUE,"LocID del agregado ONU de ingreso alto, sumas de personas 2000-2023"
+pop_are_2050_zero_mig,12.4 (12.3933),12.3933,TRUE,TRUE,2100: 6.9 M; Medium 2050: 15.4 M
+n_cnmr_sign_uncertain_2050,155,155,TRUE,TRUE,IP95 incluye 0 en 161 de 161
+meta_wpp_version,WPP 2024 (July 2024): Medium 1950-2023 est + 2024-2100; OtherVariants PI 80/95 + scenarios; supplement LE60 + births by sex,"Medium: Time 1950-2101, Variant=Medium; OtherVariants: 18 variantes incl. 80/95 PI=TRUE, Zero migration=TRUE; suplemento cols LE60=TRUE, BirthsMale/Female=TRUE",TRUE,TRUE,Descriptivo: estructura de archivos coherente con WPP 2024; la 'release' de julio 2024 no se puede comprobar desde el CSV (no trae fecha)
+n_onset,109,109,TRUE,TRUE,elegibles TFR1950>=5 con ingreso: 109 (sin inicio de Q5 observado: )
+n_mort_first_onset,106,106,TRUE,TRUE,"no-mortalidad-primero: LBN(Q5 1977, TFR 1970); RWA(Q5 1995, TFR 1987); XKX(Q5 1964, TFR 1962); TFR sin iniciar: 2; empates mismo año: 0"
+share_mort_first,97 [92; 99] (97.2477; 92.22-99.06),97.2477 [92.22; 99.06],TRUE,TRUE,""
+yr_fert_onset_low,2000 [1995; 2007],"2000 [1995; 2007] (survfit median 2000.5); n=24, eventos=22",TRUE,TRUE,""
+sd_le65_1950,1.47 [1.15; 1.76],1.4685 [1.15; 1.76],TRUE,TRUE,237: 1.46; IC por bloques propio (otra secuencia aleatoria)
+cv_le65_1950,12.9 [10.1; 15.6],12.8503 [10.1; 15.6],TRUE,TRUE,237: 12.67
+sd_medage_1950,4.7 [3.1; 5.7],4.6704 [3.1; 5.7],TRUE,TRUE,237: 5.01
+q5_ratio_p90p10_peak,"27 (26.934, 2006)",26.934 (2006),TRUE,TRUE,1950: 6.2; 2023: 19.9
+r2_ladder_tfr_cdr,0.70 (0.6965),0.6965,TRUE,TRUE,""
+r2_tfr_cnmr,0.00 [-0.01; 0.08] (-0.00127),-0.00127 [-0.007; 0.084],TRUE,TRUE,sin ajustar 0.0050
+r2_tfr_medage,0.77 [0.67; 0.84] (0.7711),0.7711 [0.675; 0.835],TRUE,TRUE,sin ajustar 0.7726
+r_cnmr_decades_recent,0.69 [0.52; 0.73] (0.6916),0.6916 [0.523; 0.726],TRUE,TRUE,"2000s = 2000-2009, 2010s = 2010-2023, Pearson; el valor puntual está cerca del borde superior del IC por bloques (asimetría del bootstrap)"
+yrs_medage30_40_jpn,21 (1977 -> 1998),21 (1977 -> 1998),TRUE,TRUE,primer año con MedianAgePop >= 30 y >= 40 (ambos estimaciones)
+yrs_medage30_40_cohort_1990_2023,24 [21; 30] (35 países; 28 cruzan 40 en proyección),24 [21; 30] (39 países; 28 cruzan 40 después de 2023; 4 no llegan a 40 antes de 2100),TRUE,FALSE,"Definición imprecisa: 39 países cruzan 30 en 1990-2023, pero solo 35 llegan a 40 antes de 2100 (no llegan: ARE, BHR, KWT, QAT); los 35 del texto son los que llegan; mediana simple sobre ellos. KM con censura 2100: 25"
+cluster_examples_early,"United States of America, Russian Federation, Japan (USA, RUS, JPN)","United States of America, Russian Federation, Japan",TRUE,TRUE,n Early = 50
+cluster_examples_recent,"Pakistan, Nigeria, Ethiopia (PAK, NGA, ETH)","Pakistan, Nigeria, Ethiopia",TRUE,TRUE,n Recent = 53
+k_clusters,4,4,TRUE,TRUE,k fijado a priori en H9a (docs/hipotesis_preinscritas.md); comprobado que el k-means corre con k = 4
+cluster_profile,ver valor del lote (Early n=50 ... Migration-led n=7),"Early movers: n=50, pop_bn=1.44, pct_pob_mundo=17.83, q5_2023=3.84, le65_2023=19.89, le60_2023=23.94, cambio_pob_2023_2050_pct=-6.93, medage_2023=41.85, medage_2050=47.84, le60_2050=27.02, tfr_1950=2.99, tfr_2023=1.44, cnmr_2000_23=1.83, ejemplos=USA, RUS, JPN, medoide=SVN || Fast movers: n=51, pop_bn=4.9, pct_pob_mundo=60.55, q5_2023=16, le65_2023=16.38, le60_2023=20.3, cambio_pob_2023_2050_pct=15.19, medage_2023=29.27, medage_2050=38.16, le60_2050=22.83, tfr_1950=6.19, tfr_2023=1.98, cnmr_2000_23=-0.88, ejemplos=IND, CHN, IDN, medoide=ECU || Recent movers: n=53, pop_bn=1.67, pct_pob_mundo=20.59, q5_2023=50.29, le65_2023=13.53, le60_2023=16.99, cambio_pob_2023_2050_pct=64.38, medage_2023=18.31, medage_2050=24.61, le60_2050=17.7, tfr_1950=6.43, tfr_2023=3.99, cnmr_2000_23=-0.92, ejemplos=PAK, NGA, ETH, medoide=CMR || Migration-led: n=7, pop_bn=0.07, pct_pob_mundo=0.81, q5_2023=6.33, le65_2023=18.35, le60_2023=22.99, cambio_pob_2023_2050_pct=39.79, medage_2023=31.23, medage_2050=32.26, le60_2050=26.22, tfr_1950=7.12, tfr_2023=1.82, cnmr_2000_23=22.62, ejemplos=SAU, JOR, ARE, medoide=SAU",TRUE,TRUE,"Máx. |dif| por columna tras redondear a 2 decimales: ; medoide = país más cercano a la mediana coordenada a coordenada (PAM: SVN,ECU,MDG,SAU)"
+share_keep_ge_0.8,96 (95.65 = 154/161),95.65 (154/161),TRUE,TRUE,"Aleatorio (nstart de las réplicas no documentado; uso 20). keep < 0.8: KOR 0.49, NPL 0.57, CHL 0.58, BWA 0.60, BOL 0.61, GTM 0.61, ARM 0.77"
+borderline_countries,"KOR, NPL, CHL, BWA, GTM, BOL, ARM","KOR, NPL, CHL, BWA, BOL, GTM, ARM",TRUE,TRUE,"Coinciden 7 de 7; solo notebook: ; solo aquí: . Aleatorio: los países cercanos a 0,8 pueden cambiar entre corridas"
+jaccard_max,"0.95 (0.949, Early movers)",0.942 (Early movers),TRUE,TRUE,"Medias por grupo: Early movers 0.942; Fast movers 0.833; Recent movers 0.907; Migration-led 0.775 (aleatorio; tolerancia 0,02)"
+region_vote_accuracy,0.78 (0.775),0.7750 (124/160),TRUE,FALSE,Región con un solo país (sin voto LOO) excluida: PNG; empates: 0 (contando empate como acierto: 0.775; sobre 161: 0.770)
+peak_year_by_group,Early movers/50/30/16/ 4/2021.5 || Fast movers/51/ 7/36/ 8/2058.0 || Recent movers/53/ 0/10/43/2100.0 || Migration-led/ 7/ 0/ 0/ 7/2100.0,Early movers/50/30/16/ 4/2021.5 || Fast movers/51/ 7/36/ 8/2058.0 || Recent movers/53/ 0/10/43/2100.0 || Migration-led/ 7/ 0/ 0/ 7/2100.0,TRUE,TRUE,Orden: grupo/n/peaked_by_2023/peak_2024_2099/no_peak_before_2100/median_peak_year; which.max (primer máximo)
+dur53_chn,5 (5.1026),5.1026 (c5 1972.18 -> c3 1977.28),TRUE,TRUE,""
+speed53_median_by_group,Early 14.9; Fast 19.2; Recent 29.6; Migration-led 18.0,"Early movers 14.95 (n 6, ev 6); Fast movers 19.21 (n 44, ev 42); Recent movers 29.56 (n 45, ev 8); Migration-led 17.95 (n 7, ev 7)",TRUE,TRUE,n total 102 con cruce de 5 observado; mediana KM de survfit
+rec_rows,"58/70, 8 on pace, Recent 50/62 | 22, 2.2 bn, Fast 13/13 | 53, 28 %, 106, CHN 1.26 [1.16-1.35], Early 33/35 | 18, Early 11/11 | 19, Fast 4/6","above25=70; stay above 2030=58; on pace=8; road Recent movers (50 of 62) | momentum=22, 2.20 bn, top3 India/Brazil/Mexico; road Fast movers (13 of 13) | natneg2023=53, 28.1% world; natneg2050=106; CHN2050 1.26 bn [1.16-1.35]; road Early movers (33 of 35) | typeC=18, top3 Germany/Spain/Belgium; road Early movers (11 of 11) | typeE=19, top3 Nepal/Azerbaijan/Uruguay; road Fast movers (4 of 6)",TRUE,TRUE,"Ritmo observado = ln(Q5_2015/Q5_2023)/8; necesario = ln(Q5_2023/25)/7 (tasa anual de reducción); texto (verbos, mandatos, agencias) no verificable numéricamente"
+pc1_var,56.7 [51.4; 62.6] (56.6735),56.6735 [51.6; 62.5],TRUE,TRUE,PC2 17.9 %; autovalores 6.8/2.15/1.15/0.83
+n_dims_parallel,2,2,TRUE,TRUE,p95 nulo 1.58/1.43/1.31 vs autovalores 6.8/2.15/1.15
+knn_tfr,13 [9; 18] (13.1677),13.1677 [8.6; 17.7],TRUE,TRUE,azar k/(n-1) = 3.1 %
+lookalikes_col_tfr_iso,"FRA, AUS, TUR, USA, NZL","FRA, AUS, TUR, USA, NZL",TRUE,TRUE,"12 indicadores: IRN, PER, ECU, PAN, TUN; |dTFR|: 0.006/0.007/0.02/0.022/0.022"
+moran_cnmr_2023_nogulf,-0.03 (-0.0283),-0.0283 (n=155),TRUE,TRUE,con Golfo (161): 0.1143; TFR 2023: 0.735
+lisa_cnmr_hh_fdr,"7 (ARE, BHR, IRN, KWT, OMN, QAT, SAU)","7 (ARE, BHR, IRN, KWT, OMN, QAT, SAU)",TRUE,FALSE,"p 'folded' de un lado (GeoDa); con p bilateral 2·min: 6 (ARE,BHR,IRN,OMN,QAT,SAU). Todos los cuadrantes tras FDR: ALB(LL) ARE(HH) BHR(HH) IRN(HH) KWT(HH) OMN(HH) QAT(HH) SAU(HH) SRB(LL); sin corregir p<0.05: 25"
+panel_between_halfq5,-1.05 [-1.17; -0.92] (-1.0523),-1.0523 [-1.17; -0.92],TRUE,TRUE,media de log Q5 anual por país; lm entre países
+panel_lowmid_halfq5,0.07 [-0.56; 0.65] (0.0695),"0.0695 [-0.56; 0.65] (n países 41, N 410)",TRUE,TRUE,Todos los 161: -0.4140; bloques = 13 subregiones; país repetido en bootstrap = nuevo efecto fijo
+panel_ssa_halfq5,-1.20 (-1.1974),-1.1974 (n países 44),TRUE,TRUE,""
+hyp_file_date,2026-10-23,2026-10-23,TRUE,TRUE,Árbol sin cambios en el archivo desde ese commit: TRUE; el archivo dice 'redacción 2026-10-22'; no existe docs/hipotesis_preinscritas.sha256 (make prereg pendiente)

@@ -1,0 +1,54 @@
+clave,valor_independiente,nota
+n_countries,237,"ISO3_code no vacío, Medium"
+n_territories,42,lista propia; quedan 195 estados
+n_natneg_1990,8,"NatChange < 0, 1990"
+share_pop_natneg_2023,28.05,53 países con NatChange<0
+n_shrinking_2100,162,"PopChange < 0, 2100 (proyección)"
+world_peak_year,2084,máx. 10289315 miles
+n_sdg32_above_2030,58,de 70 con Q5>25 en 2023
+n_type_C,18,"NatChange<0 & PopChange>0, 2023"
+n_grow_only_migration_sens_range,15–25,y2021 15; y2022 25; y2023 18; y2021_23 24
+examples_type_A_iso3,"USA, EGY, IRN",United States of America / Egypt / Iran (Islamic Republic of)
+examples_type_D,"China, Russian Federation, Japan",CHN RUS JPN
+share_mig_high_2000_2023,70.7% · IC [55.5; 133.3],n = 85
+share_mig_low_2000_2023,-3.7% · IC [-9.3; -1.6],n = 25
+pop_are_2050,15.4 million · UN PI95 8.9–33.3,""
+pop_chn_2050,1.26 billion · UN PI95 1.16–1.35,""
+n_dir_uncertain_2050,77,"de 161; decrecen seguro 17, crecen seguro 67"
+are_revision_pct,"~11.8% (externo, no calculable con WPP2024)",WPP2024 EAU 2023 = 10642.1 miles; WPP2022 2023 ~9516.9 miles (no verificado); WPP2024 2022 = 10242.1 miles vs WPP2022 2022 = 9441.1
+n_pairs_twins,12880,"choose(161, 2)"
+twin_tfr_are,1.20,par top: ARE-BLR
+cdr_prt,"11.1 per 1,000",par top: PRT-TCD (CDR 11.113)
+sd_le65_2023,2.846 years · IC [2.41; 3.15],""
+cv_le65_2023,17.19% · IC [14.2; 19.2],""
+sd_medage_2023,9.738 years · IC [7.8; 10.9],""
+rho_cdr_lex_1950,-0.974 · IC [-0.981; -0.939],""
+r2_tfr_chg2050,0.881 · IC [0.75; 0.94],""
+r2_tfr_medage_cv,0.7656,rango repeticiones 0.7601–0.7684
+r2_tfr_cnmr_cv,-0.0268,rango repeticiones -0.0601–-0.0044
+pc2_var,17.88% · IC [11.8; 23.6],PC1 = 56.67%
+recov_pc1,0.567 · IC [0.52; 0.63],""
+lookalikes_col_12,"Iran (Islamic Republic of), Peru, Ecuador, Panama, Tunisia",IRN PER ECU PAN TUN
+knn_chance,3.125,k/(n-1)
+q5_ratio_p90p10_peak_year,2006,máx. 26.9; con type = 6: 1999
+r_tfr_decades_min,0.9481,min en LEx
+q5_drop_at_tfr_onset,49.89% · IC [43.8; 60.7],n = 107; con máximo de toda la serie: 52.77
+yr_fert_onset_lowmid,1984 · IC [1982; 1987],"n = 40, eventos 40; quantile() de survival da 1984.5 (punto medio del tramo S = 0,5)"
+n_cens_der,26,cruce de 4 observado: 90; censura izq.: 45
+dur53_egy,32.748 years,CHN 5.103
+fig04_highlight_iso3,"CHN, COL, EGY",n = 36; centrales COL/ZAF
+panel_eurna_halfq5,0.3910,n países = 38
+panel_upmid_halfq5,0.1103 · IC [-0.53; 0.63],n países = 44; réplicas NA = 0
+panel_placebo_hi,0.2554,banda 95% [-0.2488; 0.2554]
+cluster_sizes,Early movers: 50; Fast movers: 51; Recent movers: 53; Migration-led: 7,variante z_anual
+cluster_examples_fast,"India, China, Indonesia",IND CHN IDN
+cluster_medoids,Early movers: Slovenia; Fast movers: Ecuador; Recent movers: Cameroon; Migration-led: Saudi Arabia,SVN ECU CMR SAU
+migration_led_members,"Saudi Arabia, Jordan, United Arab Emirates, Kuwait, Qatar, Bahrain, Djibouti",SAU JOR ARE KWT QAT BHR DJI
+medage_2050_by_group,Early movers: 47.8; Fast movers: 38.2; Recent movers: 24.6; Migration-led: 32.3,""
+jaccard_min,0.7827,Early movers 0.949; Migration-led 0.783; Recent movers 0.918; Fast movers 0.852 | mínimo con semillas 2027-2045: 0.766–0.828 (media 0.797)
+moran_tfr_2023,0.7350,""
+knn_vote_accuracy,0.7391,119 de 161
+yrs_medage30_40_kor,17 years,1999 -> 2016
+yrs_medage30_40_cohort_pre1990,40.5 years · IC [35.0; 46.0],n = 24; sin llegar a 40 en 2100: 0
+hyp_file_sha256_short,83f98f6e1a3d,""
+team_name,UNALSta-R,""

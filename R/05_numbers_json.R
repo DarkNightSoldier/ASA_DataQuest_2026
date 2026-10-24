@@ -18,6 +18,9 @@
 #      clasificación de ingreso, semilla y generador, SHA-256 de los archivos
 #      crudos y del archivo de hipótesis preinscritas (con su fecha y commit) y
 #      el nombre del equipo (docs/equipo.json).
+#   4.5 Aplica la verificación independiente de QA-stats
+#      (docs/qa/verificacion_consolidada.csv vía R/qa_verificacion.R): verified,
+#      verified_by, verified_on y nota_qa, solo si la cifra no cambió.
 #   5. Escribe figures/numbers.json (claves en orden alfabético, esquema v2).
 #   6. Comprueba que existan las claves obligatorias de
 #      docs/00_plan_implementacion.md §4 y todas las {clave} del storyboard
@@ -366,6 +369,26 @@ if (!is.null(equipo$repo) && length(equipo$repo) == 1 && !is.na(equipo$repo) && 
 }
 informar_05("Claves añadidas por 05: %d (%s)", length(claves_nuevas), paste(claves_nuevas, collapse = ", "))
 
+# 4.5 Verificación independiente (QA-stats): verified, verified_by, verified_on, nota_qa.
+# QUÉ: aplica docs/qa/verificacion_consolidada.csv (210 cifras recalculadas desde
+#      los CSV crudos por los lotes 1-4 de docs/qa/verificacion_lote_*.R).
+# POR QUÉ: QA-stats marca cada cifra de pantalla y voz (plan §7.7). Una clave solo
+#      queda en verified = true si su cifra actual (value, IC, sensibilidad, IP y
+#      método) tiene la MISMA huella que la que se verificó; si cambió, queda en
+#      false y nota_qa lo dice (ASA B.4 y C.2: un ✔ viejo nunca pasa a un número
+#      nuevo). Las demás claves llevan en nota_qa por qué no se verificaron.
+source(here::here("R", "qa_verificacion.R"))
+RUTA_QA_CONSOLIDADA <- file.path(RUTA_DOCS, "qa", "verificacion_consolidada.csv")
+qa_05 <- aplicar_verificacion_qa(total, RUTA_QA_CONSOLIDADA)
+total <- qa_05$registro
+tabla_qa_05 <- as.data.frame(table(estado = qa_05$resumen$estado, pantalla = ifelse(qa_05$resumen$pantalla, "pantalla/voz", "solo notebook")),
+                             responseName = "claves")
+print(tabla_qa_05[tabla_qa_05$claves > 0, ], row.names = FALSE)
+qa_pant_sin <- qa_05$resumen$clave[qa_05$resumen$pantalla & qa_05$resumen$estado != "verificada"]
+informar_05("Verificadas: %d de %d claves; de pantalla o voz sin verificar: %d (%s).",
+            sum(qa_05$resumen$estado == "verificada"), nrow(qa_05$resumen), length(qa_pant_sin),
+            if (length(qa_pant_sin)) paste(qa_pant_sin, collapse = ", ") else "ninguna")
+
 # =============================================================================
 # 5. Escritura de figures/numbers.json
 # =============================================================================
@@ -598,11 +621,16 @@ resumen_05 <- list(
   faltan_obligatorias = faltan_oblig$clave,
   faltan_storyboard = faltan_sb$clave,
   faltantes = faltantes_todas,
+  verificadas = qa_05$resumen$clave[qa_05$resumen$estado == "verificada"],
+  pantalla_sin_verificar = qa_pant_sin,
   sha256_numbers = sha256_archivo(RUTA_NUMBERS)
 )
 informar_05("numbers.json: %d claves · conflictos 0 · faltan %d (obligatorias: %s | storyboard: %s)",
             resumen_05$claves_total, length(faltantes_todas),
             if (length(resumen_05$faltan_obligatorias)) paste(resumen_05$faltan_obligatorias, collapse = ", ") else "ninguna",
             if (length(resumen_05$faltan_storyboard)) paste(resumen_05$faltan_storyboard, collapse = ", ") else "ninguna")
+informar_05("Verificación independiente: %d claves con verified = true; de pantalla o voz sin verificar: %s",
+            length(resumen_05$verificadas),
+            if (length(qa_pant_sin)) paste(qa_pant_sin, collapse = ", ") else "ninguna")
 informar_05("05_numbers_json.R terminó en %.1f s.", as.numeric(difftime(Sys.time(), t_inicio_05, units = "secs")))
 invisible(resumen_05)

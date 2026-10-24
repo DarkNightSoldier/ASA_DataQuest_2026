@@ -484,9 +484,12 @@ for (cl in list(c("r2_tfr_medage_by_year", "medage", "median age"), c("r2_tfr_gr
 }
 ra_chg <- resumen_anual("chg27_observed")
 anotar("r2_tfr_chg27_observed", round(ra_chg$v, 4), "R2", "0.00",
+       # QA-stats (docs/QA_stats.md): se declara qué población entra en el cambio (1 de julio).
        sprintf(paste0("Adjusted R² of the OBSERVED %% population change over %d years (origin 1950–1996) on TFR at the origin ",
-                      "(min / median / max across origins); compare with %.2f for the UN-projected 2023→2050 change"),
-               H_CAMBIO, r2_adj[["chg2050"]]),
+                      "(OLS, one regression per origin year; min / median / max across origins); change = 100 × (population on 1 July ",
+                      "of year t + %d / population on 1 July of year t − 1), the same 1 July convention as the UN-projected 2023→2050 ",
+                      "change (adjusted R² %.2f)"),
+               H_CAMBIO, H_CAMBIO, r2_adj[["chg2050"]]),
        "161 countries ≥ 1 M; UN estimates 1950–2023", "T8.1b", c("slide3.build1.footnote", "notebook.q2"),
        method = "sensitivity", sens_low = ra_chg$v[["min"]], sens_high = ra_chg$v[["max"]], sens_note = ra_chg$nota,
        status = "exploratory", hypothesis_id = "H6", n = N_PAISES_1M, universe = UNIVERSO_1M)
@@ -1488,9 +1491,13 @@ anotar("rho_rank_7var_min", min(rho_var), "rho", "0.00",
        sens_note = sprintf("without the migration variant: %.3f", min(rho_var[-6, -6])))
 w_mc <- ic_wilson(n_mc[["declared"]], N_PAISES_1M, escala = 100)
 anotar("share_rank_mc20", pct_mc[["declared"]], "%", "0",
-       sprintf(paste0("Share of countries whose 90 %% rank interval is wider than 20 places across %s index designs ",
-                      "(5 indicators; Dirichlet(5) weights; z / min–max / rank normalization; arithmetic / geometric; growth included at random)"),
-               format(M_INDICE, big.mark = ",")),
+       # QA-stats (docs/QA_stats.md): se declaran la probabilidad de incluir el crecimiento y la media geométrica.
+       sprintf(paste0("Share of countries whose 90 %% rank interval (5th to 95th percentile of their ranks, R quantile type 7) is wider ",
+                      "than 20 places across %s random index designs (seed %d): 5 indicators oriented so that higher = more advanced; ",
+                      "Dirichlet(5) weights; normalization z / min–max / percentile rank and aggregation arithmetic / geometric, each drawn ",
+                      "with equal probability; population growth included with probability 0.5; the geometric mean is taken on min–max ",
+                      "scores (also when z is drawn) or on rank scores, floored at 0.01"),
+               format(M_INDICE, big.mark = ","), SEMILLA),
        FILTRO_1M_2023, "T10.2", c("slide3.build4", "narration.s3"), ic = w_mc,
        sens_low = min(pct_mc), sens_high = max(pct_mc),
        sens_note = paste(sprintf("%s %.1f", vapply(names(pct_mc), function(s) SPECS_MC[[s]]$en, character(1)), pct_mc), collapse = " · "),

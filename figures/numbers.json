@@ -35,7 +35,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "are_revision_pct": {
     "value": 12,
@@ -73,7 +74,8 @@
     "used_in": ["slide1.build5", "slide4.ethics"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "NOT VERIFIED: external figure (revision between WPP2022 and WPP2024). The WPP2022 file is not in the repository and the independent check (about +11.8 %) relied on a recalled WPP2022 value; a person must check it against the official WPP2022 file (UAE, 2023) before it is shown or voiced."
   },
   "ari_asinh": {
     "value": 0.934186137569488,
@@ -111,7 +113,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "ari_fpca_decadas": {
     "value": 0.962860738360657,
@@ -147,9 +150,10 @@
     "p_adj_method": null,
     "source_cell": "T11.6",
     "used_in": ["slide4.method_strip", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "ari_pam": {
     "value": 0.730386556202396,
@@ -187,7 +191,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "ari_sin_cnmr": {
     "value": 0.540118991546224,
@@ -225,7 +230,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "ari_tray_niveles": {
     "value": 0.59358556931623,
@@ -261,9 +267,10 @@
     "p_adj_method": null,
     "source_cell": "T11.7",
     "used_in": ["slide4.message", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "ari_ward": {
     "value": 0.629616922437111,
@@ -301,14 +308,15 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "borderline_countries": {
     "value": ["Republic of Korea", "Nepal", "Chile", "Botswana", "Guatemala", "Bolivia (Plurinational State of)", "Armenia"],
     "unit": "countries",
     "fmt": "text",
     "say": null,
-    "def": "Countries that stay in their group in fewer than 80 % of 500 subsamples (hatched/lighter on the map); ISO3: KOR, NPL, CHL, BWA, GTM, BOL, ARM",
+    "def": "Countries that stay in their group in fewer than 80 % of 500 random 80 % subsamples of countries (without replacement; k-means k = 4 re-run with nstart 20; labels matched to the main partition with the Hungarian algorithm; seed 2026), hatched/lighter on the map; ISO3: KOR, NPL, CHL, BWA, GTM, BOL, ARM",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
     "n": 7,
     "universe": "161 countries ≥ 1 M",
@@ -337,9 +345,10 @@
     "p_adj_method": null,
     "source_cell": "T11.5",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified: same 7 countries (BOL and GTM are tied, so their order can swap). Random: 500 subsamples of 80 % with k-means nstart 20 (now stated in def)."
   },
   "cdr_prt": {
     "value": 11.113,
@@ -375,9 +384,10 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cdr_tcd": {
     "value": 11.032,
@@ -413,9 +423,10 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "china_share_natchange_upmid": {
     "value": 29.5514,
@@ -451,9 +462,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_examples_early": {
     "value": ["United States of America", "Russian Federation", "Japan"],
@@ -489,9 +501,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_examples_fast": {
     "value": ["India", "China", "Indonesia"],
@@ -527,9 +540,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_examples_iso3": {
     "value": {
@@ -570,9 +584,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_examples_migration": {
     "value": ["Saudi Arabia", "Jordan", "United Arab Emirates"],
@@ -608,9 +623,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_examples_recent": {
     "value": ["Pakistan", "Nigeria", "Ethiopia"],
@@ -646,9 +662,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_medoids": {
     "value": {
@@ -689,9 +706,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. Medoid = country closest to the coordinate-wise median of its group; a PAM-type medoid would give MDG instead of CMR for Recent movers."
   },
   "cluster_names": {
     "value": ["Early movers", "Fast movers", "Recent movers", "Migration-led"],
@@ -727,9 +745,10 @@
     "p_adj_method": null,
     "source_cell": "T11.3",
     "used_in": ["slide4.build1", "narration.s4", "slide4.table"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_pop_bn": {
     "value": {
@@ -770,9 +789,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cluster_profile": {
     "value": [
@@ -881,9 +901,10 @@
     "p_adj_method": null,
     "source_cell": "T11.4",
     "used_in": ["notebook.Q3", "slide4.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified (maximum difference 0.00 after rounding). Medoids as in cluster_medoids; pct of world population uses the UN World aggregate as denominator."
   },
   "cluster_sizes": {
     "value": {
@@ -895,7 +916,7 @@
     "unit": "countries",
     "fmt": "0",
     "say": null,
-    "def": "Number of countries in each trajectory group (k-means k = 4)",
+    "def": "Number of countries in each trajectory group (k-means k = 4, nstart 50, seed 2026, Euclidean distance on the 32 trajectory features). 32 features = decade means (1950s ... 2010s, 2020-23) of TFR, LEx, median age and net migration rate (winsorized ±3 SD of the panel); each indicator is first z-scored with the mean and SD of all 161 x 74 annual country-year values (1950-2023), then averaged by decade",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -924,9 +945,10 @@
     "p_adj_method": null,
     "source_cell": "T11.3",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. Reproduced only with z-scores over all annual country-year cells, then decade means (now stated in def); z on decade means gives 51/52/51/7 and z by column 48/55/51/7 (98 % agreement)."
   },
   "cnmr_are_2023": {
     "value": 28.19,
@@ -962,9 +984,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cover_flags": {
     "value": ["DE", "ES", "BE"],
@@ -1000,9 +1023,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["cover.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cox_hr_income_step": {
     "value": 2.3732,
@@ -1040,7 +1064,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "cramer_v_group_income": {
     "value": 0.575538356020211,
@@ -1078,7 +1103,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "cv_le65_1950": {
     "value": 12.8503437516771,
@@ -1114,9 +1140,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cv_le65_2023": {
     "value": 17.1933002935061,
@@ -1152,9 +1179,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cv_lex_1950": {
     "value": 25.5944143781768,
@@ -1190,9 +1218,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "cv_lex_2023": {
     "value": 10.1530308341521,
@@ -1228,9 +1257,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "delta_cv_le65": {
     "value": 4.34295654182904,
@@ -1268,7 +1298,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "delta_cv_lex": {
     "value": -15.4413835440247,
@@ -1306,7 +1337,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "delta_sd_le60": {
     "value": 1.38352006321155,
@@ -1344,7 +1376,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "delta_sd_le65": {
     "value": 1.37714704906247,
@@ -1382,7 +1415,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "delta_sd_lex": {
     "value": -4.82131245686837,
@@ -1420,7 +1454,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "delta_sd_medage": {
     "value": 5.06771122346243,
@@ -1458,7 +1493,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "dur53_chn": {
     "value": 5.1026,
@@ -1494,9 +1530,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.4",
     "used_in": ["slide2.build1", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "dur53_egy": {
     "value": 32.748,
@@ -1532,9 +1569,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.4",
     "used_in": ["slide2.build1", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "dur53_fastest_ge10m": {
     "value": "CHN",
@@ -1570,9 +1608,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.4",
     "used_in": ["slide2.build1", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "dur53_slowest_ge10m": {
     "value": "EGY",
@@ -1608,9 +1647,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.4",
     "used_in": ["slide2.build1", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "eigen_null_p95_12": {
     "value": [1.5848, 1.4284, 1.3106, 1.2232],
@@ -1648,7 +1688,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "eigen_pca_12": {
     "value": [6.8008, 2.1462, 1.1537, 0.8302],
@@ -1686,7 +1727,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "examples_momentum": {
     "value": ["India", "Brazil", "Mexico"],
@@ -1722,9 +1764,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.3",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_A": {
     "value": ["United States of America", "Egypt", "Iran (Islamic Republic of)"],
@@ -1762,7 +1805,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "examples_type_A_iso3": {
     "value": ["USA", "EGY", "IRN"],
@@ -1798,9 +1842,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_B": {
     "value": ["India", "Indonesia", "Pakistan"],
@@ -1838,7 +1883,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "examples_type_B_iso3": {
     "value": ["IND", "IDN", "PAK"],
@@ -1874,9 +1920,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_C": {
     "value": ["Germany", "Spain", "Belgium"],
@@ -1912,9 +1959,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_C_iso3": {
     "value": ["DEU", "ESP", "BEL"],
@@ -1950,9 +1998,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_D": {
     "value": ["China", "Russian Federation", "Japan"],
@@ -1988,9 +2037,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_D_iso3": {
     "value": ["CHN", "RUS", "JPN"],
@@ -2026,9 +2076,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_E": {
     "value": ["Nepal", "Azerbaijan", "Uruguay"],
@@ -2064,9 +2115,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "examples_type_E_iso3": {
     "value": ["NPL", "AZE", "URY"],
@@ -2102,16 +2154,17 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.2",
     "used_in": ["slide1.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "fig04_highlight_iso3": {
     "value": ["CHN", "COL", "EGY"],
     "unit": null,
     "fmt": "text",
     "say": null,
-    "def": "Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3, among those that reached 3",
+    "def": "Rule: fastest, median and slowest countries (>= 10 M people) in going from TFR 5 to 3 (smoothed, last crossings), among the 36 that reached 3 by 2023; 'median' = the country whose duration is closest to the median duration (18.66 years; with an even number of countries the median falls between two of them)",
     "filter": "161 countries >= 1 M, estimates 1950-2023; TFR smoothed with cubic B-splines (2nd-derivative penalty, lambda = 10)",
     "n": 36,
     "universe": "161 countries ≥ 1 M",
@@ -2140,9 +2193,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.4",
     "used_in": ["slide2.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. n = 36 is even: COL (18.58 years, 18th) and ZAF (18.75, 19th) straddle the median (18.66); the rule takes the country closest to the median, COL (now stated in def)."
   },
   "gam_tfr_q5_100_high": {
     "value": 3.805,
@@ -2180,7 +2234,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "gam_tfr_q5_100_low": {
     "value": 5.9053,
@@ -2218,7 +2273,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "gap_k": {
     "value": 3,
@@ -2256,7 +2312,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "growth_2000_2023_by_group": {
     "value": [
@@ -2292,7 +2349,7 @@
     "unit": "table",
     "fmt": "text",
     "say": null,
-    "def": "Population change 2000-2023 (UN estimates) by trajectory group, split into natural change and net migration, as % of the 2000 population",
+    "def": "Population change 2000-2023 (UN estimates) by trajectory group: sums over 2000-2023 of natural change and net migration, as % of the group's population on 1 July 2000",
     "filter": "161 countries ≥ 1 M, UN estimates 2000-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -2323,7 +2380,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "growth_2024_2050_by_group": {
     "value": [
@@ -2363,7 +2421,7 @@
     "unit": "table",
     "fmt": "text",
     "say": null,
-    "def": "Population change 2024-2050 by trajectory group, split into natural change (Σ NatChange) and net migration (Σ NetMigrations), as % of the 2024 population (sums of persons)",
+    "def": "Population change 2024-2050 by trajectory group: sums over the 27 annual values 2024-2050 of natural change (Σ NatChange), net migration (Σ NetMigrations) and total change (Σ PopChange), as % of the group's population on 1 July 2024 (TPopulation1July; sums of persons)",
     "filter": "161 countries ≥ 1 M, UN medium projection 2024-2050",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -2392,9 +2450,10 @@
     "p_adj_method": null,
     "source_cell": "T15.1",
     "used_in": ["slide4.table", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified with base = 1 July 2024 population and total = sum of PopChange over 2024-2050 (27 annual values), now stated in def; a 1 January 2024 base would give Recent movers 70.9 / 68.1 and Migration-led 37.5 / 41.2."
   },
   "growth_are_2023": {
     "value": 3.704,
@@ -2430,9 +2489,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "hyp_file_commit": {
     "value": "2a0ab7be7457630be9c2ce98d776873bbecad073",
@@ -2470,7 +2530,8 @@
     "used_in": ["readme", "notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "hyp_file_date": {
     "value": "2026-10-23",
@@ -2506,9 +2567,10 @@
     "p_adj_method": null,
     "source_cell": "T18 (R/05_numbers_json.R §4.1)",
     "used_in": ["slide4.ethics", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified (commit 2a0ab7b; file unchanged since). Pending: docs/hipotesis_preinscritas.sha256 ('make prereg') does not exist yet."
   },
   "hyp_file_sha256": {
     "value": "83f98f6e1a3dbbcfa07b8435db7d11cc3eacc79faee9875591652bcbad3bb4b5",
@@ -2546,7 +2608,8 @@
     "used_in": ["readme", "notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "hyp_file_sha256_short": {
     "value": "83f98f6e1a3d",
@@ -2582,9 +2645,10 @@
     "p_adj_method": null,
     "source_cell": "T18 (R/05_numbers_json.R §4.1)",
     "used_in": ["slide4.ethics", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "hyp_q2_status": {
     "value": [
@@ -2665,7 +2729,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "identity_residual_max": {
     "value": 4.862,
@@ -2703,7 +2768,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "index_eff_weights": {
     "value": {
@@ -2747,7 +2813,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "index_highlight": {
     "value": "United Arab Emirates",
@@ -2785,7 +2852,8 @@
     "used_in": ["appendix.bump"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "index_most_uncertain": {
     "value": [
@@ -2888,7 +2956,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "india_group": {
     "value": "Fast movers",
@@ -2924,9 +2993,10 @@
     "p_adj_method": null,
     "source_cell": "T11.3",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "india_share_natchange_lowmid": {
     "value": 40.1744,
@@ -2962,9 +3032,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "jaccard_by_group": {
     "value": {
@@ -3007,7 +3078,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "jaccard_max": {
     "value": 0.948953920212839,
@@ -3043,9 +3115,10 @@
     "p_adj_method": null,
     "source_cell": "T11.5",
     "used_in": ["slide4.method_strip", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified within Monte Carlo tolerance (independent 0.942 vs 0.949; tolerance 0.02)."
   },
   "jaccard_min": {
     "value": 0.782661888661745,
@@ -3081,9 +3154,10 @@
     "p_adj_method": null,
     "source_cell": "T11.5",
     "used_in": ["slide4.method_strip", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified (seed 2026 set just before resampling). The second decimal is Monte Carlo noise (0.77-0.83 across seeds 2027-2045): show it as about 0.8 or 'above 0.75', not as 0.78."
   },
   "join_same_road": {
     "value": 0.667080745341615,
@@ -3119,9 +3193,10 @@
     "p_adj_method": null,
     "source_cell": "T7.J",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "join_same_road_by_group": {
     "value": {
@@ -3164,7 +3239,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "join_same_road_null": {
     "value": 0.302876789833312,
@@ -3200,9 +3276,10 @@
     "p_adj_method": null,
     "source_cell": "T7.J",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "join_same_road_ratio": {
     "value": 2.20248222291561,
@@ -3240,7 +3317,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "k_clusters": {
     "value": 4,
@@ -3276,9 +3354,10 @@
     "p_adj_method": null,
     "source_cell": "T11.2",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "km_dur53_1975_1990": {
     "value": 18.3497,
@@ -3316,7 +3395,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "km_dur53_post1990": {
     "value": 24.1495,
@@ -3354,7 +3434,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "km_dur53_pre1975": {
     "value": 19.5076,
@@ -3392,7 +3473,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "km_dur53_upto1990": {
     "value": 18.8403,
@@ -3430,7 +3512,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_chance": {
     "value": 3.125,
@@ -3466,9 +3549,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "knn_lex": {
     "value": 17.3913043478261,
@@ -3506,7 +3590,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_medage": {
     "value": 15.0310559006211,
@@ -3544,7 +3629,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_pc1": {
     "value": 20.3726708074534,
@@ -3580,9 +3666,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "knn_pc12": {
     "value": 43.2298136645963,
@@ -3618,9 +3705,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "knn_pc123": {
     "value": 64.7204968944099,
@@ -3658,7 +3746,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_pc12_minus_tfr": {
     "value": 30.0621118012422,
@@ -3696,7 +3785,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_tfr": {
     "value": 13.167701863354,
@@ -3732,9 +3822,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "knn_tfr_cdr": {
     "value": 31.055900621118,
@@ -3772,7 +3863,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_tfr_cnmr": {
     "value": 21.9875776397516,
@@ -3810,7 +3902,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "knn_vote_accuracy": {
     "value": 0.739130434782609,
@@ -3846,9 +3939,10 @@
     "p_adj_method": null,
     "source_cell": "T7.J",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lag_onset_lower_bound": {
     "value": 22,
@@ -3884,9 +3978,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.3",
     "used_in": ["slide2.build2", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lag_onset_turnbull_mass_beyond": {
     "value": 0.6351,
@@ -3924,7 +4019,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lag_threshold_100_4_km": {
     "value": 14,
@@ -3962,7 +4058,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "le60_2050_by_group": {
     "value": {
@@ -4005,7 +4102,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lex_gap_prt_tcd": {
     "value": 27.2907,
@@ -4041,16 +4139,17 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lisa_cnmr_hh_fdr": {
     "value": 7,
     "unit": "countries",
     "fmt": "0",
     "say": null,
-    "def": "Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5, conditional permutation) that survive Benjamini-Hochberg FDR at 5%",
+    "def": "Countries in a High-High local cluster of the mean net migration rate 2010-2023 (local Moran, kNN5 with equal weights, conditional permutation with 999 draws; one-sided 'folded' pseudo p-value in the direction of the observed local I, (1 + number of permuted values at least as extreme) / (999 + 1), as in GeoDa) that survive Benjamini-Hochberg FDR at 5% over the 161 local tests",
     "filter": "161 countries >= 1 M, mean of annual estimates 2010-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -4079,9 +4178,10 @@
     "p_adj_method": "BH (161 local tests)",
     "source_cell": "Q1-4.2",
     "used_in": ["slide2.build4", "notebook.T7"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified with the one-sided ('folded', GeoDa-style) conditional-permutation p-value, now stated in def; a two-sided 2*min p-value would give 6 (KWT drops out)."
   },
   "lisa_cnmr_hh_fdr_iso3": {
     "value": ["ARE", "BHR", "IRN", "KWT", "OMN", "QAT", "SAU"],
@@ -4119,7 +4219,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "logrank_income_chisq": {
     "value": 73.3556,
@@ -4157,7 +4258,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_are_12": {
     "value": ["Oman", "Kuwait", "Bahrain", "Saudi Arabia", "Qatar"],
@@ -4195,7 +4297,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_are_12_iso": {
     "value": ["OMN", "KWT", "BHR", "SAU", "QAT"],
@@ -4233,7 +4336,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_are_tfr": {
     "value": ["Lithuania", "Italy", "Belarus", "Japan", "Thailand"],
@@ -4271,7 +4375,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_are_tfr_iso": {
     "value": ["LTU", "ITA", "BLR", "JPN", "THA"],
@@ -4309,7 +4414,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_col_12": {
     "value": ["Iran (Islamic Republic of)", "Peru", "Ecuador", "Panama", "Tunisia"],
@@ -4345,9 +4451,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lookalikes_col_12_iso": {
     "value": ["IRN", "PER", "ECU", "PAN", "TUN"],
@@ -4383,9 +4490,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lookalikes_col_overlap": {
     "value": 0,
@@ -4423,7 +4531,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_col_pc12": {
     "value": ["Iran (Islamic Republic of)", "Ecuador", "Peru", "Panama", "Israel"],
@@ -4461,7 +4570,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_col_pc12_iso": {
     "value": ["IRN", "ECU", "PER", "PAN", "ISR"],
@@ -4499,7 +4609,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "lookalikes_col_tfr": {
     "value": ["France", "Australia", "Türkiye", "United States of America", "New Zealand"],
@@ -4535,9 +4646,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "lookalikes_col_tfr_iso": {
     "value": ["FRA", "AUS", "TUR", "USA", "NZL"],
@@ -4573,9 +4685,10 @@
     "p_adj_method": null,
     "source_cell": "T9.1",
     "used_in": ["slide3.build2", "fig08", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "medage_2050_by_group": {
     "value": {
@@ -4587,7 +4700,7 @@
     "unit": "years",
     "fmt": "0",
     "say": null,
-    "def": "Median across countries of median age in 2050 (UN medium projection), by trajectory group",
+    "def": "Median across countries of median age in 2050 (UN medium projection), by trajectory group (main k-means k = 4 partition; see cluster_sizes for how the 32 features are standardized)",
     "filter": "161 countries ≥ 1 M, UN medium projection 2050",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -4616,9 +4729,10 @@
     "p_adj_method": null,
     "source_cell": "T15.2",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. Depends on the feature standardization behind the groups (see cluster_sizes): with z on decade means, Fast movers 37.1 and Recent movers 24.4."
   },
   "medage_chn_2050": {
     "value": 52.1406,
@@ -4654,9 +4768,10 @@
     "p_adj_method": null,
     "source_cell": "T15.2",
     "used_in": ["slide4.table", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "meta_income_classification": {
     "value": "World Bank FY2027 country income groups (effective 1 July 2026; 2025 GNI per capita, Atlas method), API download 2026-10-22, applied to all years (today's income groups)",
@@ -4692,9 +4807,10 @@
     "p_adj_method": null,
     "source_cell": "T18 (R/05_numbers_json.R §4.3)",
     "used_in": ["notebook.decisiones", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified against data/raw/wb_api_income_2026-10-22.csv (0 differences); the FY2027 vintage label comes from the file name and data/raw/README.md and cannot be checked from the CSV itself."
   },
   "meta_numbers_date": {
     "value": "2026-10-23",
@@ -4732,7 +4848,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_raw_sha256_medium": {
     "value": "286ac36bb1415e2e1ade03acfef0a29f0e4c087e2f78e38c48f50c5df89082bc",
@@ -4770,7 +4887,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_raw_sha256_othervariants": {
     "value": "a860504df54877e4c19788bf6e16920d6017d021b4c149eaf8b5662674180a54",
@@ -4808,7 +4926,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_raw_sha256_supplement": {
     "value": "26d89cf8092b89c6a97a38da0009fcc7454c958b73fe80ed822fd4339ce72510",
@@ -4846,7 +4965,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_raw_sha256_wb_income": {
     "value": "27e9d2c99c2888d3c7a47a83bfb83bf2d58a193b091d5c2e185d6b0fba57ac25",
@@ -4884,7 +5004,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_seed": {
     "value": 2026,
@@ -4922,7 +5043,8 @@
     "used_in": ["notebook.reproducibilidad"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "meta_wpp_version": {
     "value": "UN DESA, World Population Prospects 2024 (July 2024 release): Demographic Indicators, Medium variant (estimates 1950-2023, medium projection 2024-2100), OtherVariants (UN 80 % / 95 % prediction intervals and scenarios) and the DataQuest supplement (LE60, births by sex)",
@@ -4958,9 +5080,10 @@
     "p_adj_method": null,
     "source_cell": "T18 (R/05_numbers_json.R §4.3)",
     "used_in": ["notebook.fuentes", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified file structure (Medium 1950-2101, 18 OtherVariants, supplement); the July 2024 release date cannot be checked from the CSV."
   },
   "mig_hi_countryfe_slope": {
     "value": -0.1561,
@@ -4998,7 +5121,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "mig_hi_within_slope": {
     "value": 0.0072,
@@ -5036,7 +5160,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "mig_share_between": {
     "value": 0.3268,
@@ -5074,7 +5199,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "mig_share_between_excl_gulf": {
     "value": 0.0696,
@@ -5112,7 +5238,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "mig_share_within": {
     "value": 0.8531,
@@ -5150,7 +5277,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "mig_share_within_excl_gulf": {
     "value": 0.7926,
@@ -5188,7 +5316,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "migration_led_members": {
     "value": ["Saudi Arabia", "Jordan", "United Arab Emirates", "Kuwait", "Qatar", "Bahrain", "Djibouti"],
@@ -5224,9 +5353,10 @@
     "p_adj_method": null,
     "source_cell": "T11.3",
     "used_in": ["narration.s4", "qa.mostly_gulf"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "momentum_clock_chn_years": {
     "value": 30,
@@ -5264,7 +5394,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "momentum_clock_years_range": {
     "value": "32–40",
@@ -5302,14 +5433,15 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "momentum_years_range": {
     "value": "34–38",
     "unit": "years",
     "fmt": "text",
     "say": "34 to 38",
-    "def": "Years from 2023 to the projected population peak (UN medium, maximum over 2023-2100) in the countries below replacement that still grow from births without net immigration (lever type B & TFR < 2.1): population-weighted 25th-75th percentile",
+    "def": "Years from 2023 to the projected population peak (UN medium, maximum over 2023-2100) in the countries below replacement that still grow from births without net immigration (lever type B & TFR < 2.1): population-weighted 25th-75th percentile (weights = population on 1 July 2023; weighted percentile = first value, in ascending order, whose cumulative population share reaches p, without interpolation)",
     "filter": "22 countries and areas (type B & TFR < 2.1, 2023)",
     "n": 22,
     "universe": "237 countries and areas",
@@ -5338,9 +5470,10 @@
     "p_adj_method": null,
     "source_cell": "T16.2",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified: weights = 1 July 2023 population; weighted quantile = first value whose cumulative population share reaches p, no interpolation (now stated in def); midpoint interpolation gives 34.0-38.5."
   },
   "momentum_years_to_peak_range": {
     "value": "24–34",
@@ -5378,7 +5511,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_cnmr_2023": {
     "value": 0.1143,
@@ -5414,9 +5548,10 @@
     "p_adj_method": "holm (F1, Q1)",
     "source_cell": "Q1-4.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "moran_cnmr_2023_nogulf": {
     "value": -0.0283,
@@ -5452,9 +5587,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-4.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "moran_growth_2023": {
     "value": 0.5925,
@@ -5492,7 +5628,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_growth_rank_1950": {
     "value": 0.3392,
@@ -5530,7 +5667,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_growth_rank_2023": {
     "value": 0.6926,
@@ -5568,7 +5706,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_lex_2023": {
     "value": 0.6879,
@@ -5606,7 +5745,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_medage_2023": {
     "value": 0.7695,
@@ -5644,7 +5784,8 @@
     "used_in": ["notebook.T7"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "moran_tfr_2023": {
     "value": 0.735,
@@ -5680,9 +5821,10 @@
     "p_adj_method": "holm (F1, Q1)",
     "source_cell": "Q1-4.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_band_tfr": {
     "value": 39,
@@ -5720,7 +5862,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_below_repl_by_type": {
     "value": {
@@ -5764,7 +5907,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_below_repl_growing_2023": {
     "value": 84,
@@ -5800,9 +5944,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.2",
     "used_in": ["cover.build3", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_below_repl_natural_growth_2023": {
     "value": 66,
@@ -5838,9 +5983,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.2",
     "used_in": ["cover.build3", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_below_replacement_2023": {
     "value": 130,
@@ -5876,9 +6022,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.2",
     "used_in": ["cover.build2", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cens_der": {
     "value": 26,
@@ -5914,9 +6061,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.1",
     "used_in": ["slide2.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cens_der_ssa": {
     "value": 23,
@@ -5952,9 +6100,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.1",
     "used_in": ["slide2.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cens_izq": {
     "value": 45,
@@ -5990,9 +6139,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.1",
     "used_in": ["slide2.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cnmr_sign_uncertain_2050": {
     "value": 155,
@@ -6028,9 +6178,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.2",
     "used_in": ["slide4.table"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cnmr_winsor_cells": {
     "value": 144,
@@ -6068,7 +6219,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_cnmr_winsorized_2023": {
     "value": 7,
@@ -6106,7 +6258,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_countries": {
     "value": 237,
@@ -6142,9 +6295,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.1",
     "used_in": ["slide1.build0", "cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_countries_1m": {
     "value": 161,
@@ -6180,9 +6334,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.1",
     "used_in": ["slide1.build0"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_cruce_tfr4_obs": {
     "value": 90,
@@ -6218,9 +6373,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.1",
     "used_in": ["slide2.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_dims_parallel": {
     "value": 2,
@@ -6256,9 +6412,10 @@
     "p_adj_method": null,
     "source_cell": "T9.4",
     "used_in": ["slide3.build3", "fig09", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_dir_uncertain_2050": {
     "value": 77,
@@ -6294,9 +6451,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.2",
     "used_in": ["slide1.build5"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_ge1m": {
     "value": 161,
@@ -6332,9 +6490,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.3",
     "used_in": ["slide1.build0", "slide1.build5", "slide3", "slide4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_grow_only_migration_2023": {
     "value": 18,
@@ -6370,9 +6529,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["cover.build3", "slide1.build3", "slide1.message", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_grow_only_migration_2023_1m": {
     "value": 11,
@@ -6408,9 +6568,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_grow_only_migration_sens_range": {
     "value": "15–25",
@@ -6446,9 +6607,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_gulf_migration_led": {
     "value": 5,
@@ -6484,9 +6646,10 @@
     "p_adj_method": null,
     "source_cell": "T11.3",
     "used_in": ["narration.s4", "qa.mostly_gulf"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_hist_typeE_tfr3": {
     "value": 31,
@@ -6524,7 +6687,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_knn_tfr_zero": {
     "value": 90,
@@ -6562,7 +6726,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_momentum_countries": {
     "value": 22,
@@ -6598,9 +6763,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.3",
     "used_in": ["slide1.build3", "narration.slide1", "slide4.table"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_momentum_emig": {
     "value": 18,
@@ -6638,7 +6804,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_mort_first_onset": {
     "value": 106,
@@ -6674,9 +6841,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.1",
     "used_in": ["slide2.build2", "slide2.message", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_natneg_1990": {
     "value": 8,
@@ -6712,9 +6880,10 @@
     "p_adj_method": null,
     "source_cell": "T15.7",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_natneg_2023": {
     "value": 53,
@@ -6750,9 +6919,10 @@
     "p_adj_method": null,
     "source_cell": "T15.7",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_natneg_2050": {
     "value": 106,
@@ -6788,9 +6958,10 @@
     "p_adj_method": null,
     "source_cell": "T15.7",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_onset": {
     "value": 109,
@@ -6826,9 +6997,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.1",
     "used_in": ["slide2.build2", "slide2.message", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_pairs_twins": {
     "value": 12880,
@@ -6864,9 +7036,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_pcs_70": {
     "value": 2,
@@ -6902,9 +7075,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["slide3.build3", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_q5_falling_1950": {
     "value": 92,
@@ -6940,9 +7114,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.3",
     "used_in": ["slide2.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_sdg32_above": {
     "value": 70,
@@ -6978,9 +7153,10 @@
     "p_adj_method": null,
     "source_cell": "T15.6",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_sdg32_above_2030": {
     "value": 58,
@@ -7016,9 +7192,10 @@
     "p_adj_method": null,
     "source_cell": "T15.6",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_sdg32_on_pace": {
     "value": 8,
@@ -7054,9 +7231,10 @@
     "p_adj_method": null,
     "source_cell": "T15.6",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_shrinking_2023": {
     "value": 54,
@@ -7092,9 +7270,10 @@
     "p_adj_method": null,
     "source_cell": "T15.5",
     "used_in": ["slide4.table", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_shrinking_2050": {
     "value": 98,
@@ -7130,9 +7309,10 @@
     "p_adj_method": null,
     "source_cell": "T15.5",
     "used_in": ["slide4.table", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_shrinking_2100": {
     "value": 162,
@@ -7168,9 +7348,10 @@
     "p_adj_method": null,
     "source_cell": "T15.5",
     "used_in": ["slide4.table", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_sovereign": {
     "value": 195,
@@ -7206,9 +7387,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.3",
     "used_in": ["slide1.build0", "cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_ssa": {
     "value": 51,
@@ -7244,9 +7426,10 @@
     "p_adj_method": null,
     "source_cell": "T15.8",
     "used_in": ["slide4.ethics_card", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_states": {
     "value": 195,
@@ -7282,9 +7465,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.3",
     "used_in": ["slide1.build0", "cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_territories": {
     "value": 42,
@@ -7320,9 +7504,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.3",
     "used_in": ["slide1.build0", "cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_tests_q1": {
     "value": {
@@ -7366,7 +7551,8 @@
     "used_in": ["notebook.T17"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_tests_q2": {
     "value": 7,
@@ -7404,7 +7590,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_A": {
     "value": 71,
@@ -7440,9 +7627,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_AB": {
     "value": 165,
@@ -7478,9 +7666,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_AB_1m": {
     "value": 120,
@@ -7518,7 +7707,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_A_1m": {
     "value": 48,
@@ -7556,7 +7746,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_B": {
     "value": 94,
@@ -7592,9 +7783,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_B_1m": {
     "value": 72,
@@ -7632,7 +7824,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_C": {
     "value": 18,
@@ -7668,9 +7861,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_C_1m": {
     "value": 11,
@@ -7708,7 +7902,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_D": {
     "value": 35,
@@ -7744,9 +7939,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_D_1m": {
     "value": 24,
@@ -7784,7 +7980,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_E": {
     "value": 19,
@@ -7820,9 +8017,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.1",
     "used_in": ["slide1.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "n_type_E_1m": {
     "value": 6,
@@ -7860,7 +8058,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "n_type_E_tfr_ge21": {
     "value": 6,
@@ -7898,7 +8097,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "nat_max_band": {
     "value": 12.408,
@@ -7936,7 +8136,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "nat_min_band": {
     "value": -5.935,
@@ -7974,7 +8175,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "omega": {
     "value": 0.953669427327399,
@@ -8012,7 +8214,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_between_halfq5": {
     "value": -1.0523,
@@ -8048,9 +8251,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.1",
     "used_in": ["slide2.build3", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_eurna_halfq5": {
     "value": 0.391,
@@ -8086,9 +8290,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_forward_sd": {
     "value": 0.2823,
@@ -8126,7 +8331,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_high_halfq5": {
     "value": -0.2768,
@@ -8162,9 +8368,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_i2_income": {
     "value": 0.6923,
@@ -8202,7 +8409,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_i2_region": {
     "value": 0.9056,
@@ -8240,7 +8448,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_lead": {
     "value": 0.282,
@@ -8278,7 +8487,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_low_income_halfq5": {
     "value": -0.9476,
@@ -8314,9 +8524,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_lowmid_halfq5": {
     "value": 0.0695,
@@ -8352,9 +8563,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_placebo_hi": {
     "value": 0.2554,
@@ -8390,9 +8602,10 @@
     "p_adj_method": "holm (F1, Q1)",
     "source_cell": "Q1-7.4",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_placebo_lo": {
     "value": -0.2488,
@@ -8428,9 +8641,10 @@
     "p_adj_method": "holm (F1, Q1)",
     "source_cell": "Q1-7.4",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_ratio_between_within": {
     "value": 2.5416,
@@ -8466,9 +8680,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.1",
     "used_in": ["slide2.build3", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified point value (2.54). The block-bootstrap interval of this ratio is unstable (independent [-7.6; 14.3] vs [-9.2; 18.4]) because the within-country denominator's interval reaches 0: never show this interval."
   },
   "panel_reverse_sd": {
     "value": 0.2157,
@@ -8506,7 +8721,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "panel_ssa_halfq5": {
     "value": -1.1974,
@@ -8542,9 +8758,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_upmid_halfq5": {
     "value": 0.1103,
@@ -8580,9 +8797,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.3",
     "used_in": ["slide2.build3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_within_halfq5": {
     "value": -0.414,
@@ -8618,9 +8836,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.1",
     "used_in": ["slide2.build3", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "panel_within_over_between": {
     "value": 0.3935,
@@ -8656,9 +8875,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-7.1",
     "used_in": ["narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "partial_r_tfr_lex": {
     "value": 0.0957812616785273,
@@ -8696,7 +8916,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "pc12_var": {
     "value": 74.5584405301283,
@@ -8734,7 +8955,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "pc1_var": {
     "value": 56.6735086062963,
@@ -8770,9 +8992,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["slide3.build3", "fig09"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified point value; independent block-bootstrap CI [51.6; 62.5] vs [51.4; 62.6] (resampling details)."
   },
   "pc2_var": {
     "value": 17.8849319238319,
@@ -8808,9 +9031,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["fig09", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pc2_var_no_gulf": {
     "value": 13.3037171462401,
@@ -8846,9 +9070,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["slide3.build3", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pct_var_fase": {
     "value": 79.8259,
@@ -8884,9 +9109,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-6.2",
     "used_in": ["slide2.build1", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pct_var_fase_c3": {
     "value": 70.7834,
@@ -8924,7 +9150,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "pct_var_fase_c5": {
     "value": 76.5393,
@@ -8962,7 +9189,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "peak_year_by_group": {
     "value": [
@@ -9031,9 +9259,10 @@
     "p_adj_method": null,
     "source_cell": "T15.3",
     "used_in": ["notebook.Q3", "slide4.table"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_are_2050": {
     "value": 15.3674,
@@ -9069,9 +9298,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_are_2050_pi95_high": {
     "value": 33.2637,
@@ -9107,9 +9337,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_are_2050_pi95_low": {
     "value": 8.8863,
@@ -9145,9 +9376,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_are_2050_zero_mig": {
     "value": 12.3933,
@@ -9183,9 +9415,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_are_2100": {
     "value": 26.1343,
@@ -9223,7 +9456,8 @@
     "used_in": ["notebook.T13"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "pop_chn_2050": {
     "value": 1.260289093,
@@ -9259,9 +9493,10 @@
     "p_adj_method": null,
     "source_cell": "T13.CHN",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_chn_2050_pi95_high": {
     "value": 1.353613188,
@@ -9297,9 +9532,10 @@
     "p_adj_method": null,
     "source_cell": "T13.CHN",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_chn_2050_pi95_low": {
     "value": 1.158624329,
@@ -9335,9 +9571,10 @@
     "p_adj_method": null,
     "source_cell": "T13.CHN",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "pop_momentum_bn": {
     "value": 2.201,
@@ -9373,9 +9610,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-3.3",
     "used_in": ["slide1.build3", "narration.slide1", "slide4.table"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "q5_drop_at_tfr_onset": {
     "value": 49.8865,
@@ -9411,9 +9649,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.4",
     "used_in": ["slide2.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "q5_gap_p90p10_1950": {
     "value": 310.7013,
@@ -9451,7 +9690,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "q5_gap_p90p10_2023": {
     "value": 64.2181,
@@ -9489,7 +9729,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "q5_ratio_p90p10_1950": {
     "value": 6.19011060051016,
@@ -9525,9 +9766,10 @@
     "p_adj_method": null,
     "source_cell": "T12.2",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "q5_ratio_p90p10_2023": {
     "value": 19.8765726043504,
@@ -9563,16 +9805,17 @@
     "p_adj_method": null,
     "source_cell": "T12.2",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "q5_ratio_p90p10_peak": {
     "value": 26.9343423392168,
     "unit": "ratio",
     "fmt": "0",
     "say": null,
-    "def": "Maximum over 1950-2023 (UN estimates) of the P90/P10 ratio of under-five mortality across countries, reached in 2006",
+    "def": "Maximum over 1950-2023 (UN estimates) of the P90/P10 ratio of under-five mortality across countries (P90 and P10 with R's default quantile, type 7), reached in 2006",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -9601,16 +9844,17 @@
     "p_adj_method": null,
     "source_cell": "T12.2",
     "used_in": ["slide4.build2", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "q5_ratio_p90p10_peak_year": {
     "value": 2006,
     "unit": "year",
     "fmt": "0",
     "say": null,
-    "def": "Year (1950-2023, UN estimates) in which the P90/P10 ratio of under-five mortality across countries peaked",
+    "def": "Year (1950-2023, UN estimates) in which the P90/P10 ratio of under-five mortality across countries peaked (P90 and P10 with R's default quantile, type 7)",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -9639,9 +9883,10 @@
     "p_adj_method": null,
     "source_cell": "T12.2",
     "used_in": ["slide4.build2", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified with R's default quantile (type 7): peak in 2006 (26.9x). With quantile type 6 the peak year is 1999, so the exact year depends on the estimator: prefer 'in the 2000s' to an exact year on screen or in the narration."
   },
   "r2_all": {
     "value": 0.985853690237514,
@@ -9677,9 +9922,10 @@
     "p_adj_method": null,
     "source_cell": "T8.3",
     "used_in": ["slide3.build1.footnote", "fig07"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_fase_kr": {
     "value": 0.5578,
@@ -9717,7 +9963,8 @@
     "used_in": ["notebook.T4"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_groups_axis1": {
     "value": 0.898087856450286,
@@ -9753,9 +10000,10 @@
     "p_adj_method": null,
     "source_cell": "T11.9",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_in_m0": {
     "value": 0.0853,
@@ -9793,7 +10041,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_in_m1": {
     "value": 0.0856,
@@ -9831,7 +10080,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_in_m2": {
     "value": 0.1234,
@@ -9869,7 +10119,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_in_m3": {
     "value": 0.2084,
@@ -9907,7 +10158,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_in_m4": {
     "value": 0.2183,
@@ -9945,7 +10197,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_ladder_tfr_cdr": {
     "value": 0.696517628917462,
@@ -9981,9 +10234,10 @@
     "p_adj_method": null,
     "source_cell": "T8.3",
     "used_in": ["slide3.build1.footnote"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_nat_tfr_belowrepl": {
     "value": 0.360287319949302,
@@ -10021,7 +10275,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_nat_tfr_medage_belowrepl": {
     "value": 0.82592981954767,
@@ -10059,7 +10314,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oos_m0": {
     "value": 0.0723,
@@ -10097,7 +10353,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oos_m1": {
     "value": 0.0622,
@@ -10135,7 +10392,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oos_m2": {
     "value": 0.0835,
@@ -10173,7 +10431,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oos_m3": {
     "value": 0.1098,
@@ -10211,7 +10470,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oos_m4": {
     "value": 0.0659,
@@ -10249,7 +10509,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oot_growth_today": {
     "value": -0.158097831378948,
@@ -10287,7 +10548,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oot_medage": {
     "value": 0.473228664355076,
@@ -10325,7 +10587,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oot_tfr": {
     "value": 0.477629552164492,
@@ -10363,7 +10626,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oot_tfr_cdr": {
     "value": 0.567219228198055,
@@ -10401,7 +10665,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_oot_tfr_cdr_cnmr": {
     "value": 0.471302830736315,
@@ -10439,7 +10704,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_region_lex_1950": {
     "value": 0.572371010558513,
@@ -10477,7 +10743,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_region_lex_2023": {
     "value": 0.673551073758279,
@@ -10515,7 +10782,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_region_medage_1950": {
     "value": 0.619351951901967,
@@ -10553,7 +10821,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_region_medage_2023": {
     "value": 0.745205334854851,
@@ -10591,7 +10860,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_chg2050": {
     "value": 0.881030904621359,
@@ -10627,9 +10897,10 @@
     "p_adj_method": null,
     "source_cell": "T8.1",
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_chg2050_cv": {
     "value": 0.878419977878847,
@@ -10665,9 +10936,10 @@
     "p_adj_method": null,
     "source_cell": "T8.2",
     "used_in": ["slide3.build1", "fig07"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_chg2050_cv_loso": {
     "value": 0.867514530252745,
@@ -10705,7 +10977,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_chg27_observed": {
     "value": {
@@ -10716,7 +10989,7 @@
     "unit": "R2",
     "fmt": "0.00",
     "say": null,
-    "def": "Adjusted R² of the OBSERVED % population change over 27 years (origin 1950–1996) on TFR at the origin (min / median / max across origins); compare with 0.88 for the UN-projected 2023→2050 change",
+    "def": "Adjusted R² of the OBSERVED % population change over 27 years (origin 1950–1996) on TFR at the origin (OLS, one regression per origin year; min / median / max across origins); change = 100 × (population on 1 July of year t + 27 / population on 1 July of year t − 1), the same 1 July convention as the UN-projected 2023→2050 change (adjusted R² 0.88)",
     "filter": "161 countries ≥ 1 M; UN estimates 1950–2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -10745,9 +11018,10 @@
     "p_adj_method": null,
     "source_cell": "T8.1b",
     "used_in": ["slide3.build1.footnote", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified with 1 July populations (now stated in def); with 1 January populations the median would be 0.37 and the maximum 0.51; the 0.88 comparator does not change."
   },
   "r2_tfr_cnmr": {
     "value": -0.00126774884178693,
@@ -10783,9 +11057,10 @@
     "p_adj_method": null,
     "source_cell": "T8.1",
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_cnmr_by_year": {
     "value": {
@@ -10827,7 +11102,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_cnmr_cv": {
     "value": -0.0268493717298124,
@@ -10863,9 +11139,10 @@
     "p_adj_method": null,
     "source_cell": "T8.2",
     "used_in": ["slide3.build1", "fig07"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_cnmr_cv_loso": {
     "value": -0.0614328350527766,
@@ -10903,7 +11180,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_growth": {
     "value": 0.589933990054387,
@@ -10939,9 +11217,10 @@
     "p_adj_method": null,
     "source_cell": "T8.1",
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_growth_by_year": {
     "value": {
@@ -10983,7 +11262,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_growth_cv": {
     "value": 0.581303269451663,
@@ -11019,9 +11299,10 @@
     "p_adj_method": null,
     "source_cell": "T8.2",
     "used_in": ["slide3.build1", "fig07"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_growth_cv_loso": {
     "value": 0.550744868478105,
@@ -11059,7 +11340,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_medage": {
     "value": 0.771149426913637,
@@ -11095,9 +11377,10 @@
     "p_adj_method": null,
     "source_cell": "T8.1",
     "used_in": ["slide3.build1", "fig07", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_medage_by_year": {
     "value": {
@@ -11139,7 +11422,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r2_tfr_medage_cv": {
     "value": 0.76561255611944,
@@ -11175,9 +11459,10 @@
     "p_adj_method": null,
     "source_cell": "T8.2",
     "used_in": ["slide3.build1", "fig07"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r2_tfr_medage_cv_loso": {
     "value": 0.738445821489669,
@@ -11215,7 +11500,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r_cnmr_1950_2023": {
     "value": 0.1386,
@@ -11253,7 +11539,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r_cnmr_decades_max": {
     "value": 0.6916,
@@ -11289,9 +11576,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-8.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r_cnmr_decades_min": {
     "value": 0.3169,
@@ -11327,9 +11615,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-8.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r_cnmr_decades_recent": {
     "value": 0.6916,
@@ -11365,9 +11654,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-8.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r_nat_medage_band": {
     "value": -0.909694220780212,
@@ -11405,7 +11695,8 @@
     "used_in": ["appendix.same_fertility"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "r_tfr_decades_min": {
     "value": 0.9481,
@@ -11441,9 +11732,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-8.1",
     "used_in": ["slide2.build4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. The minimum (0.948) comes from life expectancy (1990s to 2000s), not from TFR (TFR minimum 0.951), despite the key name."
   },
   "r_tfr_pc1": {
     "value": -0.944774736164088,
@@ -11479,9 +11771,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["slide3.build3", "fig09"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "r_tfr_pc2": {
     "value": 0.0334787165655158,
@@ -11517,9 +11810,10 @@
     "p_adj_method": null,
     "source_cell": "T9.3",
     "used_in": ["slide3.build3", "fig09"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "rank_range_ukr": {
     "value": {
@@ -11560,7 +11854,8 @@
     "used_in": ["appendix.bump"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rec_rows": {
     "value": [
@@ -11662,9 +11957,10 @@
     "p_adj_method": null,
     "source_cell": "T16",
     "used_in": ["slide4.build3", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified numbers; the text cells (mandates, agencies, verbs) are wording, not numbers, and were not checked here."
   },
   "recov_pc1": {
     "value": 0.566735086062964,
@@ -11700,9 +11996,10 @@
     "p_adj_method": null,
     "source_cell": "T9.2",
     "used_in": ["slide3.build2.note", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified point value; the independent block-bootstrap lower bound is 0.52 (re-standardizing in each replicate) vs 0.514."
   },
   "recov_pc12": {
     "value": 0.745584405301283,
@@ -11738,9 +12035,10 @@
     "p_adj_method": null,
     "source_cell": "T9.2",
     "used_in": ["slide3.build2.note", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "recov_tfr": {
     "value": 0.508568936576768,
@@ -11776,18 +12074,19 @@
     "p_adj_method": null,
     "source_cell": "T9.2",
     "used_in": ["slide3.build2.note", "notebook.q2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "region_vote_accuracy": {
     "value": 0.775,
     "unit": "share",
     "fmt": "0.00",
     "say": null,
-    "def": "Share of countries whose group equals the leave-one-out majority group of its SDG region (reference so as not to overstate geography)",
+    "def": "Share of countries whose group equals the leave-one-out majority group of the other countries of its SDG region (reference so as not to overstate geography; ties go to the first group in the order Early movers, Fast movers, Recent movers, Migration-led); denominator 160 countries: Papua New Guinea is alone in its SDG region and has no leave-one-out vote",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
-    "n": 161,
+    "n": 160,
     "universe": "161 countries ≥ 1 M",
     "method": "descriptive",
     "ci_low": null,
@@ -11814,9 +12113,10 @@
     "p_adj_method": null,
     "source_cell": "T7.J",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified: denominator 160 (Papua New Guinea is the only country >= 1 M in its SDG region and has no leave-one-out vote), now stated in def and n; over 161 it would read 0.770."
   },
   "rho_cdr_lex_1950": {
     "value": -0.973921670117322,
@@ -11852,9 +12152,10 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "rho_cdr_lex_2023": {
     "value": 0.0672317598572176,
@@ -11890,9 +12191,10 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "rho_cdr_lex_2050": {
     "value": 0.440764061971058,
@@ -11930,7 +12232,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_cdr_medage_2023": {
     "value": 0.457499424890729,
@@ -11966,9 +12269,10 @@
     "p_adj_method": null,
     "source_cell": "T8.5",
     "used_in": ["slide3.build1.footnote"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "rho_index_le60": {
     "value": 0.866695422130205,
@@ -12006,7 +12310,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_q5_cnmr_within_high": {
     "value": -0.0748,
@@ -12044,7 +12349,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_q5_cnmr_within_low": {
     "value": 0.0754,
@@ -12082,7 +12388,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_q5_cnmr_within_lowmid": {
     "value": 0.1619,
@@ -12120,7 +12427,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_q5_cnmr_within_upmid": {
     "value": 0.1724,
@@ -12158,7 +12466,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_q5_cnmr_world": {
     "value": -0.4513,
@@ -12196,7 +12505,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "rho_rank_7var_min": {
     "value": 0.9698642742121,
@@ -12234,7 +12544,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "sd_le60_1950": {
     "value": 1.80352277286316,
@@ -12272,7 +12583,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "sd_le60_2023": {
     "value": 3.18704283607471,
@@ -12310,7 +12622,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "sd_le65_1950": {
     "value": 1.46849985033159,
@@ -12346,9 +12659,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_le65_2023": {
     "value": 2.84564689939406,
@@ -12384,9 +12698,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_lex_1950": {
     "value": 12.2436689997272,
@@ -12422,9 +12737,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_lex_2023": {
     "value": 7.42235654285882,
@@ -12460,9 +12776,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_logq5_1950": {
     "value": 0.698833874660413,
@@ -12500,7 +12817,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "sd_logq5_2023": {
     "value": 1.14319318652668,
@@ -12538,7 +12856,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "sd_medage_1950": {
     "value": 4.67040255246939,
@@ -12574,9 +12893,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_medage_2023": {
     "value": 9.73811377593182,
@@ -12612,9 +12932,10 @@
     "p_adj_method": null,
     "source_cell": "T12.1",
     "used_in": ["slide4.build2", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_medage_peak_year_proj": {
     "value": 2040,
@@ -12650,9 +12971,10 @@
     "p_adj_method": null,
     "source_cell": "T12.3",
     "used_in": ["slide4.build2", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "sd_tfr_peak_year": {
     "value": 1981,
@@ -12690,7 +13012,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "shapley_mig_by_income_2023": {
     "value": {
@@ -12733,7 +13056,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "shapley_mig_high_2023": {
     "value": 0.505,
@@ -12771,7 +13095,8 @@
     "used_in": ["notebook.T5"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_between_groups": {
     "value": 42.2360248447205,
@@ -12807,9 +13132,10 @@
     "p_adj_method": null,
     "source_cell": "T11.9",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_cnmr_sign_kept": {
     "value": 76.3975,
@@ -12847,7 +13173,8 @@
     "used_in": ["notebook.T6"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_countries_mig_dominant_by_region": {
     "value": {
@@ -12894,7 +13221,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_keep_ge_0.8": {
     "value": 95.6521739130435,
@@ -12930,9 +13258,10 @@
     "p_adj_method": null,
     "source_cell": "T11.5",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_high_2000_2023": {
     "value": 70.6835,
@@ -12968,9 +13297,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2", "slide1.message", "narration.slide1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. GGY and JEY are 'Not classified' (the World Bank lists Channel Islands as CHI)."
   },
   "share_mig_high_2010_2023": {
     "value": 77.5404,
@@ -13006,9 +13336,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_high_sens_range": {
     "value": "64–78",
@@ -13044,9 +13375,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_high_un_agg": {
     "value": 63.9873,
@@ -13082,9 +13414,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_low_2000_2023": {
     "value": -3.677,
@@ -13120,9 +13453,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_lowmid_2000_2023": {
     "value": -8.5812,
@@ -13158,9 +13492,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mig_region_2000_2023": {
     "value": {
@@ -13207,7 +13542,8 @@
     "used_in": ["notebook.T1"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_mig_upmid_2000_2023": {
     "value": -4.6122,
@@ -13243,9 +13579,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-2.3",
     "used_in": ["slide1.build2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mort_first": {
     "value": 97.2477,
@@ -13281,9 +13618,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.1",
     "used_in": ["slide2.build2", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_mort_first_both_observed": {
     "value": 97.1963,
@@ -13321,7 +13659,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_mort_first_threshold_range": {
     "value": [15.9, 100],
@@ -13359,7 +13698,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_pop_natneg_2023": {
     "value": 28.0506508351416,
@@ -13395,9 +13735,10 @@
     "p_adj_method": null,
     "source_cell": "T15.7",
     "used_in": ["slide4.table", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "share_rank_7var": {
     "value": 9.3167701863354,
@@ -13435,14 +13776,15 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_rank_mc20": {
     "value": 21.7391304347826,
     "unit": "%",
     "fmt": "0",
     "say": "one country in five",
-    "def": "Share of countries whose 90 % rank interval is wider than 20 places across 2,000 index designs (5 indicators; Dirichlet(5) weights; z / min–max / rank normalization; arithmetic / geometric; growth included at random)",
+    "def": "Share of countries whose 90 % rank interval (5th to 95th percentile of their ranks, R quantile type 7) is wider than 20 places across 2,000 random index designs (seed 2026): 5 indicators oriented so that higher = more advanced; Dirichlet(5) weights; normalization z / min–max / percentile rank and aggregation arithmetic / geometric, each drawn with equal probability; population growth included with probability 0.5; the geometric mean is taken on min–max scores (also when z is drawn) or on rank scores, floored at 0.01",
     "filter": "161 countries ≥ 1 M people (2023); UN estimates for 2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -13471,9 +13813,10 @@
     "p_adj_method": null,
     "source_cell": "T10.2",
     "used_in": ["slide3.build4", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified as a random statistic: an independent implementation gives 21.7-23.6 % across 10 seeds, inside the Wilson CI (16-29 %); 'one in five' is robust, the exact percentage is not."
   },
   "share_rank_mc20_sens": {
     "value": {
@@ -13516,7 +13859,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_sdg32_on_pace": {
     "value": 11.4285714285714,
@@ -13554,7 +13898,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "share_sil_lt_0.1": {
     "value": 11.1801242236025,
@@ -13592,14 +13937,15 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "silhouette": {
     "value": 0.371998419185696,
     "unit": "silhouette",
     "fmt": "0.00",
     "say": "about 0.37",
-    "def": "Mean silhouette of the k-means k = 4 partition (Euclidean distance in the 32 trajectory features). 32 features = decade means (1950s ... 2010s, 2020-23) of TFR, LEx, median age and net migration rate (winsorized ±3 SD of the panel), z-scored over the whole 161 x 1950-2023 panel",
+    "def": "Mean silhouette of the k-means k = 4 partition (Euclidean distance in the 32 trajectory features). 32 features = decade means (1950s ... 2010s, 2020-23) of TFR, LEx, median age and net migration rate (winsorized ±3 SD of the panel); each indicator is first z-scored with the mean and SD of all 161 x 74 annual country-year values (1950-2023), then averaged by decade",
     "filter": "161 countries ≥ 1 M (2023), UN estimates 1950-2023",
     "n": 161,
     "universe": "161 countries ≥ 1 M",
@@ -13628,9 +13974,10 @@
     "p_adj_method": null,
     "source_cell": "T11.2",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "silhouette_k2": {
     "value": 0.442417104893598,
@@ -13668,7 +14015,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "silhouette_speed_clusters": {
     "value": 0.45595609135373,
@@ -13706,7 +14054,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "speed53_median_by_group": {
     "value": {
@@ -13747,9 +14096,10 @@
     "p_adj_method": null,
     "source_cell": "T11.10",
     "used_in": ["notebook.Q3", "slide4.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "speed53_rule_10m": {
     "value": {
@@ -13797,7 +14147,8 @@
     "used_in": ["notebook.Q3", "qa.fig04"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "team_name": {
     "value": "UNALSta-R",
@@ -13833,9 +14184,10 @@
     "p_adj_method": null,
     "source_cell": "T18 (R/05_numbers_json.R §4.4)",
     "used_in": ["cover", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "tfr_are_2023": {
     "value": 1.2,
@@ -13871,9 +14223,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-9.1",
     "used_in": ["slide1.build5"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twin_growth_are": {
     "value": 3.704,
@@ -13909,9 +14262,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twin_growth_blr": {
     "value": -0.653,
@@ -13947,9 +14301,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twin_tfr_are": {
     "value": 1.2,
@@ -13985,9 +14340,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twin_tfr_blr": {
     "value": 1.2076,
@@ -14023,9 +14379,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2", "narration.s3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twins": {
     "value": [
@@ -14122,9 +14479,10 @@
     "p_adj_method": null,
     "source_cell": "T8.6",
     "used_in": ["slide3.build2", "fig08"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "twins_lex_medage": {
     "value": [
@@ -14223,7 +14581,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "twins_other_rules": {
     "value": [
@@ -14292,7 +14651,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "type_concordance_2023_2021_23": {
     "value": 88.6076,
@@ -14330,7 +14690,8 @@
     "used_in": ["notebook.T2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "vif_max_12": {
     "value": 334.775435621831,
@@ -14368,7 +14729,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "world_peak_bn": {
     "value": 10.289315244,
@@ -14404,9 +14766,10 @@
     "p_adj_method": null,
     "source_cell": "T15.5",
     "used_in": ["notebook.Q3", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "world_peak_year": {
     "value": 2084,
@@ -14442,9 +14805,10 @@
     "p_adj_method": null,
     "source_cell": "T15.5",
     "used_in": ["notebook.Q3", "references"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "world_pop_1950_bn": {
     "value": 2.4931,
@@ -14480,9 +14844,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.3",
     "used_in": ["cover.build1"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "world_pop_2023_bn": {
     "value": 8.0917,
@@ -14518,9 +14883,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-1.1",
     "used_in": ["cover.build1", "narration.cover"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "world_pop_2050_bn": {
     "value": 9.664378587,
@@ -14558,7 +14924,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "world_pop_2100_bn": {
     "value": 10.180160751,
@@ -14596,7 +14963,8 @@
     "used_in": ["notebook.Q3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "year_europe_natneg": {
     "value": 2015,
@@ -14634,7 +15002,8 @@
     "used_in": ["notebook.T15"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "yr_fert_onset_by_region": {
     "value": {
@@ -14680,7 +15049,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "yr_fert_onset_high": {
     "value": 1970,
@@ -14718,7 +15088,8 @@
     "used_in": ["notebook.T3"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "yr_fert_onset_low": {
     "value": 2000,
@@ -14754,9 +15125,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.5",
     "used_in": ["slide2.build2", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified (survival's quantile() would print 2000.5; first year with S(t) <= 0.5 is 2000)."
   },
   "yr_fert_onset_lowmid": {
     "value": 1984,
@@ -14792,9 +15164,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.5",
     "used_in": ["slide2.build2", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified: first year with S(t) <= 0.5 is 1984 (S = 0.5 exactly in 1984; survival's quantile() would print 1984.5)."
   },
   "yr_fert_onset_upmid": {
     "value": 1970,
@@ -14830,9 +15203,10 @@
     "p_adj_method": null,
     "source_cell": "Q1-5.5",
     "used_in": ["slide2.build2", "narration.slide2"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yr_rho_cdr_lex_cross0": {
     "value": 2022,
@@ -14870,7 +15244,8 @@
     "used_in": ["notebook.q2"],
     "verified": false,
     "verified_by": null,
-    "verified_on": null
+    "verified_on": null,
+    "nota_qa": "Not independently re-computed: notebook-only key (not used on screen, in the narration or in the references)"
   },
   "yrs_medage30_40_chn": {
     "value": 23,
@@ -14906,16 +15281,17 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_cohort_1990_2023": {
     "value": 24,
     "unit": "years",
     "fmt": "0",
     "say": "about 24",
-    "def": "Median years from median age 30 to 40 among countries (any road) that first reached 30 in 1990-2023 (35 countries; 28 reach 40 only in the UN medium projection)",
+    "def": "Median years from median age 30 to 40 among countries (any road) that first reached 30 in 1990-2023 AND reach 40 by 2100 (35 of the 39 that reached 30 in 1990-2023; ARE, BHR, KWT, QAT never reach 40 by 2100 and are left out; 28 reach 40 only in the UN medium projection)",
     "filter": "161 countries ≥ 1 M; estimates ≤ 2023 + UN medium projection ≥ 2024 (partly projected)",
     "n": 35,
     "universe": "161 countries ≥ 1 M",
@@ -14944,9 +15320,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["notebook.Q3", "slide4.alt"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified: 39 countries first reach 30 in 1990-2023, but the median uses the 35 that also reach 40 by 2100 (ARE, BHR, KWT and QAT do not), now stated in def; Kaplan-Meier with censoring at 2100 gives 25."
   },
   "yrs_medage30_40_cohort_pre1990": {
     "value": 40.5,
@@ -14982,9 +15359,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["notebook.Q3", "slide4.alt"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_early": {
     "value": 36.5,
@@ -15020,9 +15398,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_fast_started": {
     "value": 23.5,
@@ -15058,9 +15437,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["notebook.Q3", "slide4.alt"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 3",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_jpn": {
     "value": 21,
@@ -15096,9 +15476,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 4",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_kor": {
     "value": 17,
@@ -15134,9 +15515,10 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["slide4.build1", "notebook.Q3"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 1",
+    "verified_on": "2026-10-23",
+    "nota_qa": null
   },
   "yrs_medage30_40_recent": {
     "value": 32,
@@ -15172,8 +15554,9 @@
     "p_adj_method": null,
     "source_cell": "T15.4",
     "used_in": ["slide4.build1", "narration.s4"],
-    "verified": false,
-    "verified_by": null,
-    "verified_on": null
+    "verified": true,
+    "verified_by": "verificación independiente lote 2",
+    "verified_on": "2026-10-23",
+    "nota_qa": "Verified. The value is for FAST movers (the key name says 'recent' for historical reasons; the def is explicit): never present it as Recent movers, whose Kaplan-Meier median would be 47 years."
   }
 }

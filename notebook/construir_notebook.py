@@ -505,9 +505,19 @@ NUMBERS_INTRO = """
 `R/05_numbers_json.R` lee los tres registros parciales que acaban de escribir Q1, Q2 y Q3, para con error si una clave aparece en dos con valores distintos, comprueba las claves globales contra los datos, añade los metadatos de la corrida (fecha, versión WPP, clasificación FY2027, semilla, SHA-256 de los crudos y del archivo de hipótesis con su commit) y escribe `figures/numbers.json`. Después lista las claves obligatorias del plan de implementación (§4) y todas las `{clave}` del storyboard, y **reporta** las que faltan: si una clave falta porque el análisis no la produjo, no se inventa.
 """
 
+def _es_pantalla(e: dict) -> bool:
+    """Misma regla que R/05 §6.6 y R/qa_verificacion.R: portada, diapositivas, voz, referencias o figuras del vídeo."""
+    return any(re.match(r"^(cover|slide|narration|references|fig[0-9])", u) for u in (e.get("used_in") or []))
+
+
 def numbers_lectura() -> str:
     faltan = ["n_census_pre2009", "n_census_2019plus", "n_shock_years_est", "n_shock_years_proj",
               "n_lex_drop_proj", "share_monotone_proj_lex", "n_tests", "repo"]
+    # Verificación independiente (QA-stats): se cuenta desde numbers.json, no se teclea.
+    n_ver = sum(1 for e in NUM.values() if e.get("verified") is True)
+    pant = [k for k, e in NUM.items() if _es_pantalla(e)]
+    pant_sin = sorted(k for k in pant if NUM[k].get("verified") is not True)
+    lista_sin = ", ".join(f"`{k}`" for k in pant_sin) if pant_sin else "ninguna"
     return f"""
 #### Lectura de resultados · `numbers.json`
 
@@ -515,7 +525,7 @@ def numbers_lectura() -> str:
 - Archivo de hipótesis: SHA-256 `{N('hyp_file_sha256_short')}…`, fijado en el commit `{N('hyp_file_commit')[:7]}` del {N('hyp_file_date')} y sin cambios desde entonces.
 - `validar_registro()` no encuentra problemas de esquema: toda clave tiene `method`, `n`, `universe` y `status`, y todo intervalo guardado en `ci_*` usa un método que puede salir en pantalla (bloques de subregión, Wilson, Kaplan–Meier o intervalos de la ONU).
 - **Faltan {len(faltan)} claves**, todas porque ningún análisis las produjo (no se inventan): `n_census_pre2009` y `n_census_2019plus` (necesitan la tabla de fuentes censales de la ONU), `n_shock_years_est`, `n_shock_years_proj`, `n_lex_drop_proj` y `share_monotone_proj_lex` (la tarea T14 de choques de las proyecciones no se corrió), `n_tests` (Q1 y Q2 registran `n_tests_q1` y `n_tests_q2` con definiciones distintas y Q3 no registra conteo: sumarlas sería inventar una definición) y `repo` (el repositorio público aún no existe; `docs/equipo.json` lo deja vacío). Del storyboard faltan solo `n_census_pre2009` y `repo`; `n_twin_pairs` se resuelve con el alias `n_pairs_twins` y `pc1_var_sens_range` con `sens_low`–`sens_high` de `pc1_var`, igual que en `slides/js/numbers.js`.
-- Todas las claves tienen `verified: false`: las marca QA-stats al reproducirlas.
+- **Verificación independiente** (QA-stats, `docs/QA_stats.md`): {n_ver} de {len(NUM)} claves tienen `verified: true`. Son {len(pant) - len(pant_sin)} de las {len(pant)} que salen en pantalla, en la voz o en las referencias, recalculadas desde los CSV crudos de la ONU con código independiente (`docs/qa/verificacion_lote_1.R` a `_4.R`, sin usar estos scripts). Entre ellas siguen sin verificar: {lista_sin} (el motivo está en `nota_qa`). Las {len(NUM) - len(pant)} claves que solo usa el notebook no se recalcularon y quedan en `false`. `R/05` solo pone `verified: true` si la cifra tiene la misma huella (valor, IC, sensibilidad, IP y método) que la que se verificó.
 """
 
 NO_ENCONTRADO = f"""
