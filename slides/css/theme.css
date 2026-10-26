@@ -159,7 +159,7 @@ html, body { background: var(--bg); }
 .stamp { flex: none; font-size: 19px; font-weight: 900; color: var(--ink); border: 2.5px solid var(--ink);
   border-radius: 8px; padding: 6px 12px; letter-spacing: .03em; text-transform: uppercase; line-height: 1.15;
   max-width: 300px; text-align: center; }
-.stamp small { display: block; font-size: 15px; font-weight: 700; letter-spacing: .08em; opacity: .85; margin-top: 2px; }
+.stamp small { display: block; font-size: 18px; font-weight: 700; letter-spacing: .08em; opacity: .85; margin-top: 2px; }
 /* recuadro de respuesta (Slides 2–4): sustituye a la línea de mensaje */
 .msgrow.answer { gap: 0; background: var(--panel); border-radius: 10px; border-left: 8px solid var(--ink); align-items: center; }
 .msgrow.answer .stamp { background: var(--ink); color: #fff; border: 0; margin: 8px 0 8px 12px; padding: 8px 14px; max-width: 250px; }
@@ -377,12 +377,12 @@ html.is-print .print-hide { display: none !important; }
   grid-template-columns: minmax(0, 33fr) minmax(0, 31fr) minmax(0, 36fr); }
 .s3 .blk08 { display: flex; flex-direction: column; gap: 12px; min-width: 0; min-height: 0; }
 .s3 .blk08 > .fragment:not(.card) { display: flex; flex-direction: column; gap: 10px; }
-.s3 .blk08 .card .fn { font-size: 17px; }
+.s3 .blk08 .card .fn { font-size: 18px; }
 .s3 .metric { font-size: 20px; }
 .s3 .metric { font-weight: 700; color: var(--ink); line-height: 1.24; }
 .s3 .metric .big { font-size: 25px; }
 .card { border: 1.5px solid var(--rule); border-radius: 14px; padding: 9px 14px; display: flex; flex-direction: column; gap: 4px; background: #fff; }
-.card .card-k { font-size: 17px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
+.card .card-k { font-size: 18px; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); }
 .card .card-v { font-size: 20px; line-height: 1.25; }
 .card .flags { font-size: 22px; }
 .twin-pair { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; }
@@ -395,17 +395,23 @@ html.is-print .print-hide { display: none !important; }
    SLIDE 4 — cuatro caminos (P6 · P1) + recomendaciones + ética
    ============================================================================= */
 .grid-s4 { display: grid; height: 100%; row-gap: 14px;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 0fr) minmax(0, 0fr);
+  grid-template-rows: auto minmax(0, 0fr) minmax(0, 0fr);
   transition: grid-template-rows .9s ease; }
-/* b1–b2: figuras (ranura de diseño); b3: entra la tabla; b4: la ética sustituye a la tabla */
-.s4.ge-3 .grid-s4 { grid-template-rows: minmax(0, 0.85fr) minmax(0, 1fr) minmax(0, 0fr); }
-.s4.ge-4 .grid-s4 { grid-template-rows: minmax(0, 0.85fr) minmax(0, 0fr) minmax(0, 1fr); }
-.s4 .row-top { display: grid; column-gap: 30px; min-height: 0; grid-template-rows: minmax(0, 1fr);
-  grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); }
+/* b1: fig10 héroe a toda la anchura; b2: entra fig11 a la derecha; b3: entra la tabla;
+   b4: la ética sustituye a la tabla. La fila superior es "auto": la fijan las alturas de ranura (abajo). */
+.s4.ge-3 .grid-s4 { grid-template-rows: auto minmax(0, 1fr) minmax(0, 0fr); }
+.s4.ge-4 .grid-s4 { grid-template-rows: auto minmax(0, 0fr) minmax(0, 1fr); }
+.s4 .row-top { display: grid; column-gap: 0; min-height: 0; grid-template-rows: auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0fr);
+  transition: grid-template-columns .9s ease, column-gap .9s ease; }
+.s4.ge-2 .row-top { grid-template-columns: minmax(0, 62fr) minmax(0, 38fr); column-gap: 30px; }
+/* desde b3: columnas en la proporción de las ranuras de diseño (1092 : 793) → misma escala ≈ 0.93 */
+.s4.ge-3 .row-top { grid-template-columns: minmax(0, 1092fr) minmax(0, 793fr); }
 /* en vídeo, desde b3 la leyenda y las notas ya narradas se retiran para dejar sitio a la figura */
 html:not(.is-print) .s4.ge-3 .blk10 .glegend, html:not(.is-print) .s4.ge-3 .blk10 .nb,
 html:not(.is-print) .s4.ge-3 .blk11 .fn, html:not(.is-print) .s4.ge-3 .blk11 > .head { display: none; }
-.s4 .blk10 { grid-template-rows: minmax(0, 1fr) auto auto; }
+.s4 .blk10 { grid-template-rows: auto auto auto; align-content: start; }
+.s4 .blk11 { grid-template-rows: auto auto auto; align-content: start; overflow: hidden; }
 .s4 .blk10 > .slot { grid-row: 1; }
 .s4 .blk10 > .glegend { grid-row: 2; }
 .s4 .blk10 > .nb { grid-row: 3; }
@@ -419,7 +425,7 @@ html:not(.is-print) .s4.ge-3 .blk11 .fn, html:not(.is-print) .s4.ge-3 .blk11 > .
 .s4 .nb .head { font-size: 21px; }
 .s4 .tblwrap { min-height: 0; overflow: hidden; display: flex; flex-direction: column; gap: 8px; }
 .watch { width: 100%; border-collapse: collapse; font-size: var(--fs-table); line-height: 1.22; table-layout: fixed; }
-.watch th { text-align: left; font-size: 17px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
+.watch th { text-align: left; font-size: 18px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase;
   color: var(--muted); border-bottom: 2px solid var(--ink); padding: 4px 8px 6px; }
 .watch td { vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--rule); }
 .watch td:first-child { font-weight: 700; color: var(--ink); }
@@ -471,7 +477,7 @@ html.is-print .s4 .blk11 > .head { font-size: 21px; }
 html.is-print .s4 .watch tr.row { opacity: 1; transform: none; }
 html.is-print .ethics { gap: 6px; }
 html.is-print .ethics .eth-title { font-size: 22px; }
-html.is-print .ethics .stamp { font-size: 17px; padding: 3px 10px; max-width: none; }
+html.is-print .ethics .stamp { font-size: 18px; padding: 3px 10px; max-width: none; }
 html.is-print .ethics > .fn { display: none; }
 /* PDF: franja mínima de ética (títulos + códigos ASA; docs/04_etica_ASA_aplicada.md §3.1 "versión mínima");
    el texto completo de cada tarjeta se ve en el vídeo (build 4) */
@@ -491,3 +497,148 @@ html.is-print .s4 .msgrow.answer .msg { font-size: 21px; padding: 4px 16px; }
 html.is-print .s4 .msgrow.answer .stamp { padding: 4px 12px; margin: 4px 0 4px 10px; }
 html.is-print .gitem { flex-wrap: nowrap; }
 html.is-print .watch td { padding: 4px 8px; }
+
+/* =============================================================================
+   FIGURAS FINALES MONTADAS (slides-fill, 2026-10-25)
+   Ranuras exactas por build (px de diapositiva) y fundidos a las variantes _small / _print.
+   Las reglas de vídeo van con html:not(.is-print); el PDF tiene las suyas al final.
+   ============================================================================= */
+
+/* ---------- cifras sin valor o sin verificar: el elemento queda vacío (QA-stats §7) ---------- */
+html:not(.is-print):not(.qa-off) .num.missing:empty,
+html:not(.is-print):not(.qa-off) .flags.missing:empty { display: inline-block; min-width: 1.4em; height: .95em; vertical-align: -0.1em;
+  background: repeating-linear-gradient(135deg, rgba(204,121,167,.35) 0 4px, transparent 4px 8px); }
+
+/* ---------- PORTADA: equipo y fondo legible sobre los puntos ---------- */
+.cover .titleblock { position: relative; z-index: 0; }
+/* hook (b1–b4): halo blanco en el texto, sin velo, para que los puntos que se tiñen sigan visibles */
+.cover .hook .counter-wrap, .cover .hook .line, .cover .hook .sub, .cover .hook .punch {
+  text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 26px #fff; }
+.cover .titleblock::before { content: ""; position: absolute; z-index: -1; inset: -26px -44px;
+  background: rgba(255,255,255,.82); border-radius: 30px; box-shadow: 0 0 46px 34px rgba(255,255,255,.82); pointer-events: none; }
+.cover .team { display: flex; flex-direction: column; gap: 6px; border-left: 6px solid var(--c-births); padding: 2px 0 2px 18px; }
+.cover .team .aff { font-size: 30px; font-weight: 900; color: var(--ink); line-height: 1.2; }
+.cover .team .members { font-size: 27px; color: var(--text); line-height: 1.25; }
+
+/* ---------- SLIDE 1: capas transparentes de fig02 ---------- */
+.s1 .mapbox > .overlay-fig { z-index: 1; }
+.s1 .mapbox > .slot.fragment { z-index: 2; }          /* zoom al Golfo por encima de las capas */
+
+/* ---------- Variantes que se funden dentro de una misma ranura ---------- */
+.slot > .swap-small { opacity: 0; transition: opacity .6s ease .35s; }
+.slot > video, .slot > img:not(.swap-small) { transition: opacity .5s ease .35s; }
+
+/* ---------- SLIDE 2: fig04 héroe 1760×416 (b1) → 774×183 + _small.png (b2–b4) ---------- */
+.s2 .blk04 { grid-template-rows: auto auto auto; align-content: start; }
+.s2 .blk04 > .slot04 { height: 416px; transition: height .9s ease; }
+html:not(.is-print) .s2.ge-2 .blk04 > .slot04 { height: 183px; }
+html:not(.is-print) .s2.ge-2 .slot04 > .swap-small { opacity: 1; }
+html:not(.is-print) .s2.ge-2 .slot04 > video { opacity: 0; }
+
+/* ---------- SLIDE 4: fig10 héroe ≈ 1792×571 (b1) → 1092×348 (b2) → _small.png 1021×220 (b3–b4);
+   fig11 670×389 (b2) → _print.png ≈ 741×150 (b3–b4) ---------- */
+.s4 .blk10 > .slot10 { height: 571px; transition: height .9s ease; }
+html:not(.is-print) .s4.ge-2 .blk10 > .slot10 { height: 348px; }
+html:not(.is-print) .s4.ge-3 .blk10 > .slot10 { height: 220px; }
+html:not(.is-print) .s4.ge-3 .slot10 > .swap-small { opacity: 1; }
+html:not(.is-print) .s4.ge-3 .slot10 > video { opacity: 0; }
+.s4 .blk11 > .slot11 { height: 389px; transition: height .9s ease; }
+html:not(.is-print) .s4.ge-3 .blk11 > .slot11 { height: 150px; }
+html:not(.is-print) .s4.ge-3 .slot11 > .swap-small { opacity: 1; }
+html:not(.is-print) .s4.ge-3 .slot11 > img:not(.swap-small) { opacity: 0; }
+/* el recuadro de respuesta entra en b3: antes no ocupa sitio (deja al héroe su altura) */
+html:not(.is-print) .s4:not(.ge-3) > .frame > .msgrow.answer { display: none; }
+.s4 .gitem { flex-wrap: wrap; }
+/* tabla: la columna "Road" puede partir línea (las cifras llevan nowrap por defecto) */
+.watch .road .num { white-space: normal; }
+.watch td.road { color: var(--text); }
+/* ética: frase de cabecera del panel (04_etica §3.1) */
+.ethics .eth-lead { font-size: 21px; line-height: 1.28; color: var(--text); }
+
+/* ---------- MODO PDF de las figuras finales ---------- */
+html.is-print .reveal .slides section .fragment.print-keep { opacity: 1 !important; visibility: inherit !important; }
+html.is-print .s2 .blk04 > .slot04 { height: 243px; }           /* fig04_print 774×243 */
+html.is-print .s4 .row-top { grid-template-columns: minmax(0, 55fr) minmax(0, 45fr); column-gap: 30px; }
+html.is-print .s4 .blk10 > .slot10 { height: 164px; }           /* fig10_print 969×164 */
+html.is-print .s4 .blk11 > .slot11 { height: 160px; }           /* fig11_print 793×160 */
+html.is-print .s4 .grid-s4 { grid-template-rows: auto auto auto; }
+html.is-print .ethics .eth-lead { font-size: 20px; font-weight: 700; color: var(--ink); }
+html.is-print .cover .team .aff { font-size: 26px; }
+html.is-print .cover .team .members { font-size: 24px; }
+/* filas explícitas del marco (si un elemento queda display:none, los demás no cambian de fila) */
+.reveal .slides > section:not(.cover) > .frame > .hdr { grid-row: 1; }
+.reveal .slides > section:not(.cover) > .frame > .content { grid-row: 2; }
+.reveal .slides > section:not(.cover) > .frame > .msgrow { grid-row: 3; }
+.reveal .slides > section:not(.cover) > .frame > .capband { grid-row: 4; }
+.reveal .slides > section:not(.cover) > .frame > .ftr { grid-row: 5; }
+/* banderas: ISO3 nunca por debajo de 18 px */
+.flagchip { font-size: max(.8em, 18px); }
+/* S4 desde b3 (vídeo): la franja de método ya se leyó → se pliega para dar sitio a la tabla / ética */
+.s4 .method { max-height: 60px; overflow: hidden; transition: max-height .8s ease, opacity .5s ease, margin .8s ease; }
+html:not(.is-print) .s4.ge-3 .method { max-height: 0; opacity: 0; margin-top: -8px; }
+/* sello de la S4 en una sola línea (recuadro de respuesta más bajo) */
+.s4 .msgrow.answer .stamp { max-width: none; white-space: nowrap; }
+.s4 .msgrow.answer .stamp small { display: inline; margin: 0 0 0 10px; }
+.watch td { padding: 4px 8px; }
+/* leyenda de grupos: muestra + nombre en la primera línea; tamaño y banderas debajo */
+.gitem { display: grid; grid-template-columns: 22px minmax(0, 1fr); column-gap: 8px; row-gap: 2px; align-items: center; }
+.gitem .gname, .gitem .flags { grid-column: 2; }
+.ecard .ex { font-size: 20px; line-height: 1.26; }
+.watch td .num { white-space: normal; }
+.grid-s4 { row-gap: 8px; }
+.watch { line-height: 1.18; }
+.watch td { padding: 3px 8px; }
+.watch th { padding: 2px 8px 4px; }
+.nw { white-space: nowrap; }
+.grid-s2 { row-gap: 12px; }
+html.is-print .s1 .ann01 { align-self: start; }
+
+/* =============================================================================
+   CORRECCIONES FINALES (agente corrector-final, 2026-10-25; docs/correcciones.md §H)
+   ============================================================================= */
+/* V8: ecuación = clave de colores del vídeo → pastillas con el mismo código que los chips
+   (births #0072B2 y net migration #56B4E9 quedan a ΔE76 26; en texto quedaban a 8,6) */
+.k-births, .k-deaths, .k-mig { padding: 0 10px; border-radius: 6px; font-weight: 900; }
+.k-births { background: var(--c-births); color: #fff; }
+.k-deaths { background: var(--c-deaths); color: var(--ink); }
+.k-mig { background: var(--c-migration); color: var(--ink); }
+.cover-summary .t-ab-txt, .cover-summary .t-c-txt { padding: 0 8px; border-radius: 6px; }
+.cover-summary .t-ab-txt { background: var(--c-births); color: #fff; }
+.cover-summary .t-c-txt { background: var(--c-migration); color: var(--ink); }
+/* M5: recuadros "Question N answered" a 28 px en el vídeo (≥ 24 px en el PDF) */
+.msgrow.answer .msg { font-size: 28px; line-height: 1.22; padding: 8px 20px; }
+html.is-print .msgrow.answer .msg { font-size: 24px; padding: 6px 18px; }
+html.is-print .s4 .msgrow.answer .msg { font-size: 24px; padding: 4px 16px; }
+/* B5: bandera + nombre (sin ISO3) cuando el nombre ya está escrito */
+.flags.noiso .iso { display: none; }
+/* M3: cabecera de la columna Road con su denominador */
+.watch th .th-sub { text-transform: none; letter-spacing: 0; font-weight: 700; }
+/* V18: cifras grandes del chip de migración sin cortes de línea */
+.chipbox .cv .big { white-space: nowrap; }
+/* M8: en s4.b3 se resalta la fila que nombra la voz (captions.js pone data-cue = "paso:bloque") */
+html:not(.is-print) .s4[data-cue^="s4.b3:"]:not([data-cue="s4.b3:0"]) .watch tr.row { transition-delay: 0s; }
+html:not(.is-print) .s4[data-cue="s4.b3:1"] .watch tr.row:not(:nth-child(1)),
+html:not(.is-print) .s4[data-cue="s4.b3:2"] .watch tr.row:not(:nth-child(2)),
+html:not(.is-print) .s4[data-cue="s4.b3:3"] .watch tr.row:not(:nth-child(4)) { opacity: .4; }
+html:not(.is-print) .s4[data-cue="s4.b3:1"] .watch tr.row:nth-child(1),
+html:not(.is-print) .s4[data-cue="s4.b3:2"] .watch tr.row:nth-child(2),
+html:not(.is-print) .s4[data-cue="s4.b3:3"] .watch tr.row:nth-child(4) { background: #EAF1F8; }
+.watch tr.row { transition: opacity .5s ease, transform .5s ease, background-color .5s ease; }
+/* S4: anchos de columna de la tabla (vídeo / PDF) y tabla impresa más compacta */
+.watch col.c1 { width: 29%; } .watch col.c2 { width: 14%; } .watch col.c3 { width: 28%; }
+.watch col.c4 { width: 20%; } .watch col.c5 { width: 9%; }
+html.is-print .watch col.c1 { width: 30%; } html.is-print .watch col.c2 { width: 15%; }
+html.is-print .watch col.c3 { width: 28%; } html.is-print .watch col.c4 { width: 19%; } html.is-print .watch col.c5 { width: 8%; }
+html.is-print .s4 .watch { font-size: 19px; line-height: 1.15; }
+html.is-print .s4 .watch td { padding: 2px 8px; }
+html.is-print .s4 .watch th { padding: 1px 8px 3px; line-height: 1.15; }
+html.is-print .s4 .blk11 > .head { font-size: 20px; }
+/* corrector-final 2026-10-26: las pastillas del resumen de portada (PDF) no se parten entre líneas */
+.cover-summary .t-ab-txt, .cover-summary .t-c-txt { white-space: nowrap; }
+/* corrector-final 2026-10-26: en el vídeo (s4.b3) la tabla desbordaba 37 px y cortaba la fila 5
+   (textos más largos tras QA-ethics) → columna "Watch" más ancha y celdas más compactas */
+html:not(.is-print) .watch col.c1 { width: 28%; } html:not(.is-print) .watch col.c2 { width: 13%; }
+html:not(.is-print) .watch col.c3 { width: 32%; } html:not(.is-print) .watch col.c4 { width: 19%; }
+html:not(.is-print) .watch col.c5 { width: 8%; }
+html:not(.is-print) .watch td { padding: 2px 8px; }
+html:not(.is-print) .watch { line-height: 1.13; }

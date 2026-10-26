@@ -53,11 +53,17 @@
 
   var PRINT = false;
 
+  /* En el PDF solo se prueba nombre_print.png para figuras que se imprimen: no para las .print-hide
+     (no salen en la página) ni para las que ya son la versión _print (evita 404 de sondeo). */
+  function wantsPrint(el, name) {
+    return PRINT && !/_print$/.test(name) && !(el && el.closest && el.closest(".print-hide"));
+  }
+
   function handleImg(img) {
     var name = img.getAttribute("data-fig");
     var optional = img.hasAttribute("data-optional");
     var candidates = img.getAttribute("src") ? [img.getAttribute("src")]
-      : (PRINT ? [STATIC + name + "_print.png", STATIC + name + ".png"] : [STATIC + name + ".png"]);
+      : (wantsPrint(img, name) ? [STATIC + name + "_print.png", STATIC + name + ".png"] : [STATIC + name + ".png"]);
     var i = 0;
     function fail() {
       i++;
@@ -79,7 +85,7 @@
     img.setAttribute("data-fig", name);
     img.setAttribute("alt", video.getAttribute("aria-label") || name);
     img.className = video.className;
-    var candidates = PRINT ? [STATIC + name + "_print.png", posterSrc] : [posterSrc];
+    var candidates = wantsPrint(video, name) ? [STATIC + name + "_print.png", posterSrc] : [posterSrc];
     var i = 0;
     return new Promise(function (resolve) {
       img.onload = function () { push("poster", name); resolve(img); };

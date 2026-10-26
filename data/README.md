@@ -37,9 +37,12 @@ DataQuest 2026 junto con el archivo Medium.
 
 ## sha256 de los archivos usados en esta entrega (verificado 2026-10-22)
 
+Fecha de los archivos WPP 2024 en la carpeta del proyecto: **2026-10-02** (Medium, OtherVariants y notas; suplemento LE60: 2026-10-05), según la fecha de modificación de los archivos. La fecha exacta de descarga la confirma el equipo.
+
 | Archivo | sha256 |
 |---|---|
 | `../WPP2024_Demographic_Indicators_Medium_csv.gz` | `286ac36bb1415e2e1ade03acfef0a29f0e4c087e2f78e38c48f50c5df89082bc` |
+| `../WPP2024_Demographic_Indicators_OtherVariants_csv.gz` | `a860504df54877e4c19788bf6e16920d6017d021b4c149eaf8b5662674180a54` (añadido 2026-10-26, QA-ethics M7; recalculado con `sha256sum`) |
 | `../WPP2024_Supplement_Births_and_LE60.csv` | `26d89cf8092b89c6a97a38da0009fcc7454c958b73fe80ed822fd4339ce72510` |
 | `data/raw/WB_income_groups.csv` | `1474aa9e0a6282e561c7064b2e169564e73d5bae2917380f8f47613a5108358f` |
 | `data/raw/wb_api_income_2026-10-22.csv` | `27e9d2c99c2888d3c7a47a83bfb83bf2d58a193b091d5c2e185d6b0fba57ac25` |

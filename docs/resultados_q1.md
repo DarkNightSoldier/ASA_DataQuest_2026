@@ -94,7 +94,7 @@ Figuras: `q1_02_mapa_palancas_2023.png`, `q1_03_ventanas_sensibilidad.png`, `q1_
 **Lectura de resultados.**
 - Los conteos A–E de 2023 reproducen los del plan (71/94/18/35/19; ≥ 1 M 48/72/11/24/6). En pantalla, el tipo C va como `18 (15–25 depending on the year)`; antes del COVID-19 (2017–19) eran 14. La ventana 2021–23 no suaviza: lleva dentro el exceso de muertes por COVID-19 (D sube a 43 en 2021) y el desplazamiento desde Ucrania (C sube a 25 en 2022).
 - La inercia reúne a 22 países con 2 200 millones de personas: crecen por nacimientos aunque cada mujer tenga menos de 2,1 hijos, porque todavía hay muchas personas en edad de tener hijos. La voz debe decir "growing from births" (no "despite emigration"): 4 de los 22 tienen migración neta exactamente 0.
-- "Nadie se va de los países pobres" no se sostiene: los 6 casos de tipo E con fecundidad alta son microislas; entre los ≥ 1 M, 31 países tuvieron algún año de tipo E con TFR ≥ 3 en 1950–2023 (Irlanda 1952–60, TFR 3,5; Portugal 1963–70, TFR 3,1).
+- "Nadie se va de los países de ingreso bajo" no se sostiene: los 6 casos de tipo E con fecundidad alta son microislas; entre los ≥ 1 M, 31 países tuvieron algún año de tipo E con TFR ≥ 3 en 1950–2023 (Irlanda 1952–60, TFR 3,5; Portugal 1963–70, TFR 3,1).
 - **Ojo con la clave `momentum_years_range`**: la registra Q3 (años desde 2023 hasta el pico, ponderado por población: 34–38). Q1 la renombró a `momentum_clock_years_range` (32–40, desde el cruce de 2,1) para no chocar al combinar.
 
 ---

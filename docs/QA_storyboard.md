@@ -154,3 +154,82 @@ Sin logos de la ONU (G12) y países nombrados solo por regla (G7): verificado en
 - `04_etica_ASA_aplicada.md` §3.3 y `badge()` en `R/config.R`: PIE-1 debe decir `estimates, 2023` (no "2021–23 average").
 - `05_catalogo_visualizacion.md` / `figures-static`: leyendas llanas de §8 en `fig04`–`fig11` (bandas, placebo, rayado, r, SD).
 - Equipo: decidir el rótulo de presentador en portada y cierre (consentimiento R9).
+
+## 8. Cambios finales de guion (2026-10-25)
+
+Agente **script-narration**. Fuente única de la voz: `slides/script/narration_en_template.md` (frases con `{claves}`) → `python slides/script/build_narration.py` → `slides/script/narration_en.md` (palabra por palabra), `captions.json`, `video_timings.json`, `captions.srt` y `data_captions.json`. Los bloques **Narración** de `docs/00_storyboard_diapositivas.md` y su §0 se regeneran desde el mismo cálculo (comprobado: las 55 frases del storyboard, de `narration_en.md`, de `video_timings.json` y del SRT son idénticas).
+
+### 8.1 Resumen
+
+| Medida | v2.1 (2026-10-23) | v3 final (2026-10-25) |
+|---|---|---|
+| Palabras (`wc -w`, cifra = 1) | 628 (+18 opcionales) | **603** (613 habladas); la frase opcional de Colombia se retira |
+| Cifras habladas (un aire de 1,5 s cada una; "106 of 109" y "nine to thirty-three" = una) | 21 | **18** |
+| Duración con el modelo del encargo (150 ppm + 1,5 s por cifra + 0,6 s por transición; paso con MP4 ≥ MP4 + 0,3 s) | 4:52 sin transiciones (≈ 5:14 con 31 transiciones y las referencias) | **4:54.1** con referencias (límite 4:55) |
+| Gancho | "Yet 84" ≈ 0:12 | paradoja planteada antes de 0:11.6; "Yet 84" empieza a **0:11.6** |
+| Respuestas audibles | 3 | 3: `Question one, answered` 2:28.5 · `Question two, answered: no` 3:24.9 · `Question three, answered` 4:12.5 |
+| Frase más larga | 18 | **18** (55 frases) |
+| Bloques de subtítulo | 1 línea `>` = 1 bloque | **70** bloques ≤ 90 caracteres y ≤ 2 líneas (≤ 52 caracteres por línea en el SRT); una frase se parte en sus marcas ` | ` solo si pasa de 90 |
+| Cifras sin verificar o inexistentes en la voz | 3 en pantalla (`are_revision_pct`, `n_census_pre2009`, `repo`), 0 en la voz | **0**: `fill_numbers.py` y `build_narration.py` se niegan a escribir si aparece alguna |
+
+Duraciones de los MP4 medidas con el ffmpeg 7.0.2 del venv (`imageio-ffmpeg`): fig01 12,6 s · fig02b 4,0 s · fig04 16,4 s · **fig07 14,9 s** (el encargo decía ≈ 6 s) · fig09 7,7 s · fig10 26,4 s. Todos sus pasos las cubren: s1.b2 12,9 · s1.b5a 4,3 · s2.b1 18,8 · s3.b1 16,0 · s3.b3 8,6 · s4.b1 27,3 s.
+
+### 8.2 Cambios en la narración (antes v2.1 → después v3 → motivo)
+
+| Paso | Antes (v2.1) | Después (v3) | Motivo |
+|---|---|---|---|
+| cover.b2 | In 2023, {130} of 237 countries and areas had below-replacement fertility: too few children to replace their parents. | In 2023, 130 countries and areas had too few children to replace their parents. | Gancho: con el modelo con transiciones el giro llegaba a 0:13; "of 237" y "fertility below replacement" + glosa siguen en pantalla |
+| cover.b3 | {66} because births still outnumber deaths; … | 66 because births outnumber deaths; … | Tiempo ("still" ya está en "still growing") |
+| s1.b0 | One: how do births, deaths and migration relate, and how does that differ by region, country and income? | One: how do births, deaths and migration relate, and differ by region, country and income? | Tiempo (−1,2 s); la tarjeta conserva la redacción completa de P7 |
+| s1.b3b | including {22} countries below replacement, home to {2.2} billion people. | including 22 countries below replacement. | Recorte n.º 2 del orden de la v2.1 (−3,9 s); 2,2 mil M sigue en la etiqueta del mapa y en la tabla |
+| s1.b4b | Orange: deaths exceed births, and the population shrinks: {examples_type_D} | Orange: deaths exceed births, and it shrinks: China, Russia and Japan. | Tiempo; nombre corto en voz (storyboard §8): la plantilla usa `{examples_type_D.voice}` y no lee "Russian Federation" |
+| s1.b4c | Purple: more births than deaths, yet shrinking, as more people leave than arrive: … | Purple: births exceed deaths, but net departures make it shrink: Nepal, Azerbaijan and Uruguay. | Tiempo (−1,2 s) y paralelo con "arrivals keep it growing"; tipo E = NatChange > 0 y PopChange < 0 (`R/comun_analisis.R`), así que la migración neta negativa supera al saldo natural; "make" es contable, como "because" |
+| s1.b5b | …the UN gives a 95 percent range of {8.9} to {33.3} million. | …the UN's 95 percent range is nine to thirty-three million. | Se usa el `say` de las claves ("nine", "thirty-three"), que se oye mejor; 8,9–33,3 en pantalla; tiempo |
+| s2.b2 | Child deaths moved first: in {105} of {108} high-fertility countries, typically at least {22} years before fertility. | Child deaths started falling first in 106 of 109 high-fertility countries. / The gap was typically at least 22 years. | **Cambio obligatorio**: cifra verificada 106/109 (97 %; QA-stats §4); tres cifras en una frase → dos frases con la cifra al final; "typically at least" (cota inferior de la mediana, nunca "median"); "gap" en vez de "lead" para que no suene a *lead to* |
+| s2.b3 | Within one country, this link is less than half what comparing countries suggests. | Within one country, this link is smaller than what comparing countries suggests. | **Cambio obligatorio**: el intervalo por bloques de −0,41 es [−0,77; 0,05] e incluye el 0, y la razón 2,5 no tiene intervalo estable (QA-stats §3.3); "less than half" afirmaba la razón. "Smaller" sí se sostiene: el intervalo dentro del país no llega al de entre países [−1,17; −0,92] |
+| s3.b2 | It finds only {one in eight} of each country's closest look-alikes. | Fertility alone finds only one in eight of each country's closest look-alikes. | "It" seguía a "migration": antecedente ambiguo |
+| s3.b3 | Countries differ in two independent ways. | Countries differ in two separate ways. | Los ejes del ACP son incorrelados, no independientes (precisión para el jurado de estadística) |
+| s3.b4 | Blend indicators into one score, and the weights can move {share_rank_mc20.say} countries over twenty ranks. | Blend indicators into one score: the weights can shift one country in five by more than twenty places. | **Error de plantilla**: el `say` es "one country in five", así que salía "one country in five countries"; el dato es un intervalo de rangos de más de 20 puestos |
+| s3.b4 | The story emerges only when indicators of both, transition and migration, are read together. | The story emerges only when transition and migration are read together. | Tiempo (−1,2 s); se mantiene el eco de P8 |
+| s4.b1 | Early movers, {cluster_examples_early}, now grow mainly through migration, or shrink. | Early movers now grow mainly through migration, or shrink. | Tiempo (−2,4 s); las banderas USA, RUS y JPN están en la leyenda |
+| s4.b1 | Fast movers, {…}, are projected to age in {yrs_medage30_40_recent} years what took Early movers {yrs_medage30_40_early}. | Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. / About as fast as Early movers did, or faster. | **Cambio obligatorio**: Fast 32 [27–37] y Early 36,5 [29–42,5] se solapan, así que no se puede decir "en 32 lo que a otros les llevó 37". Nunca `yrs_medage30_40_fast_started`. Se parte en dos frases (la versión única tenía 27 palabras). Early = 37 solo en pantalla (fmt 0, ROUND_HALF_UP) |
+| s4.b1 | Recent movers, {cluster_examples_recent}, still have high child mortality. | Recent movers still have high child mortality. | Tiempo; banderas en pantalla |
+| s4.b2 | Countries also grew closer… | Countries grew closer in life expectancy, but further apart in age. | Tiempo |
+| s4.b3 | For the UN: watch child survival where child deaths fall too slowly. | For the UN: watch child survival where it improves too slowly. | Tiempo; mismo sentido (la supervivencia sube) |
+| s4.b4 | …hypotheses were fixed before the final run. / …every number and our use of AI are documented publicly. | …hypotheses were fixed in advance. / …every number and our AI use are documented publicly. | Tiempo |
+| s3 (opcional) | [OPCIONAL] By fertility, our home country, Colombia, resembles … | (retirada) | No cabe en 4:55; la tarjeta B de Colombia sigue en pantalla con la nota "our home country" |
+
+Sin cambios: el resto de frases de la v2.1, incluidas las tres respuestas, la frase de incertidumbre de EAU, "A sequence in time, not proof of cause", la ética y el callback.
+
+### 8.3 Claves
+
+**Usadas en la voz (25, todas `verified: true`):** `world_pop_2023_bn` (say), `n_below_replacement_2023`, `n_below_repl_growing_2023`, `n_below_repl_natural_growth_2023`, `n_grow_only_migration_2023`, `team_name`, `share_mig_high_2000_2023` (say), `n_momentum_countries`, `examples_type_C`, `examples_type_D`, `examples_type_E` (voice), `pop_are_2050_pi95_low`, `pop_are_2050_pi95_high` (say), `dur53_chn`, `dur53_egy`, `n_mort_first_onset`, `n_onset`, `lag_onset_lower_bound`, `r2_tfr_medage`, `r2_tfr_growth`, `knn_tfr`, `share_rank_mc20`, `twin_growth_are` (say), `cluster_examples_fast` (say), `yrs_medage30_40_recent` (say).
+
+**Omitidas en la voz, con su motivo:**
+
+| Clave | Motivo |
+|---|---|
+| `are_revision_pct` | `verified: false`: cifra externa (QA-stats §3.4). No se dice; la revisión del Golfo entre ediciones no se menciona en la voz |
+| `n_census_pre2009`, `repo` | No existen en `numbers.json`. La voz dice "documented publicly", sin URL ni número |
+| `yrs_medage30_40_fast_started` | Prohibida por el análisis verificado (no es la velocidad del grupo) |
+| `yrs_medage30_40_early` | Solo en pantalla (37); la voz compara sin cifra ("about as fast … or faster") porque los intervalos se solapan |
+| `panel_within_halfq5`, `panel_between_halfq5`, `panel_ratio_between_within`, `panel_eurna_halfq5` | Solo en pantalla. Dentro del país el intervalo incluye 0; la razón 2,5 nunca va con intervalo; Europa y N. América **se invierte** (+0,39). Lo debe decir el texto de fig06, no "not detected" |
+| `pop_momentum_bn` | Recortada por tiempo (recorte n.º 2 de la v2.1); queda en pantalla |
+| `cluster_examples_early`, `cluster_examples_recent`, `cluster_examples_migration` | Recortadas por tiempo; banderas en la leyenda de fig10 |
+| `lookalikes_col_tfr`, `lookalikes_col_12` | Frase opcional de Colombia retirada (tiempo) |
+| `share_mort_first` (say "97 in every 100") | La voz usa "106 of 109", el conteo verificado; 97 % queda en pantalla |
+| `world_pop_1950_bn`, `pop_are_2050`, `join_same_road`, `share_between_groups`, `share_keep_ge_0.8`, `pct_var_fase` y el resto de cifras de pantalla | Solo en pantalla, igual que en la v2.1 |
+
+### 8.4 Comprobaciones hechas
+
+- `slides/script/fill_numbers.py`: redondeo **ROUND_HALF_UP** sobre `Decimal(repr(v))`, por ejemplo 36,5 → 37 y 0,735 → 0,74. Antes, el f-string de Python daba 36 y 0,73; en `numbers.json` solo cambian `moran_tfr_2023` (0,74) y `share_mort_first.sens_low` (95). Coincide con el `roundHalfUp` nuevo de `slides/js/numbers.js`. Ahora **rechaza con código 2** toda clave inexistente o con `verified` ≠ `true`, y explica el motivo (`nota_qa`), salvo con `--allow-unverified`. Se añadieron `{clave.voice}` (nombre corto de país en voz) y `{^clave}` (mayúscula inicial). `--check-html slides/index.html` (HTML vigente, 2026-10-25): 106 claves, 0 sin valor y 0 sin verificar.
+- Deck real (Playwright + Chromium): los 32 `data-step` de `slides/index.html` están en el mismo orden que `video_timings.json`. Los `data-fragment-index` del HTML (p. ej. cover 2–5, s1 1–9) se renumeran en reveal a 0…n−1, y los dos números están en `captions.json` (`fragment_index`, `reveal_fragment`). La página carga los tiempos y muestra los subtítulos v3: el bloque más largo (90 caracteres) cabe en una línea de la barra. Capturas en el *scratchpad* de la sesión, no versionadas.
+- Ética (04 §4.2, S1 *grep*): solo aparecen "because" (contable), "keep it growing" y "make it shrink" (contables, identidad del balance), "explain" (narrativo), "migration-led" (nombre) y las negaciones "not a forecast", "not proof of cause" y "patterns, not causes". No hay "will": el futuro es "are projected" y "the UN's 95 percent range".
+- Glosas en voz: replacement ("too few children to replace their parents"), net migration ("arrivals minus departures"), UN medium projection ("a scenario, not a forecast"), transition ("to fewer births and deaths"), composite index ("blend indicators into one score"), groups ("three stretches of one road"). En pantalla: 95 % range, high-fertility, look-alikes, median age y R².
+
+### 8.5 Pendientes para otros agentes y para el equipo
+
+1. **slides (dueño de `index.html`)**: 16 `data-caption` siguen con el texto de la v2.1. Al grabar no importa, porque `video_timings.json` impone los subtítulos v3, pero sí cuentan como respaldo y para QA. Copiar `slides/script/data_captions.json`. En la fila de fig06: "reverses in Europe & N. America (+0.39)" en lugar de "not detected". Opcional: la tarjeta Q1 puede seguir con la redacción completa de P7.
+2. **Equipo / repo-ops**: "every number and our AI use are documented publicly" exige que el **repositorio público exista antes de grabar**. Si no existe, cambiar a "documented in our notebook" y regenerar.
+3. **Grabación de la voz**: cronometrar la lectura real. Si pasa de 4:55, aplicar el orden de recorte del storyboard §0; nunca recortar las respuestas, el rango de EAU ni la frase de *Fast movers*. Pronunciación: "UNALSta-R" = *u-nal-sta-ar*.
+4. **figures-static**: fig07 dura 14,9 s, no ≈ 6 s. Ya está cubierto, pero si se acorta se puede ganar ≈ 0,8 s en s3.b1.

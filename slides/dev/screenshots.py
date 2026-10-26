@@ -34,6 +34,22 @@ def goto(page, h: int, f: int, settle_ms: int = 1500):
     page.wait_for_timeout(settle_ms)
 
 
+# QA-slides M10 / QA-viz V22: en los pasos con MP4, la captura se toma cuando el vídeo ha terminado
+# (estado final del build), no a 1,7 s con la animación a medias.
+VID_LEFT_JS = """id => { const el = document.querySelector('[data-step="' + id + '"]'); if (!el) return 0;
+  const vs = (el.tagName === 'VIDEO' ? [el] : Array.from(el.querySelectorAll('video')))
+    .filter(v => !v.paused && !v.ended);
+  let r = 0; vs.forEach(v => { if (isFinite(v.duration)) r = Math.max(r, v.duration - v.currentTime); });
+  return r; }"""
+
+
+def wait_video_end(page, step_id: str, extra_ms: int = 450) -> float:
+    left = page.evaluate(VID_LEFT_JS, step_id) or 0
+    if left > 0:
+        page.wait_for_timeout(int(left * 1000) + extra_ms)
+    return left
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--finals", action="store_true", help="no guardar la captura de cada paso")
@@ -57,6 +73,7 @@ def main():
         # 1) todos los pasos: ranuras (intro/final) y capturas
         for s in steps:
             goto(pg, s["h"], s["f"], 1700)
+            wait_video_end(pg, s["id"])
             for name, v in pg.evaluate("DeckFigs.slots()").items():
                 if v["slide"] != s["h"] or not v["visible"] or v["w"] <= 0 or v["h"] <= 0:
                     continue

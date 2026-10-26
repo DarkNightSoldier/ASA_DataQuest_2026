@@ -536,7 +536,9 @@ tam_04 <- function(modo) {
 #' Instantes de la animación de fig04 (s), sincronizados con los bloques de la voz.
 tiempos_04 <- function() {
   b <- inicios_bloques("s2.b1", BLOQUES_S2B1)
-  dur <- duracion_paso("s2.b1", DURACION_S2B1)
+  # corrector-final 2026-10-25: el MP4 termina 0,3 s antes del fin del paso (build_narration.py exige
+  # paso ≥ MP4 + 0,3 s; con MP4 = paso, cada regeneración alargaría el paso 0,3 s)
+  dur <- duracion_paso("s2.b1", DURACION_S2B1) - 0.3
   d_desl <- min(2.4, max(1.2, b[3] - b[2] + 0.4))
   egy <- b[4] + FRAC_EGIPTO * (dur - b[4])
   list(dur = dur, b = b,
@@ -588,7 +590,7 @@ preparar_04 <- function(D, modo) {
   }
 
   n90 <- fmt_clave("n_cruce_tfr4_obs")
-  n57 <- fmt_cifra(cifra("pct_var_fase", "n"), "0")
+  # corrector-final (QA-slides H2): el n de pct_var_fase (57) no es una cifra verificada en pantalla → sin número
   v20 <- as.character(max(abs(D$disp$tau)))        # ventana ±20 años de la banda (parquet)
 
   # --- Cabecera: filas con título del eje y (izquierda) y clave por partes (derecha) ---
@@ -602,7 +604,7 @@ preparar_04 <- function(D, modo) {
            col = c(COL_TEXTO_2, COL_TINTA), cuando = c("uno", "tramo")),
       list(izq = "children per woman (smoothed)",
            # el calificativo va delante: así, mientras falta la mediana, no queda un hueco en medio
-           txt = c(paste0(n57, " countries with ", v20, " years of data on each side:  "),
+           txt = c(paste0("countries with ", v20, " years of data on each side:  "),
                    "band = middle 80 %", "  ·  blue line = median"),
            col = c(COL_TEXTO_2, COL_NAC_TXT, COL_NAC_TXT), cuando = c("banda", "banda", "mediana"))),
     print = list(
@@ -612,7 +614,7 @@ preparar_04 <- function(D, modo) {
     small = list(
       list(izq = "children per woman",
            txt = c(paste0("grey = ", n90, " countries"),
-                   paste0("  ·  blue = median and middle 80 % (", n57, " countries)")),
+                   "  ·  blue = median and middle 80 %"),
            col = c(COL_TEXTO_2, COL_NAC_TXT), cuando = c("uno", "uno"))))
   for (j in seq_along(cab)) {
     w <- ancho_txt(cab[[j]]$txt, TM$clave)
@@ -626,7 +628,7 @@ preparar_04 <- function(D, modo) {
   bloque <- NULL
   if (modo == "print") {
     bt <- c("band = middle 80 % · blue line = median",
-            paste0("(", n57, " countries with ", v20, " years of data"), "on each side of the crossing)")
+            paste0("(countries with ", v20, " years of data"), "on each side of the crossing)")
     paso_b <- (TM$clave + 1) * dy
     yb <- TM$ylim[2] - (6 + TM$clave / 2) * dy - (seq_along(bt) - 1) * paso_b
     xb <- px_x(L, L$w - L$mar[["r"]] - 2)
@@ -1065,7 +1067,8 @@ fig_05 <- function(D, ranura = "fig05") {
   t_y <- "% of each country's own peak, 1950–2023"
   # El número de países cambia con tau (los extremos tienen menos): se declara en la clave.
   n_rango <- range(et$n[et$variable %in% c("Q5", "TFR")])
-  clave <- sprintf("line = typical country \u00b7 band = middle half (%d to %d countries per year)", n_rango[1], n_rango[2])
+  # corrector-final (QA-slides H2): "69 to 107" no es una clave verificada → sin números
+  clave <- "line = typical country \u00b7 band = middle half of countries"
   g <- g + texto(px_x(L, 0), y_top, t_y, TAM$titulo, colour = COL_TINTA, negrita = TRUE) +
     texto(px_x(L, L$w), y_top, clave, TAM$clave, colour = COL_TEXTO_2, hjust = 1)
   avisar_ancho(paste(t_y, clave), TAM$clave, L$w - 20, donde = "fig05 cabecera")
@@ -1117,9 +1120,10 @@ fig_06 <- function(D, ranura = "fig06") {
   v_entre <- fmt_clave("panel_between_halfq5")
 
   # Leyenda (derecha): glifo + texto, en lenguaje llano
-  ley <- c("dot = the same country over time (richer view)",
+  # corrector-final (QA-ethics M · QA-slides B3): la leyenda describe el método, no lo juzga
+  ley <- c("dot = within the same country, over time",
            "line = 95 % range (re-runs by UN sub-region)",
-           paste0("dashed = comparing countries, ", v_entre, " (simple view)"),
+           paste0("dashed = comparing countries, ", v_entre),
            "grey band = shuffled data (no link)")
   w_glifo <- 30
   w_ley <- max(ancho_txt(ley, TAM$ley)) + w_glifo
@@ -1131,7 +1135,8 @@ fig_06 <- function(D, ranura = "fig06") {
   if (L$pw < 380) anotar_problema(sprintf("fig06 (%s): el panel solo mide %.0f px de ancho.", ranura, L$pw))
   dy <- L$dy; dx <- L$dx
   F$y <- rev(seq_len(nrow(F)))          # All arriba
-  baja <- F$etiqueta == "Low income"
+  # corrector-final (QA-viz V15): se resalta la fila que narra la voz (todos los países: −0.41 vs −1.05)
+  baja <- F$etiqueta == "All countries"
 
   g <- base_lienzo(L)
   # fila resaltada (Low income): fondo suave desde las etiquetas hasta la columna de valores

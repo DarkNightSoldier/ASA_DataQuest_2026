@@ -19,24 +19,54 @@
       "aspect": 1.78
     }
   },
+  "fig00_world_dots_below_replacement": {
+    "slide": 0,
+    "intro": {
+      "step": "cover.b2",
+      "w": 1920,
+      "h": 1080,
+      "aspect": 1.78
+    },
+    "final": {
+      "step": "cover.b5",
+      "w": 1920,
+      "h": 1080,
+      "aspect": 1.78
+    }
+  },
+  "fig00_world_dots_growing": {
+    "slide": 0,
+    "intro": {
+      "step": "cover.b3",
+      "w": 1920,
+      "h": 1080,
+      "aspect": 1.78
+    },
+    "final": {
+      "step": "cover.b5",
+      "w": 1920,
+      "h": 1080,
+      "aspect": 1.78
+    }
+  },
   "fig01_growth_components_by_income": {
     "slide": 1,
     "intro": {
       "step": "s1.b2",
       "w": 721,
-      "h": 390,
-      "aspect": 1.85
+      "h": 391,
+      "aspect": 1.84
     },
     "final": {
       "step": "s1.b5b",
       "w": 721,
-      "h": 390,
-      "aspect": 1.85
+      "h": 391,
+      "aspect": 1.84
     },
     "print": {
       "w": 721,
       "h": 225,
-      "aspect": 3.2
+      "aspect": 3.21
     }
   },
   "fig02_lever_map_2023": {
@@ -44,19 +74,84 @@
     "intro": {
       "step": "s1.b3",
       "w": 1037,
-      "h": 365,
+      "h": 366,
       "aspect": 2.84
     },
     "final": {
       "step": "s1.b5b",
       "w": 1037,
-      "h": 365,
+      "h": 366,
       "aspect": 2.84
     },
     "print": {
       "w": 1037,
       "h": 290,
-      "aspect": 3.57
+      "aspect": 3.58
+    }
+  },
+  "fig02_lever_map_2023_momentum": {
+    "slide": 1,
+    "intro": {
+      "step": "s1.b3b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    },
+    "final": {
+      "step": "s1.b5b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    },
+    "print": {
+      "w": 1037,
+      "h": 290,
+      "aspect": 3.58
+    }
+  },
+  "fig02_lever_map_2023_ex_c": {
+    "slide": 1,
+    "intro": {
+      "step": "s1.b4a",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    },
+    "final": {
+      "step": "s1.b5b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    }
+  },
+  "fig02_lever_map_2023_ex_d": {
+    "slide": 1,
+    "intro": {
+      "step": "s1.b4b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    },
+    "final": {
+      "step": "s1.b5b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    }
+  },
+  "fig02_lever_map_2023_ex_e": {
+    "slide": 1,
+    "intro": {
+      "step": "s1.b4c",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
+    },
+    "final": {
+      "step": "s1.b5b",
+      "w": 1037,
+      "h": 366,
+      "aspect": 2.84
     }
   },
   "fig02b_lever_map_zoom": {
@@ -64,13 +159,13 @@
     "intro": {
       "step": "s1.b5a",
       "w": 1037,
-      "h": 365,
+      "h": 366,
       "aspect": 2.84
     },
     "final": {
       "step": "s1.b5b",
       "w": 1037,
-      "h": 365,
+      "h": 366,
       "aspect": 2.84
     }
   },
@@ -99,8 +194,28 @@
     "intro": {
       "step": "s2.b1",
       "w": 1760,
-      "h": 496,
-      "aspect": 3.55
+      "h": 416,
+      "aspect": 4.23
+    },
+    "final": {
+      "step": "s2.b4",
+      "w": 774,
+      "h": 183,
+      "aspect": 4.23
+    },
+    "print": {
+      "w": 774,
+      "h": 243,
+      "aspect": 3.19
+    }
+  },
+  "fig04_same_road_registration_small": {
+    "slide": 2,
+    "intro": {
+      "step": "s2.b1",
+      "w": 1760,
+      "h": 416,
+      "aspect": 4.23
     },
     "final": {
       "step": "s2.b4",
@@ -119,19 +234,19 @@
     "intro": {
       "step": "s2.b2",
       "w": 986,
-      "h": 211,
-      "aspect": 4.67
+      "h": 217,
+      "aspect": 4.54
     },
     "final": {
       "step": "s2.b4",
       "w": 986,
-      "h": 211,
-      "aspect": 4.67
+      "h": 217,
+      "aspect": 4.54
     },
     "print": {
       "w": 986,
-      "h": 271,
-      "aspect": 3.63
+      "h": 277,
+      "aspect": 3.56
     }
   },
   "fig06_within_vs_across_forest": {
@@ -139,19 +254,19 @@
     "intro": {
       "step": "s2.b3",
       "w": 1021,
-      "h": 135,
-      "aspect": 7.54
+      "h": 139,
+      "aspect": 7.33
     },
     "final": {
       "step": "s2.b4",
       "w": 1021,
-      "h": 135,
-      "aspect": 7.54
+      "h": 139,
+      "aspect": 7.33
     },
     "print": {
       "w": 1021,
-      "h": 183,
-      "aspect": 5.57
+      "h": 187,
+      "aspect": 5.45
     }
   },
   "fig07_single_indicator_scorecard": {
@@ -159,19 +274,19 @@
     "intro": {
       "step": "s3.b1",
       "w": 572,
-      "h": 286,
-      "aspect": 2
+      "h": 282,
+      "aspect": 2.02
     },
     "final": {
       "step": "s3.b4",
       "w": 572,
-      "h": 286,
-      "aspect": 2
+      "h": 282,
+      "aspect": 2.02
     },
     "print": {
       "w": 572,
-      "h": 394,
-      "aspect": 1.45
+      "h": 487,
+      "aspect": 1.17
     }
   },
   "fig09_pca_two_dimensions": {
@@ -179,18 +294,18 @@
     "intro": {
       "step": "s3.b3",
       "w": 624,
-      "h": 405,
-      "aspect": 1.54
+      "h": 402,
+      "aspect": 1.55
     },
     "final": {
       "step": "s3.b4",
       "w": 624,
-      "h": 405,
-      "aspect": 1.54
+      "h": 402,
+      "aspect": 1.55
     },
     "print": {
       "w": 624,
-      "h": 513,
+      "h": 510,
       "aspect": 1.22
     }
   },
@@ -198,20 +313,40 @@
     "slide": 4,
     "intro": {
       "step": "s4.b1",
-      "w": 1092,
-      "h": 348,
+      "w": 1792,
+      "h": 571,
       "aspect": 3.14
     },
     "final": {
       "step": "s4.b5",
-      "w": 1092,
-      "h": 235,
-      "aspect": 4.65
+      "w": 1021,
+      "h": 220,
+      "aspect": 4.64
     },
     "print": {
       "w": 969,
       "h": 164,
-      "aspect": 5.9
+      "aspect": 5.91
+    }
+  },
+  "fig10_trajectory_groups_small": {
+    "slide": 4,
+    "intro": {
+      "step": "s4.b1",
+      "w": 1792,
+      "h": 571,
+      "aspect": 3.14
+    },
+    "final": {
+      "step": "s4.b5",
+      "w": 1021,
+      "h": 220,
+      "aspect": 4.64
+    },
+    "print": {
+      "w": 969,
+      "h": 164,
+      "aspect": 5.91
     }
   },
   "fig11_divergence_fan": {
@@ -224,9 +359,29 @@
     },
     "final": {
       "step": "s4.b5",
+      "w": 741,
+      "h": 150,
+      "aspect": 4.94
+    },
+    "print": {
+      "w": 793,
+      "h": 160,
+      "aspect": 4.96
+    }
+  },
+  "fig11_divergence_fan_small": {
+    "slide": 4,
+    "intro": {
+      "step": "s4.b2",
       "w": 670,
-      "h": 235,
-      "aspect": 2.85
+      "h": 389,
+      "aspect": 1.72
+    },
+    "final": {
+      "step": "s4.b5",
+      "w": 741,
+      "h": 150,
+      "aspect": 4.94
     },
     "print": {
       "w": 793,

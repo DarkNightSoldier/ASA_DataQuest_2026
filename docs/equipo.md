@@ -6,7 +6,7 @@ La fuente única es `docs/equipo.json`; este archivo es su versión legible.
 | Campo | Valor |
 |---|---|
 | Nombre del equipo (`team_name`) | **UNALSta-R** |
-| Integrantes | Daniel C. Kwan · David S. Merchán · Jhon A. Mora · Alejandro Higuera |
+| Integrantes | Daniela C. Kwan · David S. Merchán · Jhon A. Mora · Alejandro Higuera |
 | Institución | Universidad Nacional de Colombia |
 | Sede (`sede`) | Bogotá |
 | Programa (`program`) | Estadística (*Statistics*, `program_en`) |

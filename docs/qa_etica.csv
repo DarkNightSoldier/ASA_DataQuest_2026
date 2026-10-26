@@ -1,0 +1,61 @@
+elemento,item,respuesta,nota,revisor,fecha
+"gráficas (fig00–fig11, PDF y vídeo)",G1 [bloqueante],Sí,"Títulos descriptivos. ""Which lever moves…"" es leve (L3)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G2 [bloqueante],Sí,"PIE-0 en las 4 diapositivas, más ""countries only, no aggregates""; el filtro va en cada figura","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G3 [bloqueante],Sí en figuras; No en la tabla del PDF,"fig03, fig07 (2050 discontinuo, ""UN medium projection"") y fig10 (punteado en 2023, gris) bien. Tabla del PDF: H3","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G4 [bloqueante],Sí,"8,1 mil M = suma de los 237 (QA-stats)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G5 [bloqueante],Sí,103 claves verificadas + 2 alias verificados; constantes de diseño declaradas,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G6,Sí,"""161 countries ≥ 1 M, 2023"", ""237 countries and areas"", ""estimates 1950–2023""","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G7 [bloqueante],Parcial,"CHN/COL/EGY, banderas y medoides por regla y en código; Colombia con posicionalidad declarada. EAU y PRT–TCD sin la regla en pantalla (L4)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G8,Sí,Barras desde 0; R² de 0 a 1,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G9,Sí,Okabe-Ito; naranja y púrpura sin carga,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G10,Parcial,"Early/Fast/Recent movers y Migration-led bien; ""richer view"" (M5)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G11,Parcial,"Descargo en fig02 y fig10 y en Referencias; ""42 territories"" (M4)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G12 [bloqueante],Sí,Solo texto; el pie de Referencias lo declara,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G13,Sí,EAU 2050 80/95 %; 77 de 161 con rango que incluye crecer y decrecer,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G14,Parcial,Slides 1 y 2 sí; fig09 y fig10 usan la migración sin la nota (aceptable por espacio),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G15,Sí,"Franja ""Under 1 M people · 76""; modelos con ≥ 1 M","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G16,Sí,"""true by definition (bookkeeping)""","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G17,N.A.,Lo cubre QA-slides (al 50 %),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+"gráficas (fig00–fig11, PDF y vídeo)",G18,Parcial,El HTML del notebook tiene 50 imágenes con texto alternativo; el README no,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S1 [bloqueante],"Sí, con 3 arreglos","Solo usos contables o negados; M5, L1, L2","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S2 [bloqueante],No (PDF),"La voz y el vídeo sí (""are projected"", ""in the UN medium projection""); el PDF no (H3)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S3 [bloqueante],Sí,25 claves verificadas,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S4,Parcial,66 frente a 22 (M3),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S5,Parcial,"""66 because births…"" (M3); ""34–38 more years"" (M8)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S6,Sí,"""no alarm about birth rates"", ""voluntary family planning"", ""migrant inclusion""; L1 y L2 son matices","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S7,Parcial,"En voz, nombres cortos admitidos; ""territories"" (M4). No hay crisis, VIH ni refugiados en pantalla; en el notebook están bien nombrados (""genocidio contra los tutsis en Ruanda (1994)"", ""epidemia de VIH/sida"")","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S8 [bloqueante],Sí,"Tipos de 2023, ""in 2023"" en voz y pantalla, rango 15–25","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S9,Sí,"""UN zero-migration scenario (a what-if, not a forecast)""","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S10,Sí,"""least certain lever"" + 95 % de EAU en voz","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S11,Sí,s2.b3 y s4.b4,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S12,No,"""never mixed"" (M1), ""fixed in advance"" (M2), ""public"" (H2), ""The team reviewed it"" (H1)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S13,Sí,"Tres ""watch"" en voz y ""Watch / prepare"" en la tabla","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+guion narration_en.md + textos en pantalla,S14,Sí,32/32,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N1 [bloqueante],Parcial,Falta la ASA y la fecha de descarga en la celda 0 (M7),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N2,Parcial,"Sección 1 ""Decisiones de datos"" sí; docs/decisiones_de_datos.md no (M9)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N3 [bloqueante],Sí,R/tests_datos.R 7/7; identidad contable,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N4,Sí,"Ficha *fitness for use* honesta: dice lo que no se calculó (censos, Togo, T14)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N5 [bloqueante],Sí,"Commit 2a0ab7b, SHA-256 coincide (lo comprobé); fallos reportados (H2, H7, H8, H9)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N6,Sí,"Etiquetas *Pre-specified / Exploratory / Descriptive*; ""nada es causal""","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N7,Sí,Familias F1 (Holm) y F2 (BH); ningún p-valor en el vídeo,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N8,Parcial,"Muchas sensibilidades (año, ≥ 1 M, winsorización, umbrales, ingreso con agregados ONU); Togo no se corrió (declarado)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N9,Sí,"EAU y China, ""no pueden sumarse""","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N10 [bloqueante],Sí,"figures/miembros_*.csv, lookalikes_todos.csv","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N11 [bloqueante],Parcial,"Semilla, RNGkind, sessionInfo() y SHA-256 sí; sin renv.lock (M9)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N12 [bloqueante],Sí,numbers.json desde R/05; fill_numbers.py rechaza claves sin verificar,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N13,Sí,Lecturas con cifras reales,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N14 [bloqueante],Parcial,"§9 completa, pero con la declaración de IA errónea (H1) y la convención de la celda 0 contradicha (M1)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N15,Sí,"§8 ""Lo que no encontramos"", con 18 filas y los cambios de la corrida final","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N16,No,"Hay declaración de IA, pero no tabla de verificación humana (H1)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N17,Parcial,"Nombres ONU sí; ""ricos"" y ""pobres"" en 2 celdas (L6)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+notebook/analisis_wpp2024.ipynb,N18,Sí,"188 de 188 celdas sin errores, 13,2 min (QA-stats §8)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R1 [bloqueante],No,H2,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R2 [bloqueante],No,H4,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R3,Parcial,"correcciones.md (creado hoy) y hipotesis_preinscritas.md sí; faltan decisiones_de_datos.md, verificacion_numeros.csv humana y registro_ia.md (H1, M9)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R4,No,No hay archivos LICENSE (H2),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R5,Sí,.gitignore y data/README.md,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R6,No,M9,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R7,Sí,Comprobado con pdfinfo y a la vista,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R8,Sí,"ONU (datos, metodología, nota de revisiones, Interim Update), Banco Mundial FY2027, ASA, métodos y software; falta la licencia del Banco Mundial (L5)","QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R9,Pendiente,L7,"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25
+repositorio y entrega,R10,Parcial,Correo personal (L7),"QA-ethics (agente IA, Claude Code); pendiente de firma humana",2026-10-25

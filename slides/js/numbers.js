@@ -16,6 +16,12 @@
      - negativos con signo menos tipográfico U+2212.
      - listas → "A, B and C"; códigos ISO3 en listas de texto → nombre WPP.
    La unidad NO se añade (el texto de la diapositiva ya la lleva), salvo con data-unit.
+   Regla QA-stats (docs/QA_stats.md §6–7): SOLO se rellenan claves con "verified": true. Si una clave
+   del HTML no existe o no está verificada, el elemento queda VACÍO (sin cifra), se marca .missing
+   (marcador visible solo fuera del PDF y sin ?qa=off) y la clave va a window.NUMBERS_REPORT.unfilledKeys
+   y a la consola. ?unverified=show (solo depuración) enseña también las no verificadas.
+   Redondeo: ROUND_HALF_UP sobre la representación decimal más corta del valor (igual que
+   Decimal(str(v)).quantize(..., ROUND_HALF_UP) en script/fill_numbers.py): 36.5 → "37", 0.125 → "0.13".
    Alias: el HTML usa los nombres del storyboard v2.1; si numbers.json usa los del plan §4
    (p. ej. n_countries_1m en vez de n_ge1m) se resuelven con KEY_ALIASES (más abajo; la misma
    tabla la lee script/fill_numbers.py). *_sens_range se deriva de sens_low–sens_high.
@@ -39,8 +45,7 @@
       "n_ge1m": ["n_ge1m", "n_countries_1m"],
       "n_countries_1m": ["n_countries_1m", "n_ge1m"],
       "n_states": ["n_states", "n_sovereign"],
-      "n_twin_pairs": ["n_twin_pairs", "n_pairs_twins"],
-      "n_census_pre2009": ["n_census_pre2009"]
+      "n_twin_pairs": ["n_twin_pairs", "n_pairs_twins"]
     },
     "range": {
       "share_mig_high_sens_range": "share_mig_high_2000_2023",
@@ -51,6 +56,11 @@
   }/*ALIASES-END*/;
 
   function isPrint() { return /print-pdf/i.test(window.location.search); }
+  var SHOW_UNVERIFIED = /[?&]unverified=show/i.test(window.location.search) && !/print-pdf/i.test(window.location.search);
+
+  /* Solo las claves con verified === true se pueden mostrar o decir (QA-stats §7). */
+  function isVerified(e) { return !!e && e.verified === true; }
+  function usable(e) { return !!e && (isVerified(e) || SHOW_UNVERIFIED); }
 
   function loadScript(src) {
     return new Promise(function (resolve) {
@@ -190,10 +200,27 @@
     return parts.join(".");
   }
 
+  /* ROUND_HALF_UP decimal (no el binario de toFixed): se redondea la cadena decimal más corta
+     que representa el valor (String(x) en JS = repr(x) en Python), mitad hacia arriba en |x|. */
+  function roundHalfUp(absV, d) {
+    var s = String(absV);
+    if (/e/i.test(s)) return absV.toFixed(d);
+    var parts = s.split("."), ip = parts[0], fp = parts[1] || "";
+    if (fp.length <= d) return d ? ip + "." + (fp + new Array(d + 1).join("0")).slice(0, d) : ip;
+    var digits = (ip + fp.slice(0, d)).split("").map(Number);
+    if (fp.charCodeAt(d) - 48 >= 5) {
+      var i = digits.length - 1;
+      for (; i >= 0; i--) { if (digits[i] === 9) digits[i] = 0; else { digits[i]++; break; } }
+      if (i < 0) digits.unshift(1);
+    }
+    var all = digits.join(""), cut = all.length - d;
+    return d ? all.slice(0, cut) + "." + all.slice(cut) : all;
+  }
+
   function formatNumber(v, fmt, opts) {
     opts = opts || {};
     var d = decimalsFor(fmt, v);
-    var s = Math.abs(v).toFixed(d);
+    var s = roundHalfUp(Math.abs(v), d);
     var wantsGroup = (typeof fmt === "string" && fmt.indexOf(",") >= 0) || Math.abs(v) >= 10000;
     if (wantsGroup) s = groupThousands(s);
     var isZero = Number(s.replace(/,/g, "")) === 0;
@@ -251,6 +278,7 @@
     o = o || {};
     var e = entry(key);
     if (!e) return null;
+    if (!usable(e) && !o.allowUnverified) return null;
     var v;
     if (o.say) {
       if (e.say !== undefined && e.say !== null && e.say !== "") return String(e.say);
@@ -321,14 +349,28 @@
 
   function fill(root) {
     root = root || document;
-    var rep = { missing: {}, unverified: {}, demo: state.demo, source: state.source, filled: 0 };
+    var rep = { missing: {}, unverified: {}, unfilled: {}, demo: state.demo, source: state.source, filled: 0,
+                showUnverified: SHOW_UNVERIFIED };
 
-    function miss(key, el) { rep.missing[key] = (rep.missing[key] || 0) + 1; el.classList.add("missing"); }
+    /* Clave sin valor o sin verificar: el elemento queda vacío y la clave va a la lista. */
+    function blank(el, key, e, why) {
+      el.textContent = "";
+      el.classList.add("missing");
+      el.setAttribute("data-unfilled", why);
+      if (why === "unverified") { rep.unverified[key] = true; el.classList.add("unverified"); }
+      else rep.missing[key] = (rep.missing[key] || 0) + 1;
+      rep.unfilled[key] = why;
+      if (e) annotate(el, key, e);
+      else el.title = "key: " + key + " · not in numbers.json";
+    }
 
     root.querySelectorAll("[data-num]").forEach(function (el) {
       var key = el.getAttribute("data-num");
       el.classList.add("num");
       var e = entry(key);
+      var tag = key + (el.getAttribute("data-field") ? "." + el.getAttribute("data-field") : "") + (el.hasAttribute("data-say") ? ".say" : "");
+      if (!e) { blank(el, tag, null, "missing"); return; }
+      if (!usable(e)) { blank(el, key, e, "unverified"); return; }
       var txt = formatKey(key, {
         say: el.hasAttribute("data-say"),
         field: el.getAttribute("data-field") || undefined,
@@ -346,17 +388,17 @@
           txt = txt.replace(/^(about|≈)\s+/i, "");
         }
       }
-      if (txt === null) { el.textContent = "—"; miss(key + (el.getAttribute("data-field") ? "." + el.getAttribute("data-field") : "") + (el.hasAttribute("data-say") ? ".say" : ""), el); if (e) annotate(el, key, e); return; }
+      if (txt === null) { blank(el, tag, e, "missing"); return; }
       el.textContent = txt;
       if (el.hasAttribute("data-count-from-key")) {
         var e0 = entry(el.getAttribute("data-count-from-key"));
-        if (e0 && typeof e0.value === "number" && typeof e.value === "number") {
+        if (usable(e0) && typeof e0.value === "number" && typeof e.value === "number") {
           el.setAttribute("data-count-from", String(e0.value));
           el.setAttribute("data-count-to", String(e.value));
         }
       }
       annotate(el, key, e);
-      if (e.verified !== true) rep.unverified[key] = true;
+      if (!isVerified(e)) rep.unverified[key] = true;
       rep.filled++;
     });
 
@@ -364,7 +406,8 @@
       var key = el.getAttribute("data-list");
       el.classList.add("num");
       var e = entry(key);
-      if (!e || e.value === null || e.value === undefined) { el.textContent = "—"; miss(key, el); return; }
+      if (!e || e.value === null || e.value === undefined) { blank(el, key, e, "missing"); return; }
+      if (!usable(e)) { blank(el, key, e, "unverified"); return; }
       var items = splitListValue(getPath(e.value, el.getAttribute("data-item") || ""));
       var max = parseInt(el.getAttribute("data-max") || "0", 10);
       if (max > 0) items = items.slice(0, max);
@@ -376,7 +419,6 @@
         el.textContent = joinList(names);
       }
       annotate(el, key, e);
-      if (e.verified !== true) rep.unverified[key] = true;
       rep.filled++;
     });
 
@@ -385,11 +427,8 @@
       el.classList.add("flags");
       el.innerHTML = "";
       var e = flagEntry(key);
-      if (!e || e.value === null || e.value === undefined) {
-        miss(key, el);
-        var ph = document.createElement("span"); ph.className = "flagchip"; ph.textContent = "— — —"; el.appendChild(ph);
-        return;
-      }
+      if (!e || e.value === null || e.value === undefined) { blank(el, key, e, "missing"); return; }
+      if (!usable(e)) { blank(el, key, e, "unverified"); return; }
       var items = splitListValue(getPath(e.value, el.getAttribute("data-item") || ""));
       var max = parseInt(el.getAttribute("data-max") || "3", 10);
       var bad = [];
@@ -397,10 +436,9 @@
         var iso3 = iso3Of(it);
         if (iso3) el.appendChild(flagChip(iso3)); else bad.push(String(it));
       });
-      if (bad.length) { console.warn("[numbers] unknown country in", key, bad); miss(key + ":unknown", el); }
-      var tip = (e.def ? e.def + " · " : "") + "key: " + key + (e.verified === true ? " · verified" : " · UNVERIFIED");
-      el.title = tip;
-      if (e.verified !== true) { el.classList.add("unverified"); rep.unverified[key] = true; }
+      if (bad.length) { console.warn("[numbers] unknown country in", key, bad); rep.missing[key + ":unknown"] = 1; rep.unfilled[key + ":unknown"] = "unknown-country"; }
+      el.title = (e.def ? e.def + " · " : "") + "key: " + key + (isVerified(e) ? " · verified" : " · UNVERIFIED");
+      if (!isVerified(e)) { el.classList.add("unverified"); rep.unverified[key] = true; }
       rep.filled++;
     });
 
@@ -416,10 +454,13 @@
 
     rep.missingKeys = Object.keys(rep.missing).sort();
     rep.unverifiedKeys = Object.keys(rep.unverified).sort();
+    rep.unfilledKeys = Object.keys(rep.unfilled).sort();
     state.report = rep;
     window.NUMBERS_REPORT = rep;
-    if (rep.missingKeys.length) console.warn("[numbers] missing keys (" + rep.missingKeys.length + "):", rep.missingKeys.join(", "));
-    if (rep.unverifiedKeys.length) console.info("[numbers] unverified keys (" + rep.unverifiedKeys.length + "):", rep.unverifiedKeys.join(", "));
+    if (rep.unfilledKeys.length)
+      console.warn("[numbers] keys left EMPTY (missing or not verified) (" + rep.unfilledKeys.length + "):",
+        rep.unfilledKeys.map(function (k) { return k + " [" + rep.unfilled[k] + "]"; }).join(", "));
+    else console.info("[numbers] all " + rep.filled + " placeholders filled with verified keys");
     return rep;
   }
 

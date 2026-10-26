@@ -136,6 +136,7 @@ COL_PROY    <- COLOR_PROYECCION   # "#B0B0B0" proyección ONU
 COL_BANDA95 <- "#E9E9E9"
 COL_BANDA80 <- "#CDCDCD"
 COL_MEDIANA <- "#7A7A7A"          # línea de la proyección media (gris, más oscura que las bandas)
+COL_ESCENARIO <- "#4D4D4D"        # escenario ONU de migración cero (gris oscuro punteado; QA-viz V7)
 COL_RESALTE <- COL_TEXTO          # contorno de resaltes (inercia, ejemplos, EAU)
 PALETA_TIPO <- c(AB = COL_NAC, A = COL_NAC, B = COL_NAC, C = COL_MIG, D = COL_DEF, E = COL_EMI)
 # Atenuado = gris NEUTRO sin tono (corrección del revisor, ronda 1): un azul "atenuado" hacia
@@ -790,9 +791,11 @@ dibujar_fig01 <- function(t = Inf, version = c("video", "print"), d = DESCOMP, b
                           fill = atenuar(COL_MIG, w_at), colour = NA)
       }
       if (!is.na(fila$nat_pais)) {          # China / India: borde blanco dentro del azul
-        g <- g + annotate("rect", xmin = xl + 1.6, xmax = xr - 1.6, ymin = yv(0) + 1.2,
+        # corrector-final (QA-viz V14): en el vídeo el borde aparece con su clave ("Elsewhere…")
+        a_borde <- if (imp) 1 else e$claves
+        if (a_borde > 0.001) g <- g + annotate("rect", xmin = xl + 1.6, xmax = xr - 1.6, ymin = yv(0) + 1.2,
                           ymax = yv(fila$nat_pais * cr) - 0.4, fill = NA,
-                          colour = "white", linewidth = 0.42)
+                          colour = scales::alpha("white", a_borde), linewidth = 0.42)
       }
     }
     # línea del cero sobre las barras del panel
@@ -1172,8 +1175,10 @@ MARGEN_SUP_GOLFO <- 10                     # px mínimos entre una etiqueta y el
 
 estado_fig02b <- function(t) {
   p <- function(t0, d = 0.5, ease = "cubic-in-out") prog(t, t0, d, ease)
-  list(franja = 1 - p(0, 0.45), mom = 1 - p(0, 0.5), zoom = p(0.35, 2.8, "cubic-in-out"),
-       final = p(3.1, 0.5))
+  # corrector-final (QA-viz V9): sin capa de inercia en el fotograma 0 (en s1.b4c se veía _ex_e, no
+  # _momentum → destello); las etiquetas del Golfo entran al terminar el zoom (3,15 → 3,5 s)
+  list(franja = 1 - p(0, 0.45), mom = 0, zoom = p(0.35, 2.8, "cubic-in-out"),
+       final = p(3.2, 0.3))
 }
 
 #' Caja aproximada (px) de una etiqueta texto_halo: alto = 1,2 × tamaño + relleno.
@@ -1218,6 +1223,8 @@ dibujar_fig02b <- function(t = Inf) {
     for (l in capa_etiquetas(G, v, "momentum", alfa = e$mom)) g <- g + l
   }
   if (e$final > 0.001) {
+    # caja blanca de las etiquetas solo con la opacidad completa (sin cajas "fantasma" en el fundido)
+    fz <- if (e$final >= 0.999) 0.85 else 0
     for (l in capa_contorno(G, v, D$W, D$H, "ARE", alfa = e$final, grosor = 2.4)) g <- g + l
     cajas <- list()
     for (et in ETIQUETAS_GOLFO) {
@@ -1227,7 +1234,7 @@ dibujar_fig02b <- function(t = Inf) {
         g <- g + annotate("segment", x = xy$x + 3, y = xy$y, xend = pc$x, yend = pc$y,
                           colour = scales::alpha(COL_TEXTO_2, e$final), linewidth = 0.8 / 2.13)
       }
-      g <- g + texto_halo(xy$x, xy$y, et$iso, TAM_GOLFO$iso, COL_TEXTO_2, hjust = et$hj, alpha = e$final)
+      g <- g + texto_halo(xy$x, xy$y, et$iso, TAM_GOLFO$iso, COL_TEXTO_2, hjust = et$hj, alpha = e$final, fondo = fz)
       cajas[[et$iso]] <- caja_etiqueta(xy$x, xy$y, et$iso, TAM_GOLFO$iso, et$hj)
     }
     pu <- a_px(G$puntos |> filter(.data$iso3 == "ARE"), v)
@@ -1235,7 +1242,7 @@ dibujar_fig02b <- function(t = Inf) {
     g <- g + annotate("segment", x = xe - 4, y = ye, xend = pu$x + 14, yend = pu$y + 4,
                       colour = scales::alpha(COL_RESALTE, e$final), linewidth = 1.1 / 2.13)
     g <- g + texto_halo(xe, ye, "United Arab Emirates", TAM_GOLFO$eae, COL_RESALTE, hjust = 0,
-                        negrita = TRUE, alpha = e$final)
+                        negrita = TRUE, alpha = e$final, fondo = fz)
     cajas[["ARE"]] <- caja_etiqueta(xe, ye, "United Arab Emirates", TAM_GOLFO$eae, 0, TRUE)
     # póster: cada etiqueta dentro de la franja que deja ver la tarjeta de EAU (y ≥ 226 px), a
     # ≥ 10 px del borde superior y sin solaparse con otra
@@ -1291,11 +1298,11 @@ anim_02b <- function() {
   ruta0 <- file.path(tempdir(), "fig02b_t0.png")
   guardar_lienzo(dibujar_fig02b(0), ruta0, r[["w"]], r[["h"]])
   base <- magick::image_read(ruta_static(NOMBRES[["fig02"]]))
-  capa <- magick::image_read(ruta_static(paste0(NOMBRES[["fig02"]], "_momentum")))
-  comp <- as.integer(magick::image_data(magick::image_composite(base, capa), "rgb"))
+  # corrector-final: el fotograma 0 = mapa estático SIN capas (QA-viz V9)
+  comp <- as.integer(magick::image_data(base, "rgb"))
   f0 <- as.integer(magick::image_data(magick::image_read(ruta0), "rgb"))
   dif <- mean(abs(comp - f0)) / 255
-  message(sprintf("  fig02b: diferencia media fotograma 0 vs mapa + capa de inercia = %.4f", dif))
+  message(sprintf("  fig02b: diferencia media fotograma 0 vs mapa estático = %.4f", dif))
   if (dif > 0.01) anotar_problema(sprintf("fig02b: el primer fotograma no coincide con el mapa estático (dif. %.3f).", dif))
   res <- renderizar_mp4(dibujar_fig02b, dur, ruta_mp4(NOMBRES[["fig02b"]]), r[["w"]], r[["h"]])
   if (!mismo_png(res$ultimo, ruta_static(NOMBRES[["fig02b"]]))) anotar_problema("fig02b: el último fotograma no coincide con el póster.")
@@ -1354,9 +1361,12 @@ dibujar_fig03 <- function(version = c("video", "print"), f = FAN) {
                     colour = "#8E8E8E", linewidth = 0.55, linetype = "22")
   g <- g + annotate("segment", x = x0, xend = x1, y = y0, yend = y0, colour = "#6E6E6E", linewidth = 0.55)
   # líneas
-  g <- g + annotate("path", x = sx(med$Time), y = sy(med$pop_millones), colour = COL_MEDIANA, linewidth = 1.2)
-  g <- g + annotate("path", x = sx(zm$Time), y = sy(zm$pop_millones), colour = COL_DEF, linewidth = 1.3,
-                    linetype = "11", lineend = "round")
+  # corrector-final (QA-viz V7, V11): mediana proyectada gris DISCONTINUA (convención de proyección) y
+  # escenario de migración cero en gris oscuro punteado (el naranja = "deaths > births" en la leyenda)
+  g <- g + annotate("path", x = sx(med$Time), y = sy(med$pop_millones), colour = COL_MEDIANA, linewidth = 1.2,
+                    linetype = "22")
+  g <- g + annotate("path", x = sx(zm$Time), y = sy(zm$pop_millones), colour = COL_ESCENARIO, linewidth = 1.3,
+                    linetype = "13", lineend = "round")
   g <- g + annotate("path", x = sx(est$Time), y = sy(est$pop_millones), colour = "#111111", linewidth = 1.3)
   # corchete 2050: intervalo del 95 %
   lo <- cifra("pop_are_2050_pi95_low"); hi <- cifra("pop_are_2050_pi95_high")
@@ -1372,12 +1382,13 @@ dibujar_fig03 <- function(version = c("video", "print"), f = FAN) {
   # clave arriba a la izquierda (zona vacía 1950–2040, 30–80 M)
   xs <- x0 + 6; xt <- xs + 30
   g <- g + annotate("segment", x = xs, xend = xs + 22, y = yl[1], yend = yl[1], colour = "#111111", linewidth = 1.3)
-  g <- g + annotate("segment", x = xs, xend = xs + 22, y = yl[2], yend = yl[2], colour = COL_MEDIANA, linewidth = 1.2)
+  g <- g + annotate("segment", x = xs, xend = xs + 22, y = yl[2], yend = yl[2], colour = COL_MEDIANA, linewidth = 1.2,
+                    linetype = "22")
   g <- g + annotate("rect", xmin = xs, xmax = xs + 10, ymin = yl[3] - 7, ymax = yl[3] + 7, fill = COL_BANDA80)
   g <- g + annotate("rect", xmin = xs + 12, xmax = xs + 22, ymin = yl[3] - 7, ymax = yl[3] + 7, fill = COL_BANDA95,
                     colour = "#D0D0D0", linewidth = 0.3)
-  g <- g + annotate("segment", x = xs, xend = xs + 22, y = yl[4], yend = yl[4], colour = COL_DEF, linewidth = 1.3,
-                    linetype = "11", lineend = "round")
+  g <- g + annotate("segment", x = xs, xend = xs + 22, y = yl[4], yend = yl[4], colour = COL_ESCENARIO, linewidth = 1.3,
+                    linetype = "13", lineend = "round")
   clave <- c("UN estimate, 1950–2023", "UN medium projection", "80 % · 95 % range",
              "UN zero-migration scenario", "(a what-if, not a forecast)")
   avisar_ancho(clave, TAM$secundario, x1 - xt, donde = "fig03 clave")

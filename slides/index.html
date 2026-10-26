@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>One Number Can't Tell 8 Billion Stories · ASA DataQuest 2026</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <meta name="description" content="Births, deaths and migration in 237 countries and areas (UN World Population Prospects 2024). Slides for the ASA International DataQuest 2026.">
 <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css">
 <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
@@ -12,7 +13,7 @@
 </head>
 <body>
 <!--
-  ESQUELETO DE DIAPOSITIVAS — storyboard v2.1 (docs/00_storyboard_diapositivas.md, revisión QA 2026-10-23)
+  DIAPOSITIVAS — storyboard v2.1 (docs/00_storyboard_diapositivas.md, revisión QA 2026-10-23) · guion final v3 (2026-10-25)
   Convenciones de marcado (detalle en slides/README.md):
    · data-num="clave"           → cifra desde figures/numbers.json (value formateado según fmt)
        data-say                 → usa el campo "say" (frase hablada)   · data-cap → primera letra en mayúscula
@@ -26,8 +27,9 @@
                                    video → ../figures/animated/nombre.mp4 (póster = static/nombre.png);
                                    en el PDF se prueba antes static/nombre_print.png
        data-optional            → si falta, se oculta (sin marcador gris)
-   · data-step / data-caption   → id del estado (video_timings.json) y subtítulo literal a la voz;
-                                   " | " separa bloques; admite {clave} y {clave.say}
+   · data-step / data-caption   → id del estado (video_timings.json) y subtítulo literal a la voz final:
+                                   copia de slides/script/data_captions.json (build_narration.py), cifras ya
+                                   escritas; " | " separa bloques; admite {clave} y {clave.say} pero no se usan
    · data-build                 → número de build del storyboard (clases .ge-N en la <section>)
    · .print-hide / .print-only  → transitorios del vídeo / solo en el PDF
    Constantes de diseño (237, ≥ 1 M, 12 indicadores, 5 look-alikes, 20 puestos, 2.1/4/5→3, 25 por 1,000,
@@ -53,12 +55,12 @@
       <span class="counter-year" data-year-from="1950" data-year-to="2023">2023</span>
     </div>
     <div class="fragment" data-fragment-index="2" data-build="2" data-step="cover.b2"
-      data-caption="In 2023, {n_below_replacement_2023} of 237 countries and areas had below-replacement fertility: | too few children to replace their parents.">
+      data-caption="In 2023, 130 countries and areas had too few children to replace their parents.">
       <p class="line"><span class="n" data-num="n_below_replacement_2023">—</span> of 237 countries and areas: fertility below replacement</p>
       <p class="sub">replacement ≈ 2.1 children per woman: enough to replace the parents where almost every child survives</p>
     </div>
     <div class="fragment" data-fragment-index="3" data-build="3" data-step="cover.b3"
-      data-caption="Yet {n_below_repl_growing_2023} are still growing. | {n_below_repl_natural_growth_2023} because births still outnumber deaths; | {n_grow_only_migration_2023} only because more people arrive than leave.">
+      data-caption="Yet 84 are still growing. | 66 have more births than deaths; 18 grow only because more people arrive than leave.">
       <p class="line"><span class="n" data-num="n_below_repl_growing_2023">—</span> still growing</p>
       <div class="split">
         <span class="chip t-ab"><span class="n" data-num="n_below_repl_natural_growth_2023">—</span> births &gt; deaths</span>
@@ -70,10 +72,15 @@
       data-caption="One number can't explain that.">One number can't explain that.</p>
    </div>
    <div class="titleblock fragment" data-fragment-index="5" data-build="5" data-step="cover.b5"
-     data-caption="We are Team {team_name}.">
+     data-caption="We are Team UNALSta-R.">
      <h1 class="cover-title">One Number Can't Tell<br><span class="eight">8 Billion</span> Stories</h1>
      <p class="cover-sub">Births, deaths and migration in 237 countries and areas — UN estimates 1950–2023, projections to 2100 — and where the UN should look next</p>
-     <p class="cover-summary print-only"><span data-num="n_below_replacement_2023">—</span> below replacement · <span data-num="n_below_repl_growing_2023">—</span> still growing
+     <!-- equipo: texto exacto de docs/equipo.json ("affiliation_line", "members"); init.js lo resincroniza desde el JSON -->
+     <div class="team">
+       <p class="aff" data-team="affiliation_line">UNALSta-R · Statistics students · Universidad Nacional de Colombia, Bogotá</p>
+       <p class="members" data-team="members">Daniela C. Kwan · David S. Merchán · Jhon A. Mora · Alejandro Higuera</p>
+     </div>
+     <p class="cover-summary print-only"><span data-num="n_below_replacement_2023">—</span> of 237 below replacement fertility (≈ 2.1 children per woman) · <span data-num="n_below_repl_growing_2023">—</span> still growing
        (<span class="t-ab-txt"><span data-num="n_below_repl_natural_growth_2023">—</span> births &gt; deaths</span> ·
        <span class="t-c-txt"><span data-num="n_grow_only_migration_2023">—</span> only because more arrive than leave</span>)</p>
      <p class="cover-questions print-only"><b>Q1</b> How do births, deaths and migration relate — and how does that differ by region, country and income? <span class="pc">P7 · P4</span> ·
@@ -90,7 +97,7 @@
      SLIDE 1 — Question 1 · P7 · P4 (0:27–1:51) — builds 0–5
      ===================================================================== -->
 <section class="s1" data-qn="1" data-qnav-fragment="1" data-step="s1.b0" data-build-initial="0"
-  data-caption="Three questions. | One: how do births, deaths and migration relate, | and how does that differ by region, country and income? | Two: does one indicator tell the whole story, or only several together? | Three: do countries share one road at different speeds, and what should the UN watch? | After 2023, grey shows the UN medium projection: a scenario, not a forecast.">
+  data-caption="Three questions. | One: how do births, deaths and migration relate, and differ by region, country and income? | Two: does one indicator tell the whole story, or only several together? | Three: do countries share one road at different speeds, and what should the UN watch?">
  <div class="frame">
   <header class="hdr">
     <div class="hdr-row"><span class="qchip">Question 1</span><span class="pcodes">P7 · P4</span></div>
@@ -120,10 +127,10 @@
         </div>
       </div>
       <div class="datacard">
-        <span><span class="dk">Data</span>237 countries and areas (<span data-num="n_states">—</span> states + <span data-num="n_territories">—</span> territories) · our models use the <span data-num="n_ge1m">—</span> with ≥ 1 M people</span>
+        <span><span class="dk">Data</span>237 countries and areas (<span data-num="n_states">—</span> UN Member and observer States + <span data-num="n_territories">—</span> other areas) · our models use the <span data-num="n_ge1m">—</span> with ≥&nbsp;1&nbsp;M people</span>
         <span>UN estimates 1950–2023 · <i class="gr"></i>UN medium projection 2024–2100 (grey after 2023: a scenario, with uncertainty)</span>
         <span>Net migration = arrivals − departures, the least-measured component</span>
-        <span><span data-num="n_census_pre2009">—</span> countries and areas: last census before 2009</span>
+        <span>Some countries and areas have had no census since before 2009: their figures rest more on UN modelling (see UN DESA, WPP 2024 data sources)</span>
         <span>Source: UN DESA Population Division (2024), CC BY 3.0 IGO</span>
       </div>
     </div>
@@ -137,8 +144,8 @@
 
     <!-- b2: fig01 descomposición por ingreso (MP4 8 s) -->
     <div class="f01 fragment" data-fragment-index="2" data-build="2" data-step="s1.b2"
-      data-caption="In today's high-income countries, net migration accounted for | about {share_mig_high_2000_2023.say} of the growth since 2000. | Elsewhere, growth came almost entirely from births exceeding deaths.">
-      <p class="head">Where growth came from, by today's income group<br><span class="fn">millions of people per decade · <i class="sw t-ab" style="width:16px;height:16px;vertical-align:-2px"></i> births − deaths · <i class="sw t-c" style="width:16px;height:16px;vertical-align:-2px"></i> net migration</span></p>
+      data-caption="In today's high-income countries, net migration accounted for | about seven in ten of the growth since 2000. | Elsewhere, growth came almost entirely from births exceeding deaths.">
+      <p class="head">High-income growth since 2000: mostly net migration<br><span class="fn">millions of people per decade · <i class="sw t-ab" style="width:16px;height:16px;vertical-align:-2px"></i> births − deaths · <i class="sw t-c" style="width:16px;height:16px;vertical-align:-2px"></i> net migration</span></p>
       <figure class="slot">
         <video data-fig="fig01_growth_components_by_income" muted playsinline preload="auto"></video>
       </figure>
@@ -150,40 +157,45 @@
 
     <!-- b3: fig02 mapa de palancas 2023 (+ zoom en b5) -->
     <div class="mapbox fragment" data-fragment-index="3" data-build="3" data-step="s1.b3"
-      data-caption="Blue: growing from births,">
+      data-caption="Blue: more births than deaths, and growing,">
       <figure class="slot"><img data-fig="fig02_lever_map_2023" alt="Map: lever type of each country and area, 2023"></figure>
-      <img class="overlay-fig fragment" data-fig="fig02_lever_map_2023_momentum" data-optional data-fragment-index="4" alt="">
+      <!-- capas transparentes (mismo encuadre que fig02): se iluminan al nombrarse y se apagan en el build siguiente;
+           en el PDF queda solo la de inercia (_momentum_print.png) -->
+      <img class="overlay-fig fragment fade-in-then-out print-keep" data-fig="fig02_lever_map_2023_momentum" data-optional data-fragment-index="4" alt="">
+      <img class="overlay-fig fragment fade-in-then-out print-hide" data-fig="fig02_lever_map_2023_ex_c" data-optional data-fragment-index="5" alt="">
+      <img class="overlay-fig fragment fade-in-then-out print-hide" data-fig="fig02_lever_map_2023_ex_d" data-optional data-fragment-index="6" alt="">
+      <img class="overlay-fig fragment fade-in-then-out print-hide" data-fig="fig02_lever_map_2023_ex_e" data-optional data-fragment-index="7" alt="">
       <figure class="slot fragment print-hide" data-fragment-index="8" data-build="5" data-step="s1.b5a"
         data-caption="Migration is also the least certain lever.">
         <video data-fig="fig02b_lever_map_zoom" muted playsinline preload="auto"></video>
       </figure>
     </div>
     <div class="legend fragment" data-fragment-index="3" data-build="3">
-      <div class="lg-row"><i class="sw t-ab"></i><span class="lg-lab">Growing from births</span><span class="lg-n" data-num="n_type_AB">—</span>
+      <div class="lg-row"><i class="sw t-ab"></i><span class="lg-lab">Growing: births &gt; deaths</span><span class="lg-n" data-num="n_type_AB">—</span>
         <span class="lg-ex fragment" data-fragment-index="4" data-build="3" data-step="s1.b3b"
-          data-caption="including {n_momentum_countries} countries below replacement, | home to {pop_momentum_bn} billion people.">Below replacement, still growing from births: <b data-num="n_momentum_countries">—</b> countries, <b data-num="pop_momentum_bn">—</b> bn people <span class="flags" data-flags="examples_momentum"></span></span></div>
+          data-caption="including 22 below replacement that grow with no net arrivals.">Below replacement, growing from births with no net arrivals: <b data-num="n_momentum_countries">—</b> countries, <b data-num="pop_momentum_bn">—</b> bn people — largest: <span class="flags" data-flags="examples_momentum"></span></span></div>
       <div class="lg-row"><i class="sw t-c"></i><span class="lg-lab">Growing only because more arrive than leave</span><span class="lg-n" data-num="n_type_C">—</span>
         <span class="lg-ex fragment" data-fragment-index="5" data-build="4" data-step="s1.b4a"
-          data-caption="Light blue: deaths exceed births, but arrivals keep it growing: {examples_type_C}."><span class="flags" data-flags="examples_type_C"></span></span></div>
+          data-caption="Light blue: deaths exceed births, but arrivals keep it growing."><span class="flags" data-flags="examples_type_C"></span></span></div>
       <div class="lg-row"><i class="sw t-d"></i><span class="lg-lab">Shrinking: deaths &gt; births</span><span class="lg-n" data-num="n_type_D">—</span>
         <span class="lg-ex fragment" data-fragment-index="6" data-build="4" data-step="s1.b4b"
-          data-caption="Orange: deaths exceed births, and the population shrinks: {examples_type_D}."><span class="flags" data-flags="examples_type_D"></span></span></div>
+          data-caption="Orange: deaths exceed births, and it shrinks."><span class="flags" data-flags="examples_type_D"></span></span></div>
       <div class="lg-row"><i class="sw t-e"></i><span class="lg-lab">Shrinking: more leave than arrive</span><span class="lg-n" data-num="n_type_E">—</span>
         <span class="lg-ex fragment" data-fragment-index="7" data-build="4" data-step="s1.b4c"
-          data-caption="Purple: more births than deaths, yet shrinking, | as more people leave than arrive: {examples_type_E}."><span class="flags" data-flags="examples_type_E"></span></span></div>
+          data-caption="Purple: births exceed deaths, but net departures make it shrink."><span class="flags" data-flags="examples_type_E"></span></span></div>
       <p class="fn">Light blue: <span data-num="n_grow_only_migration_2023">—</span> in 2023 (<span data-num="n_grow_only_migration_sens_range">—</span> depending on the year) ·
         grey: small states (&lt; 1 M) · Map: Natural Earth; boundaries and names do not imply UN endorsement
-        <span class="fragment" data-fragment-index="5">· examples chosen by rule: the three largest countries of each type (≥ 1 M)</span></p>
+        <span class="fragment" data-fragment-index="5">· examples chosen by rule: the three largest countries of each type (≥&nbsp;1&nbsp;M); for blue, of these <span data-num="n_momentum_countries">—</span></span></p>
     </div>
 
     <!-- b5: inset EAU (fan chart 2050) -->
     <aside class="uae-card fragment" data-fragment-index="9" data-build="5" data-step="s1.b5b"
-      data-caption="For the Emirates in 2050, the UN gives a 95 percent range | of {pop_are_2050_pi95_low} to {pop_are_2050_pi95_high} million.">
+      data-caption="For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million.">
       <div class="uae-txt">
-        <p class="head"><span class="flags"><span data-iso="ARE"></span></span> UAE 2023: net migration <span data-num="cnmr_are_2023" data-sign="always">—</span> per 1,000 people · growth <span data-num="growth_are_2023">—</span> % a year · fertility <span data-num="tfr_are_2023">—</span> children per woman</p>
-        <p class="fn">The UN revised the UAE's 2023 population by <span data-num="are_revision_pct" data-sign="always">—</span> % between its 2022 and 2024 editions</p>
-        <p class="range">UN medium projection, 2050: <span data-num="pop_are_2050">—</span> M · 95 % range <span data-num="pop_are_2050_pi95_low">—</span>–<span data-num="pop_are_2050_pi95_high">—</span> M</p>
-        <p class="fn">95 % range = the UN's band of likely values · <span data-num="n_dir_uncertain_2050">—</span> of <span data-num="n_ge1m">—</span> countries: the UN 95 % range for 2050 includes both growth and decline</p>
+        <p class="head"><span class="flags noiso"><span data-iso="ARE"></span></span> UAE 2023: net migration <span data-num="cnmr_are_2023" data-sign="always">—</span> per 1,000 people · growth <span data-num="growth_are_2023">—</span> % a year · fertility <span data-num="tfr_are_2023">—</span> children per woman</p>
+        <p class="fn">UAE = the twin picked by rule in Question 2 · net migration is often inferred from census gaps</p>
+        <p class="range">UN medium projection, 2050: <span data-num="pop_are_2050">—</span> M · <span class="nw">95 % range <span data-num="pop_are_2050_pi95_low">—</span>–<span data-num="pop_are_2050_pi95_high">—</span> M</span></p>
+        <p class="fn">95 % range = the UN's band of likely values · for <span data-num="n_dir_uncertain_2050">—</span> of <span data-num="n_ge1m">—</span> countries it spans both growth and decline by 2050</p>
       </div>
       <figure class="slot"><img data-fig="fig03_uae_fan_2050" alt="UAE population 1950–2100: UN medium projection with 80/95 % ranges and the UN zero-migration scenario"></figure>
     </aside>
@@ -203,16 +215,21 @@
 <section class="s2" data-qn="1" data-step="s2.b0" data-build-initial="0" data-caption="">
  <div class="frame">
   <header class="hdr">
-    <div class="hdr-row"><span class="qchip">Question 1</span><span class="pcodes">P7 · P1</span></div>
+    <div class="hdr-row"><span class="qchip">Question 1</span><span class="pcodes">P7 · P4</span></div>
     <h2 class="title">Same road, different speed: child mortality fell first, fertility followed</h2>
   </header>
   <div class="content grid-s2">
     <div class="row-top">
       <!-- b1: fig04 registro por hitos (MP4 8 s) -->
       <div class="blk blk04 fragment" data-fragment-index="1" data-build="1" data-step="s2.b1"
-        data-caption="Set each country's clock to when its fertility fell below four children, | and the curves line up. | The road is shared; the speed is not. | China went from five to three children in {dur53_chn} years; Egypt took {dur53_egy}.">
+        data-caption="Set each country's clock to when its fertility fell below four children, | and the curves line up. | The road is shared; the speed is not. | China went from five to three children in 5 years; Egypt took 33.">
         <p class="head">Same road, different clock: lining countries up on the year fertility fell below 4 children per woman removes <span data-num="pct_var_fase">—</span> % of the gaps between them</p>
-        <figure class="slot"><video data-fig="fig04_same_road_registration" muted playsinline preload="auto"></video></figure>
+        <!-- b1: héroe 1760×416 (MP4 18.5 s, póster = panel B alineado); desde b2 la ranura baja a 774×183 y se funde
+             a la versión legible _small.png; en el PDF, _print.png (774×243) -->
+        <figure class="slot slot04">
+          <video data-fig="fig04_same_road_registration" muted playsinline preload="auto" aria-label="Fertility of 90 countries, lined up on the year it fell below 4 children per woman"></video>
+          <img class="swap-small print-hide" data-fig="fig04_same_road_registration_small" alt="Fertility of 90 countries lined up on the year it fell below 4 children per woman: China 5 years, Colombia 19, Egypt 33 from 5 to 3 children">
+        </figure>
         <div class="txtgroup">
           <p class="speed">5 → 3 children per woman: China <span data-num="dur53_chn">—</span> years · Egypt <span data-num="dur53_egy">—</span> years <span class="fn">(fastest and slowest of countries ≥ 10 M that made the trip)</span></p>
           <p class="fn"><span data-num="n_cens_der">—</span> countries, mostly in sub-Saharan Africa, have not crossed 4 yet and are not shown; <span data-num="n_cens_izq">—</span> were already below 4 in 1950</p>
@@ -220,25 +237,26 @@
       </div>
       <!-- b2: fig05 mortalidad primero (event time) -->
       <div class="blk blk05 fragment" data-fragment-index="2" data-build="2" data-step="s2.b2"
-        data-caption="Child deaths moved first: in {n_mort_first_onset} of {n_onset} high-fertility countries, | typically at least {lag_onset_lower_bound} years before fertility.">
+        data-caption="Child deaths started falling first in 106 of 109 high-fertility countries. | The gap was typically at least 22 years.">
         <p class="head">Child mortality began a lasting fall first in <span data-num="n_mort_first_onset">—</span> of <span data-num="n_onset">—</span> high-fertility countries (5+ children per woman in 1950; <span data-num="share_mort_first">—</span> %) — typically at least <span data-num="lag_onset_lower_bound">—</span> years earlier</p>
+        <!-- la flecha en 0 y su rótulo ya están dentro de fig05; la cifra (q5_drop_at_tfr_onset) va en el texto -->
         <figure class="slot">
           <img data-fig="fig05_mortality_first_event_time" alt="Child mortality and fertility in years since fertility began to fall">
-          <span class="callout">child mortality had already fallen by about half (<span data-num="q5_drop_at_tfr_onset">—</span> %)</span>
         </figure>
         <div class="txtgroup">
           <p class="txt">Fertility began to fall: ≈ <span data-num="yr_fert_onset_upmid">—</span> in today's upper-middle-income countries · <span data-num="yr_fert_onset_lowmid">—</span> lower-middle · <span data-num="yr_fert_onset_low">—</span> low-income</p>
-          <p class="fn">child mortality was already falling in 1950 in <span data-num="n_q5_falling_1950">—</span>, so the true gap is probably longer · income groups = World Bank FY2027 (today's groups applied to all years)</p>
+          <p class="fn">when it did, child mortality had already fallen by about half (<span data-num="q5_drop_at_tfr_onset">—</span> %) · it was already falling in 1950 in <span data-num="n_q5_falling_1950">—</span> of the <span data-num="n_onset">—</span>, so the true gap is probably longer · income groups = World Bank FY2027 (today's groups applied to all years)</p>
         </div>
       </div>
     </div>
     <div class="row-bot">
       <!-- b3: fig06 dentro vs entre países (mini-forest) -->
       <div class="blk blk06 fragment" data-fragment-index="3" data-build="3" data-step="s2.b3"
-        data-caption="Within one country, this link is less than half what comparing countries suggests. | A sequence in time, not proof of cause.">
-        <p class="head">Within the same country, halving child mortality goes with <span data-num="panel_within_halfq5">—</span> children per woman over the next 20 years — comparing countries, <span data-num="panel_between_halfq5">—</span></p>
+        data-caption="Within one country, this link is smaller than what comparing countries suggests. | A sequence in time, not proof of cause.">
+        <!-- QA-stats: el intervalo por bloques de −0.41 incluye 0 → no se afirma que lo excluya; sin intervalo para la razón 2.5 -->
+        <p class="head">Within the same country, the link is smaller than what comparing countries suggests: halving child mortality goes with <span data-num="panel_within_halfq5">—</span> children per woman over the next 20 years, vs <span data-num="panel_between_halfq5">—</span> comparing countries</p>
         <figure class="slot"><img data-fig="fig06_within_vs_across_forest" alt="Within-country vs comparing-countries association, by income group"></figure>
-        <p class="fn">clearest in sub-Saharan Africa (<span data-num="panel_ssa_halfq5">—</span>); not detected in Europe &amp; N. America · each country counts once · association, not cause</p>
+        <p class="fn">clearest in sub-Saharan Africa (<span data-num="panel_ssa_halfq5">—</span>); in Europe &amp; N. America it goes the other way (<span data-num="panel_eurna_halfq5" data-sign="always">—</span>) · association, not cause</p>
       </div>
       <!-- b4: chip de migración (texto) -->
       <div class="chipbox fragment" data-fragment-index="4" data-build="4" data-step="s2.b4"
@@ -246,16 +264,16 @@
         <p class="head">Migration: a short memory and almost no neighbourhood</p>
         <p class="ck">How alike? (0 = no link, 1 = identical)</p>
         <div class="cols">
-          <p class="cv">same country, one decade to the next: births &amp; deaths ≥ <span class="big" data-num="r_tfr_decades_min">—</span> · migration <span class="big" data-num="r_cnmr_decades_recent">—</span></p>
-          <p class="cv">neighbouring countries: fertility <span class="big" data-num="moran_tfr_2023">—</span> · migration <span class="big" data-num="moran_cnmr_2023">—</span> (<span data-num="moran_cnmr_2023_nogulf">—</span> without the Gulf)</p>
+          <p class="cv">same country, decade to decade: births &amp; deaths ≥&nbsp;<span class="big" data-num="r_tfr_decades_min" data-fmt="0.000">—</span> · <span class="nw">migration <span class="big" data-num="r_cnmr_decades_min">—</span>–<span class="big" data-num="r_cnmr_decades_recent">—</span></span> (latest <span data-num="r_cnmr_decades_recent">—</span>)</p>
+          <p class="cv">neighbouring countries: fertility <span class="big" data-num="moran_tfr_2023">—</span> · <span class="nw">migration <span class="big" data-num="moran_cnmr_2023">—</span></span> (<span data-num="moran_cnmr_2023_nogulf">—</span> without the Gulf)</p>
         </div>
-        <p class="fn">Net migration = arrivals − departures, often inferred from census gaps — the least-measured component</p>
+        <p class="fn">Net migration = arrivals − departures, often inferred from census gaps</p>
       </div>
     </div>
   </div>
   <div class="msgrow answer fragment" data-fragment-index="4" data-build="4">
     <span class="stamp">Question 1 answered<small>P7 · P4</small></span>
-    <p class="msg">Child mortality fell first and fertility followed, at each country's pace — latest in low-income countries (fertility began to fall ≈ <span data-num="yr_fert_onset_upmid">—</span> upper-middle · <span data-num="yr_fert_onset_lowmid">—</span> lower-middle · <span data-num="yr_fert_onset_low">—</span> low income). Migration moves on its own — alike among neighbours only in the Gulf — and weighs most in today's high-income countries (≈ <span data-num="share_mig_high_2000_2023" data-say>—</span> of their growth since 2000).</p>
+    <p class="msg">Child deaths fell first, fertility followed — at each country's pace, latest in low-income countries. Migration moves on its own and accounts for ≈ <span data-num="share_mig_high_2000_2023" data-say>—</span> of high-income growth since 2000.</p>
   </div>
   <div class="capband"></div>
   <footer class="ftr" data-badge></footer>
@@ -275,21 +293,21 @@
     <div class="row-main">
       <!-- b1: fig07 scorecard (MP4 6 s) -->
       <div class="blk blk07 fragment" data-fragment-index="1" data-build="1" data-step="s3.b1"
-        data-caption="Question two. | Fertility alone captures the slow story: | about {r2_tfr_medage.say} of the differences in how old populations are. | But only {r2_tfr_growth.say} percent of today's growth, and almost none of migration.">
-        <p class="head">What fertility alone captures <span class="fn">(adjusted R², <span data-num="n_ge1m">—</span> countries ≥ 1 M, 2023)</span></p>
+        data-caption="Question two. | Fertility alone captures the slow story: | about three quarters of the differences in how old populations are. | Only part of today's growth, and almost none of migration.">
+        <p class="head">Fertility alone tells how old a population is, part of today's growth, almost nothing of migration</p>
         <figure class="slot"><video data-fig="fig07_single_indicator_scorecard" muted playsinline preload="auto"></video></figure>
         <div class="txtgroup">
-          <p class="fn">R² = share of the differences between countries that fertility alone reproduces (0 = none, 1 = all) · same when tested on countries left out · 2050 change is partly built in (UN projections start from fertility) · births − deaths + migration together reach <span data-num="r2_all">—</span>: true by definition (bookkeeping)</p>
-          <p class="fn">Even the death rate (deaths per 1,000 people) changed meaning: Portugal and Chad share it (<span data-num="cdr_prt">—</span> vs <span data-num="cdr_tcd">—</span>) but are <span data-num="lex_gap_prt_tcd">—</span> years apart in life expectancy</p>
+          <p class="fn">adjusted R², <span data-num="n_ge1m">—</span> countries ≥&nbsp;1&nbsp;M, 2023 · R² = share of the differences between countries that fertility alone reproduces (0 = none, 1 = all)<span class="print-hide"> · same when tested on countries left out</span> · 2050 change is partly built in<span class="print-hide"> (UN projections start from fertility)</span></p>
+          <p class="fn print-hide">Even the death rate changed meaning: Portugal and Chad, picked by rule (same death rate ±&nbsp;0.1, largest life-expectancy gap), share it (<span data-num="cdr_prt">—</span> vs <span data-num="cdr_tcd">—</span>) but are <span data-num="lex_gap_prt_tcd">—</span> years apart in life expectancy</p>
         </div>
       </div>
       <!-- b2: métrica de look-alikes + tarjeta B (Colombia); b4: tarjeta A (gemelos) -->
       <div class="blk08">
         <div class="fragment" data-fragment-index="2" data-build="2" data-step="s3.b2"
-          data-caption="It finds only {knn_tfr.say} of each country's closest look-alikes.">
-          <p class="metric">Look-alikes = the 5 countries most similar on 12 indicators. Fertility alone finds <span class="big" data-num="knn_tfr">—</span> % of them · the two summary axes (right): <span class="big" data-num="knn_pc12">—</span> % · picking at random: <span data-num="knn_chance">—</span> %</p>
+          data-caption="Fertility alone finds only one in eight of each country's closest look-alikes.">
+          <p class="metric">Look-alikes = the 5 countries most similar on 12 indicators. Fertility alone finds <span class="big" data-num="knn_tfr">—</span> % of them · the two summary axes: <span class="big" data-num="knn_pc12">—</span> % · picking at random: <span data-num="knn_chance">—</span> %</p>
           <div class="card">
-            <span class="card-k">Look-alikes · <span class="flags"><span data-iso="COL"></span></span> Colombia</span>
+            <span class="card-k">Look-alikes · <span class="flags noiso"><span data-iso="COL"></span></span> Colombia</span>
             <p class="card-v">by fertility it looks like</p>
             <span class="flags" data-flags="lookalikes_col_tfr" data-max="5"></span>
             <p class="card-v">by 12 indicators, like</p>
@@ -298,30 +316,31 @@
           </div>
         </div>
         <div class="card twins fragment" data-fragment-index="4" data-build="4">
-          <span class="card-k">Twins by rule · same fertility, opposite growth</span>
-          <div class="twin-pair"><span class="flags"><span data-iso="ARE"></span></span> UAE <span class="vs">·</span> <span class="flags"><span data-iso="BLR"></span></span> Belarus</div>
+          <span class="card-k">Same fertility, opposite growth · by rule</span>
+          <div class="twin-pair"><span class="flags noiso"><span data-iso="ARE"></span></span> UAE <span class="vs">·</span> <span class="flags noiso"><span data-iso="BLR"></span></span> Belarus</div>
           <p class="card-v">same fertility <b data-num="twin_tfr_are">—</b> vs <b data-num="twin_tfr_blr">—</b> children per woman → growth <b class="arrow-up"><span data-num="twin_growth_are" data-sign="always">—</span> %</b> vs <b class="arrow-down"><span data-num="twin_growth_blr" data-sign="always">—</span> %</b> a year</p>
-          <p class="fn">twins chosen by rule from <span data-num="n_twin_pairs">—</span> pairs (≥ 1 M): same fertility (± 0.05), most different growth</p>
+          <p class="fn">twins chosen by rule from <span data-num="n_twin_pairs">—</span> pairs (≥&nbsp;1&nbsp;M): same fertility (±&nbsp;0.05), most different growth</p>
         </div>
       </div>
       <!-- b3: fig09 dos dimensiones (MP4 8 s) -->
       <div class="blk blk09 fragment" data-fragment-index="3" data-build="3" data-step="s3.b3"
-        data-caption="Countries differ in two independent ways. | Fertility tracks the first, the transition to fewer births and deaths, | but misses migration.">
-        <p class="head">Only <span data-num="n_dims_parallel">—</span> axes stand out from random noise · fertility ≈ axis 1 (r = <span data-num="r_tfr_pc1">—</span>) · blind to axis 2 (r = <span data-num="r_tfr_pc2">—</span>)</p>
+        data-caption="Countries differ in two separate ways. | Fertility tracks the first, the transition to fewer births and deaths, | but misses migration.">
+        <p class="head"><span class="print-only">Only <span data-num="n_dims_parallel">—</span> axes stand out from random noise</span><span class="print-hide">Countries differ in two separate ways</span> · fertility ≈ axis 1 <span class="nw">(r = <span data-num="r_tfr_pc1">—</span>)</span> · blind to axis 2 <span class="nw">(r = <span data-num="r_tfr_pc2">—</span>)</span></p>
         <figure class="slot"><video data-fig="fig09_pca_two_dimensions" muted playsinline preload="auto"></video></figure>
-        <p class="fn">axis = one summary of all 12 indicators · r = correlation, from −1 to 1 · axis 1 = <span data-num="pc1_var" data-fmt="0">—</span> % of the variation (<span data-num="pc1_var_sens_range">—</span> % depending on which indicators enter)</p>
+        <p class="fn">axis = one summary of all 12 indicators · r = correlation, −1 to 1 · axis 1 = <span data-num="pc1_var" data-fmt="0">—</span> % of the variation (<span data-num="pc1_var_sens_range">—</span> % with other indicator sets) · <span class="nw">axis 2 = <span data-num="pc2_var" data-fmt="0">—</span> %</span></p>
       </div>
     </div>
     <!-- b4: franja P5 (índice compuesto) -->
     <div class="p5strip fragment" data-fragment-index="4" data-build="4" data-step="s3.b4"
-      data-caption="Blend indicators into one score, | and the weights can move {share_rank_mc20.say} countries over twenty ranks. | Question two, answered: no. | The Emirates and Belarus share the same fertility; | one grows almost {twin_growth_are.say} percent a year, the other shrinks. | The story emerges only when indicators of both, | transition and migration, are read together.">
+      data-caption="Blend indicators into one score: | the weights can shift one country in five by more than twenty places. | Question two, answered: no. | The Emirates and Belarus share the same fertility; | one grows almost four percent a year, the other shrinks. | The story emerges only when transition and migration are read together.">
       <span class="p5k">Composite index</span>
-      <p class="txt">= one score blending 5 indicators (2,000 reasonable ways to build it): weights, not formulas, decide — <b><span data-num="share_rank_mc20">—</span> % of countries can move more than 20 places</b> · a transition-stage index, not a ranking of development or well-being</p>
+      <p class="txt">= one score blending 5 indicators (2,000 reasonable ways to build it): weights, not formulas, decide — <!-- QA-stats §3.3: share_rank_mc20 es aleatoria (21.7–23.6 % según semilla) → se muestra la forma robusta "one country in five" -->
+      <b><span data-num="share_rank_mc20" data-say>—</span> can move more than 20 places</b> · a transition-stage index, not a ranking of development or well-being</p>
     </div>
   </div>
   <div class="msgrow answer fragment" data-fragment-index="4" data-build="4">
     <span class="stamp">Question 2 answered<small>P8 · P5</small></span>
-    <p class="msg">No. One indicator tells the slow story (how old a population is), not the fast one (growth, migration). The story emerges when two dimensions, the transition and migration, are read together: same fertility, UAE <span data-num="twin_growth_are" data-sign="always">—</span> % a year vs Belarus <span data-num="twin_growth_blr" data-sign="always">—</span> %.</p>
+    <p class="msg">No. Fertility alone tells how old a population is (<span data-num="r2_tfr_medage">—</span>) and only part of today's growth (<span data-num="r2_tfr_growth">—</span>), but almost nothing about migration — it finds <span data-num="knn_tfr">—</span> % of each country's look-alikes. Same fertility: UAE <span data-num="twin_growth_are" data-sign="always">—</span> % a year vs Belarus <span data-num="twin_growth_blr" data-sign="always">—</span> %.</p>
   </div>
   <div class="capband"></div>
   <footer class="ftr" data-badge></footer>
@@ -342,8 +361,13 @@
     <div class="row-top">
       <!-- b1: fig10 mapa de grupos + pequeños múltiplos (MP4 10 s) -->
       <div class="blk blk10 fragment" data-fragment-index="1" data-build="1" data-step="s4.b1"
-        data-caption="Question three. | Grouped by seventy-year paths, countries form three stretches of one road, | plus a migration-led group, mostly Gulf states. | Early movers, {cluster_examples_early}, now grow mainly through migration, or shrink. | Fast movers, {cluster_examples_fast}, are projected to age in {yrs_medage30_40_recent} years | what took Early movers {yrs_medage30_40_early}. | Recent movers, {cluster_examples_recent}, still have high child mortality.">
-        <figure class="slot"><video data-fig="fig10_trajectory_groups" muted playsinline preload="auto"></video></figure>
+        data-caption="Question three. | Grouped by seventy-year paths, countries form three stretches of one road, | plus a migration-led group, mostly Gulf states. | Early movers are projected to grow only through migration, or shrink. | Fast movers, India, China and Indonesia, | are projected to age from 30 to 40 in about 32 years. | About as fast as Early movers did, or faster. | Recent movers have the highest child mortality today.">
+        <!-- b1: héroe ≈ 1792×571 (MP4 28.2 s); b2: 1092×348; desde b3 se funde a _small.png (ranura reducida);
+             en el PDF, _print.png (lleva la etiqueta por panel) -->
+        <figure class="slot slot10">
+          <video data-fig="fig10_trajectory_groups" muted playsinline preload="auto" aria-label="Map of the four trajectory groups and their fertility and median-age paths, 1950–2100"></video>
+          <img class="swap-small print-hide" data-fig="fig10_trajectory_groups_small" alt="Map of the four trajectory groups and their fertility and median-age paths">
+        </figure>
         <div class="glegend">
           <div class="gitem"><i class="sw g-early"></i><span class="gname">Early movers <span class="gmeta"><span data-num="cluster_sizes" data-item="Early movers">—</span> countries · <span data-num="cluster_pop_bn" data-item="Early movers">—</span> bn</span></span>
             <span class="flags" data-flags="cluster_examples_early"></span></div>
@@ -356,29 +380,35 @@
         </div>
         <div class="nb">
           <p class="head"><span data-num="join_same_road" data-say data-cap>—</span> pairs of neighbouring countries share a group (by chance: <span data-num="join_same_road_null" data-say>—</span>) · <span data-num="share_between_groups" data-say data-cap>—</span> countries sit between two groups — a spectrum, not boxes</p>
-          <p class="fn"><span data-num="share_keep_ge_0.8">—</span> % of countries keep their group in at least 4 of 5 re-runs · median age 30 → 40: Fast movers <span data-num="yrs_medage30_40_recent">—</span> years · Early movers <span data-num="yrs_medage30_40_early">—</span> years (UN medium projection after 2023)</p>
+          <!-- yrs_medage30_40_recent es de Fast movers (QA-stats §3.3); yrs_medage30_40_early se muestra con 0 decimales (36.5 → 37) -->
+          <p class="fn"><span data-num="share_keep_ge_0.8">—</span> % of countries keep their group in at least 80 % of 500 re-runs · median age 30&nbsp;→&nbsp;40: Fast movers <span data-num="yrs_medage30_40_recent" data-fmt="0">—</span> years · Early movers <span data-num="yrs_medage30_40_early" data-fmt="0">—</span> years (grey = UN medium projection after 2023, which assumes the transition continues)</p>
         </div>
       </div>
       <!-- b2: fig11 divergencia (P1) -->
       <div class="blk blk11 fragment" data-fragment-index="2" data-build="2" data-step="s4.b2"
-        data-caption="Countries also grew closer in life expectancy, but further apart in age.">
-        <p class="head">Closer in life expectancy (typical gap between countries, SD: <span data-num="sd_lex_1950">—</span> → <span data-num="sd_lex_2023">—</span> years), further apart in age (SD <span data-num="sd_medage_1950">—</span> → <span data-num="sd_medage_2023">—</span> years) — and in child deaths: the highest tenth of countries had <span data-num="q5_ratio_p90p10_1950">—</span>× the rate of the lowest tenth in 1950, <span data-num="q5_ratio_p90p10_2023">—</span>× in 2023</p>
-        <figure class="slot"><img data-fig="fig11_divergence_fan" alt="Spread between countries in life expectancy and median age, 1950–2023"></figure>
-        <p class="fn">life expectancy at 65: SD <span data-num="sd_le65_1950">—</span> → <span data-num="sd_le65_2023">—</span> years · estimates 1950–2023</p>
+        data-caption="Countries grew closer in life expectancy, but further apart in age.">
+        <p class="head print-only">Closer in life expectancy (SD <span class="nw"><span data-num="sd_lex_1950">—</span>&nbsp;→&nbsp;<span data-num="sd_lex_2023">—</span></span> years), further apart in age (SD <span class="nw"><span data-num="sd_medage_1950">—</span>&nbsp;→&nbsp;<span data-num="sd_medage_2023">—</span></span>) and, in relative terms only, in child deaths: highest tenth <span data-num="q5_ratio_p90p10_1950">—</span>× the lowest in 1950, <span data-num="q5_ratio_p90p10_2023">—</span>× in 2023 (peak ≈ <span data-num="q5_ratio_p90p10_peak">—</span>×, 2000s); the absolute gap shrank</p>
+        <p class="head print-hide">Closer in life expectancy (typical gap between countries, SD: <span class="nw"><span data-num="sd_lex_1950">—</span>&nbsp;→&nbsp;<span data-num="sd_lex_2023">—</span></span> years), further apart in age (SD <span class="nw"><span data-num="sd_medage_1950">—</span>&nbsp;→&nbsp;<span data-num="sd_medage_2023">—</span></span> years) — and, in relative terms only, in child deaths: the highest tenth had <span data-num="q5_ratio_p90p10_1950">—</span>× the rate of the lowest tenth in 1950 and <span data-num="q5_ratio_p90p10_2023">—</span>× in 2023 (peak ≈ <span data-num="q5_ratio_p90p10_peak">—</span>× in the 2000s), while the absolute gap shrank</p>
+        <!-- b2: 670×389; desde b3 (ranura baja) se funde a la versión apaisada _small.png (741×150); el PDF usa _print.png -->
+        <figure class="slot slot11">
+          <img data-fig="fig11_divergence_fan" alt="Spread between countries in life expectancy and median age, 1950–2023">
+          <img class="swap-small print-hide" data-fig="fig11_divergence_fan_small" alt="Spread between countries in life expectancy, median age and child deaths, 1950–2023">
+        </figure>
+        <p class="fn"><span class="print-only">SD = typical gap between countries · </span>but at 65 countries drifted apart: years left to live at 65, SD <span class="nw"><span data-num="sd_le65_1950">—</span>&nbsp;→&nbsp;<span data-num="sd_le65_2023">—</span></span> · estimates 1950–2023</p>
       </div>
     </div>
     <!-- b3: tabla "What to watch, where, when" (HTML nativo, 5 columnas) -->
     <div class="tblwrap fragment" data-fragment-index="3" data-build="3" data-step="s4.b3"
-      data-caption="Question three, answered: mostly one road, at different speeds. | For the UN: watch child survival where child deaths fall too slowly. | Watch ageing where fertility is low but populations still grow. | Watch migration data where growth depends on arrivals.">
+      data-caption="Question three, answered: mostly one road, at different speeds. | For the UN: watch child survival where it is off pace for the 2030 goal. | Watch ageing where fertility is low but populations still grow. | Watch migration data where growth depends on arrivals.">
       <table class="watch">
-        <colgroup><col style="width:32%"><col style="width:10%"><col style="width:29%"><col style="width:21%"><col style="width:8%"></colgroup>
-        <thead><tr><th>Countries where…</th><th>Road</th><th>Watch / prepare</th><th>For (mandate)</th><th>When</th></tr></thead>
+        <colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup>
+        <thead><tr><th>Countries where…</th><th>Road <span class="th-sub">(of the row's countries ≥&nbsp;1&nbsp;M)</span></th><th>Watch / prepare</th><th>For (mandate)</th><th>When</th></tr></thead>
         <tbody>
-          <tr class="row"><td><span class="print-hide">child deaths fall too slowly: <span data-num="n_sdg32_above_2030">—</span> of <span data-num="n_sdg32_above">—</span> above 25 per 1,000 stay above it in 2030 in the UN medium projection; <span data-num="n_sdg32_on_pace">—</span> on pace</span><span class="print-only">child deaths fall too slowly: <span data-num="n_sdg32_above_2030">—</span> of <span data-num="n_sdg32_above">—</span> stay above 25 per 1,000 in 2030</span></td>
+          <tr class="row"><td>child deaths fall too slowly: <span data-num="n_sdg32_above_2030">—</span> of <span data-num="n_sdg32_above">—</span> above 25 per 1,000 projected to stay above it in 2030 (UN medium); <span data-num="n_sdg32_on_pace">—</span> on pace<span class="print-hide"> at their 2015–23 rate</span></td>
             <td class="road"><span data-num="rec_rows" data-item="0.road">—</span></td><td>child survival, newborn care; voluntary family planning; births to adolescent girls</td><td>UNICEF · WHO · UNFPA (SDG 3.2, 3.7 · ICPD)</td><td>by 2030</td></tr>
-          <tr class="row"><td>fertility is below replacement but the population still grows: <span data-num="n_momentum_countries">—</span> countries, <span data-num="pop_momentum_bn">—</span> bn</td>
-            <td class="road"><span data-num="rec_rows" data-item="1.road">—</span></td><td><span data-num="momentum_years_range">—</span> more years of growth in working and older ages: pensions and long-term care now; no alarm about birth rates</td><td>UN DESA · WHO · ILO (Decade of Healthy Ageing · SDG 1.3)</td><td>2030–2060</td></tr>
-          <tr class="row"><td><span class="print-hide">deaths already outnumber births: <span data-num="n_natneg_2023">—</span> countries, <span data-num="share_pop_natneg_2023">—</span> % of humanity; <span data-num="n_natneg_2050">—</span> by 2050 (UN medium projection)</span><span class="print-only">deaths outnumber births: <span data-num="n_natneg_2023">—</span> countries (<span data-num="share_pop_natneg_2023">—</span> %), <span data-num="n_natneg_2050">—</span> by 2050</span></td>
+          <tr class="row"><td>below replacement, growing from births with no net arrivals: <span data-num="n_momentum_countries">—</span> countries, <span data-num="pop_momentum_bn">—</span> bn</td>
+            <td class="road"><span data-num="rec_rows" data-item="1.road">—</span></td><td><span data-num="momentum_years_range">—</span> more years of projected growth (UN medium) for most of their <span data-num="pop_momentum_bn">—</span> bn people<span class="print-hide">, in working and older ages</span>: pensions and long-term care now; no alarm about birth rates</td><td>UN DESA · WHO · ILO (Decade of Healthy Ageing · SDG 1.3)</td><td>2030–2060</td></tr>
+          <tr class="row"><td>deaths outnumber births: <span data-num="n_natneg_2023">—</span> countries (<span data-num="share_pop_natneg_2023">—</span> % of humanity); <span data-num="n_natneg_2050">—</span> projected by 2050 (UN medium)</td>
             <td class="road"><span data-num="rec_rows" data-item="2.road">—</span></td><td>healthy longevity; measure mortality with life expectancy, not the crude death rate</td><td>WHO · UN DESA (SDG 3.4)</td><td>now–2040</td></tr>
           <tr class="row"><td>growth comes only from arrivals: <span data-num="n_grow_only_migration_2023">—</span> countries and areas</td>
             <td class="road"><span data-num="rec_rows" data-item="3.road">—</span></td><td>migrant inclusion; better arrival and departure data; read UN migration projections as scenarios</td><td>IOM · UN DESA (GCM obj. 1 &amp; 16 · SDG 10.7)</td><td>now</td></tr>
@@ -389,16 +419,20 @@
     </div>
     <!-- b4: tarjetas de ética (5) -->
     <div class="ethics fragment" data-fragment-index="4" data-build="4" data-step="s4.b4"
-      data-caption="Projections stay apart from estimates; examples are chosen by rule; | hypotheses were fixed before the final run. | These are patterns, not causes; | every number and our use of AI are documented publicly.">
+      data-caption="Projections are labelled as scenarios; examples follow a rule; | hypotheses were fixed before the final run. | These are patterns, not causes; | every number and our AI use are documented in our notebook.">
+      <!-- texto de docs/04_etica_ASA_aplicada.md §3.1 (panel) + 5 tarjetas del storyboard v2.1; sin cifras no verificadas
+           (are_revision_pct) ni claves inexistentes (repo); "no crises built in" sale (QA-stats §7.3: sin clave que lo respalde).
+           PDF: versión mínima de §3.1 = título + primera frase + títulos de tarjeta con códigos ASA -->
       <div class="eth-hd"><p class="eth-title">How we kept it honest · ASA Ethical Guidelines (2022)</p></div>
+      <p class="eth-lead">We describe patterns; we do not claim causes.<span class="print-hide"> UN estimates (≤ 2023) and UN projections (≥ 2024) are always told apart: grey after 2023; the UAE example carries the UN's own 80/95 % ranges. Each country is counted once — no aggregates added on top. Every number is regenerated by our notebook.</span></p>
       <div class="cards5">
-        <div class="ecard"><p class="et">Scenarios, not forecasts</p><p class="ex">grey = UN medium projection; no crises built in; UAE range shown.</p><p class="ec">B.2 · C.4</p></div>
-        <div class="ecard"><p class="et">Weakest data, said aloud</p><p class="ex">net migration is often inferred from census gaps; UAE revised <span data-num="are_revision_pct" data-sign="always">—</span> %.</p><p class="ec">B.1 · D.10</p></div>
+        <div class="ecard"><p class="et">Scenarios, not forecasts</p><p class="ex">grey = UN medium projection, a scenario; UAE 2050: <span data-num="pop_are_2050">—</span> M, UN 95 % range <span data-num="pop_are_2050_pi95_low">—</span>–<span data-num="pop_are_2050_pi95_high">—</span> M.</p><p class="ec">B.2 · C.4</p></div>
+        <div class="ecard"><p class="et">Weakest data, said aloud</p><p class="ex">net migration is often inferred from census gaps: the least-measured lever, so we say so.</p><p class="ec">B.1 · D.10</p></div>
         <div class="ecard"><p class="et">Patterns, not causes</p><p class="ex">orders in time and links within countries, not effects.</p><p class="ec">C.2 · C.3</p></div>
-        <div class="ecard"><p class="et">Levers, not verdicts</p><p class="ex">groups describe paths, not development or worth; positive migration is not “success”.</p><p class="ec">A.8 · D.6</p></div>
-        <div class="ecard"><p class="et">Open &amp; checkable</p><p class="ex">hypotheses fixed <span data-num="hyp_file_date">—</span> (sha256 <span data-num="hyp_file_sha256_short">—</span>), still exploratory · examples by rule · AI use declared · github.com/<span data-num="repo">—</span></p><p class="ec">B.3 · F.4</p></div>
+        <div class="ecard"><p class="et">Levers, not verdicts</p><p class="ex">groups describe demographic paths, not development or worth; no judgement on fertility or migration.</p><p class="ec">A.8 · D.6</p></div>
+        <div class="ecard"><p class="et">Open &amp; checkable</p><p class="ex">hypotheses fixed <span data-num="hyp_file_date">—</span>, before the final run · examples by rule · AI agents wrote code and text · every number recomputed by separate code, team-reviewed</p><p class="ec">B.3 · F.4</p></div>
       </div>
-      <p class="fn">ASA (2022), doi:10.5281/zenodo.7092386 · UN DESA (2024) WPP 2024 Methodology · World Bank FY2027 income groups applied to all years · countries ≥ 1 M for models · Map: Natural Earth; boundaries imply no UN endorsement</p>
+      <p class="fn">ASA (2022), doi:10.5281/zenodo.7092386 · UN DESA (2024) WPP 2024 Methodology · World Bank FY2027 income groups applied to all years · countries ≥ 1 M for models</p>
     </div>
   </div>
   <div class="msgrow answer fragment" data-fragment-index="3" data-build="3">
@@ -428,12 +462,16 @@
         <li>United Nations, Department of Economic and Social Affairs, Population Division (2024). <i>World Population Prospects 2024</i>, Online Edition. https://population.un.org/wpp/ — licensed under CC BY 3.0 IGO (https://creativecommons.org/licenses/by/3.0/igo/). Changes: we aggregated, modelled and charted the data; the UN does not endorse this work.</li>
         <li>UN DESA (2024). <i>World Population Prospects 2024: Methodology of the United Nations population estimates and projections</i>. UN DESA/POP/2024/DC/NO.10 · <i>Summary of Results</i>. UN DESA/POP/2024/TR/NO.9 · Release note on 2022 vs 2024 revisions (11 Jul 2024) · WPP 2024 Interim Update (Togo), 19 Jan 2026.</li>
         <li>WPP 2024 Supplement (births by sex, LE60) — prepared by the DataQuest organisers from the UN Data Portal.</li>
-        <li>World Bank (2026). Country and Lending Groups, FY2027 (effective 1 July 2026; 2025 GNI per capita, Atlas method). API download 2026-10-22.</li>
+        <li>World Bank (2026). Country and Lending Groups, FY2027 (effective 1 July 2026; 2025 GNI per capita, Atlas method). API download 2026-10-22. CC BY 4.0.</li>
         <li>Natural Earth (public domain) map data. Boundaries and names shown do not imply official endorsement or acceptance by the United Nations.</li>
       </ul>
       <h3>Software</h3>
       <ul>
-        <li>R 4.6.1; tidyverse, sf, rnaturalearth, fixest, survival, fda, cluster, clue, boot, gganimate, av, gifski, tweenr, ggflags, patchwork · reveal.js 6 (MIT) · flag-icons (MIT) · Lato (SIL OFL) · Playwright + Chromium (recording)</li>
+        <li>R 4.6.1 (R Core Team, 2026); tidyverse (dplyr, tidyr, readr, ggplot2), sf, rnaturalearth, arrow, fixest, survival, fda, cluster, clue, mclust, boot, tweenr, ragg, ggflags, ggrepel, patchwork · FFmpeg (H.264) · reveal.js 6 (MIT) · flag-icons (MIT) · Lato (SIL OFL) · Playwright + Chromium (recording)</li>
+      </ul>
+      <h3>Acronyms</h3>
+      <ul>
+        <li>SDG = UN Sustainable Development Goal target · ICPD = Cairo Programme of Action (1994) · GCM = Global Compact for Migration · UNSD = UN Statistics Division.</li>
       </ul>
     </div>
     <div>
@@ -451,8 +489,8 @@
       </ul>
       <h3>AI assistance &amp; reproducibility</h3>
       <ul>
-        <li>AI assistance: Claude Code (Anthropic) helped draft code and text; every number was regenerated by the notebook and checked by the team.</li>
-        <li>Code, notebook, figures and pre-specified hypotheses (sha256 <span data-num="hyp_file_sha256_short">—</span>): github.com/<span data-num="repo">—</span> (MIT; texts CC BY 4.0).</li>
+        <li>AI assistance: Claude Code (Anthropic) AI agents, directed by the team, wrote most of the R code, the analysis memos, the figures and drafts of the slides and script. Every number shown or said was independently recomputed from the raw UN files with separate code (also AI-written); the team reviewed the results and is responsible for the work. Log: docs/registro_ia.md.</li>
+        <li>Code, notebook, figures and hypotheses (fixed <span data-num="hyp_file_date">—</span> before the final run, after exploring the same data — not confirmatory; sha256 <span data-num="hyp_file_sha256_short">—</span>) are in our public repository (code MIT; texts CC BY 4.0).</li>
       </ul>
     </div>
   </div>

@@ -63,19 +63,25 @@ Orden de carga de cifras: `../figures/numbers.json` → `window.NUMBERS` (`js/nu
 | Figura | Tipo | Paso | Ranura final vídeo | Ranura de entrada | PDF |
 |---|---|---|---|---|---|
 | fig00_world_dots | PNG fondo | cover | 1920×1080 | = | = |
-| fig01_growth_components_by_income | MP4 + PNG | s1.b2 | **721×390** | = | 721×225 |
+| fig01_growth_components_by_income | MP4 (12.1 s) + PNG | s1.b2 | **721×390** | = | 721×225 |
 | fig02_lever_map_2023 | PNG | s1.b3 | **1037×365** | = | 1037×290 |
 | fig02b_lever_map_zoom | MP4 | s1.b5a | **1037×365** (el Golfo en la mitad superior: abajo entra la tarjeta EAU de 226 px) | = | — |
 | fig03_uae_fan_2050 | PNG | s1.b5b | **441×204** | = | 560×150 |
-| fig04_same_road_registration | MP4 + PNG | s2.b1 | **774×183** | 1760×496 (héroe, misma proporción) | 774×243 |
+| fig04_same_road_registration | MP4 (18.5 s) + PNG | s2.b1 | **774×183** = `_small.png` (fundido desde b2) | **1760×416** (héroe, = MP4 3520×832 / 2) | 774×243 (`_print.png`) |
 | fig05_mortality_first_event_time | PNG | s2.b2 | **986×211** | = | 986×271 |
 | fig06_within_vs_across_forest | PNG | s2.b3 | **1021×135** | = | 1021×183 |
-| fig07_single_indicator_scorecard | MP4 + PNG | s3.b1 | **572×286** | = | 572×394 |
-| fig09_pca_two_dimensions | MP4 + PNG | s3.b3 | **624×405** | = | 624×513 |
-| fig10_trajectory_groups | MP4 + PNG | s4.b1 | **1092×348** (foco b1–b2; desde b3 se reduce a 1092×235) | = | 969×164 → conviene `_print.png` |
-| fig11_divergence_fan | PNG | s4.b2 | **670×389** (foco b2; desde b3 670×235) | = | 793×160 → conviene `_print.png` |
+| fig07_single_indicator_scorecard | MP4 (14.9 s) + PNG | s3.b1 | **572×282** (figura 572×263) | = | 572×487 (figura 572×395) |
+| fig09_pca_two_dimensions | MP4 (9.2 s) + PNG | s3.b3 | **624×402** | = | 624×510 |
+| fig10_trajectory_groups | MP4 (28.2 s) + PNG | s4.b1 | b2 1092×348; desde b3 **1021×220** = `_small.png` | **1792×571** (héroe, = MP4 2184×696) | 969×164 (`_print.png`) |
+| fig11_divergence_fan | PNG | s4.b2 | **670×389** (b2); desde b3 **741×150** = `_small.png` | = | 793×160 (`_print.png`) |
 
 ## 4. Cifras (`figures/numbers.json`)
+
+**Regla QA-stats (slides-fill, 2026-10-25):** `numbers.js` solo rellena claves con `"verified": true`; una clave
+inexistente o no verificada deja el elemento **vacío** y va a `window.NUMBERS_REPORT.unfilledKeys` + consola
+(`?unverified=show` solo para depurar). Redondeo **ROUND_HALF_UP** decimal (36.5 → 37), igual que `fill_numbers.py`.
+Capas de fig02 (`_momentum`, `_ex_c/_d/_e`): `fade-in-then-out` en s1.b3b/b4a/b4b/b4c; en el PDF queda `_momentum_print`.
+Vídeos: solo se reproduce el del build más reciente; con http.server (sin Range) "rebobinar" = `load()` (póster).
 
 Cada clave: `{"value", "unit", "fmt", "say", "def", "verified", "sens_low", "sens_high", …}` (plan §4).
 Formato (igual en `numbers.js` y `fill_numbers.py`): `fmt` "0"/"0.0"/"0.00" = decimales, "+0.00" = signo,
@@ -99,8 +105,11 @@ Con las salidas parciales del notebook (`numbers_q1/q2/q3.json`) solo faltan: `a
 ## 5. Subtítulos y tiempos
 
 `data-caption` de cada fragmento (o de la `<section>` para el estado sin fragmentos) = texto literal de
-la voz v2.1; `" | "` separa bloques (≤ 90 caracteres). `slides/script/video_timings.json` (lo escribe el
-agente de guion; partir de `dev/video_timings.template.json`):
+la voz final (guion v3, 2026-10-25), copiado de `slides/script/data_captions.json`; `" | "` separa bloques
+(≤ 90 caracteres). Las cifras van ya escritas (sin `{clave}`): el guion solo dice claves con
+`verified: true` y `build_narration.py` las redondea con ROUND_HALF_UP. Si cambia el guion, se regenera con
+`slides/script/build_narration.py` y se vuelve a copiar al HTML (nunca se edita el subtítulo a mano en el HTML).
+`slides/script/video_timings.json` (lo genera `build_narration.py`; manda sobre el `data-caption` al grabar):
 
 ```json
 {"steps": [{"id": "s1.b2", "duration": 14.0,
@@ -108,6 +117,12 @@ agente de guion; partir de `dev/video_timings.template.json`):
 ```
 
 Sin `captions`, los bloques se reparten por igual en `duration`; sin archivo, 3,2 s por bloque.
+Comprobado el 2026-10-25 (agente captions-sync): 32 estados en el mismo orden en `window.deckSteps()`,
+`video_timings.json` y `captions.json`; cada `data-caption` = unión de los bloques de `video_timings.json`;
+cada paso con MP4 dura más que su vídeo (s1.b2 12.9 ≥ 12.6 s · s1.b5a 4.3 ≥ 4.0 · s2.b1 18.8 ≥ 16.4 ·
+s3.b1 16.0 ≥ 14.9 · s3.b3 8.6 ≥ 7.7 · s4.b1 27.3 ≥ 26.4).
+Guion v4 (corrector-final, 2026-10-26): s1.b2 12.9 ≥ 12.1 · s1.b5a 4.3 ≥ 4.0 · s2.b1 18.8 ≥ 18.5 · s3.b1 15.2 ≥ 14.9 ·
+s3.b3 9.5 ≥ 9.2 · s4.b1 28.5 ≥ 28.2; total 292.2 s. Los MP4 de fig04 y fig10 se generan con la duración del paso − 0,3 s.
 Los `id` son los `data-step` (32 estados: `cover.b1…b5`, `s1.b0…b5b`, `s2.b0…b4`, `s3.b0…b4`, `s4.b0…b5`, `refs`).
 
 ## 6. Grabar, exportar, probar
@@ -120,6 +135,7 @@ $VENV/bin/python video/record_slides.py            # WebM 1920×1080 en video/ra
 $VENV/bin/python video/record_slides.py --timings slides/dev/video_timings.template.json --mp4
 bash video/export_pdf.sh --png                     # slides/export/slides.pdf; falla si no son 6 páginas
 $VENV/bin/python slides/dev/screenshots.py         # capturas + ranuras + informe
+$VENV/bin/python slides/dev/check_sync.py          # subtítulos, orden de pasos y MP4 en tiempo real (~5 min)
 ```
 
 `record_slides.py` se niega a grabar con cifras DEMO, sin valor o sin verificar (QA-stats bloquea la

@@ -9,6 +9,8 @@
       calculados con data-build de los fragmentos visibles. El CSS usa esas clases
       para las transiciones de rejilla dentro de una diapositiva (el auto-animate de
       reveal solo actúa entre diapositivas; el storyboard no pide ninguna pareja).
+   4b. Equipo (portada): [data-team="campo"] ← ../docs/equipo.json (affiliation_line, members…);
+       el HTML trae el mismo texto por defecto (file:// o sin el JSON).
    5. window.deckReady = true cuando todo está listo (lo esperan los scripts de
       grabación, capturas y PDF); en impresión además window.pdfReady tras 'pdf-ready'.
    ============================================================================= */
@@ -117,12 +119,41 @@
     if (cur && cur.classList.contains("cover") && !cur.querySelector(".fragment.visible")) runCounter();
   }
 
+  /* ---------- 4b. equipo (docs/equipo.json, fuente única de la línea de afiliación) ---------- */
+  function loadTeam() {
+    if (window.location.protocol === "file:") return Promise.resolve(null);
+    return fetch("../docs/equipo.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (t) {
+        if (!t) { console.warn("[init] docs/equipo.json not found; cover keeps its default team text"); return null; }
+        window.TEAM = t;
+        document.querySelectorAll("[data-team]").forEach(function (el) {
+          var v = t[el.getAttribute("data-team")];
+          if (Array.isArray(v)) v = v.join(" · ");
+          if (typeof v === "string" && v.trim()) el.textContent = v;
+        });
+        return t;
+      });
+  }
+
+  /* ---------- 3b. tabla de la S4: "mostly X (n of n)" → "all X (n of n)" (QA-slides M3) ----------
+     rec_rows (verificada) trae "mostly" incluso cuando todos los países ≥ 1 M de la fila están en el
+     mismo grupo; solo se cambia la palabra cuando los dos números coinciden (el dato no cambia). */
+  function fixRoadWording() {
+    document.querySelectorAll(".watch td.road .num").forEach(function (el) {
+      var m = el.textContent.match(/^mostly (.+) \((\d+) of (\d+)\)$/);
+      if (m && m[2] === m[3]) el.textContent = "all " + m[1] + " (" + m[2] + " of " + m[3] + ")";
+    });
+  }
+
   /* ---------- 3. arranque ---------- */
   injectCommon();
   if (isPrint) updateAll();
 
-  DeckNumbers.load().then(function () {
+  Promise.all([DeckNumbers.load(), loadTeam()]).then(function () {
     DeckNumbers.fill(document);
+    fixRoadWording();
     DeckFigs.init(isPrint);
 
     var toggleQA = function () { html.classList.toggle("qa-off"); };

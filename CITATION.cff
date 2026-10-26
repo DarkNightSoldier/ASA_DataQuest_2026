@@ -1,0 +1,49 @@
+# CITATION.cff — creado el 2026-10-26 por el agente de IA corrector-final (QA-ethics M9 / ítem R6).
+# Rol de cada autor: lo escribe el equipo en docs/registro_ia.md §2 (no se inventa aquí).
+# La URL del repositorio se añade cuando el repositorio sea público (docs/equipo.json → "repo_url").
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below. The data are from UN DESA, World Population Prospects 2024 (CC BY 3.0 IGO); cite them as well."
+type: software
+title: "One Number Can't Tell 8 Billion Stories: births, deaths and migration in 237 countries and areas (UN World Population Prospects 2024)"
+abstract: >-
+  Team UNALSta-R's entry to the ASA International DataQuest 2026: an exploratory,
+  non-causal analysis of births, deaths and net migration in the UN World Population
+  Prospects 2024 (estimates 1950–2023, medium projection to 2100), with a reproducible
+  R notebook, figures, slides and video script. AI agents (Claude Code, Anthropic),
+  directed by the team, wrote most of the code and drafts; see docs/registro_ia.md.
+version: v1.0-submission
+license: MIT
+authors:
+  - given-names: "Daniela C."
+    family-names: "Kwan"
+    affiliation: "Universidad Nacional de Colombia, Bogotá"
+  - given-names: "David S."
+    family-names: "Merchán"
+    affiliation: "Universidad Nacional de Colombia, Bogotá"
+  - given-names: "Jhon A."
+    family-names: "Mora"
+    affiliation: "Universidad Nacional de Colombia, Bogotá"
+  - given-names: "Alejandro"
+    family-names: "Higuera"
+    affiliation: "Universidad Nacional de Colombia, Bogotá"
+keywords:
+  - demography
+  - World Population Prospects
+  - migration
+  - fertility
+  - mortality
+  - ASA DataQuest
+references:
+  - type: data
+    title: "World Population Prospects 2024, Online Edition"
+    authors:
+      - name: "United Nations, Department of Economic and Social Affairs, Population Division"
+    year: 2024
+    url: "https://population.un.org/wpp/"
+    license: CC-BY-3.0-IGO
+  - type: generic
+    title: "Ethical Guidelines for Statistical Practice"
+    authors:
+      - name: "American Statistical Association"
+    year: 2022
+    doi: "10.5281/zenodo.7092386"

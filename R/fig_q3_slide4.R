@@ -95,8 +95,10 @@ FUENTE <- "Lato"
 # ranura de foco (builds 1–2), que es donde la voz las comenta.
 RANURAS <- list(
   fig10 = c(w = 1092, h = 348), fig10_print = c(w = 969, h = 164),
-  fig10_small = c(w = 1092, h = 235),     # builds 3–5 (ranura reducida, README §3)
-  fig11 = c(w = 670, h = 389),  fig11_print = c(w = 793, h = 160)
+  # corrector-final 2026-10-25 (QA-viz V5): ranura medida desde b3 = 1021×220 (antes 1092×235 →
+  # la figura se veía al 0,935); fig11 tiene variante _small 741×150 para b3–b5 (el PDF sigue con _print)
+  fig10_small = c(w = 1021, h = 220),     # builds 3–5 (ranura reducida, README §3)
+  fig11 = c(w = 670, h = 389),  fig11_print = c(w = 793, h = 160), fig11_small = c(w = 741, h = 150)
 )
 NOMBRES <- c(fig10 = "fig10_trajectory_groups", fig11 = "fig11_divergence_fan")
 
@@ -141,7 +143,9 @@ AREA_PUNTO_RAYADO <- 120000
 RADIO_PUNTO_RAYADO <- 6            # px de ranura (mapa de 456 px; se escala con el ancho)
 # fig11: banda entre países en tinta azulada, NO gris (gris = proyección en todo el vídeo;
 # #B9C6DE: ΔE ≈ 16 frente al gris de proyección #E4E4E4, saturación HSL ≈ 36 %).
-COL_BANDA_PAISES <- "#B9C6DE"
+# corrector-final (QA-viz V13): #B9C6DE quedaba a ΔE76 6,5 de la banda de Early movers (#CECAE3)
+# que está al lado en fig10 → tinta neutra #D5DAE3 (ΔE 10,3 frente a Early; mediana en tinta #15233B)
+COL_BANDA_PAISES <- "#D5DAE3"
 # Texto único de la banda P10–P90 de fig10 (vídeo b2, póster y versión impresa; revisión
 # r2: había dos formulaciones para la misma banda)
 BANDA_TXT <- "band = middle 80 % of the group’s countries (spread, not uncertainty)"
@@ -187,10 +191,12 @@ fmt_rango <- function(clave, fmt = NULL) {
 #' Trazabilidad (revisión r2): toda clave cuya cifra se ve en fig10 debe declarar la
 #' diapositiva en `used_in`; si no, QA-stats no la verifica y record_slides no la bloquea.
 CLAVES_FIG10 <- c("cluster_sizes", "cluster_pop_bn", "cluster_examples_iso3", "cluster_medoids",
-                  "cluster_profile", "growth_2000_2023_by_group", "growth_2024_2050_by_group",
+                  "cluster_profile", "growth_2024_2050_by_group",
                   "n_gulf_migration_led", "cluster_examples_migration", "cluster_examples_recent",
                   "yrs_medage30_40_early", "yrs_medage30_40_recent", "share_keep_ge_0.8",
-                  "borderline_countries", "are_revision_pct", "sau_revision_pct")
+                  "borderline_countries")
+# corrector-final (QA-viz V1–V2): growth_2000_2023_by_group, are_revision_pct y sau_revision_pct
+# no están verificadas (o no existen) → ya no se dibujan en fig10
 verificar_used_in <- function(claves, diapo = "slide4.build1") {
   for (cl in claves) {
     if (is.null(NUM[[cl]])) next                 # las que faltan se anotan donde se usan
@@ -442,6 +448,28 @@ duracion_paso <- function(paso, por_defecto) {
 #      Early movers did, or faster." — la pantalla dice "about as fast or faster")  19,1
 #   b7 "Recent movers, Pakistan, Nigeria and Ethiopia, still have high…"     22,5 → fin 26,4
 BLOQUES_S4B1 <- c(0, 1.0, 4.9, 7.6, 13.2, 19.1, 22.5)
+
+#' Hitos de s4.b1 desde video_timings.json (corrector-final 2026-10-25, QA-viz V10). El guion v4 tiene
+#' 8 bloques: Question three · Grouped… · plus a migration-led… · Early movers… · Fast movers, India… ·
+#' are projected to age… · About as fast… · Recent movers… → se toman los bloques 1–5, 7 y 8. La fase
+#' Fast se adelanta 0,2 s (la voz la nombra al empezar el bloque; antes llegaba 1 s tarde).
+tiempos_s4b1 <- function() {
+  if (file.exists(RUTA_TIMINGS)) {
+    tj <- tryCatch(jsonlite::read_json(RUTA_TIMINGS, simplifyVector = FALSE), error = function(e) NULL)
+    st <- Filter(function(s) identical(s$id, "s4.b1"), tj$steps)
+    if (length(st) == 1) {
+      t <- vapply(st[[1]]$captions, function(c) as.numeric(c$t), numeric(1))
+      b <- if (length(t) == 8) t[c(1, 2, 3, 4, 5, 7, 8)] else if (length(t) == 7) t else NULL
+      if (!is.null(b)) {
+        b[5] <- b[5] - 0.2
+        message(sprintf("  s4.b1: hitos de video_timings.json (%s s)", paste(round(b, 1), collapse = ", ")))
+        return(b)
+      }
+    }
+  }
+  message("  s4.b1: hitos por defecto (", paste(BLOQUES_S4B1, collapse = ", "), " s)")
+  BLOQUES_S4B1
+}
 DURACION_S4B1 <- 26.4              # slides/dev/video_timings.template.json (s4.b1)
 
 # =============================================================================
@@ -749,28 +777,17 @@ capas_mapa <- function(g, P, d, color, foco, rayado, contorno = character(0), a_
 #   final: todo a opacidad completa; la línea de hechos pasa a la leyenda de lectura (= póster).
 
 textos_fig10 <- function(d) {
-  g00 <- tabla_grupo("growth_2000_2023_by_group")
   g50 <- tabla_grupo("growth_2024_2050_by_group")
   perfil <- tabla_grupo("cluster_profile")
   q5 <- setNames(fmt_cifra(round(perfil$q5_2023), "0"), GRUPOS)
   gulf <- cifra("n_gulf_migration_led"); n_ml <- cifra("n_gulf_migration_led", "n")
   if (n_ml != d$tam[["Migration-led"]]) stop("n_gulf_migration_led: n distinto del tamaño del grupo.", call. = FALSE)
-  # Revisión WPP2024 de las poblaciones del Golfo (UN DESA, WPP2024 Release note, 11 jul
-  # 2024: UAE +12 %, Saudi Arabia −10 %): se lee de sus claves si existen; si no, del
-  # sens_note de cluster_examples_migration (y queda anotado: cifra sin clave propia)
-  if (!is.null(NUM[["are_revision_pct"]]) && !is.null(NUM[["sau_revision_pct"]])) {
-    nota_golfo <- sprintf("Gulf populations were revised in WPP2024 (UAE %s %%, Saudi Arabia %s %%)",
-                          fmt_cifra(cifra("are_revision_pct"), "+0"), fmt_cifra(cifra("sau_revision_pct"), "+0"))
-  } else {
-    anotar_problema(paste0("Faltan las claves are_revision_pct / sau_revision_pct en numbers_q3.json: la nota del ",
-                           "Golfo (UAE +12 %, Saudi Arabia −10 %) sale del sens_note de cluster_examples_migration ",
-                           "(fuente: UN DESA, WPP2024 Release note, 11 jul 2024); pedir al agente Q3 las claves."))
-    nota_golfo <- cifra("cluster_examples_migration", "sens_note")
-    nota_golfo <- sub(";.*$", "", nota_golfo)                    # "Gulf populations were revised in WPP2024 (…)"
-    nota_golfo <- gsub("(?<=[ (])-(?=[0-9])", "−", nota_golfo, perl = TRUE)
-  }
-  nota_nga <- cifra("cluster_examples_recent", "sens_note")
-  nota_nga <- sub(";.*$", "", nota_nga)                          # "Nigeria: last census 2006"
+  # corrector-final 2026-10-25 (QA-viz V1, CRÍTICA): la revisión WPP2024 del Golfo (UAE +12 %,
+  # Saudi Arabia −10 %) es una cifra externa sin clave verificada (are_revision_pct verified: false;
+  # sau_revision_pct no existe) → se omite; nota sin cifras
+  nota_golfo <- "Net migration is the least-measured component: read these paths as UN estimates"
+  # (QA-viz V21) el año del último censo de Nigeria sale de un sens_note sin verificar → sin año
+  nota_nga <- "Nigeria: no recent census"
   # Años de edad mediana 30 → 40 SIEMPRE en años enteros (fmt "0"): con un IC de 29 a 42,5
   # un decimal es precisión falsa, y la voz dice "about 37" (revisión r2). El redondeo es
   # el de formatear_cifra (mitad hacia afuera: 36,5 → 37, 42,5 → 43), igual que numbers.js.
@@ -819,9 +836,10 @@ textos_fig10 <- function(d) {
     tramos   = c("Three stretches of one road: Early → Fast → Recent movers",
                  paste(BANDA_TXT, "grey after 2023 = UN medium projection", sep = " · ")),
     golfo    = c(sprintf("Migration-led: %d of %d countries are Gulf states", gulf, n_ml), nota_golfo),
-    early    = c(sprintf("Early movers: net arrivals account for %s %% of their growth, 2000–23",
-                         fmt_cifra(g00$share_migration_pct[1], "0")),
-                 sprintf("UN medium projection 2024–50: births − deaths %s %%, net arrivals %s %% of the population",
+    # (QA-viz V2) la línea del 75 % (growth_2000_2023_by_group, verified: false) sale; titular = la
+    # línea ya verificada de growth_2024_2050_by_group
+    early    = c("Early movers, UN medium projection 2024–50:",
+                 sprintf("births − deaths %s %%, net arrivals %s %% of the population (a scenario)",
                          fmt_cifra(g50$natural_pct[1], "+0.0"), fmt_cifra(g50$migration_pct[1], "+0.0"))),
     fast     = c(sprintf("Median age 30 → 40: Fast movers in %s years (95 %% range %s)", a_fast, r_fast), nota_proy),
     fast_early = c(sprintf("Median age 30 → 40: Fast movers %s years (95 %% range %s) · Early movers %s years (%s)",
@@ -840,7 +858,9 @@ estado_fig10 <- function(t, b, dur = DURACION_FIG10) {
   p <- function(t0, d = 0.5, ease = "cubic-in-out") prog(t, t0, d, ease)
   # vuelta final a opacidad plena (0,6 s) + leyenda de lectura: empieza 0,9 s antes del fin
   # del paso s4.b1, para que el MP4 termine dentro del paso y no compita con fig11 (b2)
-  fin <- max(b[7] + 2.6, dur - 0.9)
+  # corrector-final: el MP4 dura exactamente `dur` (= paso − 0,3 s); la fase final empieza 0,9 s antes
+  fin <- dur - 0.9
+  if (b[7] + 1.2 > fin) anotar_problema(sprintf("fig10: la fase Recent (%.1f s) deja < 1,2 s antes del final (%.1f s).", b[7], fin))
   aparece <- c(b[2] + 0.2, b[2] + 0.9, b[2] + 1.6, b[3] + 0.2)
   dur_barrido <- c(2.4, 2.4, 2.4, 1.8)
   color <- vapply(1:4, function(k) p(aparece[k], 0.6), numeric(1))
@@ -903,17 +923,22 @@ geom_fig10 <- function(version, M, d) {
     # Variante para los builds 3–5 (ranura 1092×235): mapa, píldoras y líneas, SIN línea
     # de hechos, leyenda del rayado ni nota del mapa (ya narrados en b1–b2). Misma
     # escala de columnas que el póster; la fila de edad mediana pasa a 3 marcas.
+    # corrector-final (QA-viz V5–V6): ranura real 1021×220 y leyenda del rayado bajo el mapa
+    # (línea 1: inestables y < 1 M; línea 2: nota de Natural Earth) → mapa algo más pequeño
     W <- RANURAS$fig10_small[["w"]]; H <- RANURAS$fig10_small[["h"]]
-    ancho_mapa <- 456
+    alto_mapa <- H - 46
+    ancho_mapa <- min(456, alto_mapa / M$aspecto)
     alto_mapa <- ancho_mapa * M$aspecto
-    y0_mapa <- (H - alto_mapa) / 2
+    y0_mapa <- H - alto_mapa
+    gx <- ancho_mapa + 46
+    paso_col <- (W - (gx + 6) - 2) / 4
     list(W = W, H = H, imp = FALSE, solo_grafica = TRUE,
          mapa = mapa_a_px(M, 0, y0_mapa, ancho_mapa, paso = 4.2, d = d),
-         y_leyenda_mapa = y0_mapa - c(16, 36, 56),
-         gutter_x = 502, col_x0 = 508 + (0:3) * 146, col_w = 138,
-         tira = list(TFR = c(132, 184), MedianAgePop = c(24, 100)),
+         y_leyenda_mapa = c(29, 9),
+         gutter_x = gx, col_x0 = gx + 6 + (0:3) * paso_col, col_w = paso_col - 4,
+         tira = list(TFR = c(124, 172), MedianAgePop = c(22, 94)),
          marcas = list(TFR = c(0, 4, 8), MedianAgePop = c(10, 30, 50)),
-         y_cab = 222, y_tit = c(TFR = 197, MedianAgePop = 113), y_anio = 10,
+         y_cab = 207, y_tit = c(TFR = 184, MedianAgePop = 106), y_anio = 9,
          y_hecho = c(NA, NA))
   } else {
     W <- RANURAS$fig10_print[["w"]]; H <- RANURAS$fig10_print[["h"]]
@@ -1125,8 +1150,18 @@ dibujar_fig10 <- function(t = Inf, version = c("video", "print", "small"), d = Q
   # Fast movers) y gris con rayas grises (< 1 M, sin grupo), como se ven en el mapa
   L <- lote_nuevo()
   if (solo) {
-    # variante small: solo la nota obligatoria del mapa (ética: límites sin aval de la ONU)
-    L <- lote_txt(L, 2, 10, "Map: Natural Earth · boundaries imply no UN endorsement", TAM$nota, COL_TEXTO_2)
+    # variante small (corrector-final, QA-viz V6): leyenda del rayado (inestables y < 1 M) y,
+    # en la segunda línea, la nota obligatoria del mapa (ética: límites sin aval de la ONU)
+    yl <- G$y_leyenda_mapa
+    ley_s <- c("changes group in > 1 in 5 re-runs", "< 1 M")
+    x_m2s <- 28 + ancho_txt(ley_s[1], TAM$nota) + 14
+    g <- muestra_rayada(g, 2, 20, yl[1] - 7, yl[1] + 7, COL_GRUPO[["Fast movers"]], COL_RAYA_GRUPO[["Fast movers"]], 4.2)
+    g <- muestra_rayada(g, x_m2s, x_m2s + 18, yl[1] - 7, yl[1] + 7, COL_BASE_MAPA, COL_RAYA_GRIS, 4.2)
+    L <- lote_txt(L, c(26, x_m2s + 24), yl[c(1, 1)], ley_s, TAM$nota, COL_TEXTO_2)
+    avisar_ancho(paste(ley_s, collapse = "      "), TAM$nota, G$gutter_x - 30, donde = "fig10s leyenda")
+    nota_s <- "Map: Natural Earth; borders not UN-endorsed"
+    avisar_ancho(nota_s, TAM$nota, G$gutter_x - 30, donde = "fig10s nota mapa")
+    L <- lote_txt(L, 2, yl[2], nota_s, TAM$nota, COL_TEXTO_2)
   } else {
     # línea 1: muestra de inestables + texto; línea 2: "(ringed if small)" bajo ese texto y
     # después la muestra gris de los < 1 M (mismo orden que la versión impresa)
@@ -1224,6 +1259,10 @@ dibujar_fig10_print <- function(d, G, tx) {
   g <- g + texto(x_m2 + 13 + 8, yl[2], ley2[2], TP$ley, COL_TEXTO_2)
   X <- list(sw = 320, nombre = 342, meta = 482, flags = 584, paso_flag = 66,
             s1 = c(784, 872), s2 = c(882, 966))
+  # corrector-final (QA-slides M6): a 26 px de alto las mini-series no se leen en el PDF → fuera;
+  # la tabla de grupos (nombre, n, población, 3 mayores por regla) usa todo el ancho
+  MINI <- FALSE
+  if (!MINI) X <- modifyList(X, list(meta = 500, flags = 640, paso_flag = 100))
   fin_ley <- max(x_txt + ancho_txt(ley1, TP$ley), x_m2 + 21 + ancho_txt(ley2[2], TP$ley))
   if (fin_ley > X$sw - 2) anotar_problema(sprintf("fig10p: la leyenda del mapa llega a x = %.0f (tabla en %d).", fin_ley, X$sw))
 
@@ -1236,6 +1275,11 @@ dibujar_fig10_print <- function(d, G, tx) {
   banda <- strsplit(BANDA_TXT, " (?=\\()", perl = TRUE)[[1]]    # "band = …countries" / "(spread, …)"
   cab_izq <- c(banda[1], paste(banda[2], "line = median", "1950–2050", sep = " · "),
                sprintf("%d countries ≥ 1 M · grey = UN medium projection", sum(d$tam)))
+  if (!MINI) {
+    cab_izq <- c("Four groups of 70-year paths (k-means), countries ≥ 1 M",
+                 "group · countries · people · three largest (by rule)")
+    g <- g + texto(X$sw, cab[1:2], cab_izq, TP$pie, COL_TEXTO_2)
+  } else {
   avisar_ancho(cab_izq, TP$pie, X$s1[1] - X$sw - 8, donde = "fig10p cabecera")
   g <- g + texto(X$sw, cab, cab_izq, TP$pie, COL_TEXTO_2)
   # cabeceras de columna a 20 px (mínimo del PDF, §9) y su escala debajo (18 px)
@@ -1245,6 +1289,7 @@ dibujar_fig10_print <- function(d, G, tx) {
               sprintf("%s–%s years", RANGO_Y$MedianAgePop[1], RANGO_Y$MedianAgePop[2]))
   x_esc <- c(mean(X$s1), min(mean(X$s2), G$W - 1 - ancho_txt(escala[2], TP$pie) / 2))
   g <- g + texto(x_esc, cab[3], escala, TP$pie, COL_TEXTO_2, hjust = 0.5)
+  }
   for (k in 1:4) {
     yc <- filas_y[k]
     if (k > 1) g <- g + annotate("segment", x = X$sw, xend = G$W, y = yc + medio, yend = yc + medio,
@@ -1264,8 +1309,8 @@ dibujar_fig10_print <- function(d, G, tx) {
                       colour = "#9A9A9A", stroke = 0.35)
     avisar_ancho(iso3, TP$iso, X$paso_flag - 19, negrita = TRUE, donde = "fig10p ISO3")
     g <- g + texto(xs + 17, yc, iso3, TP$iso, COL_TEXTO, negrita = TRUE)
-    # mini-series
-    for (v in c("TFR", "MedianAgePop")) {
+    # mini-series (solo si MINI)
+    for (v in if (MINI) c("TFR", "MedianAgePop") else character(0)) {
       xx <- if (v == "TFR") X$s1 else X$s2
       y0 <- yc - medio + 2; y1 <- yc + medio - 2
       sx <- function(a) xx[1] + (a - 1950) / 100 * diff(xx)
@@ -1321,13 +1366,21 @@ anim_10 <- function() {
 # llega a 28, así que un "año del máximo" sería precisión falsa. Naranja = mortalidad
 # infantil (como en fig05), con un halo fino #8A5A00 para llegar a ≥ 3:1 sobre blanco.
 
-dibujar_fig11 <- function(version = c("video", "print"), dd = DISP) {
+dibujar_fig11 <- function(version = c("video", "print", "small"), dd = DISP) {
   version <- match.arg(version)
-  imp <- version == "print"
-  W <- RANURAS[[if (imp) "fig11_print" else "fig11"]][["w"]]
-  H <- RANURAS[[if (imp) "fig11_print" else "fig11"]][["h"]]
+  # "small" (corrector-final, QA-viz V5) = composición apaisada de la versión impresa a 741×150
+  # (ranura del vídeo desde s4.b3); mismos tamaños de letra, coordenadas reescaladas
+  imp <- version %in% c("print", "small")
+  clave_r <- switch(version, video = "fig11", print = "fig11_print", small = "fig11_small")
+  W <- RANURAS[[clave_r]][["w"]]
+  H <- RANURAS[[clave_r]][["h"]]
   g <- lienzo(W, H)
-  if (!imp) {
+  if (version == "small") {
+    kx <- W / 793; ky <- H / 160
+    paneles <- list(lex = round(c(28, 240) * kx), edad = round(c(272, 484) * kx))
+    py <- round(c(26, 120) * ky); y_tit <- 141; y_leyenda <- 124; y_anio <- 11
+    tira_x <- round(c(548, 790) * kx); tira_y <- round(c(26, 120) * ky); y_tit_tira <- 141; y_anio_tira <- 11
+  } else if (!imp) {
     paneles <- list(lex = c(36, 320), edad = c(374, 658))
     py <- c(190, 334); y_tit <- 373; y_leyenda <- 351; y_anio <- 176
     tira_x <- c(36, 658); tira_y <- c(50, 136); y_tit_tira <- 157; y_anio_tira <- 34
@@ -1340,7 +1393,8 @@ dibujar_fig11 <- function(version = c("video", "print"), dd = DISP) {
   rx <- c(1950, 2023)
   rangos <- list(lex = c(27, 82), edad = c(5, 60))     # mismo alto: 55 años (P90 LEx máx. 81,9)
   marcas <- list(lex = c(30, 50, 70), edad = c(10, 30, 50))
-  titulos <- if (imp) c(lex = "Life expectancy: closer", edad = "Median age: further apart") else
+  titulos <- if (version == "small") c(lex = "Life expectancy: closer", edad = "Median age: apart") else
+    if (imp) c(lex = "Life expectancy: closer", edad = "Median age: further apart") else
     c(lex = "Life expectancy at birth, years", edad = "Median age, years")
   sd <- list(lex = c(fmt_clave("sd_lex_1950"), fmt_clave("sd_lex_2023")),
              edad = c(fmt_clave("sd_medage_1950"), fmt_clave("sd_medage_2023")))
@@ -1411,7 +1465,8 @@ dibujar_fig11 <- function(version = c("video", "print"), dd = DISP) {
     avisar_ancho(ley, TAM$nota, W - paneles$lex[1] - 2, donde = "fig11 leyenda")
     g <- g + texto(paneles$lex[1], y_leyenda, ley, TAM$nota, COL_TEXTO_2)
   } else {
-    ley <- "161 countries ≥ 1 M · UN estimates 1950–2023 · same scale"
+    ley <- if (version == "small") "161 countries ≥ 1 M · estimates 1950–2023" else
+      "161 countries ≥ 1 M · UN estimates 1950–2023 · same scale"
     avisar_ancho(ley, TAM$nota, tira_x[1] - paneles$lex[1] - 12, donde = "fig11p leyenda")
     g <- g + texto(paneles$lex[1], y_leyenda, ley, TAM$nota, COL_TEXTO_2)
     g <- g + texto(tira_x[2], y_leyenda, "bars = 95 % ranges", TAM$nota, COL_TEXTO_2, hjust = 1)
@@ -1449,19 +1504,14 @@ dibujar_fig11 <- function(version = c("video", "print"), dd = DISP) {
   g <- g + texto_halo(xb[1] + 8, sy(if (imp) 16 else 15.5), e50, TAM$valor, COL_Q5_TXT, negrita = TRUE)
   g <- g + texto_halo(xb[2] - (if (imp) 6 else 8), sy(30.6), e23, TAM$valor, COL_Q5_TXT, hjust = 1, negrita = TRUE)
   # brecha absoluta P90 − P10 (muertes por 1.000 nacidos): se cerró
-  b50 <- fmt_clave("q5_gap_p90p10_1950"); b23 <- fmt_clave("q5_gap_p90p10_2023")
   if (cifra("q5_gap_p90p10_2023") >= cifra("q5_gap_p90p10_1950")) {
     anotar_problema("fig11: la brecha absoluta de Q5 ya no se cierra; revisar el texto 'gap shrank'.")
   }
+  # corrector-final (QA-viz V3): q5_gap_p90p10_1950/2023 tienen verified: false → sin cifras; queda
+  # la lectura en palabras (el titular HTML del PDF dice "while the absolute gap shrank")
   if (!imp) {
-    gap <- c(sprintf("gap: %s → %s deaths per 1,000 births", b50, b23),
-             "the ratio grew, but the gap in deaths shrank")
-    avisar_ancho(gap[1], TAM$nota, 330, TRUE, donde = "fig11 brecha")
-    g <- g + texto(xb[2] - 8, sy(10.8), gap[1], TAM$nota, COL_Q5_TXT, hjust = 1, negrita = TRUE)
-    g <- g + texto(xb[2] - 8, sy(4.1), gap[2], TAM$nota, COL_TEXTO_2, hjust = 1)
-  } else {
-    gap <- sprintf("gap: %s → %s per 1,000", b50, b23)
-    g <- g + texto(tira_x[2] - 4, sy(6.2), gap, TAM$nota, COL_Q5_TXT, hjust = 1, negrita = TRUE)
+    g <- g + texto(xb[2] - 8, sy(7.4), "the ratio grew, but the gap in deaths shrank", TAM$nota, COL_Q5_TXT,
+                   hjust = 1, negrita = TRUE)
   }
   tit_tira <- if (imp) "Child deaths: highest ÷ lowest tenth" else
     "Child deaths before age 5: highest tenth of countries ÷ lowest tenth"
@@ -1483,6 +1533,8 @@ fig_11 <- function() {
              print = file.path(RUTA_FIG_STATIC, paste0(NOMBRES[["fig11"]], "_print.png")))
   guardar_lienzo(dibujar_fig11("video"), rutas[["png"]], RANURAS$fig11[["w"]], RANURAS$fig11[["h"]])
   guardar_lienzo(dibujar_fig11("print"), rutas[["print"]], RANURAS$fig11_print[["w"]], RANURAS$fig11_print[["h"]])
+  rutas[["small"]] <- file.path(RUTA_FIG_STATIC, paste0(NOMBRES[["fig11"]], "_small.png"))
+  guardar_lienzo(dibujar_fig11("small"), rutas[["small"]], RANURAS$fig11_small[["w"]], RANURAS$fig11_small[["h"]])
   message("  fig11 PNG: ", paste(basename(rutas), collapse = ", "))
   rutas
 }
@@ -1497,8 +1549,10 @@ DISP <- leer_dispersion()
 MAPA <- preparar_mapa()
 TEXTOS_FIG10 <- textos_fig10(Q3)
 verificar_used_in(CLAVES_FIG10)
-TIEMPOS_FIG10 <- inicios_bloques("s4.b1", BLOQUES_S4B1)
-DURACION_FIG10 <- duracion_paso("s4.b1", DURACION_S4B1)
+TIEMPOS_FIG10 <- tiempos_s4b1()
+# el MP4 termina 0,3 s antes del fin del paso (build_narration.py exige paso ≥ MP4 + 0,3 s;
+# si el MP4 durara lo mismo que el paso, cada regeneración alargaría el paso 0,3 s)
+DURACION_FIG10 <- duracion_paso("s4.b1", DURACION_S4B1) - 0.3
 GEOM_FIG10_VIDEO <- geom_fig10("video", MAPA, Q3)
 GEOM_FIG10_PRINT <- geom_fig10("print", MAPA, Q3)
 GEOM_FIG10_SMALL <- geom_fig10("small", MAPA, Q3)

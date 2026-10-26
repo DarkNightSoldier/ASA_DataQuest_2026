@@ -154,7 +154,7 @@ Sensibilidades de la TFR (`knn_tfr.sens_note`): k = 10 → 22,4 % (azar 6,2 %) �
 
 Figuras: `q2_05_lookalikes_overlap.png`, `q2_06_colombia_lookalikes.png`.
 
-**Lectura.** H20 se confirma: TFR 13,2 % < 25 % (su IC llega a 17,7 %) y PC1+PC2 43,2 % > 40 %. Pero el límite inferior por bloques de PC1+PC2 es 40,1 %, y quedan por debajo de 40 % el caso 1990 (34,4 %), los 237 países (38,2 %) y el caso sin Golfo (39,4 %). La parte "> 40 %" es frágil; la parte "un número no basta" es muy robusta. Ni el mejor número posible (PC1) pasa del 20 %. Colombia reproduce exactamente el ejemplo del memo: por fecundidad se parece a países ricos de baja fecundidad, y por el perfil completo a sus vecinos de ingreso medio con edad y mortalidad parecidas. **Posicionalidad:** el equipo es de Colombia; se muestra como ilustración y la tabla completa de los 161 países está publicada.
+**Lectura.** H20 se confirma: TFR 13,2 % < 25 % (su IC llega a 17,7 %) y PC1+PC2 43,2 % > 40 %. Pero el límite inferior por bloques de PC1+PC2 es 40,1 %, y quedan por debajo de 40 % el caso 1990 (34,4 %), los 237 países (38,2 %) y el caso sin Golfo (39,4 %). La parte "> 40 %" es frágil; la parte "un número no basta" es muy robusta. Ni el mejor número posible (PC1) pasa del 20 %. Colombia reproduce exactamente el ejemplo del memo: por fecundidad se parece a países de ingreso alto con baja fecundidad, y por el perfil completo a sus vecinos de ingreso medio con edad y mortalidad parecidas. **Posicionalidad:** el equipo es de Colombia; se muestra como ilustración y la tabla completa de los 161 países está publicada.
 
 ---
 

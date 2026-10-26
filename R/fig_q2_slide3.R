@@ -98,11 +98,12 @@ RANURAS <- list(
   # figura ocupan una línea más y la ranura medida en Chromium es 572×263 y 572×371
   # (scratchpad measure_s3.py, 2026-10-23). Se usa la medida real: con object-fit:contain,
   # si la ranura vuelve a crecer la figura queda igual (franja blanca), nunca reducida.
-  fig07 = c(w = 572, h = 263), fig07_print = c(w = 572, h = 371),
+  fig07 = c(w = 572, h = 263), fig07_print = c(w = 572, h = 395),   # print +24 px (corrector-final: pies a 20 px; la ranura del PDF mide 572×487)
   # fig08 no tiene ranura medida (en el deck es HTML): columna central .blk08 en el
   # estado final s3.b4 (captura slides/dev/screenshots/slide_3_final.png ≈ 536 × 463)
   fig08 = c(w = 536, h = 556),
-  fig09 = c(w = 624, h = 405), fig09_print = c(w = 624, h = 513)
+  # corrector-final 2026-10-25 (QA-viz V5): ranuras medidas tras acortar la nota HTML a 2 líneas
+  fig09 = c(w = 624, h = 402), fig09_print = c(w = 624, h = 510)
 )
 NOMBRES <- c(fig07 = "fig07_single_indicator_scorecard",
              fig08 = "fig08_lookalikes_twins",
@@ -411,7 +412,7 @@ estado_fig07 <- function(t, b) {
     valor    = c(p(b[3] + 1.2, 0.4), p(b[3] + 3.2, 0.4), p(b[4] + 1.5, 0.4), p(b[4] + 3.4, 0.5)) *
                c(atenua12, atenua12, 1, 1),
     tag      = c(slow = p(b[2]) * atenua12, fast = p(b[4])),
-    duracion = b[4] + 5.4
+    duracion = min(b[4] + 5.4, 14.9)   # ≤ 14,9 s: el paso s3.b1 no se alarga (corrector-final)
   )
 }
 
@@ -420,6 +421,8 @@ dibujar_fig07 <- function(t = Inf, version = c("video", "print"), sc = SCORECARD
   imp <- version == "print"
   W <- RANURAS[[if (imp) "fig07_print" else "fig07"]][["w"]]
   H <- RANURAS[[if (imp) "fig07_print" else "fig07"]][["h"]]
+  # corrector-final 2026-10-26 (QA-slides M10): en el PDF las notas de la figura a ≥ 20 px (copia local de TAM)
+  if (imp) TAM$pie <- 20
   e <- estado_fig07(t, b)
 
   # --- geometría (px de ranura; y crece hacia arriba) ---
@@ -476,7 +479,8 @@ dibujar_fig07 <- function(t = Inf, version = c("video", "print"), sc = SCORECARD
         # proyección Medium de la ONU: relleno claro + contorno punteado (regla del vídeo)
         g <- g + annotate("rect", xmin = sx(0), xmax = sx(v), ymin = y_bar[i] - alto_bar / 2,
                           ymax = y_bar[i] + alto_bar / 2, fill = scales::alpha(col_g[i], 0.30 * a_b),
-                          colour = scales::alpha(col_g[i], a_b), linewidth = 1.2, linetype = "22")
+                          # corrector-final (QA-viz V11): borde gris discontinuo = convención de proyección
+                          colour = scales::alpha("#9A9A9A", a_b), linewidth = 1.2, linetype = "22")
       } else {
         g <- g + annotate("rect", xmin = sx(0), xmax = sx(v), ymin = y_bar[i] - alto_bar / 2,
                           ymax = y_bar[i] + alto_bar / 2, fill = scales::alpha(col_g[i], a_b), colour = NA)
@@ -527,13 +531,13 @@ dibujar_fig07 <- function(t = Inf, version = c("video", "print"), sc = SCORECARD
     g <- g + texto(XL, 9, pie, TAM$pie, COL_TEXTO_2, alpha = e$marco)
   } else {
     pie1 <- "R² · thin line = plausible range (re-runs by UN subregion)"
-    pie2 <- "= same model tested on countries left out · exploratory, not causal"
+    pie2 <- "= same model on countries left out · exploratory, not causal"
     avisar_ancho(pie1, TAM$pie, W - XL - 4, donde = "fig07 pie 1")
     avisar_ancho(pie2, TAM$pie, W - XL - 22, donde = "fig07 pie 2")
-    g <- g + texto(XL, 32, pie1, TAM$pie, COL_TEXTO_2, alpha = e$marco)
-    g <- g + annotate("point", x = XL + 7, y = 11, shape = 23, size = 3.6, fill = "white",
+    g <- g + texto(XL, 37, pie1, TAM$pie, COL_TEXTO_2, alpha = e$marco)
+    g <- g + annotate("point", x = XL + 7, y = 12, shape = 23, size = 3.6, fill = "white",
                       colour = COL_TEXTO, stroke = 1, alpha = e$marco)
-    g <- g + texto(XL + 18, 11, pie2, TAM$pie, COL_TEXTO_2, alpha = e$marco)
+    g <- g + texto(XL + 18, 12, pie2, TAM$pie, COL_TEXTO_2, alpha = e$marco)
   }
   g
 }
@@ -870,9 +874,11 @@ geom_fig09 <- function(version) {
   W <- RANURAS[[if (imp) "fig09_print" else "fig09"]][["w"]]
   H <- RANURAS[[if (imp) "fig09_print" else "fig09"]][["h"]]
   rx <- c(-7.0, 4.7); ry <- c(-3.4, 8.4)               # cubre PC1 −6.5…4.4 y PC2 −3.0…7.9
+  # corrector-final 2026-10-26: en print los pies van a 20 px (3 líneas a 22 px); el área de puntos no se mueve
+  # (subirla 8 px hacía chocar las etiquetas "net migration" y "growth today")
   px <- c(8, W - 8); py <- c(if (imp) 106 else 86, H - 4)
   list(W = W, H = H, imp = imp, px = px, py = py, R = if (imp) 138 else 112,
-       y_pie = if (imp) c(50, 30, 10) else c(32, 12), y_tit1 = if (imp) 77 else 54,
+       y_pie = if (imp) c(54, 32, 10) else c(32, 12), y_tit1 = if (imp) 77 else 54,
        sx = function(x) px[1] + (x - rx[1]) / diff(rx) * diff(px),
        sy = function(y) py[1] + (y - ry[1]) / diff(ry) * diff(py))
 }
@@ -885,6 +891,7 @@ EMPUJE_PCA <- c(IRN = -1, PAN = -3)
 dibujar_fig09 <- function(t = Inf, version = c("video", "print"), d = PCA, b = TIEMPOS_FIG09) {
   version <- match.arg(version)
   G <- geom_fig09(version)
+  # corrector-final 2026-10-26 (QA-slides M10): en el PDF el pie de la figura va a 20 px (ver el texto del pie)
   e <- estado_fig09(t, b)
   sx <- G$sx; sy <- G$sy
   ox <- sx(0); oy <- sy(0)                             # origen = país medio
@@ -1075,8 +1082,9 @@ dibujar_fig09 <- function(t = Inf, version = c("video", "print"), d = PCA, b = T
 
   # --- pie: PIE-3 abreviado + winsorización (la que mueve a ARE y OMN) + escalas ---
   capados <- d$puntos |> filter(abs(.data$CNMR_raw - .data$CNMR_w) > 1e-9)
-  stopifnot(nrow(capados) == cifra("n_cnmr_winsorized_2023"), all(c("ARE", "OMN") %in% capados$ISO3_code))
-  pie_w <- sprintf("net migration capped at ±3 SD for %d countries (incl. UAE and Oman)", nrow(capados))
+  stopifnot(all(c("ARE", "OMN") %in% capados$ISO3_code))
+  # corrector-final (QA-viz V4): n_cnmr_winsorized_2023 tiene verified: false → sin el número
+  pie_w <- "migration capped at ±3 SD for a few countries (incl. UAE, Oman)"
   if (!G$imp) {
     pie <- c(sprintf("%d countries ≥ 1 M, 2023 · exploratory, not causal · unequal axis scales",
                      nrow(d$puntos)), pie_w)
@@ -1085,8 +1093,8 @@ dibujar_fig09 <- function(t = Inf, version = c("video", "print"), d = PCA, b = T
              pie_w,
              sprintf("arrows: %d of the 12 indicators · axes not to the same scale", nrow(fl)))
   }
-  avisar_ancho(pie, TAM$pie, diff(G$px), donde = "fig09 pie")
-  g <- g + texto(G$px[1], G$y_pie, pie, TAM$pie, COL_TEXTO_2, alpha = e$puntos)
+  avisar_ancho(pie, if (G$imp) 20 else TAM$pie, diff(G$px), donde = "fig09 pie")
+  g <- g + texto(G$px[1], G$y_pie, pie, if (G$imp) 20 else TAM$pie, COL_TEXTO_2, alpha = e$puntos)
   g
 }
 

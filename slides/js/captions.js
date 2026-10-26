@@ -5,8 +5,8 @@
      {clave} y {clave.say} se resuelven con DeckNumbers.
    · Reparto temporal de bloques: captions[] de video_timings.json (t en s desde el
      inicio del paso) → si no, duración del paso / n bloques → si no, 3,2 s por bloque.
-   · Al mostrarse un fragmento que contiene <video>, lo reproduce desde el inicio;
-     al ocultarse (o al salir de la diapositiva) lo pausa y lo rebobina.
+   · Al mostrarse un fragmento que contiene <video>, lo reproduce desde el inicio (solo el build
+     más reciente; los saltados quedan en su último fotograma); al ocultarse lo rebobina.
    · window.slideTimings ← slides/script/video_timings.json (si existe).
    · window.deckSteps() → lista ordenada de estados {id, h, f, build, caption}.
    ============================================================================= */
@@ -99,9 +99,15 @@
     if (!step) { show(""); return; }
     var timing = window.slideTimings && window.slideTimings.byId ? window.slideTimings.byId[step.id] : null;
     var chunks;
+    /* data-cue = "paso:bloque" en la <section> activa: el CSS resalta lo que nombra cada bloque
+       (p. ej. la fila de la tabla de s4.b3 que se está leyendo; corrector-final, QA-slides M8) */
+    var cueSec = st.sec;
+    var cue = function (i) { if (cueSec) cueSec.setAttribute("data-cue", step.id + ":" + i); };
+    sections().forEach(function (x) { if (x !== cueSec) x.removeAttribute("data-cue"); });
+    cue(0);
     if (timing && Array.isArray(timing.captions) && timing.captions.length) {
       timing.captions.forEach(function (c, i) {
-        var fn = function () { show(resolve(c.text)); };
+        var fn = function () { show(resolve(c.text)); cue(i); };
         if (!c.t || i === 0) fn(); else timers.push(setTimeout(fn, c.t * 1000));
       });
       return;
@@ -111,27 +117,78 @@
     var dur = timing && timing.duration ? timing.duration : null;
     var each = dur ? dur / chunks.length : DEFAULT_CHUNK_S;
     chunks.forEach(function (c, i) {
-      var fn = function () { show(resolve(c)); };
+      var fn = function () { show(resolve(c)); cue(i); };
       if (i === 0) fn(); else timers.push(setTimeout(fn, i * each * 1000));
     });
   }
 
-  /* ---------- vídeos ---------- */
+  /* ---------- vídeos ----------
+     · Al avanzar un build, solo se reproduce (desde 0) el vídeo del fragmento recién mostrado con el
+       índice más alto; si se salta varios builds de golpe (navegación directa, capturas, ?#/2/4), los
+       vídeos de los builds intermedios se dejan en su ÚLTIMO fotograma (= póster), no en el primero.
+     · Un fragmento que se oculta (retroceso) rebobina su vídeo; al salir de la diapositiva se pausa.
+     · Al volver a una diapositiva con builds ya visibles, sus vídeos muestran el último fotograma.
+     · Los fragmentos fade-out / fade-in-then-out que se disparan no reproducen vídeo (se están ocultando). */
   function videosIn(el) {
     if (!el) return [];
     var list = Array.prototype.slice.call(el.querySelectorAll("video"));
     if (el.tagName === "VIDEO") list.unshift(el);
     return list;
   }
-  function play(v) { try { v.pause(); v.currentTime = 0; var p = v.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {} }
-  function stop(v) { try { v.pause(); v.currentTime = 0; } catch (e) {} }
+  /* Sin cabeceras Range (python http.server) Chrome no puede buscar dentro del MP4 (seekable = [0, 0]):
+     entonces "volver al inicio" = load() y "último fotograma" = load() → se muestra el póster, que es
+     justamente el último fotograma (README §3). Con un servidor con Range se usa currentTime. */
+  function canSeek(v, t) {
+    try { for (var i = 0; i < v.seekable.length; i++) if (v.seekable.start(i) <= t && v.seekable.end(i) >= t) return true; } catch (e) {}
+    return false;
+  }
+  function rewind(v) { if (v.currentTime > 0 || v.ended) { if (canSeek(v, 0)) v.currentTime = 0; else v.load(); } }
+  function play(v) { try { v.pause(); rewind(v); var p = v.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {} }
+  function stop(v) { try { v.pause(); rewind(v); } catch (e) {} }
+  function toEnd(v) {
+    try {
+      v.pause();
+      var d = v.duration;
+      if (isFinite(d) && d > 0 && canSeek(v, d - 0.05)) v.currentTime = d - 0.05;
+      else if (v.currentTime > 0 || v.ended || v.readyState >= 2) v.load();   // vuelve a mostrar el póster
+    } catch (e) {}
+  }
+  function hiding(fr) { return fr.classList.contains("fade-out") || fr.classList.contains("fade-in-then-out"); }
+  function isShownNow(v, sec) {
+    var node = v, shown = true;
+    while (node && node !== sec) {
+      if (node.classList && node.classList.contains("fragment")) {
+        var vis = node.classList.contains("visible");
+        if (node.classList.contains("fade-out") ? vis : !vis) { shown = false; break; }
+      }
+      node = node.parentElement;
+    }
+    return shown;
+  }
 
-  function onShown(ev) { (ev.fragments || [ev.fragment]).forEach(function (fr) { videosIn(fr).forEach(play); }); update(); }
-  function onHidden(ev) { (ev.fragments || [ev.fragment]).forEach(function (fr) { videosIn(fr).forEach(stop); }); update(); }
+  function onShown(ev) {
+    var frs = ev.fragments || [ev.fragment];
+    var maxI = -Infinity;
+    frs.forEach(function (fr) { var i = fragIndex(fr); if (!isNaN(i)) maxI = Math.max(maxI, i); });
+    frs.forEach(function (fr) {
+      // solo los vídeos cuyo fragmento más cercano es este (no los de fragmentos anidados aún ocultos)
+      var vids = videosIn(fr).filter(function (v) { return v.closest(".fragment") === fr; });
+      if (!vids.length) return;
+      if (hiding(fr)) { vids.forEach(function (v) { try { v.pause(); } catch (e) {} }); return; }
+      vids.forEach(fragIndex(fr) === maxI ? play : toEnd);
+    });
+    update();
+  }
+  function onHidden(ev) { (ev.fragments || [ev.fragment]).forEach(function (fr) { if (!hiding(fr)) videosIn(fr).forEach(stop); }); update(); }
   function onSlide(ev) {
     if (ev.previousSlide) videosIn(ev.previousSlide).forEach(stop);
-    // vídeos que no están dentro de un fragmento: se reproducen al entrar en la diapositiva
-    if (ev.currentSlide) videosIn(ev.currentSlide).forEach(function (v) { if (!v.closest(".fragment")) play(v); });
+    if (ev.currentSlide) {
+      var sec = ev.currentSlide;
+      videosIn(sec).forEach(function (v) {
+        if (!v.closest(".fragment")) play(v);          // vídeo fijo de la diapositiva
+        else if (isShownNow(v, sec)) toEnd(v);         // build ya visible al entrar: último fotograma
+      });
+    }
     update();
   }
 

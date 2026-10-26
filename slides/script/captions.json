@@ -1,0 +1,1955 @@
+[
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b1",
+  "fragment_index": null,
+  "reveal_fragment": -1,
+  "build": "1",
+  "cue": 1,
+  "caption": "Eight billion people.",
+  "lines": [
+   "Eight billion people."
+  ],
+  "chars": 21,
+  "narration": "Eight billion people.",
+  "words": 3,
+  "spoken_words": 3,
+  "spoken_figures": [
+   "world_pop_2023_bn"
+  ],
+  "t_start": 0.0,
+  "t_end": 2.7,
+  "step_narration": "Eight billion people.",
+  "step_words": 3,
+  "step_t_start": 0.0,
+  "step_t_end": 2.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 0,
+  "build": "2",
+  "cue": 1,
+  "caption": "In 2023, 130 countries and areas had too few children to replace their parents.",
+  "lines": [
+   "In 2023, 130 countries and areas had too few",
+   "children to replace their parents."
+  ],
+  "chars": 79,
+  "narration": "In 2023, 130 countries and areas had too few children to replace their parents.",
+  "words": 14,
+  "spoken_words": 17,
+  "spoken_figures": [
+   "n_below_replacement_2023"
+  ],
+  "t_start": 2.7,
+  "t_end": 11.6,
+  "step_narration": "In 2023, 130 countries and areas had too few children to replace their parents.",
+  "step_words": 14,
+  "step_t_start": 2.7,
+  "step_t_end": 11.6,
+  "step_mp4": []
+ },
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 1,
+  "build": "3",
+  "cue": 1,
+  "caption": "Yet 84 are still growing.",
+  "lines": [
+   "Yet 84 are still growing."
+  ],
+  "chars": 25,
+  "narration": "Yet 84 are still growing.",
+  "words": 5,
+  "spoken_words": 5,
+  "spoken_figures": [
+   "n_below_repl_growing_2023"
+  ],
+  "t_start": 11.6,
+  "t_end": 15.7,
+  "step_narration": "Yet 84 are still growing. 66 have more births than deaths; 18 grow only because more people arrive than leave.",
+  "step_words": 20,
+  "step_t_start": 11.6,
+  "step_t_end": 24.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 1,
+  "build": "3",
+  "cue": 2,
+  "caption": "66 have more births than deaths; 18 grow only because more people arrive than leave.",
+  "lines": [
+   "66 have more births than deaths;",
+   "18 grow only because more people arrive than leave."
+  ],
+  "chars": 84,
+  "narration": "66 have more births than deaths; 18 grow only because more people arrive than leave.",
+  "words": 15,
+  "spoken_words": 15,
+  "spoken_figures": [
+   "n_below_repl_natural_growth_2023",
+   "n_grow_only_migration_2023"
+  ],
+  "t_start": 15.7,
+  "t_end": 24.7,
+  "step_narration": "Yet 84 are still growing. 66 have more births than deaths; 18 grow only because more people arrive than leave.",
+  "step_words": 20,
+  "step_t_start": 11.6,
+  "step_t_end": 24.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 2,
+  "build": "4",
+  "cue": 1,
+  "caption": "One number can't explain that.",
+  "lines": [
+   "One number can't explain that."
+  ],
+  "chars": 30,
+  "narration": "One number can't explain that.",
+  "words": 5,
+  "spoken_words": 5,
+  "spoken_figures": [],
+  "t_start": 24.7,
+  "t_end": 27.3,
+  "step_narration": "One number can't explain that.",
+  "step_words": 5,
+  "step_t_start": 24.7,
+  "step_t_end": 27.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "cover",
+  "slide_name": "Cover",
+  "slide_index": 0,
+  "step": "cover.b5",
+  "fragment_index": 5,
+  "reveal_fragment": 3,
+  "build": "5",
+  "cue": 1,
+  "caption": "We are Team UNALSta-R.",
+  "lines": [
+   "We are Team UNALSta-R."
+  ],
+  "chars": 22,
+  "narration": "We are Team UNALSta-R.",
+  "words": 4,
+  "spoken_words": 4,
+  "spoken_figures": [],
+  "t_start": 27.3,
+  "t_end": 29.5,
+  "step_narration": "We are Team UNALSta-R.",
+  "step_words": 4,
+  "step_t_start": 27.3,
+  "step_t_end": 29.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b0",
+  "fragment_index": null,
+  "reveal_fragment": -1,
+  "build": "0",
+  "cue": 1,
+  "caption": "Three questions.",
+  "lines": [
+   "Three questions."
+  ],
+  "chars": 16,
+  "narration": "Three questions.",
+  "words": 2,
+  "spoken_words": 2,
+  "spoken_figures": [],
+  "t_start": 29.5,
+  "t_end": 30.9,
+  "step_narration": "Three questions. One: how do births, deaths and migration relate, and differ by region, country and income? Two: does one indicator tell the whole story, or only several together? Three: do countries share one road at different speeds, and what should the UN watch?",
+  "step_words": 44,
+  "step_t_start": 29.5,
+  "step_t_end": 47.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b0",
+  "fragment_index": null,
+  "reveal_fragment": -1,
+  "build": "0",
+  "cue": 2,
+  "caption": "One: how do births, deaths and migration relate, and differ by region, country and income?",
+  "lines": [
+   "One: how do births, deaths and migration relate,",
+   "and differ by region, country and income?"
+  ],
+  "chars": 90,
+  "narration": "One: how do births, deaths and migration relate, and differ by region, country and income?",
+  "words": 15,
+  "spoken_words": 15,
+  "spoken_figures": [],
+  "t_start": 30.9,
+  "t_end": 36.9,
+  "step_narration": "Three questions. One: how do births, deaths and migration relate, and differ by region, country and income? Two: does one indicator tell the whole story, or only several together? Three: do countries share one road at different speeds, and what should the UN watch?",
+  "step_words": 44,
+  "step_t_start": 29.5,
+  "step_t_end": 47.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b0",
+  "fragment_index": null,
+  "reveal_fragment": -1,
+  "build": "0",
+  "cue": 3,
+  "caption": "Two: does one indicator tell the whole story, or only several together?",
+  "lines": [
+   "Two: does one indicator tell the whole story,",
+   "or only several together?"
+  ],
+  "chars": 71,
+  "narration": "Two: does one indicator tell the whole story, or only several together?",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [],
+  "t_start": 36.9,
+  "t_end": 41.7,
+  "step_narration": "Three questions. One: how do births, deaths and migration relate, and differ by region, country and income? Two: does one indicator tell the whole story, or only several together? Three: do countries share one road at different speeds, and what should the UN watch?",
+  "step_words": 44,
+  "step_t_start": 29.5,
+  "step_t_end": 47.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b0",
+  "fragment_index": null,
+  "reveal_fragment": -1,
+  "build": "0",
+  "cue": 4,
+  "caption": "Three: do countries share one road at different speeds, and what should the UN watch?",
+  "lines": [
+   "Three: do countries share one road at different",
+   "speeds, and what should the UN watch?"
+  ],
+  "chars": 85,
+  "narration": "Three: do countries share one road at different speeds, and what should the UN watch?",
+  "words": 15,
+  "spoken_words": 15,
+  "spoken_figures": [],
+  "t_start": 41.7,
+  "t_end": 47.7,
+  "step_narration": "Three questions. One: how do births, deaths and migration relate, and differ by region, country and income? Two: does one indicator tell the whole story, or only several together? Three: do countries share one road at different speeds, and what should the UN watch?",
+  "step_words": 44,
+  "step_t_start": 29.5,
+  "step_t_end": 47.7,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 1,
+  "caption": "Population change is bookkeeping:",
+  "lines": [
+   "Population change is bookkeeping:"
+  ],
+  "chars": 33,
+  "narration": "Population change is bookkeeping:",
+  "words": 4,
+  "spoken_words": 4,
+  "spoken_figures": [],
+  "t_start": 47.7,
+  "t_end": 49.9,
+  "step_narration": "Population change is bookkeeping: births minus deaths, plus net migration, arrivals minus departures.",
+  "step_words": 13,
+  "step_t_start": 47.7,
+  "step_t_end": 53.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 2,
+  "caption": "births minus deaths, plus net migration, arrivals minus departures.",
+  "lines": [
+   "births minus deaths, plus net migration,",
+   "arrivals minus departures."
+  ],
+  "chars": 67,
+  "narration": "births minus deaths, plus net migration, arrivals minus departures.",
+  "words": 9,
+  "spoken_words": 9,
+  "spoken_figures": [],
+  "t_start": 49.9,
+  "t_end": 53.5,
+  "step_narration": "Population change is bookkeeping: births minus deaths, plus net migration, arrivals minus departures.",
+  "step_words": 13,
+  "step_t_start": 47.7,
+  "step_t_end": 53.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 1,
+  "caption": "In today's high-income countries, net migration accounted for",
+  "lines": [
+   "In today's high-income countries,",
+   "net migration accounted for"
+  ],
+  "chars": 61,
+  "narration": "In today's high-income countries, net migration accounted for",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 53.5,
+  "t_end": 57.3,
+  "step_narration": "In today's high-income countries, net migration accounted for about seven in ten of the growth since 2000. Elsewhere, growth came almost entirely from births exceeding deaths.",
+  "step_words": 26,
+  "step_t_start": 53.5,
+  "step_t_end": 66.4,
+  "step_mp4": [
+   {
+    "name": "fig01_growth_components_by_income",
+    "duration_s": 12.1
+   }
+  ]
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 2,
+  "caption": "about seven in ten of the growth since 2000.",
+  "lines": [
+   "about seven in ten of the growth since 2000."
+  ],
+  "chars": 44,
+  "narration": "about seven in ten of the growth since 2000.",
+  "words": 9,
+  "spoken_words": 10,
+  "spoken_figures": [
+   "share_mig_high_2000_2023"
+  ],
+  "t_start": 57.3,
+  "t_end": 62.8,
+  "step_narration": "In today's high-income countries, net migration accounted for about seven in ten of the growth since 2000. Elsewhere, growth came almost entirely from births exceeding deaths.",
+  "step_words": 26,
+  "step_t_start": 53.5,
+  "step_t_end": 66.4,
+  "step_mp4": [
+   {
+    "name": "fig01_growth_components_by_income",
+    "duration_s": 12.1
+   }
+  ]
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 3,
+  "caption": "Elsewhere, growth came almost entirely from births exceeding deaths.",
+  "lines": [
+   "Elsewhere, growth came almost",
+   "entirely from births exceeding deaths."
+  ],
+  "chars": 68,
+  "narration": "Elsewhere, growth came almost entirely from births exceeding deaths.",
+  "words": 9,
+  "spoken_words": 9,
+  "spoken_figures": [],
+  "t_start": 62.8,
+  "t_end": 66.4,
+  "step_narration": "In today's high-income countries, net migration accounted for about seven in ten of the growth since 2000. Elsewhere, growth came almost entirely from births exceeding deaths.",
+  "step_words": 26,
+  "step_t_start": 53.5,
+  "step_t_end": 66.4,
+  "step_mp4": [
+   {
+    "name": "fig01_growth_components_by_income",
+    "duration_s": 12.1
+   }
+  ]
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 1,
+  "caption": "Blue: more births than deaths, and growing,",
+  "lines": [
+   "Blue: more births than deaths, and growing,"
+  ],
+  "chars": 43,
+  "narration": "Blue: more births than deaths, and growing,",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 66.4,
+  "t_end": 69.8,
+  "step_narration": "Blue: more births than deaths, and growing,",
+  "step_words": 7,
+  "step_t_start": 66.4,
+  "step_t_end": 69.8,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b3b",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "3",
+  "cue": 1,
+  "caption": "including 22 below replacement that grow with no net arrivals.",
+  "lines": [
+   "including 22 below replacement",
+   "that grow with no net arrivals."
+  ],
+  "chars": 62,
+  "narration": "including 22 below replacement that grow with no net arrivals.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [
+   "n_momentum_countries"
+  ],
+  "t_start": 69.8,
+  "t_end": 75.9,
+  "step_narration": "including 22 below replacement that grow with no net arrivals.",
+  "step_words": 10,
+  "step_t_start": 69.8,
+  "step_t_end": 75.9,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b4a",
+  "fragment_index": 5,
+  "reveal_fragment": 4,
+  "build": "4",
+  "cue": 1,
+  "caption": "Light blue: deaths exceed births, but arrivals keep it growing.",
+  "lines": [
+   "Light blue: deaths exceed births,",
+   "but arrivals keep it growing."
+  ],
+  "chars": 63,
+  "narration": "Light blue: deaths exceed births, but arrivals keep it growing.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 75.9,
+  "t_end": 80.5,
+  "step_narration": "Light blue: deaths exceed births, but arrivals keep it growing.",
+  "step_words": 10,
+  "step_t_start": 75.9,
+  "step_t_end": 80.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b4b",
+  "fragment_index": 6,
+  "reveal_fragment": 5,
+  "build": "4",
+  "cue": 1,
+  "caption": "Orange: deaths exceed births, and it shrinks.",
+  "lines": [
+   "Orange: deaths exceed births, and it shrinks."
+  ],
+  "chars": 45,
+  "narration": "Orange: deaths exceed births, and it shrinks.",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 80.5,
+  "t_end": 83.9,
+  "step_narration": "Orange: deaths exceed births, and it shrinks.",
+  "step_words": 7,
+  "step_t_start": 80.5,
+  "step_t_end": 83.9,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b4c",
+  "fragment_index": 7,
+  "reveal_fragment": 6,
+  "build": "4",
+  "cue": 1,
+  "caption": "Purple: births exceed deaths, but net departures make it shrink.",
+  "lines": [
+   "Purple: births exceed deaths,",
+   "but net departures make it shrink."
+  ],
+  "chars": 64,
+  "narration": "Purple: births exceed deaths, but net departures make it shrink.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 83.9,
+  "t_end": 88.5,
+  "step_narration": "Purple: births exceed deaths, but net departures make it shrink.",
+  "step_words": 10,
+  "step_t_start": 83.9,
+  "step_t_end": 88.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b5a",
+  "fragment_index": 8,
+  "reveal_fragment": 7,
+  "build": "5",
+  "cue": 1,
+  "caption": "Migration is also the least certain lever.",
+  "lines": [
+   "Migration is also the least certain lever."
+  ],
+  "chars": 42,
+  "narration": "Migration is also the least certain lever.",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 88.5,
+  "t_end": 92.8,
+  "step_narration": "Migration is also the least certain lever.",
+  "step_words": 7,
+  "step_t_start": 88.5,
+  "step_t_end": 92.8,
+  "step_mp4": [
+   {
+    "name": "fig02b_lever_map_zoom",
+    "duration_s": 4.0
+   }
+  ]
+ },
+ {
+  "slide": "s1",
+  "slide_name": "Slide 1",
+  "slide_index": 1,
+  "step": "s1.b5b",
+  "fragment_index": 9,
+  "reveal_fragment": 8,
+  "build": "5",
+  "cue": 1,
+  "caption": "For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million.",
+  "lines": [
+   "For the Emirates in 2050, the UN's 95 percent",
+   "range is nine to thirty-three million."
+  ],
+  "chars": 84,
+  "narration": "For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million.",
+  "words": 15,
+  "spoken_words": 16,
+  "spoken_figures": [
+   "pop_are_2050_pi95_low+pop_are_2050_pi95_high"
+  ],
+  "t_start": 92.8,
+  "t_end": 101.3,
+  "step_narration": "For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million.",
+  "step_words": 15,
+  "step_t_start": 92.8,
+  "step_t_end": 101.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 1,
+  "caption": "Set each country's clock to when its fertility fell below four children,",
+  "lines": [
+   "Set each country's clock to when its",
+   "fertility fell below four children,"
+  ],
+  "chars": 72,
+  "narration": "Set each country's clock to when its fertility fell below four children,",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [],
+  "t_start": 101.9,
+  "t_end": 107.3,
+  "step_narration": "Set each country's clock to when its fertility fell below four children, and the curves line up. The road is shared; the speed is not. China went from five to three children in 5 years; Egypt took 33.",
+  "step_words": 38,
+  "step_t_start": 101.9,
+  "step_t_end": 120.7,
+  "step_mp4": [
+   {
+    "name": "fig04_same_road_registration",
+    "duration_s": 18.5
+   }
+  ]
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 2,
+  "caption": "and the curves line up.",
+  "lines": [
+   "and the curves line up."
+  ],
+  "chars": 23,
+  "narration": "and the curves line up.",
+  "words": 5,
+  "spoken_words": 5,
+  "spoken_figures": [],
+  "t_start": 107.3,
+  "t_end": 109.3,
+  "step_narration": "Set each country's clock to when its fertility fell below four children, and the curves line up. The road is shared; the speed is not. China went from five to three children in 5 years; Egypt took 33.",
+  "step_words": 38,
+  "step_t_start": 101.9,
+  "step_t_end": 120.7,
+  "step_mp4": [
+   {
+    "name": "fig04_same_road_registration",
+    "duration_s": 18.5
+   }
+  ]
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 3,
+  "caption": "The road is shared; the speed is not.",
+  "lines": [
+   "The road is shared; the speed is not."
+  ],
+  "chars": 37,
+  "narration": "The road is shared; the speed is not.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 109.3,
+  "t_end": 112.5,
+  "step_narration": "Set each country's clock to when its fertility fell below four children, and the curves line up. The road is shared; the speed is not. China went from five to three children in 5 years; Egypt took 33.",
+  "step_words": 38,
+  "step_t_start": 101.9,
+  "step_t_end": 120.7,
+  "step_mp4": [
+   {
+    "name": "fig04_same_road_registration",
+    "duration_s": 18.5
+   }
+  ]
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 4,
+  "caption": "China went from five to three children in 5 years; Egypt took 33.",
+  "lines": [
+   "China went from five to three",
+   "children in 5 years; Egypt took 33."
+  ],
+  "chars": 65,
+  "narration": "China went from five to three children in 5 years; Egypt took 33.",
+  "words": 13,
+  "spoken_words": 13,
+  "spoken_figures": [
+   "dur53_chn",
+   "dur53_egy"
+  ],
+  "t_start": 112.5,
+  "t_end": 120.7,
+  "step_narration": "Set each country's clock to when its fertility fell below four children, and the curves line up. The road is shared; the speed is not. China went from five to three children in 5 years; Egypt took 33.",
+  "step_words": 38,
+  "step_t_start": 101.9,
+  "step_t_end": 120.7,
+  "step_mp4": [
+   {
+    "name": "fig04_same_road_registration",
+    "duration_s": 18.5
+   }
+  ]
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 1,
+  "caption": "Child deaths started falling first in 106 of 109 high-fertility countries.",
+  "lines": [
+   "Child deaths started falling first",
+   "in 106 of 109 high-fertility countries."
+  ],
+  "chars": 74,
+  "narration": "Child deaths started falling first in 106 of 109 high-fertility countries.",
+  "words": 11,
+  "spoken_words": 15,
+  "spoken_figures": [
+   "n_mort_first_onset+n_onset"
+  ],
+  "t_start": 120.7,
+  "t_end": 128.8,
+  "step_narration": "Child deaths started falling first in 106 of 109 high-fertility countries. The gap was typically at least 22 years.",
+  "step_words": 19,
+  "step_t_start": 120.7,
+  "step_t_end": 133.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 2,
+  "caption": "The gap was typically at least 22 years.",
+  "lines": [
+   "The gap was typically at least 22 years."
+  ],
+  "chars": 40,
+  "narration": "The gap was typically at least 22 years.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [
+   "lag_onset_lower_bound"
+  ],
+  "t_start": 128.8,
+  "t_end": 133.5,
+  "step_narration": "Child deaths started falling first in 106 of 109 high-fertility countries. The gap was typically at least 22 years.",
+  "step_words": 19,
+  "step_t_start": 120.7,
+  "step_t_end": 133.5,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 1,
+  "caption": "Within one country, this link is smaller than what comparing countries suggests.",
+  "lines": [
+   "Within one country, this link is smaller",
+   "than what comparing countries suggests."
+  ],
+  "chars": 80,
+  "narration": "Within one country, this link is smaller than what comparing countries suggests.",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [],
+  "t_start": 133.5,
+  "t_end": 138.9,
+  "step_narration": "Within one country, this link is smaller than what comparing countries suggests. A sequence in time, not proof of cause.",
+  "step_words": 20,
+  "step_t_start": 133.5,
+  "step_t_end": 142.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 2,
+  "caption": "A sequence in time, not proof of cause.",
+  "lines": [
+   "A sequence in time, not proof of cause."
+  ],
+  "chars": 39,
+  "narration": "A sequence in time, not proof of cause.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 138.9,
+  "t_end": 142.1,
+  "step_narration": "Within one country, this link is smaller than what comparing countries suggests. A sequence in time, not proof of cause.",
+  "step_words": 20,
+  "step_t_start": 133.5,
+  "step_t_end": 142.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 1,
+  "caption": "Question one, answered: child deaths fell first and births followed,",
+  "lines": [
+   "Question one, answered:",
+   "child deaths fell first and births followed,"
+  ],
+  "chars": 68,
+  "narration": "Question one, answered: child deaths fell first and births followed,",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 142.1,
+  "t_end": 146.7,
+  "step_narration": "Question one, answered: child deaths fell first and births followed, at each country's pace; latest in low-income countries. Migration moves on its own, alike among neighbours only in the Gulf, and weighs most in high-income countries.",
+  "step_words": 36,
+  "step_t_start": 142.1,
+  "step_t_end": 157.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 2,
+  "caption": "at each country's pace; latest in low-income countries.",
+  "lines": [
+   "at each country's pace;",
+   "latest in low-income countries."
+  ],
+  "chars": 55,
+  "narration": "at each country's pace; latest in low-income countries.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 146.7,
+  "t_end": 149.9,
+  "step_narration": "Question one, answered: child deaths fell first and births followed, at each country's pace; latest in low-income countries. Migration moves on its own, alike among neighbours only in the Gulf, and weighs most in high-income countries.",
+  "step_words": 36,
+  "step_t_start": 142.1,
+  "step_t_end": 157.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 3,
+  "caption": "Migration moves on its own, alike among neighbours only in the Gulf,",
+  "lines": [
+   "Migration moves on its own,",
+   "alike among neighbours only in the Gulf,"
+  ],
+  "chars": 68,
+  "narration": "Migration moves on its own, alike among neighbours only in the Gulf,",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [],
+  "t_start": 149.9,
+  "t_end": 154.7,
+  "step_narration": "Question one, answered: child deaths fell first and births followed, at each country's pace; latest in low-income countries. Migration moves on its own, alike among neighbours only in the Gulf, and weighs most in high-income countries.",
+  "step_words": 36,
+  "step_t_start": 142.1,
+  "step_t_end": 157.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s2",
+  "slide_name": "Slide 2",
+  "slide_index": 2,
+  "step": "s2.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 4,
+  "caption": "and weighs most in high-income countries.",
+  "lines": [
+   "and weighs most in high-income countries."
+  ],
+  "chars": 41,
+  "narration": "and weighs most in high-income countries.",
+  "words": 6,
+  "spoken_words": 6,
+  "spoken_figures": [],
+  "t_start": 154.7,
+  "t_end": 157.1,
+  "step_narration": "Question one, answered: child deaths fell first and births followed, at each country's pace; latest in low-income countries. Migration moves on its own, alike among neighbours only in the Gulf, and weighs most in high-income countries.",
+  "step_words": 36,
+  "step_t_start": 142.1,
+  "step_t_end": 157.1,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 1,
+  "caption": "Question two.",
+  "lines": [
+   "Question two."
+  ],
+  "chars": 13,
+  "narration": "Question two.",
+  "words": 2,
+  "spoken_words": 2,
+  "spoken_figures": [],
+  "t_start": 157.7,
+  "t_end": 159.1,
+  "step_narration": "Question two. Fertility alone captures the slow story: about three quarters of the differences in how old populations are. Only part of today's growth, and almost none of migration.",
+  "step_words": 29,
+  "step_t_start": 157.7,
+  "step_t_end": 172.9,
+  "step_mp4": [
+   {
+    "name": "fig07_single_indicator_scorecard",
+    "duration_s": 14.9
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 2,
+  "caption": "Fertility alone captures the slow story:",
+  "lines": [
+   "Fertility alone captures the slow story:"
+  ],
+  "chars": 40,
+  "narration": "Fertility alone captures the slow story:",
+  "words": 6,
+  "spoken_words": 6,
+  "spoken_figures": [],
+  "t_start": 159.1,
+  "t_end": 161.5,
+  "step_narration": "Question two. Fertility alone captures the slow story: about three quarters of the differences in how old populations are. Only part of today's growth, and almost none of migration.",
+  "step_words": 29,
+  "step_t_start": 157.7,
+  "step_t_end": 172.9,
+  "step_mp4": [
+   {
+    "name": "fig07_single_indicator_scorecard",
+    "duration_s": 14.9
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 3,
+  "caption": "about three quarters of the differences in how old populations are.",
+  "lines": [
+   "about three quarters of the differences",
+   "in how old populations are."
+  ],
+  "chars": 67,
+  "narration": "about three quarters of the differences in how old populations are.",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [
+   "r2_tfr_medage"
+  ],
+  "t_start": 161.5,
+  "t_end": 167.4,
+  "step_narration": "Question two. Fertility alone captures the slow story: about three quarters of the differences in how old populations are. Only part of today's growth, and almost none of migration.",
+  "step_words": 29,
+  "step_t_start": 157.7,
+  "step_t_end": 172.9,
+  "step_mp4": [
+   {
+    "name": "fig07_single_indicator_scorecard",
+    "duration_s": 14.9
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 4,
+  "caption": "Only part of today's growth, and almost none of migration.",
+  "lines": [
+   "Only part of today's growth,",
+   "and almost none of migration."
+  ],
+  "chars": 58,
+  "narration": "Only part of today's growth, and almost none of migration.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 167.4,
+  "t_end": 172.9,
+  "step_narration": "Question two. Fertility alone captures the slow story: about three quarters of the differences in how old populations are. Only part of today's growth, and almost none of migration.",
+  "step_words": 29,
+  "step_t_start": 157.7,
+  "step_t_end": 172.9,
+  "step_mp4": [
+   {
+    "name": "fig07_single_indicator_scorecard",
+    "duration_s": 14.9
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 1,
+  "caption": "Fertility alone finds only one in eight of each country's closest look-alikes.",
+  "lines": [
+   "Fertility alone finds only one in eight",
+   "of each country's closest look-alikes."
+  ],
+  "chars": 78,
+  "narration": "Fertility alone finds only one in eight of each country's closest look-alikes.",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [
+   "knn_tfr"
+  ],
+  "t_start": 172.9,
+  "t_end": 179.8,
+  "step_narration": "Fertility alone finds only one in eight of each country's closest look-alikes.",
+  "step_words": 12,
+  "step_t_start": 172.9,
+  "step_t_end": 179.8,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 1,
+  "caption": "Countries differ in two separate ways.",
+  "lines": [
+   "Countries differ in two separate ways."
+  ],
+  "chars": 38,
+  "narration": "Countries differ in two separate ways.",
+  "words": 6,
+  "spoken_words": 6,
+  "spoken_figures": [],
+  "t_start": 179.8,
+  "t_end": 182.8,
+  "step_narration": "Countries differ in two separate ways. Fertility tracks the first, the transition to fewer births and deaths, but misses migration.",
+  "step_words": 20,
+  "step_t_start": 179.8,
+  "step_t_end": 189.3,
+  "step_mp4": [
+   {
+    "name": "fig09_pca_two_dimensions",
+    "duration_s": 9.2
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 2,
+  "caption": "Fertility tracks the first, the transition to fewer births and deaths,",
+  "lines": [
+   "Fertility tracks the first,",
+   "the transition to fewer births and deaths,"
+  ],
+  "chars": 70,
+  "narration": "Fertility tracks the first, the transition to fewer births and deaths,",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 182.8,
+  "t_end": 187.2,
+  "step_narration": "Countries differ in two separate ways. Fertility tracks the first, the transition to fewer births and deaths, but misses migration.",
+  "step_words": 20,
+  "step_t_start": 179.8,
+  "step_t_end": 189.3,
+  "step_mp4": [
+   {
+    "name": "fig09_pca_two_dimensions",
+    "duration_s": 9.2
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 3,
+  "caption": "but misses migration.",
+  "lines": [
+   "but misses migration."
+  ],
+  "chars": 21,
+  "narration": "but misses migration.",
+  "words": 3,
+  "spoken_words": 3,
+  "spoken_figures": [],
+  "t_start": 187.2,
+  "t_end": 189.3,
+  "step_narration": "Countries differ in two separate ways. Fertility tracks the first, the transition to fewer births and deaths, but misses migration.",
+  "step_words": 20,
+  "step_t_start": 179.8,
+  "step_t_end": 189.3,
+  "step_mp4": [
+   {
+    "name": "fig09_pca_two_dimensions",
+    "duration_s": 9.2
+   }
+  ]
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 1,
+  "caption": "Blend indicators into one score:",
+  "lines": [
+   "Blend indicators into one score:"
+  ],
+  "chars": 32,
+  "narration": "Blend indicators into one score:",
+  "words": 5,
+  "spoken_words": 5,
+  "spoken_figures": [],
+  "t_start": 189.3,
+  "t_end": 191.9,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 2,
+  "caption": "the weights can shift one country in five by more than twenty places.",
+  "lines": [
+   "the weights can shift one country",
+   "in five by more than twenty places."
+  ],
+  "chars": 69,
+  "narration": "the weights can shift one country in five by more than twenty places.",
+  "words": 13,
+  "spoken_words": 13,
+  "spoken_figures": [
+   "share_rank_mc20"
+  ],
+  "t_start": 191.9,
+  "t_end": 198.6,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 3,
+  "caption": "Question two, answered: no.",
+  "lines": [
+   "Question two, answered: no."
+  ],
+  "chars": 27,
+  "narration": "Question two, answered: no.",
+  "words": 4,
+  "spoken_words": 4,
+  "spoken_figures": [],
+  "t_start": 198.6,
+  "t_end": 200.2,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 4,
+  "caption": "The Emirates and Belarus share the same fertility;",
+  "lines": [
+   "The Emirates and Belarus share the same fertility;"
+  ],
+  "chars": 50,
+  "narration": "The Emirates and Belarus share the same fertility;",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 200.2,
+  "t_end": 203.4,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 5,
+  "caption": "one grows almost four percent a year, the other shrinks.",
+  "lines": [
+   "one grows almost four percent a year,",
+   "the other shrinks."
+  ],
+  "chars": 56,
+  "narration": "one grows almost four percent a year, the other shrinks.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [
+   "twin_growth_are"
+  ],
+  "t_start": 203.4,
+  "t_end": 208.9,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s3",
+  "slide_name": "Slide 3",
+  "slide_index": 3,
+  "step": "s3.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 6,
+  "caption": "The story emerges only when transition and migration are read together.",
+  "lines": [
+   "The story emerges only when transition",
+   "and migration are read together."
+  ],
+  "chars": 71,
+  "narration": "The story emerges only when transition and migration are read together.",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 208.9,
+  "t_end": 213.3,
+  "step_narration": "Blend indicators into one score: the weights can shift one country in five by more than twenty places. Question two, answered: no. The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks. The story emerges only when transition and migration are read together.",
+  "step_words": 51,
+  "step_t_start": 189.3,
+  "step_t_end": 213.3,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 1,
+  "caption": "Question three.",
+  "lines": [
+   "Question three."
+  ],
+  "chars": 15,
+  "narration": "Question three.",
+  "words": 2,
+  "spoken_words": 2,
+  "spoken_figures": [],
+  "t_start": 213.9,
+  "t_end": 215.3,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 2,
+  "caption": "Grouped by seventy-year paths, countries form three stretches of one road,",
+  "lines": [
+   "Grouped by seventy-year paths,",
+   "countries form three stretches of one road,"
+  ],
+  "chars": 74,
+  "narration": "Grouped by seventy-year paths, countries form three stretches of one road,",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 215.3,
+  "t_end": 219.7,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 3,
+  "caption": "plus a migration-led group, mostly Gulf states.",
+  "lines": [
+   "plus a migration-led group, mostly Gulf states."
+  ],
+  "chars": 47,
+  "narration": "plus a migration-led group, mostly Gulf states.",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 219.7,
+  "t_end": 222.5,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 4,
+  "caption": "Early movers are projected to grow only through migration, or shrink.",
+  "lines": [
+   "Early movers are projected to grow",
+   "only through migration, or shrink."
+  ],
+  "chars": 69,
+  "narration": "Early movers are projected to grow only through migration, or shrink.",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 222.5,
+  "t_end": 226.9,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 5,
+  "caption": "Fast movers, India, China and Indonesia,",
+  "lines": [
+   "Fast movers, India, China and Indonesia,"
+  ],
+  "chars": 40,
+  "narration": "Fast movers, India, China and Indonesia,",
+  "words": 6,
+  "spoken_words": 6,
+  "spoken_figures": [],
+  "t_start": 226.9,
+  "t_end": 229.3,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 6,
+  "caption": "are projected to age from 30 to 40 in about 32 years.",
+  "lines": [
+   "are projected to age",
+   "from 30 to 40 in about 32 years."
+  ],
+  "chars": 53,
+  "narration": "are projected to age from 30 to 40 in about 32 years.",
+  "words": 12,
+  "spoken_words": 12,
+  "spoken_figures": [
+   "yrs_medage30_40_recent"
+  ],
+  "t_start": 229.3,
+  "t_end": 235.6,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 7,
+  "caption": "About as fast as Early movers did, or faster.",
+  "lines": [
+   "About as fast as Early movers did, or faster."
+  ],
+  "chars": 45,
+  "narration": "About as fast as Early movers did, or faster.",
+  "words": 9,
+  "spoken_words": 9,
+  "spoken_figures": [],
+  "t_start": 235.6,
+  "t_end": 239.2,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b1",
+  "fragment_index": 1,
+  "reveal_fragment": 0,
+  "build": "1",
+  "cue": 8,
+  "caption": "Recent movers have the highest child mortality today.",
+  "lines": [
+   "Recent movers have the highest",
+   "child mortality today."
+  ],
+  "chars": 53,
+  "narration": "Recent movers have the highest child mortality today.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 239.2,
+  "t_end": 242.4,
+  "step_narration": "Question three. Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states. Early movers are projected to grow only through migration, or shrink. Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years. About as fast as Early movers did, or faster. Recent movers have the highest child mortality today.",
+  "step_words": 66,
+  "step_t_start": 213.9,
+  "step_t_end": 242.4,
+  "step_mp4": [
+   {
+    "name": "fig10_trajectory_groups",
+    "duration_s": 28.2
+   }
+  ]
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b2",
+  "fragment_index": 2,
+  "reveal_fragment": 1,
+  "build": "2",
+  "cue": 1,
+  "caption": "Countries grew closer in life expectancy, but further apart in age.",
+  "lines": [
+   "Countries grew closer in life expectancy,",
+   "but further apart in age."
+  ],
+  "chars": 67,
+  "narration": "Countries grew closer in life expectancy, but further apart in age.",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 242.4,
+  "t_end": 247.4,
+  "step_narration": "Countries grew closer in life expectancy, but further apart in age.",
+  "step_words": 11,
+  "step_t_start": 242.4,
+  "step_t_end": 247.4,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 1,
+  "caption": "Question three, answered: mostly one road, at different speeds.",
+  "lines": [
+   "Question three, answered:",
+   "mostly one road, at different speeds."
+  ],
+  "chars": 63,
+  "narration": "Question three, answered: mostly one road, at different speeds.",
+  "words": 9,
+  "spoken_words": 9,
+  "spoken_figures": [],
+  "t_start": 247.4,
+  "t_end": 251.6,
+  "step_narration": "Question three, answered: mostly one road, at different speeds. For the UN: watch child survival where it is off pace for the 2030 goal. Watch ageing where fertility is low but populations still grow. Watch migration data where growth depends on arrivals.",
+  "step_words": 42,
+  "step_t_start": 247.4,
+  "step_t_end": 265.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 2,
+  "caption": "For the UN: watch child survival where it is off pace for the 2030 goal.",
+  "lines": [
+   "For the UN: watch child survival",
+   "where it is off pace for the 2030 goal."
+  ],
+  "chars": 72,
+  "narration": "For the UN: watch child survival where it is off pace for the 2030 goal.",
+  "words": 15,
+  "spoken_words": 16,
+  "spoken_figures": [],
+  "t_start": 251.6,
+  "t_end": 258.0,
+  "step_narration": "Question three, answered: mostly one road, at different speeds. For the UN: watch child survival where it is off pace for the 2030 goal. Watch ageing where fertility is low but populations still grow. Watch migration data where growth depends on arrivals.",
+  "step_words": 42,
+  "step_t_start": 247.4,
+  "step_t_end": 265.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 3,
+  "caption": "Watch ageing where fertility is low but populations still grow.",
+  "lines": [
+   "Watch ageing where fertility",
+   "is low but populations still grow."
+  ],
+  "chars": 63,
+  "narration": "Watch ageing where fertility is low but populations still grow.",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 258.0,
+  "t_end": 262.0,
+  "step_narration": "Question three, answered: mostly one road, at different speeds. For the UN: watch child survival where it is off pace for the 2030 goal. Watch ageing where fertility is low but populations still grow. Watch migration data where growth depends on arrivals.",
+  "step_words": 42,
+  "step_t_start": 247.4,
+  "step_t_end": 265.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b3",
+  "fragment_index": 3,
+  "reveal_fragment": 2,
+  "build": "3",
+  "cue": 4,
+  "caption": "Watch migration data where growth depends on arrivals.",
+  "lines": [
+   "Watch migration data",
+   "where growth depends on arrivals."
+  ],
+  "chars": 54,
+  "narration": "Watch migration data where growth depends on arrivals.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 262.0,
+  "t_end": 265.2,
+  "step_narration": "Question three, answered: mostly one road, at different speeds. For the UN: watch child survival where it is off pace for the 2030 goal. Watch ageing where fertility is low but populations still grow. Watch migration data where growth depends on arrivals.",
+  "step_words": 42,
+  "step_t_start": 247.4,
+  "step_t_end": 265.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 1,
+  "caption": "Projections are labelled as scenarios; examples follow a rule;",
+  "lines": [
+   "Projections are labelled as scenarios;",
+   "examples follow a rule;"
+  ],
+  "chars": 62,
+  "narration": "Projections are labelled as scenarios; examples follow a rule;",
+  "words": 9,
+  "spoken_words": 9,
+  "spoken_figures": [],
+  "t_start": 265.2,
+  "t_end": 269.4,
+  "step_narration": "Projections are labelled as scenarios; examples follow a rule; hypotheses were fixed before the final run. These are patterns, not causes; every number and our AI use are documented in our notebook.",
+  "step_words": 32,
+  "step_t_start": 265.2,
+  "step_t_end": 278.6,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 2,
+  "caption": "hypotheses were fixed before the final run.",
+  "lines": [
+   "hypotheses were fixed before the final run."
+  ],
+  "chars": 43,
+  "narration": "hypotheses were fixed before the final run.",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 269.4,
+  "t_end": 272.2,
+  "step_narration": "Projections are labelled as scenarios; examples follow a rule; hypotheses were fixed before the final run. These are patterns, not causes; every number and our AI use are documented in our notebook.",
+  "step_words": 32,
+  "step_t_start": 265.2,
+  "step_t_end": 278.6,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 3,
+  "caption": "These are patterns, not causes;",
+  "lines": [
+   "These are patterns, not causes;"
+  ],
+  "chars": 31,
+  "narration": "These are patterns, not causes;",
+  "words": 5,
+  "spoken_words": 5,
+  "spoken_figures": [],
+  "t_start": 272.2,
+  "t_end": 274.2,
+  "step_narration": "Projections are labelled as scenarios; examples follow a rule; hypotheses were fixed before the final run. These are patterns, not causes; every number and our AI use are documented in our notebook.",
+  "step_words": 32,
+  "step_t_start": 265.2,
+  "step_t_end": 278.6,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b4",
+  "fragment_index": 4,
+  "reveal_fragment": 3,
+  "build": "4",
+  "cue": 4,
+  "caption": "every number and our AI use are documented in our notebook.",
+  "lines": [
+   "every number and our AI use",
+   "are documented in our notebook."
+  ],
+  "chars": 59,
+  "narration": "every number and our AI use are documented in our notebook.",
+  "words": 11,
+  "spoken_words": 11,
+  "spoken_figures": [],
+  "t_start": 274.2,
+  "t_end": 278.6,
+  "step_narration": "Projections are labelled as scenarios; examples follow a rule; hypotheses were fixed before the final run. These are patterns, not causes; every number and our AI use are documented in our notebook.",
+  "step_words": 32,
+  "step_t_start": 265.2,
+  "step_t_end": 278.6,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b5",
+  "fragment_index": 5,
+  "reveal_fragment": 4,
+  "build": "5",
+  "cue": 1,
+  "caption": "One number can't tell eight billion stories.",
+  "lines": [
+   "One number can't tell eight billion stories."
+  ],
+  "chars": 44,
+  "narration": "One number can't tell eight billion stories.",
+  "words": 7,
+  "spoken_words": 7,
+  "spoken_figures": [],
+  "t_start": 278.6,
+  "t_end": 282.0,
+  "step_narration": "One number can't tell eight billion stories. But births, deaths and migration, read together region by region, can tell the UN where to look next.",
+  "step_words": 25,
+  "step_t_start": 278.6,
+  "step_t_end": 289.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b5",
+  "fragment_index": 5,
+  "reveal_fragment": 4,
+  "build": "5",
+  "cue": 2,
+  "caption": "But births, deaths and migration, read together region by region,",
+  "lines": [
+   "But births, deaths and migration,",
+   "read together region by region,"
+  ],
+  "chars": 65,
+  "narration": "But births, deaths and migration, read together region by region,",
+  "words": 10,
+  "spoken_words": 10,
+  "spoken_figures": [],
+  "t_start": 282.0,
+  "t_end": 286.0,
+  "step_narration": "One number can't tell eight billion stories. But births, deaths and migration, read together region by region, can tell the UN where to look next.",
+  "step_words": 25,
+  "step_t_start": 278.6,
+  "step_t_end": 289.2,
+  "step_mp4": []
+ },
+ {
+  "slide": "s4",
+  "slide_name": "Slide 4",
+  "slide_index": 4,
+  "step": "s4.b5",
+  "fragment_index": 5,
+  "reveal_fragment": 4,
+  "build": "5",
+  "cue": 3,
+  "caption": "can tell the UN where to look next.",
+  "lines": [
+   "can tell the UN where to look next."
+  ],
+  "chars": 35,
+  "narration": "can tell the UN where to look next.",
+  "words": 8,
+  "spoken_words": 8,
+  "spoken_figures": [],
+  "t_start": 286.0,
+  "t_end": 289.2,
+  "step_narration": "One number can't tell eight billion stories. But births, deaths and migration, read together region by region, can tell the UN where to look next.",
+  "step_words": 25,
+  "step_t_start": 278.6,
+  "step_t_end": 289.2,
+  "step_mp4": []
+ }
+]

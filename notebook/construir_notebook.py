@@ -250,6 +250,8 @@ PORTADA = f"""
 
 **{EQUIPO_LINEA}** · cifras v1 congeladas el **{N('meta_numbers_date')}** · datos: UN DESA, *World Population Prospects 2024* (CC BY 3.0 IGO).
 
+**Ética:** American Statistical Association (2022), *Ethical Guidelines for Statistical Practice*, https://doi.org/10.5281/zenodo.7092386 · archivos WPP 2024 en la carpeta del proyecto desde el 2026-10-02 (fecha de los archivos; la fecha exacta de descarga la confirma el equipo); SHA-256 en §9.1 y en `data/README.md`.
+
 Este notebook ejecuta, de principio a fin y en este orden, `R/01_preparar_datos.R`, `R/02_q1_palancas.R`, `R/03_q2_un_numero.R`, `R/04_q3_caminos.R` y `R/05_numbers_json.R`. El código de cada celda es **copia literal** de esos scripts (lo genera `notebook/construir_notebook.py`, que corta las celdas solo en los encabezados de sección y nunca dentro de una expresión de R): correr el notebook o correr los scripts con `Rscript` da las mismas cifras. Todas las cifras del vídeo y de las diapositivas salen de `figures/numbers.json`, que se escribe en la sección 7.
 
 **Cómo se ejecuta** (desde la raíz del repositorio; ≈ 20 minutos con 14 núcleos, la mayor parte en Q1):
@@ -267,7 +269,7 @@ Los archivos crudos de la ONU (`WPP2024_Demographic_Indicators_Medium_csv.gz`, `
 > - Código y comentarios en español; títulos, ejes y textos de las gráficas en inglés.
 > - **País** = fila con `ISO3_code` no vacío: **{N('n_countries')} países y áreas**, cada uno contado una vez. Los agregados de la ONU (mundo, regiones, grupos de ingreso) **nunca** entran en un análisis entre países; solo se usan para líneas regionales y comprobaciones.
 > - Modelos, correlaciones, PCA, clustering, panel y Moran usan los **{N('n_countries_1m')} países con ≥ 1 M de habitantes en 2023**; mapas y conteos usan los {N('n_countries')}.
-> - **Estimaciones 1950–2023** ("Estimate") y **proyección Medium 2024–2100** ("UN medium projection") van siempre separadas y rotuladas; ningún estadístico usa una ventana que cruce 2023/2024.
+> - **Estimaciones 1950–2023** ("Estimate") y **proyección Medium 2024–2100** ("UN medium projection") van siempre separadas y rotuladas; ningún estadístico usa una ventana que cruce 2023/2024, salvo tres que combinan estimación y proyección y se rotulan así: los años de edad mediana 30 → 40 (`yrs_medage30_40_*`), los años de crecimiento por inercia (`momentum_years_range`) y las curvas 1950–2100 de fig10 (gris = proyección Medium, que supone que la transición continúa).
 > - **Intervalos:** IC 95 % por *bootstrap* por bloques de las 20 subregiones ONU (B = 2 000, semilla 2026), el único que puede salir en pantalla junto con Wilson (proporciones), Kaplan–Meier (tiempos) y los intervalos de predicción de la ONU. Describen la **sensibilidad a qué países (o regiones) entran**, no un error muestral: los países no son una muestra.
 > - **Nada es causal.** Usamos "va con", "precede", "dentro del mismo país", "entre países"; nunca "causa", "impulsa" ni "efecto de".
 > - Cada sección lleva su etiqueta: *Pre-specified (H…)* = la afirmación estaba fijada antes de la corrida final; *Exploratory* = sugerida por los propios datos; *Descriptive* = conteo o descripción sin hipótesis.
@@ -392,7 +394,7 @@ POST_DATOS = """
 HIPOTESIS_INTRO = """
 ## 2. Hipótesis preinscritas (`docs/hipotesis_preinscritas.md`)
 
-**Honestidad sobre el estatus (ASA B.3, C.3).** Todas las hipótesis se formularon **después** de análisis exploratorios de los mismos datos (EDA previo del equipo y prototipos de siete asesores, 22-oct-2026). *Pre-specified* significa que el enunciado, el filtro, el estadístico y la regla de decisión quedaron fijados **antes de la corrida final**; no son confirmaciones independientes ni un pre-registro externo. Cada hipótesis se reporta con su resultado, sea cual sea (tabla consolidada en la sección 6). En pantalla se usa "pre-specified", nunca "pre-registered" ni "confirmatory".
+**Honestidad sobre el estatus (ASA B.3, C.3).** Todas las hipótesis se formularon **después** de análisis exploratorios de los mismos datos (EDA previo del equipo y prototipos de siete agentes asesores de IA —no son personas—, 22-oct-2026). *Pre-specified* significa que el enunciado, el filtro, el estadístico y la regla de decisión quedaron fijados **antes de la corrida final**; no son confirmaciones independientes ni un pre-registro externo. Cada hipótesis se reporta con su resultado, sea cual sea (tabla consolidada en la sección 6). En pantalla se usa "pre-specified", nunca "pre-registered" ni "confirmatory".
 
 Familias de contraste: **F1** = H1–H25 (si hay p-valor, Holm); **F2** = rejillas de sensibilidad (Benjamini–Hochberg o distribución completa sin marcar); **F3** = ilustraciones por regla sin inferencia (gemelos, look-alikes de Colombia, países resaltados, nombres de grupos). Ningún p-valor sale en el vídeo ni en las diapositivas.
 
@@ -545,7 +547,7 @@ Hipótesis y frases que cayeron. Se publican aquí, en el README y en `docs/corr
 | "Fertility and migration couple **only in high-income** countries (ρ = −0,36)" (H5) | Con ≥ 1 M el signo cambia: +0,10 [−0,20; 0,41]; el −0,36 lo generan microestados | [ST][MV] | Forest por ingreso y paradoja tipo Simpson (S15) |
 | "Migration has **no memory** (β ≈ −1)" (H4) | β ≈ −1 es exactamente lo que da el ruido puro (placebo −1,00); entre décadas consecutivas la migración correlaciona 0,32–0,68 y el 76 % mantiene el signo | [ST][DEM] | "Short memory and almost no neighbourhood" (S16) |
 | "In rich countries migration **fills the gap** that low fertility leaves" | Dentro del país, 1 punto menos de saldo natural va con +0,01 ‰ de migración [−0,17; 0,18]; la "compensación" es contabilidad del agregado y calendario compartido; además evoca el marco del "gran reemplazo" | [PN][DEM][ET] | "Net migration accounted for about seven in ten of the growth" |
-| "Fast movers will age **faster than anyone before**" | Corea tardó 17 años en pasar de edad mediana 30 a 40, Japón 21, China 23 | [DEM] | "Projected to age in about 25 years what Europe took 40 to 50" |
+| "Fast movers will age **faster than anyone before**" | Corea tardó 17 años en pasar de edad mediana 30 a 40, Japón 21, China 23 | [DEM] | "Projected to age from 30 to 40 in about 32 years, about as fast as Early movers did, or faster" |
 | "**Europe took a century**, Asia and Latin America about fifty years" | Europa ya estaba en TFR 2,78 en 1950 (censurada); de 5 a 2,5: E/SE Asia 32 años, LAC 30 | [ST] | Registro por hitos + velocidad 5 → 3 (China 5, Egipto 33) |
 | "**Everyone heads** to the bottom-left corner" | La convergencia futura es un supuesto del modelo de proyección (teleología) | [DEM][ET] | "The road is shared; the speed is not" (observado ≤ 2023) |
 | "The transition axis captures **only 46 %**; 3 axes for 70 %" (H7) | Con el conjunto fijo de 12: PC1 56,7 %, 2 ejes = 74,6 %; el % va de 46 a 77 según las variables | [MV][INF] | "Two real dimensions" (análisis paralelo) |
@@ -610,7 +612,7 @@ Este análisis sigue los *Ethical Guidelines for Statistical Practice* de la Ame
 ### 9.6 Privacidad, reproducibilidad, IA y correcciones (D.4, B.4, B.5, F.4, A.5)
 - No se usan datos personales: todo son agregados nacionales publicados.
 - Reproducibilidad: R y paquetes en la sección 10 (`sessionInfo()`), `set.seed(2026)` antes de cada remuestreo, SHA-256 de los crudos y del archivo de hipótesis en `numbers.json`; ejecutar este notebook regenera `figures/numbers.json`, las tablas `data/processed/resultados_q*.parquet` y las figuras de revisión.
-- **Uso de IA:** usamos asistentes de IA (Claude Code, de Anthropic) para redactar código, documentación y el guion. Cada cifra procede de este notebook, y el equipo revisa cada número (`verified` en `numbers.json`, que marca QA-stats) y cada figura.
+- **Uso de IA:** agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, escribieron la mayor parte del código, los memos de asesoría, las figuras y los borradores del guion y de las diapositivas. `verified: true` en `numbers.json` lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: **no es una revisión humana**. La revisión humana de las cifras habladas se firma en `docs/verificacion_numeros.csv`; el registro de uso de IA está en `docs/registro_ia.md`.
 - Los errores detectados y corregidos se registran en `docs/correcciones.md`.
 
 ### 9.7 Conflictos de interés y límites de competencia (A.1, A.7)
@@ -653,7 +655,7 @@ REFERENCIAS = f"""
 - United Nations, Department of Economic and Social Affairs, Population Division (2024). *World Population Prospects 2024*, Online Edition. https://population.un.org/wpp/ — licensed under CC BY 3.0 IGO (https://creativecommons.org/licenses/by/3.0/igo/). Changes: we aggregated, modelled and charted the data; the UN does not endorse this work.
 - UN DESA (2024). *World Population Prospects 2024: Methodology of the United Nations population estimates and projections* (UN DESA/POP/2024/DC/NO.10) · *World Population Prospects 2024: Summary of Results* (UN DESA/POP/2024/TR/NO.9) · release note on 2022 vs 2024 revisions (11 Jul 2024) · WPP 2024 *Interim Update* (Togo), 19 Jan 2026.
 - WPP2024 Supplement (births by sex, LE60) — prepared by the DataQuest organisers from the UN Data Portal.
-- World Bank (2026). *Country and Lending Groups, FY2027* (effective 1 July 2026; 2025 GNI per capita, Atlas method). API download 2026-10-22.
+- World Bank (2026). *Country and Lending Groups, FY2027* (effective 1 July 2026; 2025 GNI per capita, Atlas method). API download 2026-10-22. CC BY 4.0.
 - Natural Earth (public domain) map data. *Boundaries and names shown do not imply official endorsement or acceptance by the United Nations.*
 
 **Métodos y ética**
@@ -671,7 +673,7 @@ REFERENCIAS = f"""
 - R (versión en la sección 10); tidyverse, data.table, arrow, sf, rnaturalearth, fixest, survival, fda, fda.usc, cluster, mclust, clue, boot, mgcv, patchwork, ggrepel, magick, IRkernel; Jupyter / nbconvert.
 
 **Asistencia de IA y reproducibilidad**
-- AI assistance: Claude Code (Anthropic) helped draft code and text; every number was regenerated by this notebook and is checked by the team.
+- AI assistance: Claude Code (Anthropic) AI agents, directed by the team, wrote most of the R code, the analysis memos, the figures and drafts of the slides and script. Every number shown or said was independently recomputed from the raw UN files with separate code (also AI-written); the team reviewed the results. Log: `docs/registro_ia.md`.
 - Code, notebook, figures and pre-specified hypotheses (SHA-256 `{N('hyp_file_sha256_short')}`): repositorio público pendiente de crear (`repo` aún vacío en `docs/equipo.json`). Código MIT; textos CC BY 4.0.
 """
 

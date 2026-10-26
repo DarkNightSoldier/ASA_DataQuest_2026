@@ -9,14 +9,22 @@ Otros modos:
 
 Marcadores admitidos en el texto:
     {clave}            valor formateado (mismas reglas que slides/js/numbers.js)
-    {clave.say}        campo "say" (frase hablada, p. ej. "about seven in ten")
+    {clave.say}        campo "say" (frase hablada, p. ej. "seven in ten"); error si la clave no lo tiene
+    {clave.voice}      forma hablada: "say" si existe; si no, el valor formateado y, en listas de
+                       países, el nombre corto admitido en voz (storyboard §8: "Russia", "the United
+                       States", "Iran", "the Emirates"…)
     {clave.campo}      cualquier otro campo de la entrada (sens_low, ci_high, pi95_low…)
-    {clave:fmt}        decimales forzados, p. ej. {dur53_chn:1}
+    {clave:fmt}        decimales forzados, p. ej. {yrs_medage30_40_early:0}
+    {^clave…}          igual, con la primera letra en mayúscula (inicio de frase)
 Las llaves que no son marcadores (código, JSON) se respetan si no casan con el patrón
-[A-Za-z_][A-Za-z0-9_]* o si van escapadas como {{ }}.
+[A-Za-z_][A-Za-z0-9_.]* o si van escapadas como {{ }}.
 
-Sale con código 2 si queda algún marcador sin resolver (salvo --allow-missing) y avisa de
-las claves con verified != true.
+Redondeo: ROUND_HALF_UP sobre la representación decimal del valor (Decimal(repr(v)).quantize),
+p. ej. 36.5 → 37 con fmt "0" y 0.735 → 0.74 con fmt "0.00" (el f-string de Python daba 36 y 0.73).
+
+Seguridad de cifras (QA-stats, docs/QA_stats.md §7): una clave que no existe en numbers.json o cuya
+entrada no tiene "verified": true es un ERROR (código 2) en todos los modos, salvo --allow-unverified
+(solo pruebas). --allow-missing se conserva por compatibilidad y equivale a --allow-unverified.
 """
 from __future__ import annotations
 
@@ -25,6 +33,7 @@ import json
 import math
 import re
 import sys
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
@@ -32,7 +41,28 @@ DEFAULT_NUMBERS = REPO / "figures" / "numbers.json"
 ISO_JS = REPO / "slides" / "js" / "iso_codes.js"
 NUMBERS_JS = REPO / "slides" / "js" / "numbers.js"
 MINUS = "−"
-PAT = re.compile(r"(?<!\{)\{([A-Za-z_][A-Za-z0-9_]*)(?:\.([A-Za-z_][A-Za-z0-9_]*))?(?::([0-9]+))?\}(?!\})")
+# claves con punto (share_keep_ge_0.8) admitidas: el último ".campo" solo cuenta como campo si
+# la clave completa no existe (ver split_key)
+PAT = re.compile(r"(?<!\{)\{(\^)?([A-Za-z_][A-Za-z0-9_.]*?)(?:\.([A-Za-z_][A-Za-z0-9_]*))?(?::([0-9]+))?\}(?!\})")
+
+# Nombres cortos admitidos en voz (storyboard §8 "Nombres ONU"); en pantalla se usa el nombre WPP
+VOICE_NAMES = {
+    "Russian Federation": "Russia",
+    "United States of America": "the United States",
+    "Iran (Islamic Republic of)": "Iran",
+    "United Arab Emirates": "the Emirates",
+    "United Kingdom": "the United Kingdom",
+    "Republic of Korea": "the Republic of Korea",
+    "Netherlands": "the Netherlands",
+    "Philippines": "the Philippines",
+    "Democratic Republic of the Congo": "the Democratic Republic of the Congo",
+    "Syrian Arab Republic": "Syria",
+    "Venezuela (Bolivarian Republic of)": "Venezuela",
+    "Bolivia (Plurinational State of)": "Bolivia",
+    "United Republic of Tanzania": "Tanzania",
+    "Republic of Moldova": "Moldova",
+    "Lao People's Democratic Republic": "Laos",
+}
 
 
 # ---------------------------------------------------------------- formato (= numbers.js)
@@ -55,9 +85,16 @@ def decimals_for(fmt, v: float) -> int:
     return 2 if abs(v) < 1 else 1
 
 
+def round_half_up(v: float, d: int) -> str:
+    """|v| redondeado a d decimales, mitad hacia arriba, sobre la representación decimal (repr)."""
+    q = Decimal(1).scaleb(-d)
+    r = Decimal(repr(abs(float(v)))).quantize(q, rounding=ROUND_HALF_UP)
+    return f"{r:.{d}f}"
+
+
 def format_number(v: float, fmt=None, sign: str | None = None, ascii_minus: bool = False) -> str:
     d = decimals_for(fmt, v)
-    s = f"{abs(v):.{d}f}"
+    s = round_half_up(v, d)
     if (isinstance(fmt, str) and "," in fmt) or abs(v) >= 10000:
         ip, _, dp = s.partition(".")
         ip = f"{int(ip):,}"
@@ -140,8 +177,19 @@ def entry(numbers: dict, key: str):
         if b and isinstance(b.get("sens_low"), (int, float)) and isinstance(b.get("sens_high"), (int, float)):
             f = b.get("range_fmt", "0")
             return {"value": f"{format_number(b['sens_low'], f)}–{format_number(b['sens_high'], f)}",
-                    "verified": b.get("verified"), "derived_from": base}
+                    "verified": b.get("verified"), "nota_qa": b.get("nota_qa"), "derived_from": base}
     return None
+
+
+def split_key(numbers: dict, key: str, field: str | None):
+    """PAT es perezoso con el punto: 'share_keep_ge_0' + '.8' no es campo. Reconstruye la clave."""
+    if field and entry(numbers, key) is None and entry(numbers, f"{key}.{field}") is not None:
+        return f"{key}.{field}", None
+    if field is None and "." in key and entry(numbers, key) is None:
+        k, _, f = key.rpartition(".")
+        if entry(numbers, k) is not None:
+            return k, f
+    return key, field
 
 
 def format_key(numbers: dict, key: str, field: str | None = None, fmt=None, ascii_minus=False):
@@ -152,6 +200,13 @@ def format_key(numbers: dict, key: str, field: str | None = None, fmt=None, asci
         if e.get("say") not in (None, ""):
             return str(e["say"])
         return None  # en la voz, sin "say" es un error: la frase hablada debe existir
+    if field == "voice":
+        if e.get("say") not in (None, ""):
+            return str(e["say"])
+        v = e.get("value")
+        if isinstance(v, list):
+            return join_list([VOICE_NAMES.get(name_of(x), name_of(x)) for x in v])
+        field = None  # cifra sin "say": se lee el valor formateado
     v = e.get(field) if field else e.get("value")
     if v is None or (isinstance(v, float) and not math.isfinite(v)):
         return None
@@ -170,12 +225,15 @@ def fill_text(text: str, numbers: dict, ascii_minus=False):
     missing, used = [], set()
 
     def rep(m):
-        key, field, fmt = m.group(1), m.group(2), m.group(3)
+        cap, key, field, fmt = m.group(1), m.group(2), m.group(3), m.group(4)
+        key, field = split_key(numbers, key, field)
         used.add(key)
         out = format_key(numbers, key, field, fmt, ascii_minus)
         if out is None:
             missing.append(m.group(0))
             return m.group(0)
+        if cap and out:
+            out = out[0].upper() + out[1:]
         return out
 
     out = PAT.sub(rep, text)
@@ -193,8 +251,26 @@ def keys_in_html(html: str) -> set[str]:
     html = re.sub(r"<!--.*?-->", "", html, flags=re.S)  # el comentario de convenciones no cuenta
     keys = set(re.findall(r'data-(?:num|flags|list)="([^"]+)"', html))
     for cap in re.findall(r'data-caption="([^"]*)"', html):
-        keys |= {m.group(1) for m in PAT.finditer(cap)}
+        keys |= {m.group(2) for m in PAT.finditer(cap)}
     return keys
+
+
+def audit(numbers: dict, keys) -> tuple[list[str], list[str]]:
+    """(inexistentes, sin verificar) — sin verificar = entrada con verified distinto de True."""
+    miss = sorted(k for k in keys if entry(numbers, k) is None)
+    unver = sorted(k for k in keys if entry(numbers, k) is not None and entry(numbers, k).get("verified") is not True)
+    return miss, unver
+
+
+def report_rejected(numbers: dict, miss: list[str], unver: list[str], where: str) -> None:
+    print(f"[fill_numbers] ERROR en {where}: hay cifras que no se pueden decir ni mostrar "
+          "(docs/QA_stats.md §7). Reformule la frase sin la cifra o verifique la clave; "
+          "--allow-unverified solo para pruebas.", file=sys.stderr)
+    for k in miss:
+        print(f"  ✘ {k}: no existe en numbers.json", file=sys.stderr)
+    for k in unver:
+        nota = (entry(numbers, k) or {}).get("nota_qa") or "verified != true"
+        print(f"  ✘ {k}: sin verificar · {nota}", file=sys.stderr)
 
 
 def main() -> int:
@@ -202,11 +278,14 @@ def main() -> int:
     ap.add_argument("input", nargs="?", help="markdown con marcadores {clave}")
     ap.add_argument("-o", "--output", help="salida (por defecto: <input>_filled.md)")
     ap.add_argument("--numbers", default=str(DEFAULT_NUMBERS), help="ruta a numbers.json")
-    ap.add_argument("--allow-missing", action="store_true", help="no fallar si quedan marcadores")
+    ap.add_argument("--allow-unverified", action="store_true",
+                    help="no fallar con claves inexistentes, sin valor o sin verificar (solo pruebas)")
+    ap.add_argument("--allow-missing", action="store_true", help="alias antiguo de --allow-unverified")
     ap.add_argument("--ascii-minus", action="store_true", help="usar '-' en lugar de U+2212")
     ap.add_argument("--check-html", metavar="HTML", help="lista claves usadas en el HTML que faltan o no están verificadas")
     ap.add_argument("--emit-js", metavar="JS", help="escribe window.NUMBERS = {...} (para abrir el deck por file://)")
     a = ap.parse_args()
+    allow = a.allow_unverified or a.allow_missing
 
     npath = Path(a.numbers)
     if not npath.exists():
@@ -225,28 +304,32 @@ def main() -> int:
 
     if a.check_html:
         keys = keys_in_html(Path(a.check_html).read_text(encoding="utf-8"))
-        miss = sorted(k for k in keys if entry(numbers, k) is None)
-        unver = sorted(k for k in keys if entry(numbers, k) is not None and entry(numbers, k).get("verified") is not True)
+        miss, unver = audit(numbers, keys)
         print(f"[fill_numbers] {a.check_html}: {len(keys)} claves · {len(miss)} sin valor · {len(unver)} sin verificar")
         if miss:
             print("  sin valor:", ", ".join(miss))
         if unver:
             print("  sin verificar:", ", ".join(unver))
-        rc = 2 if miss and not a.allow_missing else rc
+        if (miss or unver) and not allow:
+            report_rejected(numbers, miss, unver, a.check_html)
+            rc = 2
 
     if a.input:
         src = Path(a.input)
         out_path = Path(a.output) if a.output else src.with_name(src.stem + "_filled" + src.suffix)
         text, missing, used = fill_text(src.read_text(encoding="utf-8"), numbers, a.ascii_minus)
-        out_path.write_text(text, encoding="utf-8")
-        unver = sorted(k for k in used if entry(numbers, k) is not None and entry(numbers, k).get("verified") is not True)
-        print(f"[fill_numbers] {src} → {out_path} · {len(used)} claves · {len(missing)} sin resolver · {len(unver)} sin verificar")
-        if unver:
-            print("  sin verificar:", ", ".join(unver))
+        miss, unver = audit(numbers, used)
+        print(f"[fill_numbers] {src} → {out_path} · {len(used)} claves · {len(missing)} sin resolver · "
+              f"{len(unver)} sin verificar")
         if missing:
             print("  sin resolver:", ", ".join(sorted(set(missing))), file=sys.stderr)
-            if not a.allow_missing:
-                rc = 2
+        if (missing or miss or unver) and not allow:
+            report_rejected(numbers, miss, unver, str(src))
+            print(f"[fill_numbers] no se escribe {out_path}", file=sys.stderr)
+            return 2
+        out_path.write_text(text, encoding="utf-8")
+        if unver:
+            print("  AVISO (--allow-unverified): sin verificar:", ", ".join(unver), file=sys.stderr)
     if not (a.input or a.check_html or a.emit_js):
         ap.print_help()
     return rc

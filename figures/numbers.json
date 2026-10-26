@@ -7472,7 +7472,7 @@
   },
   "n_territories": {
     "value": 42,
-    "unit": "territories and areas",
+    "unit": "other areas",
     "fmt": "0",
     "say": null,
     "def": "Territories and areas among the 237 (not UN Member or observer States), explicit ISO3 list",

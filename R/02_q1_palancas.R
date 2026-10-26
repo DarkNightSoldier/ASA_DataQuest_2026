@@ -287,7 +287,7 @@ for (k in c("n_sovereign", "n_states")) {
          status = "descriptive", sens_note = paste("Territories/areas:", paste(TERRITORIOS_42, collapse = ", ")),
          n = N_PAISES, universe = UNIVERSO_237)
 }
-anotar("n_territories", value = length(TERRITORIOS_42), unit = "territories and areas", fmt = "0",
+anotar("n_territories", value = length(TERRITORIOS_42), unit = "other areas", fmt = "0",
        def = "Territories and areas among the 237 (not UN Member or observer States), explicit ISO3 list",
        filter = F_SOB, source_cell = "Q1-1.3", used_in = c("slide1.build0", "cover"), method = "none_census",
        status = "descriptive", sens_note = sprintf("%d of them have >= 1 M people: %s", length(ter_1m), paste(ter_1m, collapse = ", ")),

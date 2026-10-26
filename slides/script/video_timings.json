@@ -1,0 +1,469 @@
+{
+  "_comment": "Generado por slides/script/build_narration.py desde slides/script/narration_en_template.md (guion final 2026-10-25). Modelo: 150 ppm + 1,5 s de aire por cifra hablada + 0,6 s de transición por paso (salvo el primero); pasos con MP4 ≥ MP4 + 0,3 s. 'captions[].t' = s desde el inicio del paso; el primer bloque se muestra al entrar en el paso. Los id son los data-step de slides/index.html. Se regenera: no editar a mano.",
+  "version": 4,
+  "storyboard": "v4 (guion final 2026-10-25 + corrector-final 2026-10-26)",
+  "default_step_s": 4,
+  "total_s": 292.2,
+  "words": 596,
+  "wpm": 150.0,
+  "air_per_figure_s": 1.5,
+  "transition_s": 0.6,
+  "steps": [
+    {
+      "id": "cover.b1",
+      "duration": 2.7,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Eight billion people."
+        }
+      ]
+    },
+    {
+      "id": "cover.b2",
+      "duration": 8.9,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "In 2023, 130 countries and areas had too few children to replace their parents."
+        }
+      ]
+    },
+    {
+      "id": "cover.b3",
+      "duration": 13.1,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Yet 84 are still growing."
+        },
+        {
+          "t": 4.1,
+          "text": "66 have more births than deaths; 18 grow only because more people arrive than leave."
+        }
+      ]
+    },
+    {
+      "id": "cover.b4",
+      "duration": 2.6,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "One number can't explain that."
+        }
+      ]
+    },
+    {
+      "id": "cover.b5",
+      "duration": 2.2,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "We are Team UNALSta-R."
+        }
+      ]
+    },
+    {
+      "id": "s1.b0",
+      "duration": 18.2,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Three questions."
+        },
+        {
+          "t": 1.4,
+          "text": "One: how do births, deaths and migration relate, and differ by region, country and income?"
+        },
+        {
+          "t": 7.4,
+          "text": "Two: does one indicator tell the whole story, or only several together?"
+        },
+        {
+          "t": 12.2,
+          "text": "Three: do countries share one road at different speeds, and what should the UN watch?"
+        }
+      ]
+    },
+    {
+      "id": "s1.b1",
+      "duration": 5.8,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Population change is bookkeeping:"
+        },
+        {
+          "t": 2.2,
+          "text": "births minus deaths, plus net migration, arrivals minus departures."
+        }
+      ]
+    },
+    {
+      "id": "s1.b2",
+      "duration": 12.9,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "In today's high-income countries, net migration accounted for"
+        },
+        {
+          "t": 3.8,
+          "text": "about seven in ten of the growth since 2000."
+        },
+        {
+          "t": 9.3,
+          "text": "Elsewhere, growth came almost entirely from births exceeding deaths."
+        }
+      ]
+    },
+    {
+      "id": "s1.b3",
+      "duration": 3.4,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Blue: more births than deaths, and growing,"
+        }
+      ]
+    },
+    {
+      "id": "s1.b3b",
+      "duration": 6.1,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "including 22 below replacement that grow with no net arrivals."
+        }
+      ]
+    },
+    {
+      "id": "s1.b4a",
+      "duration": 4.6,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Light blue: deaths exceed births, but arrivals keep it growing."
+        }
+      ]
+    },
+    {
+      "id": "s1.b4b",
+      "duration": 3.4,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Orange: deaths exceed births, and it shrinks."
+        }
+      ]
+    },
+    {
+      "id": "s1.b4c",
+      "duration": 4.6,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Purple: births exceed deaths, but net departures make it shrink."
+        }
+      ]
+    },
+    {
+      "id": "s1.b5a",
+      "duration": 4.3,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Migration is also the least certain lever."
+        }
+      ]
+    },
+    {
+      "id": "s1.b5b",
+      "duration": 8.5,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million."
+        }
+      ]
+    },
+    {
+      "id": "s2.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s2.b1",
+      "duration": 18.8,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Set each country's clock to when its fertility fell below four children,"
+        },
+        {
+          "t": 5.4,
+          "text": "and the curves line up."
+        },
+        {
+          "t": 7.4,
+          "text": "The road is shared; the speed is not."
+        },
+        {
+          "t": 10.6,
+          "text": "China went from five to three children in 5 years; Egypt took 33."
+        }
+      ]
+    },
+    {
+      "id": "s2.b2",
+      "duration": 12.8,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Child deaths started falling first in 106 of 109 high-fertility countries."
+        },
+        {
+          "t": 8.1,
+          "text": "The gap was typically at least 22 years."
+        }
+      ]
+    },
+    {
+      "id": "s2.b3",
+      "duration": 8.6,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Within one country, this link is smaller than what comparing countries suggests."
+        },
+        {
+          "t": 5.4,
+          "text": "A sequence in time, not proof of cause."
+        }
+      ]
+    },
+    {
+      "id": "s2.b4",
+      "duration": 15.0,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Question one, answered: child deaths fell first and births followed,"
+        },
+        {
+          "t": 4.6,
+          "text": "at each country's pace; latest in low-income countries."
+        },
+        {
+          "t": 7.8,
+          "text": "Migration moves on its own, alike among neighbours only in the Gulf,"
+        },
+        {
+          "t": 12.6,
+          "text": "and weighs most in high-income countries."
+        }
+      ]
+    },
+    {
+      "id": "s3.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s3.b1",
+      "duration": 15.2,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Question two."
+        },
+        {
+          "t": 1.4,
+          "text": "Fertility alone captures the slow story:"
+        },
+        {
+          "t": 3.8,
+          "text": "about three quarters of the differences in how old populations are."
+        },
+        {
+          "t": 9.7,
+          "text": "Only part of today's growth, and almost none of migration."
+        }
+      ]
+    },
+    {
+      "id": "s3.b2",
+      "duration": 6.9,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Fertility alone finds only one in eight of each country's closest look-alikes."
+        }
+      ]
+    },
+    {
+      "id": "s3.b3",
+      "duration": 9.5,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Countries differ in two separate ways."
+        },
+        {
+          "t": 3.0,
+          "text": "Fertility tracks the first, the transition to fewer births and deaths,"
+        },
+        {
+          "t": 7.4,
+          "text": "but misses migration."
+        }
+      ]
+    },
+    {
+      "id": "s3.b4",
+      "duration": 24.0,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Blend indicators into one score:"
+        },
+        {
+          "t": 2.6,
+          "text": "the weights can shift one country in five by more than twenty places."
+        },
+        {
+          "t": 9.3,
+          "text": "Question two, answered: no."
+        },
+        {
+          "t": 10.9,
+          "text": "The Emirates and Belarus share the same fertility;"
+        },
+        {
+          "t": 14.1,
+          "text": "one grows almost four percent a year, the other shrinks."
+        },
+        {
+          "t": 19.6,
+          "text": "The story emerges only when transition and migration are read together."
+        }
+      ]
+    },
+    {
+      "id": "s4.b0",
+      "duration": 0.6
+    },
+    {
+      "id": "s4.b1",
+      "duration": 28.5,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Question three."
+        },
+        {
+          "t": 1.4,
+          "text": "Grouped by seventy-year paths, countries form three stretches of one road,"
+        },
+        {
+          "t": 5.8,
+          "text": "plus a migration-led group, mostly Gulf states."
+        },
+        {
+          "t": 8.6,
+          "text": "Early movers are projected to grow only through migration, or shrink."
+        },
+        {
+          "t": 13.0,
+          "text": "Fast movers, India, China and Indonesia,"
+        },
+        {
+          "t": 15.4,
+          "text": "are projected to age from 30 to 40 in about 32 years."
+        },
+        {
+          "t": 21.7,
+          "text": "About as fast as Early movers did, or faster."
+        },
+        {
+          "t": 25.3,
+          "text": "Recent movers have the highest child mortality today."
+        }
+      ]
+    },
+    {
+      "id": "s4.b2",
+      "duration": 5.0,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Countries grew closer in life expectancy, but further apart in age."
+        }
+      ]
+    },
+    {
+      "id": "s4.b3",
+      "duration": 17.8,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Question three, answered: mostly one road, at different speeds."
+        },
+        {
+          "t": 4.2,
+          "text": "For the UN: watch child survival where it is off pace for the 2030 goal."
+        },
+        {
+          "t": 10.6,
+          "text": "Watch ageing where fertility is low but populations still grow."
+        },
+        {
+          "t": 14.6,
+          "text": "Watch migration data where growth depends on arrivals."
+        }
+      ]
+    },
+    {
+      "id": "s4.b4",
+      "duration": 13.4,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "Projections are labelled as scenarios; examples follow a rule;"
+        },
+        {
+          "t": 4.2,
+          "text": "hypotheses were fixed before the final run."
+        },
+        {
+          "t": 7.0,
+          "text": "These are patterns, not causes;"
+        },
+        {
+          "t": 9.0,
+          "text": "every number and our AI use are documented in our notebook."
+        }
+      ]
+    },
+    {
+      "id": "s4.b5",
+      "duration": 10.6,
+      "captions": [
+        {
+          "t": 0.0,
+          "text": "One number can't tell eight billion stories."
+        },
+        {
+          "t": 3.4,
+          "text": "But births, deaths and migration, read together region by region,"
+        },
+        {
+          "t": 7.4,
+          "text": "can tell the UN where to look next."
+        }
+      ]
+    },
+    {
+      "id": "refs",
+      "duration": 3.0
+    }
+  ]
+}

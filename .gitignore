@@ -64,6 +64,10 @@ notebook/*_cache/
 
 # ---------- Diapositivas / vídeo (regenerables) ----------
 video/raw/
+# vídeo mudo (≈ 70 MB; se regenera con video/record_slides.py --mp4) y voces grabadas (datos personales)
+video/deck_silent.mp4
+video/*.wav
+video/voz/
 slides/export/pages/
 slides/dev/screenshots/steps/
 slides/js/numbers_data.js
