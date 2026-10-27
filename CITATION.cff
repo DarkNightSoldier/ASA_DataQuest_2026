@@ -1,6 +1,9 @@
 # CITATION.cff — creado el 2026-10-26 por el agente de IA corrector-final (QA-ethics M9 / ítem R6).
-# Rol de cada autor: lo escribe el equipo en docs/registro_ia.md §2 (no se inventa aquí).
-# La URL del repositorio se añade cuando el repositorio sea público (docs/equipo.json → "repo_url").
+# Autoría igual (dato del usuario, 2026-10-26 12:10, America/Bogota): los cuatro integrantes revisaron el output del
+# notebook y las cifras y comparten IGUAL responsabilidad del trabajo; el orden de 'authors' es el de docs/equipo.json
+# ('members') y no ordena contribuciones. No se registran papeles individuales (docs/registro_ia.md §2). Los cuatro
+# dieron consentimiento escrito para publicar sus nombres (P-05).
+# URL del repositorio = docs/equipo.json → "repo_url" (añadida el 2026-10-26; público desde el 2026-10-29, cuando el equipo sube el código).
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below. The data are from UN DESA, World Population Prospects 2024 (CC BY 3.0 IGO); cite them as well."
 type: software
@@ -10,9 +13,14 @@ abstract: >-
   non-causal analysis of births, deaths and net migration in the UN World Population
   Prospects 2024 (estimates 1950–2023, medium projection to 2100), with a reproducible
   R notebook, figures, slides and video script. AI agents (Claude Code, Anthropic),
-  directed by the team, wrote most of the code and drafts; see docs/registro_ia.md.
+  directed by the team, assisted the analysis, the code and the production (most of
+  the code and drafts), not the voices: the video is narrated by team members. The
+  four authors share equal responsibility for the work (author order as in
+  docs/equipo.json, not by contribution); see docs/registro_ia.md.
 version: v1.0-submission
 license: MIT
+repository-code: "https://github.com/DarkNightSoldier/ASA_DataQuest_2026"
+url: "https://github.com/DarkNightSoldier/ASA_DataQuest_2026"
 authors:
   - given-names: "Daniela C."
     family-names: "Kwan"

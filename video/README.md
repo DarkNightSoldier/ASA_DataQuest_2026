@@ -89,11 +89,14 @@ subtítulo debe cambiar dentro de cada paso.
 
 **Antes de grabar**
 
-- Pendientes de `docs/correcciones.md` que afectan a la voz: **P-01** (una persona del equipo comprueba a
-  mano las 17 cifras habladas), **P-03** (lectura cronometrada: el guion cabe en 4:52 a 150 palabras por
-  minuto; a 140 ppm se pasaría de 5:00 → recortes en el orden que da P-03) y **P-05** (consentimiento
-  escrito de quien pone la voz y de cada integrante nombrado; si se usa una voz sintética hay que decirlo
-  en el vídeo y en las Referencias).
+- Pendientes de `docs/correcciones.md` que afectan a la voz: **P-01** ✅ (hecho el 2026-10-26 a las 11:23:
+  los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla; si una cifra cambia después,
+  hay que volver a comprobarla), **P-03** (lectura cronometrada: el guion cabe en 4:52 a 150 palabras por
+  minuto; a 140 ppm se pasaría de 5:00 → recortes en el orden que da P-03) y **P-05** ✅ (hecho, informado
+  el 2026-10-26 a las 12:10: consentimiento escrito de los cuatro integrantes para publicar sus nombres; las
+  voces son de integrantes del equipo, **ninguna sintética**, y así lo dicen las Referencias: "not the voices
+  (team members narrate; no synthetic voice)". Si al final se usara una voz sintética, habría que cambiar
+  esa frase, decirlo en el vídeo y volver a exportar el PDF).
 - La voz debe decir **exactamente** el guion: los subtítulos incrustados son ese texto. Cualquier cambio
   se hace en `slides/script/narration_en_template.md` → `build_narration.py` → paso 1 otra vez.
   No improvise cifras: solo las del guion (todas verificadas).
@@ -169,8 +172,10 @@ La grabación manual depende de la mano de quien avanza: respete las duraciones 
 
 - [ ] `video/final/UNALSta-R_DataQuest2026.mp4` dura ≤ 5:00 (lo comprueba `assemble.sh`), 1920×1080.
 - [ ] Voz y subtítulos dicen lo mismo; ninguna cifra fuera del guion.
-- [ ] P-01 firmado (cifras habladas), P-02 (repositorio público, porque Referencias dice "public
-      repository"), P-05 (consentimientos; voz sintética declarada si la hay).
+- [x] P-01 firmado (cifras habladas y en pantalla, 2026-10-26 11:23; `docs/QA_stats.md` §10).
+- [ ] P-02: el código subido el 29-oct y https://github.com/DarkNightSoldier/ASA_DataQuest_2026 público
+      (Referencias da esa URL), con `LICENSE` y `LICENSE-texts`.
+- [x] P-05: consentimiento escrito de los cuatro (nombres); voces de los integrantes, ninguna sintética (2026-10-26).
 - [ ] El PDF (`slides/export/slides.pdf`, 6 páginas) es del mismo estado del deck que el vídeo.
 
 ## Notas técnicas

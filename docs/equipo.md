@@ -15,7 +15,11 @@ La fuente única es `docs/equipo.json`; este archivo es su versión legible.
 | Contacto | alejoh1029@gmail.com |
 | Concurso | ASA International DataQuest 2026 |
 | Datos | UN World Population Prospects 2024, Medium variant, CC BY 3.0 IGO |
-| Repositorio (`repo`, `repo_url`) | *Pendiente* (`null`); `repo` = `usuario/repositorio` |
+| Repositorio (`repo`, `repo_url`) | `DarkNightSoldier/ASA_DataQuest_2026` · https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (público desde el 2026-10-29, `repo_public_from`; el equipo sube el código ese día) |
+| Verificación humana (`human_check`) | Los cuatro integrantes comprobaron a mano las cifras habladas (guion v4) y en pantalla (deck rc1) el 2026-10-26 a las 11:23 (America/Bogota, UTC−5); `R/05` lo copia a `meta_human_check` en `figures/numbers.json` (`docs/QA_stats.md` §10) |
+| Consentimiento (`consent`) | Los cuatro integrantes dieron consentimiento **escrito** para publicar sus nombres (informado por el usuario el 2026-10-26 a las 12:10, America/Bogota; los documentos los guarda el equipo). El correo de contacto no se mencionó (`docs/correcciones.md` P-05) |
+| Autoría (`authorship`) | Los cuatro revisaron el output del notebook y las cifras y **comparten igual responsabilidad del trabajo**; el orden de `members` no ordena contribuciones; sin papeles individuales (no se inventan) |
+| Voces (`voices`) | Las voces del vídeo son de los integrantes; **ninguna sintética** |
 | Fecha límite de entrega | 2026-10-30 (último viernes de octubre) |
 
 ## Metadatos que usan las diapositivas
@@ -25,7 +29,7 @@ Claves de `docs/equipo.json` que el notebook no produce y que las diapositivas e
 | Clave | Valor | Cómo se obtuvo |
 |---|---|---|
 | `team_name` | UNALSta-R | Dato del equipo |
-| `repo` | `null` (pendiente) | Se completa al publicar el repositorio |
+| `repo` | `DarkNightSoldier/ASA_DataQuest_2026` | Dato del equipo (2026-10-26). Metadato, no cifra: va como texto literal en Referencias (`data-team="repo_url"`), no por `data-num` |
 | `hyp_file_date` | 2026-10-23 | Fecha de fijación de `docs/hipotesis_preinscritas.md` |
 | `hyp_file_sha256_short` | `83f98f6e1a3d` | Primeros 12 caracteres de `sha256sum docs/hipotesis_preinscritas.md` (completo: `83f98f6e1a3dbbcfa07b8435db7d11cc3eacc79faee9875591652bcbad3bb4b5`). Recalcular si el archivo cambia. |
 | `n_states` | 195 | 193 Estados miembros de la ONU + 2 observadores (Santa Sede, Estado de Palestina) |

@@ -6,6 +6,7 @@ Uso típico (agente de guion):
 Otros modos:
     python slides/script/fill_numbers.py --check-html slides/index.html     # claves del HTML que faltan / sin verificar
     python slides/script/fill_numbers.py --emit-js slides/js/numbers_data.js # window.NUMBERS para abrir el deck por file://
+        (numbers_data.js se versiona; build_narration.py y video/export_pdf.sh lo regeneran siempre)
 
 Marcadores admitidos en el texto:
     {clave}            valor formateado (mismas reglas que slides/js/numbers.js)
@@ -273,6 +274,31 @@ def report_rejected(numbers: dict, miss: list[str], unver: list[str], where: str
         print(f"  ✘ {k}: sin verificar · {nota}", file=sys.stderr)
 
 
+DEFAULT_NUMBERS_JS = REPO / "slides" / "js" / "numbers_data.js"
+
+
+def write_if_changed(path: Path, text: str) -> bool:
+    """Escribe solo si el contenido cambia (conserva la fecha de los archivos que no cambian: la
+    verificación humana de las cifras se ancla a la fecha de los archivos; docs/QA_stats.md §10)."""
+    path = Path(path)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def emit_js(numbers: dict, out: Path = DEFAULT_NUMBERS_JS, source_name: str = "numbers.json") -> Path:
+    """Escribe window.NUMBERS = {...} (copia de numbers.json) para abrir el deck con doble clic (file://).
+
+    slides/js/numbers_data.js se versiona: lo regeneran siempre build_narration.py y
+    video/export_pdf.sh, así que nunca queda atrás de figures/numbers.json. Salida determinista."""
+    changed = write_if_changed(out, "/* Generado por slides/script/fill_numbers.py --emit-js a partir de "
+                               f"{source_name}. NO editar a mano. */\nwindow.NUMBERS = "
+                               + json.dumps(numbers, ensure_ascii=False) + ";\n")
+    print(f"[fill_numbers] {'escrito' if changed else 'sin cambios'} {out}")
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("input", nargs="?", help="markdown con marcadores {clave}")
@@ -297,10 +323,7 @@ def main() -> int:
 
     rc = 0
     if a.emit_js:
-        Path(a.emit_js).write_text("/* Generado por slides/script/fill_numbers.py --emit-js a partir de "
-                                   f"{npath.name}. NO editar a mano. */\nwindow.NUMBERS = "
-                                   + json.dumps(numbers, ensure_ascii=False) + ";\n", encoding="utf-8")
-        print(f"[fill_numbers] escrito {a.emit_js}")
+        emit_js(numbers, Path(a.emit_js), npath.name)
 
     if a.check_html:
         keys = keys_in_html(Path(a.check_html).read_text(encoding="utf-8"))

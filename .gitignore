@@ -70,4 +70,5 @@ video/*.wav
 video/voz/
 slides/export/pages/
 slides/dev/screenshots/steps/
-slides/js/numbers_data.js
+# slides/js/numbers_data.js SÍ se versiona (copia de figures/numbers.json para abrir el deck con doble clic;
+# la regeneran slides/script/build_narration.py y video/export_pdf.sh).

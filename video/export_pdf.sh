@@ -11,6 +11,9 @@ PY="${PYTHON:-$VENV/bin/python}"
 [ -x "$PY" ] || PY="$(command -v python3)"
 
 "$PY" -c "import pypdf" 2>/dev/null || "$PY" -m pip install -q pypdf
+# Copia de figures/numbers.json para abrir el deck con doble clic (file://); se versiona y se
+# regenera siempre aquí y en slides/script/build_narration.py (solo se reescribe si cambia).
+"$PY" "$REPO/slides/script/fill_numbers.py" --emit-js "$REPO/slides/js/numbers_data.js"
 "$PY" "$REPO/video/export_pdf.py" "$@"
 
 # Comprobación independiente del número de páginas (pypdf del venv)

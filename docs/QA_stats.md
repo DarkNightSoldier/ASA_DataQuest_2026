@@ -11,6 +11,7 @@ Archivos: `docs/qa/verificacion_lote_{1..4}.R` (verificadores), `docs/qa/verific
 - **209 de 210** quedan con `verified: true` (`verified_by` = "verificación independiente lote N", `verified_on` = 2026-10-23). **1 queda en `false`**: `are_revision_pct` (cifra externa; la comprobación fue solo parcial, sección 3.4).
 - **12 definiciones eran ambiguas** (el valor se reproduce, pero solo con una de varias lecturas razonables). En 11 se reescribió `def` en el script que la calcula para que diga exactamente qué se hizo; la número 12 (`yrs_medage30_40_recent`) tiene un nombre de clave engañoso, pero su `def` ya era explícita. Por coherencia se aclararon otras 4 `def` que comparten el mismo cálculo (`silhouette`, `borderline_countries`, `q5_ratio_p90p10_peak` y `growth_2000_2023_by_group`), así que en total cambiaron 15 `def` y un `n` (`region_vote_accuracy`: 161 → 160). **Ningún valor cambió**: las 209 huellas coinciden después de volver a correr todo.
 - En `numbers.json` hay 383 claves: 209 verificadas, 1 de pantalla sin verificar y 173 que solo usa el notebook. Esas 173 no se recalcularon y quedan en `false`. Cada clave sin verificar lleva el motivo en el campo nuevo `nota_qa`.
+- *(2026-10-26: §10 registra la verificación humana de las cifras habladas y en pantalla; `numbers.json` pasa a 385 claves con 2 de metadatos, `repo` y `meta_human_check`, sin cambiar ningún valor ni `verified`.)*
 - **Faltan 8 claves** que ningún análisis produjo (sección 6). Dos de ellas (`n_census_pre2009` y `repo`) están en el storyboard y en las diapositivas: **no pueden decirse ni teclearse hasta que existan** (sección 7).
 
 ## 2. Cómo se verificó
@@ -302,14 +303,14 @@ Ninguna. Las 210 cifras coinciden al redondeo de pantalla. Las únicas diferenci
 | `n_lex_drop_proj` | plan §4 | T14 | **notebook-R** (T14) |
 | `share_monotone_proj_lex` | plan §4; `01b_otros_equipos` A7 (frase "projections contain no shocks") | T14 | **notebook-R** (T14) |
 | `n_tests` | plan §4; `04_etica` ítem 12 | Q1 registra `n_tests_q1` y Q2 `n_tests_q2`, con definiciones distintas, y Q3 no registra ninguna. Sumarlas sería inventar una definición | **notebook-R** (T17), con la definición por familia F1/F2/F3 acordada con **QA-ethics** |
-| `repo` | storyboard (tarjeta de ética 5 y referencias: `github.com/{repo}`) | El repositorio público aún no existe; `docs/equipo.json` tiene `repo: null` | **repo-ops**: crear el repositorio, rellenar `docs/equipo.json` y volver a correr `R/05` |
+| `repo` | storyboard (tarjeta de ética 5 y referencias: `github.com/{repo}`) | El repositorio público aún no existe; `docs/equipo.json` tiene `repo: null` | **repo-ops**: crear el repositorio, rellenar `docs/equipo.json` y volver a correr `R/05`. **Resuelto el 2026-10-26** (§10): `repo` existe como clave de **metadatos** (no es una cifra: no pasa por la verificación numérica) y la URL va como texto literal en Referencias |
 
 Cuando aparezcan, cada una debe pasar por un lote de verificación independiente (nueva fila en `docs/qa/verificacion_consolidada.csv`) antes de grabar. Mientras tanto, `R/05` les pondrá `nota_qa` = "NOT VERIFIED … verify before recording".
 
 ## 7. Cifras que **NO** deben usarse en el guion ni en las diapositivas hasta resolverse
 
 1. **`are_revision_pct`** ("UAE revised +12 %"): diapositiva 1, build 5 (nota del zoom) y tarjeta de ética 2. No está verificada (sección 3.4). Mientras no se coteje, o se quita el número o se dice sin cifra que la ONU revisó la población de los EAU entre ediciones.
-2. **`n_census_pre2009`** (tarjeta de datos de la portada) y **`repo`** (tarjeta de ética 5 y referencias). No existen: `numbers.js` muestra "—". No se puede teclear "23" ni una URL.
+2. **`n_census_pre2009`** (tarjeta de datos de la portada) y **`repo`** (tarjeta de ética 5 y referencias). No existen: `numbers.js` muestra "—". No se puede teclear "23" ni una URL. *(2026-10-26: `repo` ya existe como metadato y la URL del repositorio, que no es una cifra, va como texto literal en Referencias; ver §10.)*
 3. **`n_census_2019plus`, `n_shock_years_est`, `n_shock_years_proj`, `n_lex_drop_proj`, `share_monotone_proj_lex`, `n_tests`**. No están en el storyboard, pero ninguna frase del guion o de la ética puede citar su contenido ("114 countries with a recent census", "projections contain no shocks", "we ran N tests") mientras no existan y estén verificadas.
 4. **Toda clave con `verified` ≠ `true`**. `slides/script/fill_numbers.py` y `slides/js/numbers.js` ya las señalan como *UNVERIFIED*. Hoy, entre las claves de pantalla y voz, la única es `are_revision_pct`.
 
@@ -340,3 +341,43 @@ Se pueden usar, **pero solo con la regla de la sección 3.3**: `jaccard_min` (�
 - La redacción del guion (universo dicho en voz, "projected (UN medium)", ausencia de "p =" o "significant"): **QA-ethics** y **QA-slides** (07 §4.1, puntos 3, 5 y 6).
 - La coherencia entre cada país nombrado y su tipo o grupo en la voz (07 §4.1, punto 4). Aquí se verificaron los ejemplos por regla (`examples_type_*`, `cluster_examples_*`, `twins`, `lookalikes_*`), no las frases que los usan.
 - Las 173 claves que solo usa el notebook: se reproducen al correr el notebook, pero no se recalcularon con código independiente.
+
+## 10. Verificación humana (2026-10-26)
+
+Registro escrito por el agente de IA *seguimiento* (2026-10-26, después de las 11:23) a partir de lo que **el usuario informó en el chat**. Ningún agente hizo esta verificación ni la presenció; aquí solo se anota, con su alcance exacto, y se comprueba con `stat` que los archivos verificados son anteriores a la hora informada.
+
+| Campo | Valor |
+|---|---|
+| Fecha y hora | **2026-10-26, 11:23** (America/Bogota, UTC−5) = `2026-10-26T11:23-05:00` |
+| Quiénes | Los cuatro integrantes: **Daniela C. Kwan, David S. Merchán, Jhon A. Mora y Alejandro Higuera** |
+| Alcance | Las cifras **habladas** del guion v4 (`slides/script/narration_en.md`: 17 cifras habladas; 21 claves con `en_voz = sí`) y las cifras **en pantalla** del deck rc1 (`slides/index.html`, que las toma de `figures/numbers.json`, y su PDF `slides/export/slides.pdf`): las 107 claves de `docs/verificacion_numeros.csv` |
+| Fuera del alcance | Las cifras del README, del notebook y de los memos de `docs/` (son copias de las mismas claves o cifras de trabajo, pero no se informó que se revisaran) y las 173 claves de `numbers.json` que solo usa el notebook |
+| Dónde queda | `docs/verificacion_numeros.csv` (columnas `verificado_por` = "4 integrantes" y `verificado_en` = `2026-10-26T11:23-05:00` en las 107 filas; antes se llamaban `revisado_por` y `fecha`; `valor_comprobado_a_mano` y `ok` quedan vacíos porque no se informaron fila por fila) · `docs/equipo.json` → `human_check` · `figures/numbers.json` → clave de metadatos `meta_human_check` (la copia `R/05_numbers_json.R` §4.4) |
+| Qué **no** cambia | `verified: true` sigue significando "recalculada con código independiente" (QA-stats, IA). La verificación humana va aparte, en `meta_human_check`; no cambia ningún `value` ni ningún `verified` |
+
+**Archivos verificados: todos con fecha anterior a las 11:23** (`TZ=America/Bogota stat -c '%y'`, comprobado el 2026-10-26 a las 11:51, con el árbol limpio en el commit `c367937`; SHA-256 = primeros 16 caracteres del archivo en ese commit):
+
+| Archivo | Fecha de modificación (UTC−5) | SHA-256 en `c367937` |
+|---|---|---|
+| `slides/script/narration_en.md` | 10:51:49 | `6d566d52b926fdbb` |
+| `slides/script/captions.json`, `captions.srt`, `video_timings.json`, `data_captions.json` | 10:51:49 | — |
+| `figures/numbers.json` (383 claves) | 10:50:49 | `c98bc30ea85c9d04` |
+| `slides/index.html` | 10:56:56 | `2a5a279e3c7c9041` |
+| `figures/static/` y `figures/animated/` (la más reciente: fig09) | fig09 MP4 11:00:23 · PNG 11:00:45 · `_print.png` 11:00:46 | `0aaf163b1a4fad27` (PNG) · `3e7e7a099d75ccc2` (MP4) |
+| `slides/css/theme.css` (maquetación, sin cifras) | 11:13:07 | — |
+| `slides/export/slides.pdf` | 11:13:30 | `5a824bf36feede85` |
+| `slides/js/numbers_data.js` (copia de `numbers.json`; entonces sin versionar) | 11:21:42 | — |
+
+Antes de este encargo, después de las 11:23 solo habían cambiado `.gitignore` (11:32), la grabación de prueba (`video/raw/slides_20261026_113220.webm` 11:37 y `video/deck_silent.mp4` 11:39, grabadas del mismo deck sin cambios), `video/assemble.sh`, `video/README.md`, `video/record_slides.py` (11:41–11:42), `README.md` (11:47) y `docs/INDICE.md` (11:47). Ninguno es fuente de cifras del guion o del deck.
+
+**Cambios hechos después de las 11:23 por este encargo (ninguno cambia una cifra):**
+
+- `figures/numbers.json`: `R/05_numbers_json.R` añade **2 claves de metadatos** (`repo` y `meta_human_check`); `git diff` = 86 líneas añadidas y **0 borradas**; las 383 claves anteriores son idénticas campo a campo (209 con `verified: true`, igual que antes). SHA-256 nuevo `7d0b3f46e5546330…` (385 claves).
+- `slides/index.html`: solo texto sin cifras en la tarjeta de ética 5 y en Referencias (frase de verificación y URL del repositorio; después, con la información del usuario de las 12:10, la declaración de IA de Referencias dice "assisted the analysis, the code and the production …, not the voices (team members narrate; no synthetic voice)" y "The four of us share equal responsibility"). Las cifras de esas líneas (`hyp_file_date`, `hyp_file_sha256_short`) no cambian.
+- `docs/equipo.json`: bloques `consent`, `authorship` y `voices` (12:10, P-04 y P-05). `R/05` no los lee: al volver a correrlo, `numbers.json` sale idéntico (comprobado con `git diff` y comparación campo a campo).
+- `slides/export/slides.pdf`, capturas y `video/deck_silent.mp4`: regenerados desde los mismos valores.
+- Guion y subtítulos: **sin cambios** (mismo contenido y misma fecha 10:51; `build_narration.py` ahora solo reescribe un archivo si su contenido cambia).
+
+**Regla desde ahora:** si una cifra hablada o en pantalla cambia después del 2026-10-26T11:23-05:00, vuelve a verificarse a mano antes de grabar o entregar (`docs/correcciones.md`, P-01), y se actualizan `human_check` en `docs/equipo.json` y las filas de `docs/verificacion_numeros.csv`.
+
+**Frase pública** (Referencias y tarjeta de ética 5): *"Every number was recomputed by independent code and checked by the four team members"*. La voz no menciona la verificación ("every number and our AI use are documented in our notebook"), así que no se tocó.

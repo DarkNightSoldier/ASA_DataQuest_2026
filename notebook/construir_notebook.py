@@ -250,7 +250,7 @@ PORTADA = f"""
 
 **{EQUIPO_LINEA}** · cifras v1 congeladas el **{N('meta_numbers_date')}** · datos: UN DESA, *World Population Prospects 2024* (CC BY 3.0 IGO).
 
-**Ética:** American Statistical Association (2022), *Ethical Guidelines for Statistical Practice*, https://doi.org/10.5281/zenodo.7092386 · archivos WPP 2024 en la carpeta del proyecto desde el 2026-10-02 (fecha de los archivos; la fecha exacta de descarga la confirma el equipo); SHA-256 en §9.1 y en `data/README.md`.
+**Ética:** American Statistical Association (2022), *Ethical Guidelines for Statistical Practice*, https://doi.org/10.5281/zenodo.7092386 · **procedencia de los datos:** los archivos WPP 2024 los entregaron los organizadores del ASA International DataQuest 2026; sus marcas de tiempo son 2026-10-02 (Medium, OtherVariants y notas) y 2026-10-05 (suplemento LE60); no se anota fecha de descarga. SHA-256 en §9.1 y en `data/README.md`.
 
 Este notebook ejecuta, de principio a fin y en este orden, `R/01_preparar_datos.R`, `R/02_q1_palancas.R`, `R/03_q2_un_numero.R`, `R/04_q3_caminos.R` y `R/05_numbers_json.R`. El código de cada celda es **copia literal** de esos scripts (lo genera `notebook/construir_notebook.py`, que corta las celdas solo en los encabezados de sección y nunca dentro de una expresión de R): correr el notebook o correr los scripts con `Rscript` da las mismas cifras. Todas las cifras del vídeo y de las diapositivas salen de `figures/numbers.json`, que se escribe en la sección 7.
 
@@ -513,8 +513,16 @@ def _es_pantalla(e: dict) -> bool:
 
 
 def numbers_lectura() -> str:
-    faltan = ["n_census_pre2009", "n_census_2019plus", "n_shock_years_est", "n_shock_years_proj",
-              "n_lex_drop_proj", "share_monotone_proj_lex", "n_tests", "repo"]
+    faltan = [k for k in ["n_census_pre2009", "n_census_2019plus", "n_shock_years_est", "n_shock_years_proj",
+                          "n_lex_drop_proj", "share_monotone_proj_lex", "n_tests", "repo"] if k not in NUM]
+    n_meta = len(NUM) - (165 + 96 + 109)   # claves que añade R/05 (metadatos y globales)
+    meta_no_cifra = [k for k in ("repo", "meta_human_check") if k in NUM]
+    txt_repo = (" y `repo` (el repositorio público aún no existe; `docs/equipo.json` lo deja vacío)" if "repo" in faltan else "")
+    txt_sb = "`n_census_pre2009` y `repo`" if "repo" in faltan else "`n_census_pre2009`"
+    txt_meta = (f" Entre ellas van {len(meta_no_cifra)} de metadatos que **no son cifras** ("
+                + ", ".join(f"`{k}`" for k in meta_no_cifra)
+                + ": dirección del repositorio y registro de la verificación humana, copiados de `docs/equipo.json`)."
+                if meta_no_cifra else "")
     # Verificación independiente (QA-stats): se cuenta desde numbers.json, no se teclea.
     n_ver = sum(1 for e in NUM.values() if e.get("verified") is True)
     pant = [k for k, e in NUM.items() if _es_pantalla(e)]
@@ -523,10 +531,10 @@ def numbers_lectura() -> str:
     return f"""
 #### Lectura de resultados · `numbers.json`
 
-- `figures/numbers.json` reúne **{len(NUM)} claves**: 165 de Q1, 96 de Q2 y 109 de Q3, sin ninguna clave repetida entre los tres registros (las dos colisiones de la fase de análisis — `momentum_years_range` y las claves de la banda de misma fecundidad — se resolvieron antes, en los scripts), más 13 de metadatos que añade `R/05`. Las claves globales coinciden con los datos: {N('n_countries')} países y áreas, {N('n_countries_1m')} ≥ 1 M y {N('world_pop_2023_bn', d=4)} mil millones de personas en 2023 (agregado ONU = suma de los 237; diferencia 1,2 × 10⁻⁸ %).
+- `figures/numbers.json` reúne **{len(NUM)} claves**: 165 de Q1, 96 de Q2 y 109 de Q3, sin ninguna clave repetida entre los tres registros (las dos colisiones de la fase de análisis — `momentum_years_range` y las claves de la banda de misma fecundidad — se resolvieron antes, en los scripts), más {n_meta} de metadatos que añade `R/05`.{txt_meta} Las claves globales coinciden con los datos: {N('n_countries')} países y áreas, {N('n_countries_1m')} ≥ 1 M y {N('world_pop_2023_bn', d=4)} mil millones de personas en 2023 (agregado ONU = suma de los 237; diferencia 1,2 × 10⁻⁸ %).
 - Archivo de hipótesis: SHA-256 `{N('hyp_file_sha256_short')}…`, fijado en el commit `{N('hyp_file_commit')[:7]}` del {N('hyp_file_date')} y sin cambios desde entonces.
 - `validar_registro()` no encuentra problemas de esquema: toda clave tiene `method`, `n`, `universe` y `status`, y todo intervalo guardado en `ci_*` usa un método que puede salir en pantalla (bloques de subregión, Wilson, Kaplan–Meier o intervalos de la ONU).
-- **Faltan {len(faltan)} claves**, todas porque ningún análisis las produjo (no se inventan): `n_census_pre2009` y `n_census_2019plus` (necesitan la tabla de fuentes censales de la ONU), `n_shock_years_est`, `n_shock_years_proj`, `n_lex_drop_proj` y `share_monotone_proj_lex` (la tarea T14 de choques de las proyecciones no se corrió), `n_tests` (Q1 y Q2 registran `n_tests_q1` y `n_tests_q2` con definiciones distintas y Q3 no registra conteo: sumarlas sería inventar una definición) y `repo` (el repositorio público aún no existe; `docs/equipo.json` lo deja vacío). Del storyboard faltan solo `n_census_pre2009` y `repo`; `n_twin_pairs` se resuelve con el alias `n_pairs_twins` y `pc1_var_sens_range` con `sens_low`–`sens_high` de `pc1_var`, igual que en `slides/js/numbers.js`.
+- **Faltan {len(faltan)} claves**, todas porque ningún análisis las produjo (no se inventan): `n_census_pre2009` y `n_census_2019plus` (necesitan la tabla de fuentes censales de la ONU), `n_shock_years_est`, `n_shock_years_proj`, `n_lex_drop_proj` y `share_monotone_proj_lex` (la tarea T14 de choques de las proyecciones no se corrió), `n_tests` (Q1 y Q2 registran `n_tests_q1` y `n_tests_q2` con definiciones distintas y Q3 no registra conteo: sumarlas sería inventar una definición){txt_repo}. Del storyboard faltan solo {txt_sb}; `n_twin_pairs` se resuelve con el alias `n_pairs_twins` y `pc1_var_sens_range` con `sens_low`–`sens_high` de `pc1_var`, igual que en `slides/js/numbers.js`.
 - **Verificación independiente** (QA-stats, `docs/QA_stats.md`): {n_ver} de {len(NUM)} claves tienen `verified: true`. Son {len(pant) - len(pant_sin)} de las {len(pant)} que salen en pantalla, en la voz o en las referencias, recalculadas desde los CSV crudos de la ONU con código independiente (`docs/qa/verificacion_lote_1.R` a `_4.R`, sin usar estos scripts). Entre ellas siguen sin verificar: {lista_sin} (el motivo está en `nota_qa`). Las {len(NUM) - len(pant)} claves que solo usa el notebook no se recalcularon y quedan en `false`. `R/05` solo pone `verified: true` si la cifra tiene la misma huella (valor, IC, sensibilidad, IP y método) que la que se verificó.
 """
 
@@ -612,7 +620,7 @@ Este análisis sigue los *Ethical Guidelines for Statistical Practice* de la Ame
 ### 9.6 Privacidad, reproducibilidad, IA y correcciones (D.4, B.4, B.5, F.4, A.5)
 - No se usan datos personales: todo son agregados nacionales publicados.
 - Reproducibilidad: R y paquetes en la sección 10 (`sessionInfo()`), `set.seed(2026)` antes de cada remuestreo, SHA-256 de los crudos y del archivo de hipótesis en `numbers.json`; ejecutar este notebook regenera `figures/numbers.json`, las tablas `data/processed/resultados_q*.parquet` y las figuras de revisión.
-- **Uso de IA:** agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, escribieron la mayor parte del código, los memos de asesoría, las figuras y los borradores del guion y de las diapositivas. `verified: true` en `numbers.json` lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: **no es una revisión humana**. La revisión humana de las cifras habladas se firma en `docs/verificacion_numeros.csv`; el registro de uso de IA está en `docs/registro_ia.md`.
+- **Uso de IA:** agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, asistieron el análisis, el código y la producción: escribieron la mayor parte del código, los memos de asesoría, las figuras y los borradores del guion y de las diapositivas. **No hicieron las voces**: narran integrantes del equipo y no se usa voz sintética. Los cuatro integrantes revisaron el output de este notebook y las cifras y comparten igual responsabilidad del trabajo (`docs/registro_ia.md` §2). `verified: true` en `numbers.json` lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: **no es una revisión humana**. La revisión humana va aparte: **los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla el 2026-10-26 a las 11:23 (UTC−5)**, sobre archivos con fecha anterior (`docs/verificacion_numeros.csv`, `docs/QA_stats.md` §10 y la clave de metadatos `meta_human_check`); si una cifra cambia después, se vuelve a comprobar. El registro de uso de IA está en `docs/registro_ia.md`.
 - Los errores detectados y corregidos se registran en `docs/correcciones.md`.
 
 ### 9.7 Conflictos de interés y límites de competencia (A.1, A.7)
@@ -622,6 +630,8 @@ Este análisis sigue los *Ethical Guidelines for Statistical Practice* de la Ame
 
 REPRO_INTRO = """
 ## 10. Reproducibilidad
+
+**Repositorio:** https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (público desde el 29 de octubre de 2026, cuando el equipo sube el código). Código MIT; textos CC BY 4.0.
 
 Semilla, generador, huellas SHA-256 de las salidas, pruebas de la infraestructura de incertidumbre (`R/tests_incertidumbre.R`, en un proceso aparte) y la sesión de R completa.
 """
@@ -673,8 +683,8 @@ REFERENCIAS = f"""
 - R (versión en la sección 10); tidyverse, data.table, arrow, sf, rnaturalearth, fixest, survival, fda, fda.usc, cluster, mclust, clue, boot, mgcv, patchwork, ggrepel, magick, IRkernel; Jupyter / nbconvert.
 
 **Asistencia de IA y reproducibilidad**
-- AI assistance: Claude Code (Anthropic) AI agents, directed by the team, wrote most of the R code, the analysis memos, the figures and drafts of the slides and script. Every number shown or said was independently recomputed from the raw UN files with separate code (also AI-written); the team reviewed the results. Log: `docs/registro_ia.md`.
-- Code, notebook, figures and pre-specified hypotheses (SHA-256 `{N('hyp_file_sha256_short')}`): repositorio público pendiente de crear (`repo` aún vacío en `docs/equipo.json`). Código MIT; textos CC BY 4.0.
+- AI assistance: Claude Code (Anthropic) AI agents, directed by the team, assisted the analysis, the code and the production (most R code, memos, figures, slide and script drafts), not the voices (team members narrate; no synthetic voice). Every number was recomputed by independent code and checked by the four team members (that code is also AI-written; hand check on 2026-10-26 at 11:23 UTC−5, `docs/QA_stats.md` §10). The four of us share equal responsibility. Log: `docs/registro_ia.md`.
+- Code, notebook, figures and pre-specified hypotheses (SHA-256 `{N('hyp_file_sha256_short')}`): https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (public from 29 Oct 2026). Código MIT; textos CC BY 4.0.
 """
 
 

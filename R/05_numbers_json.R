@@ -16,8 +16,10 @@
 #      n_countries_1m, world_pop_2023_bn) y añade las que falten.
 #   4. Añade los metadatos de la corrida: fecha de las cifras, versión WPP,
 #      clasificación de ingreso, semilla y generador, SHA-256 de los archivos
-#      crudos y del archivo de hipótesis preinscritas (con su fecha y commit) y
-#      el nombre del equipo (docs/equipo.json).
+#      crudos y del archivo de hipótesis preinscritas (con su fecha y commit) y,
+#      desde docs/equipo.json, el nombre del equipo, el repositorio (`repo`) y
+#      el registro de la verificación humana (`meta_human_check`); estos dos
+#      últimos son metadatos, no cifras estadísticas.
 #   4.5 Aplica la verificación independiente de QA-stats
 #      (docs/qa/verificacion_consolidada.csv vía R/qa_verificacion.R): verified,
 #      verified_by, verified_on y nota_qa, solo si la cifra no cambió.
@@ -353,19 +355,50 @@ anotar_05("meta_seed", value = SEMILLA, unit = NA, fmt = "0",
           used_in = c("notebook.reproducibilidad"), method = "descriptive", status = "descriptive",
           n = 1, universe = "project metadata")
 
-# 4.4 Nombre del equipo (portada). El repositorio público aún no existe: si
-# docs/equipo.json no trae `repo`, la clave queda como faltante (no se inventa).
+# 4.4 Equipo, repositorio y verificación humana (docs/equipo.json).
+# QUÉ: nombre del equipo (portada), dirección del repositorio (`repo`) y registro
+#      de la verificación humana de las cifras (`meta_human_check`, bloque
+#      `human_check` de docs/equipo.json).
+# POR QUÉ: `repo` y `meta_human_check` son METADATOS, no cifras estadísticas:
+#      no se recalculan, no pasan por la verificación numérica (quedan con
+#      verified = false y una nota_qa propia en §4.5) y ningún data-num los
+#      muestra. La dirección se escribe como texto literal en Referencias,
+#      README y CITATION.cff. Si docs/equipo.json no trae un campo, la clave no
+#      se crea (no se inventa).
 if (!is.null(equipo$team_name) && nzchar(equipo$team_name)) {
   anotar_05("team_name", value = equipo$team_name, unit = NA, fmt = "text",
             def = "Team name as confirmed by the team (docs/equipo.json)", filter = "docs/equipo.json",
             source_cell = "T18 (R/05_numbers_json.R §4.4)", used_in = c("cover", "narration.cover"),
             method = "descriptive", status = "descriptive", n = 1, universe = "project metadata")
 }
+NOTA_METADATO_05 <- paste("Metadata, not a statistical number: copied from docs/equipo.json, not re-computed and",
+                          "outside the numeric verification (verified stays false); no data-num shows it")
+claves_metadato_05 <- character(0)
 if (!is.null(equipo$repo) && length(equipo$repo) == 1 && !is.na(equipo$repo) && nzchar(equipo$repo)) {
   anotar_05("repo", value = equipo$repo, unit = NA, fmt = "text",
-            def = "Public GitHub repository (user/repository), from docs/equipo.json", filter = "docs/equipo.json",
-            source_cell = "T18 (R/05_numbers_json.R §4.4)", used_in = c("slide4.ethics", "references"),
+            def = paste0("GitHub repository (user/repository) of the team, from docs/equipo.json",
+                         if (!is.null(equipo$repo_url)) paste0(" (", equipo$repo_url, ")") else "",
+                         if (!is.null(equipo$repo_public_from)) paste0("; public from ", equipo$repo_public_from) else "",
+                         ". Metadata, not a statistical number: written as literal text in the references slide,",
+                         " README and CITATION.cff"),
+            filter = "docs/equipo.json", source_cell = "T18 (R/05_numbers_json.R §4.4)",
+            used_in = c("meta.repository", "readme", "citation"),
             method = "descriptive", status = "descriptive", n = 1, universe = "project metadata")
+  claves_metadato_05 <- c(claves_metadato_05, "repo")
+}
+if (!is.null(equipo$human_check) && length(equipo$human_check$datetime) == 1) {
+  hc <- equipo$human_check
+  anotar_05("meta_human_check",
+            value = list(datetime = hc$datetime, timezone = hc$timezone, members = I(as.character(hc$members)),
+                         scope = hc$scope, files_checked = hc$files_checked, method = hc$method, rule = hc$rule),
+            unit = NA, fmt = "text",
+            def = paste("Record of the hand check of the spoken and on-screen numbers by the team members",
+                        "(docs/equipo.json -> human_check). Metadata, not a statistical number; it does not change",
+                        "any value or any verified flag"),
+            filter = "docs/equipo.json", source_cell = "T18 (R/05_numbers_json.R §4.4)",
+            used_in = c("meta.qa", "notebook.reproducibilidad"),
+            method = "descriptive", status = "descriptive", n = length(hc$members), universe = "project metadata")
+  claves_metadato_05 <- c(claves_metadato_05, "meta_human_check")
 }
 informar_05("Claves añadidas por 05: %d (%s)", length(claves_nuevas), paste(claves_nuevas, collapse = ", "))
 
@@ -381,6 +414,8 @@ source(here::here("R", "qa_verificacion.R"))
 RUTA_QA_CONSOLIDADA <- file.path(RUTA_DOCS, "qa", "verificacion_consolidada.csv")
 qa_05 <- aplicar_verificacion_qa(total, RUTA_QA_CONSOLIDADA)
 total <- qa_05$registro
+# Metadatos de §4.4 (repo, meta_human_check): nota_qa propia en vez de "notebook-only".
+for (k in claves_metadato_05) total[[k]]$nota_qa <- NOTA_METADATO_05
 tabla_qa_05 <- as.data.frame(table(estado = qa_05$resumen$estado, pantalla = ifelse(qa_05$resumen$pantalla, "pantalla/voz", "solo notebook")),
                              responseName = "claves")
 print(tabla_qa_05[tabla_qa_05$claves > 0, ], row.names = FALSE)

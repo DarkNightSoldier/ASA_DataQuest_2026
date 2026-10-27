@@ -16,6 +16,8 @@ Salida
   slides/script/video_timings.json         formato de video/record_slides.py y slides/js/captions.js
   slides/script/captions.srt               SRT estándar (≤ 2 líneas por bloque)
   slides/script/data_captions.json         texto para los data-caption de slides/index.html
+  slides/js/numbers_data.js                copia de numbers.json (window.NUMBERS) para abrir el deck por
+                                           file:// (doble clic); se versiona y se regenera en cada corrida
 
 Modelo de tiempo (encargo script-narration, 2026-10-25)
   voz de un bloque = palabras habladas / 150 ppm + 1,5 s de aire por cifra hablada
@@ -400,7 +402,7 @@ def build(numbers):
 def write_outputs(r, numbers):
     steps, cues = r["steps"], r["cues"]
     # ---- captions.json (lista de bloques)
-    OUT_CAPS.write_text(json.dumps(cues, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    fn.write_if_changed(OUT_CAPS, json.dumps(cues, indent=1, ensure_ascii=False) + "\n")
     # ---- video_timings.json
     vt = {
         "_comment": ("Generado por slides/script/build_narration.py desde slides/script/narration_en_template.md "
@@ -414,17 +416,17 @@ def write_outputs(r, numbers):
         "steps": [{"id": s["id"], "duration": s["duration"],
                    **({"captions": s["captions"]} if s["captions"] else {})} for s in steps],
     }
-    OUT_TIMINGS.write_text(json.dumps(vt, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    fn.write_if_changed(OUT_TIMINGS, json.dumps(vt, indent=2, ensure_ascii=False) + "\n")
     # ---- data_captions.json: texto para los data-caption de slides/index.html (" | " = bloque)
     dc = {"_comment": ("data-caption literal a la voz final para cada data-step de slides/index.html "
                        "(lo aplica el dueño del HTML; video_timings.json ya los impone al grabar)."),
           "captions": {s["id"]: " | ".join(c["text"] for c in s["captions"]) for s in steps}}
-    OUT_DATACAPS.write_text(json.dumps(dc, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    fn.write_if_changed(OUT_DATACAPS, json.dumps(dc, indent=1, ensure_ascii=False) + "\n")
     # ---- SRT
     srt = []
     for i, c in enumerate(cues, 1):
         srt.append(f"{i}\n{fmt_ts(c['t_start'])} --> {fmt_ts(c['t_end'])}\n" + "\n".join(c["lines"]) + "\n")
-    OUT_SRT.write_text("\n".join(srt), encoding="utf-8")
+    fn.write_if_changed(OUT_SRT, "\n".join(srt))
     # ---- narration_en.md
     md = []
     md.append("# Narration — final video script (EN) · v4 · 2026-10-26 (corrector-final, hallazgos QA)\n")
@@ -479,7 +481,7 @@ def write_outputs(r, numbers):
     md.append("| Clave | Valor formateado | `say` | verified |\n|---|---|---|---|")
     md += rows
     md.append("")
-    OUT_MD.write_text("\n".join(md) + "\n", encoding="utf-8")
+    fn.write_if_changed(OUT_MD, "\n".join(md) + "\n")
 
 
 def main() -> int:
@@ -503,6 +505,8 @@ def main() -> int:
     if not a.check:
         write_outputs(r, numbers)
         print(f"escritos: {OUT_MD.name}, {OUT_CAPS.name}, {OUT_TIMINGS.name}, {OUT_SRT.name}, {OUT_DATACAPS.name}")
+        # copia de numbers.json para abrir el deck con doble clic (file://): siempre al día
+        fn.emit_js(numbers, fn.DEFAULT_NUMBERS_JS, fn.DEFAULT_NUMBERS.name)
     return 0
 
 

@@ -16,8 +16,9 @@
   "contact_email": "alejoh1029@gmail.com",
   "competition": "ASA International DataQuest 2026",
   "data": "UN World Population Prospects 2024, Medium variant, CC BY 3.0 IGO",
-  "repo_url": null,
-  "repo": null,
+  "repo_url": "https://github.com/DarkNightSoldier/ASA_DataQuest_2026",
+  "repo": "DarkNightSoldier/ASA_DataQuest_2026",
+  "repo_public_from": "2026-10-29",
   "submission_deadline": "2026-10-30",
   "hyp_file_date": "2026-10-23",
   "hyp_file_sha256_short": "83f98f6e1a3d",
@@ -27,12 +28,54 @@
   "are_revision_pct": null,
   "momentum_years_range": null,
   "n_census_pre2009": null,
+  "human_check": {
+    "datetime": "2026-10-26T11:23-05:00",
+    "timezone": "America/Bogota (UTC-5)",
+    "members": [
+      "Daniela C. Kwan",
+      "David S. Merchán",
+      "Jhon A. Mora",
+      "Alejandro Higuera"
+    ],
+    "scope": "Numbers spoken in script v4 (slides/script/narration_en.md) and numbers shown on screen in deck rc1 (slides/index.html, filled from figures/numbers.json; slides/export/slides.pdf)",
+    "files_checked": "All files with those numbers were dated before the check: narration_en.md 10:51, figures/numbers.json 10:50, slides/index.html 10:56, fig09 11:00 (2026-10-26, UTC-5)",
+    "method": "Hand check by the four team members, reported by the team to the AI agents",
+    "rule": "If a number changes after this date-time, it must be checked by hand again (docs/correcciones.md, P-01)"
+  },
+  "consent": {
+    "reported": "2026-10-26T12:10-05:00",
+    "timezone": "America/Bogota (UTC-5)",
+    "type": "written",
+    "members": [
+      "Daniela C. Kwan",
+      "David S. Merchán",
+      "Jhon A. Mora",
+      "Alejandro Higuera"
+    ],
+    "scope": "Each of the four members gave written consent to publish their name (slides, video, README, CITATION.cff, repository)",
+    "source": "Reported by the user in the chat to the AI agents; the written consents are kept by the team, not in this repository"
+  },
+  "authorship": {
+    "equal_responsibility": true,
+    "statement": "The four members reviewed the notebook output and the numbers and share equal responsibility for the work",
+    "order": "Author order = 'members' above; it does not rank contributions",
+    "individual_roles": null,
+    "reported": "2026-10-26T12:10-05:00"
+  },
+  "voices": {
+    "narrators": "team members",
+    "synthetic_voice": false,
+    "statement": "The video voices are the team members' own; no synthetic voice is used",
+    "reported": "2026-10-26T12:10-05:00"
+  },
   "_notas": {
     "sede_program_affiliation_line": "Confirmado por el equipo: estudiantes de Estadística de la Universidad Nacional de Colombia, sede Bogotá. 'affiliation_line' es el texto exacto en inglés para la portada de las diapositivas; 'program_en' e 'institution_en' son sus componentes.",
-    "repo_url_y_repo": "Pendiente de crear el repositorio publico. 'repo' = 'usuario/repositorio' (la diapositiva escribe github.com/<repo>); 'repo_url' = URL completa.",
+    "repo_url_y_repo": "Repositorio GitHub del equipo (dato del usuario, 2026-10-26). 'repo' = 'usuario/repositorio'; 'repo_url' = URL completa. El equipo sube el código el 2026-10-29 ('repo_public_from'): hasta entonces la URL no responde (ningún agente hace git push). Referencias, README, CITATION.cff y notebook §10–§11 escriben esta URL como texto literal (es un metadato, no una cifra).",
     "hyp_file_sha256_short": "Primeros 12 caracteres de sha256sum docs/hipotesis_preinscritas.md (hash completo 83f98f6e1a3dbbcfa07b8435db7d11cc3eacc79faee9875591652bcbad3bb4b5, calculado el 2026-10-23). Recalcular si el archivo se modifica.",
     "n_states_n_territories": "Sobre las 237 ubicaciones con ISO3 de data/processed/lookup_regiones.csv (= paises.parquet). Estados = 193 miembros de la ONU + 2 observadores (Santa Sede VAT, Estado de Palestina PSE) = 195; territorios = 42 ubicaciones que no son miembros ni observadores (dependencias, regiones administrativas especiales y areas, incl. Kosovo XKX, Taiwan TWN, Sahara Occidental ESH), lista ISO3 explicita TERRITORIOS_42 en R/02_q1_palancas.R. Verificacion cruzada: countrycode (un.name.en) reconoce 193 de los 195 Estados y ninguno de los 42 territorios; las excepciones son VAT y PSE (observadores).",
     "world_pop_1950_bn": "Fila Location == 'World', Time == 1950 de data/processed/agregados.parquet: TPopulation1July = 2 493 093 (miles) / 1e6 = 2.49 miles de millones.",
-    "are_revision_pct_momentum_years_range_n_census_pre2009": "Pendiente del notebook/etica (docs/04_etica_ASA_aplicada.md); se rellenan desde R/05_numbers_json.R, no a mano."
+    "are_revision_pct_momentum_years_range_n_census_pre2009": "Pendiente del notebook/etica (docs/04_etica_ASA_aplicada.md); se rellenan desde R/05_numbers_json.R, no a mano.",
+    "human_check": "Verificación humana de las cifras (P-01), informada por el usuario el 2026-10-26: los cuatro integrantes comprobaron a mano las cifras habladas del guion v4 y las de pantalla del deck rc1 a las 11:23 (America/Bogota, UTC-5), sobre archivos con fecha anterior a esa hora (comprobado con stat). R/05_numbers_json.R copia este bloque a la clave 'meta_human_check' de figures/numbers.json. Detalle: docs/QA_stats.md §10 y docs/verificacion_numeros.csv.",
+    "consent_authorship_voices": "Información del usuario (2026-10-26, 12:10 America/Bogota): (i) los cuatro integrantes dieron consentimiento ESCRITO para publicar sus nombres; (ii) los cuatro revisaron el output del notebook y las cifras y comparten IGUAL responsabilidad del trabajo (sin papeles individuales: 'individual_roles' = null, no se inventan); (iii) las voces del vídeo son de los integrantes, ninguna sintética. Cierra P-04 y P-05 (docs/correcciones.md). El consentimiento informado cubre los nombres; el correo 'contact_email' no se mencionó (ver P-05)."
   }
 }

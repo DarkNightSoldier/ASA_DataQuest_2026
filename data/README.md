@@ -37,7 +37,7 @@ DataQuest 2026 junto con el archivo Medium.
 
 ## sha256 de los archivos usados en esta entrega (verificado 2026-10-22)
 
-Fecha de los archivos WPP 2024 en la carpeta del proyecto: **2026-10-02** (Medium, OtherVariants y notas; suplemento LE60: 2026-10-05), según la fecha de modificación de los archivos. La fecha exacta de descarga la confirma el equipo.
+**Procedencia (P-06, resuelto el 2026-10-26):** los archivos WPP 2024 que usa esta entrega **los entregaron los organizadores del ASA International DataQuest 2026**. Sus marcas de tiempo (fecha de modificación) son **2026-10-02** (Medium, OtherVariants y notas) y 2026-10-05 (suplemento LE60). No se anota una fecha de descarga: la única referencia temporal es esa marca de tiempo. Quien reproduzca el trabajo puede bajarlos de la ONU como se explica arriba y comparar los SHA-256 de abajo (si la ONU publicó después una versión revisada, el hash será distinto).
 
 | Archivo | sha256 |
 |---|---|

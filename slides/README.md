@@ -16,29 +16,49 @@ Texto en pantalla en inglés; este README y los comentarios en español.
 | `js/figs.js` | Figuras con marcador gris si faltan (nombre, ruta esperada y tamaño de ranura); póster si falta el MP4 |
 | `js/captions.js` | Subtítulos por fragmento, reproducción de `<video>` al mostrarse el fragmento, `window.slideTimings`, `window.deckSteps()` |
 | `js/init.js` | Configuración de reveal (1920×1080, margin 0, `hash`, `fade`, `pdfSeparateFragments:false`, `pdfMaxPagesPerSlide:1`, sin controles ni progreso), pie/navegador comunes, clases `.ge-N` por build, contador de la portada |
+| `js/numbers_data.js` | Copia de `figures/numbers.json` (`window.NUMBERS`) para abrir el deck con doble clic; **se versiona** y la regeneran `build_narration.py` y `video/export_pdf.sh` |
+| `abrir.sh` | Abre el deck con un servidor local (`python3 -m http.server` en un puerto libre + `xdg-open`) |
 | `js/iso_codes.js` | ISO3 → ISO2 (flag-icons) y nombres WPP; se regenera con `Rscript slides/dev/gen_iso_codes.R` |
 | `script/fill_numbers.py` | Sustituye `{clave}` / `{clave.say}` / `{clave.campo}` en un markdown (guion); `--check-html`, `--emit-js` |
 | `dev/numbers_demo.json` (+ `.js`) | **10 claves inventadas, `"demo": true`**, solo para probar el render (muestra la cinta *Demo numbers · not real*) |
 | `dev/screenshots.py` | Prueba visual: capturas de los 6 finales y de los 32 estados + `dev/figure_slots.json` + `dev/deck_report.json` |
 | `dev/video_timings.template.json` | Plantilla de tiempos con las duraciones del storyboard v2.1 (4:50 + 3 s) |
-| `export/slides.pdf` | PDF generado (ahora: versión de prueba con marcadores y cifras DEMO) |
+| `export/slides.pdf` | PDF de entrega (6 páginas: portada, 4 diapositivas, Referencias), cifras reales verificadas; lo genera `video/export_pdf.sh` |
 | `../video/record_slides.py`, `../video/export_pdf.sh` (`export_pdf.py`), `../video/deck_browser.py` | Grabación WebM, PDF, utilidades comunes |
 
-## 2. Servir y navegar
+## 2. Abrir el deck: dos modos
 
-Siempre desde la **raíz del repositorio** (para que `../figures/` resuelva desde `/slides/`):
+Antes, una vez: `cd slides && npm install` (reveal.js y flag-icons viven en `slides/node_modules/`, que no se versiona).
+
+**a) Servidor local (recomendado):**
 
 ```bash
-cd RepoGithub && python3 -m http.server 8000
-# http://127.0.0.1:8000/slides/index.html
+bash slides/abrir.sh            # puerto libre; PORT=8000 bash slides/abrir.sh para fijarlo
 ```
+
+Sirve la **raíz del repositorio** con `python3 -m http.server` (para que `../figures/` y `../docs/equipo.json`
+resuelvan desde `/slides/`), espera a que responda, abre `http://127.0.0.1:<puerto>/slides/index.html` con
+`xdg-open` y deja el servidor encendido hasta Ctrl+C. En este modo se cargan `../figures/numbers.json`,
+`script/video_timings.json` (subtítulos con los tiempos del vídeo) y `../docs/equipo.json`. A mano es lo mismo:
+`cd RepoGithub && python3 -m http.server 8000` → `http://127.0.0.1:8000/slides/index.html`.
+
+**b) Doble clic en `slides/index.html` (`file://`):** el navegador no deja leer JSON por `file://`, así que las
+cifras salen de **`js/numbers_data.js`** (`window.NUMBERS`, copia exacta de `figures/numbers.json`). Ese archivo
+**se versiona** (desde el 2026-10-26) y lo regeneran siempre `slides/script/build_narration.py` y
+`video/export_pdf.sh` (función `emit_js` de `script/fill_numbers.py`; solo se reescribe si cambia). A mano:
+`python slides/script/fill_numbers.py --emit-js slides/js/numbers_data.js`. Diferencias con a): los bloques de
+subtítulo cambian cada 3,2 s (no se leen los tiempos del vídeo) y la línea del equipo de la portada y la URL de
+Referencias usan el texto por defecto del HTML (idéntico a `docs/equipo.json`).
+
+Comprobado el 2026-10-26 con Playwright (Chromium): en los dos modos **ningún `[data-num]` queda vacío** (138 de 138
+con valor), `NUMBERS_REPORT.unfilledKeys` está vacío y no aparece la cinta DEMO (fuente: `../figures/numbers.json` por
+http, `js/numbers_data.js` por `file://`). `abrir.sh` probado con un `xdg-open` de prueba: `/slides/index.html` y
+`/figures/numbers.json` responden 200 y el servidor se apaga al salir.
 
 Teclas: → / espacio (siguiente build), ← (anterior), `c` subtítulos on/off, `q` marcadores QA on/off,
 `f` pantalla completa, `o`/`esc` vista general. Parámetros de URL: `?print-pdf` (versión PDF),
 `?qa=off` (oculta marcadores), `?captions=off`, `?record=1` (sin cursor),
 `?numbers=../figures/numbers_q1.json,../figures/numbers_q2.json` (vista previa con salidas parciales).
-Por `file://` funciona si existe `js/numbers_data.js`:
-`python slides/script/fill_numbers.py --emit-js slides/js/numbers_data.js` (archivo ignorado por git).
 
 Orden de carga de cifras: `../figures/numbers.json` → `window.NUMBERS` (`js/numbers_data.js`) →
 `dev/numbers_demo.json` (solo si fallan los anteriores; cinta DEMO visible también en el PDF).
