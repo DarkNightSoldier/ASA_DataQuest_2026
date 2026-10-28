@@ -206,7 +206,7 @@ group stability on the map (hatching) and labelling results as exploratory. On 2
 2025 videos (teams Chartosaur Inferna, INFINITA, VizChiefs and Glorystician); from them we adopted naming the statistical
 technique on every slide, always in the same tag style (our **Methods** tags), and saying it aloud.
 Our notes and screenshots of their work are kept internally and are not published here (they show other people's
-work and, in some frames, faces). The team may adjust this list (`docs/correcciones.md`, P-08).
+work and, in some frames, faces). The team confirmed this list on 2026-10-28 (`docs/correcciones.md`, P-08).
 
 ### How to cite
 
@@ -228,7 +228,7 @@ Only people can do these (full list with reasons: `docs/correcciones.md`, "Pendi
 **P-05** ✅ done (same date): written consent of the four members to publish their names; the voices are the members' own, none synthetic; public contact = the Team Leader's institutional e-mail (decided by him on 2026-10-27);
 **P-06** ✅ resolved: the WPP 2024 files were given by the DataQuest organisers (timestamps 2026-10-02; `data/README.md`);
 **P-07** ✅ done (reported 2026-10-27, 23:40 UTC−5): the four members hand-checked the number added on screen in rc2 (`knn_pc1` = 20 %); signed in `docs/verificacion_numeros.csv`;
-**P-08** confirm the Acknowledgements list (and add the professor if he guided Questions P7–P8).
+**P-08** ✅ done (reported 2026-10-28, 00:21 UTC−5): the Acknowledgements list, as worded, was confirmed by the team (Team Leader).
 
 ---
 
@@ -409,7 +409,7 @@ marcar en el mapa la estabilidad del grupo de cada país (rayado) y rotular los 
 como exploratorios. El 27 de octubre de 2026 vimos además otros cuatro vídeos de 2025 (equipos Chartosaur Inferna, INFINITA,
 VizChiefs y Glorystician); de ellos adoptamos nombrar la técnica estadística en cada diapositiva, siempre con el mismo estilo
 de etiqueta (nuestras etiquetas **Methods**), y decirla en voz alta. Nuestras notas y capturas de su trabajo se guardan de forma interna y no se publican aquí (muestran
-trabajo ajeno y, en algunos fotogramas, caras). El equipo puede ajustar esta lista (`docs/correcciones.md`, P-08).
+trabajo ajeno y, en algunos fotogramas, caras). El equipo confirmó esta lista el 2026-10-28 (`docs/correcciones.md`, P-08).
 
 **Cómo citar:** UNALSta-R (Kwan, D. C., Merchán, D. S., Mora, J. A. y Higuera, A.) (2026). *One Number Can't Tell 8 Billion Stories: births, deaths and migration in 237 countries and areas (UN World Population Prospects 2024)*. ASA International DataQuest 2026. Ver `CITATION.cff`.
 
@@ -425,4 +425,4 @@ Solo los pueden hacer personas (lista completa con motivos: `docs/correcciones.m
 **P-05** ✅ hecho (misma fecha): consentimiento escrito de los cuatro para publicar sus nombres; las voces son de los integrantes, ninguna sintética; contacto público = correo institucional del Team Leader (lo decidió él el 2026-10-27);
 **P-06** ✅ resuelto: los archivos WPP 2024 los entregaron los organizadores del DataQuest (fecha de los archivos 2026-10-02; `data/README.md`);
 **P-07** ✅ hecho (informado el 2026-10-27, 23:40, UTC−5): los cuatro comprobaron a mano la cifra que rc2 añadió en pantalla (`knn_pc1` = 20 %); firmada en `docs/verificacion_numeros.csv`;
-**P-08** confirmar la lista de Agradecimientos (y añadir al profesor si orientó las preguntas P7–P8).
+**P-08** ✅ hecho (informado el 2026-10-28, 00:21, UTC−5): la lista de Agradecimientos, tal como está redactada, fue confirmada por el equipo (Team Leader).
