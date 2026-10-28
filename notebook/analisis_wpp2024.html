@@ -7835,7 +7835,7 @@ python<span class="w"> </span>-I<span class="w"> </span>notebook/exportar_html.p
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Tesis,-tres-preguntas-y-mapa-a-las-preguntas-oficiales-(P1%E2%80%93P8)">Tesis, tres preguntas y mapa a las preguntas oficiales (P1–P8)<a class="anchor-link" href="#Tesis,-tres-preguntas-y-mapa-a-las-preguntas-oficiales-(P1%E2%80%93P8)">¶</a></h2><p><strong>Tesis (una frase).</strong> Ningún indicador cuenta por sí solo la historia de la población de un país; la historia útil para la ONU aparece cuando se leen juntos los tres componentes del balance — nacimientos, defunciones y migración — y se mira cómo se movieron durante 70 años, porque el componente que domina cambia con la etapa de la transición, la región y el nivel de ingreso.</p>
-<p><strong>Gancho (2023, 237 países y áreas).</strong> 130 tienen fecundidad bajo el reemplazo; 84 de ellos aún crecen: 66 porque nacen más personas de las que mueren y 18 solo porque llegan más de las que se van.</p>
+<p><strong>Gancho (2023, 237 países y áreas).</strong> 130 tienen fecundidad bajo el reemplazo; 84 de ellos aún crecen: 66 tienen más nacimientos que defunciones y 18 crecen solo porque llegan más personas de las que se van.</p>
 <table>
 <thead>
 <tr>
@@ -9859,7 +9859,7 @@ NRR &lt; 1   130     86  68       18
 <span class="w">         </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"descriptive"</span><span class="p">,</span><span class="w"> </span><span class="n">sens_note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="s">"Territories/areas:"</span><span class="p">,</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">TERRITORIOS_42</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">", "</span><span class="p">)),</span>
 <span class="w">         </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N_PAISES</span><span class="p">,</span><span class="w"> </span><span class="n">universe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UNIVERSO_237</span><span class="p">)</span>
 <span class="p">}</span>
-<span class="nf">anotar</span><span class="p">(</span><span class="s">"n_territories"</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">TERRITORIOS_42</span><span class="p">),</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"territories and areas"</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0"</span><span class="p">,</span>
+<span class="nf">anotar</span><span class="p">(</span><span class="s">"n_territories"</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">TERRITORIOS_42</span><span class="p">),</span><span class="w"> </span><span class="n">unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"other areas"</span><span class="p">,</span><span class="w"> </span><span class="n">fmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0"</span><span class="p">,</span>
 <span class="w">       </span><span class="n">def</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Territories and areas among the 237 (not UN Member or observer States), explicit ISO3 list"</span><span class="p">,</span>
 <span class="w">       </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">F_SOB</span><span class="p">,</span><span class="w"> </span><span class="n">source_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Q1-1.3"</span><span class="p">,</span><span class="w"> </span><span class="n">used_in</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"slide1.build0"</span><span class="p">,</span><span class="w"> </span><span class="s">"cover"</span><span class="p">),</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"none_census"</span><span class="p">,</span>
 <span class="w">       </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"descriptive"</span><span class="p">,</span><span class="w"> </span><span class="n">sens_note</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sprintf</span><span class="p">(</span><span class="s">"%d of them have &gt;= 1 M people: %s"</span><span class="p">,</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">ter_1m</span><span class="p">),</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">ter_1m</span><span class="p">,</span><span class="w"> </span><span class="n">collapse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">", "</span><span class="p">)),</span>
@@ -9982,7 +9982,7 @@ NRR &lt; 1   130     86  68       18
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A72-Identidad-de-balance-y-descomposici%C3%B3n-del-crecimiento">Q1 · §2 Identidad de balance y descomposición del crecimiento<a class="anchor-link" href="#Q1-%C2%B7-%C2%A72-Identidad-de-balance-y-descomposici%C3%B3n-del-crecimiento">¶</a></h3><p><em>Pre-specified (H1)</em> · <code>R/02_q1_palancas.R</code> líneas 304–516</p>
+<h3 id="Q1-%C2%B7-%C2%A72-Identidad-de-balance-y-descomposici%C3%B3n-del-crecimiento-%C2%B7-Demographic-balance-decomposition">Q1 · §2 Identidad de balance y descomposición del crecimiento · <strong>Demographic balance decomposition</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A72-Identidad-de-balance-y-descomposici%C3%B3n-del-crecimiento-%C2%B7-Demographic-balance-decomposition">¶</a></h3><p><em>Pre-specified (H1)</em> · <code>R/02_q1_palancas.R</code> líneas 304–516</p>
 </div>
 </div>
 </div>
@@ -13589,7 +13589,7 @@ H6KFUzxr2szWAAAAAElFTkSuQmCC"/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A73-Tipolog%C3%ADa-de-palancas-2023,-ventanas-de-sensibilidad,-ejemplos-e-inercia">Q1 · §3 Tipología de palancas 2023, ventanas de sensibilidad, ejemplos e inercia<a class="anchor-link" href="#Q1-%C2%B7-%C2%A73-Tipolog%C3%ADa-de-palancas-2023,-ventanas-de-sensibilidad,-ejemplos-e-inercia">¶</a></h3><p><em>Exploratory (H19) · conteos descriptivos</em> · <code>R/02_q1_palancas.R</code> líneas 517–820</p>
+<h3 id="Q1-%C2%B7-%C2%A73-Tipolog%C3%ADa-de-palancas-2023,-ventanas-de-sensibilidad,-ejemplos-e-inercia-%C2%B7-Webb-typology-(sign-of-each-component)">Q1 · §3 Tipología de palancas 2023, ventanas de sensibilidad, ejemplos e inercia · <strong>Webb typology (sign of each component)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A73-Tipolog%C3%ADa-de-palancas-2023,-ventanas-de-sensibilidad,-ejemplos-e-inercia-%C2%B7-Webb-typology-(sign-of-each-component)">¶</a></h3><p><em>Exploratory (H19) · conteos descriptivos</em> · <code>R/02_q1_palancas.R</code> líneas 517–820</p>
 </div>
 </div>
 </div>
@@ -25223,7 +25223,7 @@ AgICAgKCBxT/P3cE/uD7cP1jAAAAAElFTkSuQmCC"/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A74-%C2%BFSe-parecen-los-vecinos?-Moran's-I-(dependencia-espacial)">Q1 · §4 ¿Se parecen los vecinos? Moran's I (dependencia espacial)<a class="anchor-link" href="#Q1-%C2%B7-%C2%A74-%C2%BFSe-parecen-los-vecinos?-Moran's-I-(dependencia-espacial)">¶</a></h3><p><em>Exploratory (H24)</em> · <code>R/02_q1_palancas.R</code> líneas 821–1033</p>
+<h3 id="Q1-%C2%B7-%C2%A74-%C2%BFSe-parecen-los-vecinos?-Moran's-I-(dependencia-espacial)-%C2%B7-Moran's-I-+-LISA-(spatial-autocorrelation)">Q1 · §4 ¿Se parecen los vecinos? Moran's I (dependencia espacial) · <strong>Moran's I + LISA (spatial autocorrelation)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A74-%C2%BFSe-parecen-los-vecinos?-Moran's-I-(dependencia-espacial)-%C2%B7-Moran's-I-+-LISA-(spatial-autocorrelation)">¶</a></h3><p><em>Exploratory (H24)</em> · <code>R/02_q1_palancas.R</code> líneas 821–1033</p>
 </div>
 </div>
 </div>
@@ -31459,7 +31459,7 @@ AAAASUVORK5CYII="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A75-Supervivencia:-%C2%BFqu%C3%A9-empieza-a-caer-primero,-la-mortalidad-infantil-o-la-fecundidad?">Q1 · §5 Supervivencia: ¿qué empieza a caer primero, la mortalidad infantil o la fecundidad?<a class="anchor-link" href="#Q1-%C2%B7-%C2%A75-Supervivencia:-%C2%BFqu%C3%A9-empieza-a-caer-primero,-la-mortalidad-infantil-o-la-fecundidad?">¶</a></h3><p><em>Pre-specified (H3, H3a) · Exploratory (H3b)</em> · <code>R/02_q1_palancas.R</code> líneas 1034–1331</p>
+<h3 id="Q1-%C2%B7-%C2%A75-Supervivencia:-%C2%BFqu%C3%A9-empieza-a-caer-primero,-la-mortalidad-infantil-o-la-fecundidad?-%C2%B7-Kaplan%E2%80%93Meier-and-Turnbull-survival-analysis">Q1 · §5 Supervivencia: ¿qué empieza a caer primero, la mortalidad infantil o la fecundidad? · <strong>Kaplan–Meier and Turnbull survival analysis</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A75-Supervivencia:-%C2%BFqu%C3%A9-empieza-a-caer-primero,-la-mortalidad-infantil-o-la-fecundidad?-%C2%B7-Kaplan%E2%80%93Meier-and-Turnbull-survival-analysis">¶</a></h3><p><em>Pre-specified (H3, H3a) · Exploratory (H3b)</em> · <code>R/02_q1_palancas.R</code> líneas 1034–1331</p>
 </div>
 </div>
 </div>
@@ -40761,7 +40761,7 @@ p5BCSBAEQRAEQRAEcZ1CCiFBEARBEARBEMR1CimEBEEQBEEQBEEQ1ymkEBIEQRAEQRAEQVyn
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A76-Registro-por-hitos-(datos-funcionales):-mismo-camino,-distinta-velocidad">Q1 · §6 Registro por hitos (datos funcionales): mismo camino, distinta velocidad<a class="anchor-link" href="#Q1-%C2%B7-%C2%A76-Registro-por-hitos-(datos-funcionales):-mismo-camino,-distinta-velocidad">¶</a></h3><p><em>Exploratory (H17, H18)</em> · <code>R/02_q1_palancas.R</code> líneas 1332–1553</p>
+<h3 id="Q1-%C2%B7-%C2%A76-Registro-por-hitos-(datos-funcionales):-mismo-camino,-distinta-velocidad-%C2%B7-Curve-registration-(functional-data)">Q1 · §6 Registro por hitos (datos funcionales): mismo camino, distinta velocidad · <strong>Curve registration (functional data)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A76-Registro-por-hitos-(datos-funcionales):-mismo-camino,-distinta-velocidad-%C2%B7-Curve-registration-(functional-data)">¶</a></h3><p><em>Exploratory (H17, H18)</em> · <code>R/02_q1_palancas.R</code> líneas 1332–1553</p>
 </div>
 </div>
 </div>
@@ -49750,7 +49750,7 @@ EARBkFkKGoQIgiAIgiAIgiCzFDQIEQRBEARBEARBZin/HwHPKv1i1agpAAAAAElFTkSuQmCC
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A77-Panel-en-cambios-quinquenales-con-efectos-fijos-pa%C3%ADs-+-periodo">Q1 · §7 Panel en cambios quinquenales con efectos fijos país + periodo<a class="anchor-link" href="#Q1-%C2%B7-%C2%A77-Panel-en-cambios-quinquenales-con-efectos-fijos-pa%C3%ADs-+-periodo">¶</a></h3><p><em>Exploratory (H15, H16)</em> · <code>R/02_q1_palancas.R</code> líneas 1554–1951</p>
+<h3 id="Q1-%C2%B7-%C2%A77-Panel-en-cambios-quinquenales-con-efectos-fijos-pa%C3%ADs-+-periodo-%C2%B7-Fixed-effects-panel-regression-(cluster-robust)">Q1 · §7 Panel en cambios quinquenales con efectos fijos país + periodo · <strong>Fixed-effects panel regression (cluster-robust)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A77-Panel-en-cambios-quinquenales-con-efectos-fijos-pa%C3%ADs-+-periodo-%C2%B7-Fixed-effects-panel-regression-(cluster-robust)">¶</a></h3><p><em>Exploratory (H15, H16)</em> · <code>R/02_q1_palancas.R</code> líneas 1554–1951</p>
 </div>
 </div>
 </div>
@@ -57964,7 +57964,7 @@ o6AGIQUFBQUFBQUFBQUFxTuK/wc95Atl0PZkpgAAAABJRU5ErkJggg=="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A78-Migraci%C3%B3n:-memoria-corta-y-paradoja-tipo-Simpson-con-el-ingreso">Q1 · §8 Migración: memoria corta y paradoja tipo Simpson con el ingreso<a class="anchor-link" href="#Q1-%C2%B7-%C2%A78-Migraci%C3%B3n:-memoria-corta-y-paradoja-tipo-Simpson-con-el-ingreso">¶</a></h3><p><em>Pre-specified (H4, H5) · Exploratory (H4a, H21)</em> · <code>R/02_q1_palancas.R</code> líneas 1952–2094</p>
+<h3 id="Q1-%C2%B7-%C2%A78-Migraci%C3%B3n:-memoria-corta-y-paradoja-tipo-Simpson-con-el-ingreso-%C2%B7-Correlation-over-decades-(migration-memory)">Q1 · §8 Migración: memoria corta y paradoja tipo Simpson con el ingreso · <strong>Correlation over decades (migration memory)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A78-Migraci%C3%B3n:-memoria-corta-y-paradoja-tipo-Simpson-con-el-ingreso-%C2%B7-Correlation-over-decades-(migration-memory)">¶</a></h3><p><em>Pre-specified (H4, H5) · Exploratory (H4a, H21)</em> · <code>R/02_q1_palancas.R</code> líneas 1952–2094</p>
 </div>
 </div>
 </div>
@@ -61812,7 +61812,7 @@ ZAUsS5Ys3TSyApYlS5ZuGlkBy5IlSzeNrIBlyZKlm0ZWwLJkydJNIytgWbJk6aaRFbAsWbJ0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A79-Incertidumbre-oficial-de-la-ONU-(OtherVariants):-EAU-y-direcci%C3%B3n-2050">Q1 · §9 Incertidumbre oficial de la ONU (OtherVariants): EAU y dirección 2050<a class="anchor-link" href="#Q1-%C2%B7-%C2%A79-Incertidumbre-oficial-de-la-ONU-(OtherVariants):-EAU-y-direcci%C3%B3n-2050">¶</a></h3><p><em>Exploratory (H22) · UN medium projection = escenario</em> · <code>R/02_q1_palancas.R</code> líneas 2095–2234</p>
+<h3 id="Q1-%C2%B7-%C2%A79-Incertidumbre-oficial-de-la-ONU-(OtherVariants):-EAU-y-direcci%C3%B3n-2050-%C2%B7-UN-probabilistic-projections-(80-%25-and-95-%25-ranges)">Q1 · §9 Incertidumbre oficial de la ONU (OtherVariants): EAU y dirección 2050 · <strong>UN probabilistic projections (80 % and 95 % ranges)</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A79-Incertidumbre-oficial-de-la-ONU-(OtherVariants):-EAU-y-direcci%C3%B3n-2050-%C2%B7-UN-probabilistic-projections-(80-%25-and-95-%25-ranges)">¶</a></h3><p><em>Exploratory (H22) · UN medium projection = escenario</em> · <code>R/02_q1_palancas.R</code> líneas 2095–2234</p>
 </div>
 </div>
 </div>
@@ -64860,7 +64860,7 @@ UfQ1J93rlQAAAABJRU5ErkJggg=="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A710b-Ap%C3%A9ndice-del-notebook:-Shapley-por-ingreso,-misma-fecundidad,-tipo-E-hist%C3%B3rico-y-GAM-por-ingreso-(plan-%C2%A74-Q1,-fila-%22Solo-notebook%22)">Q1 · §10b Apéndice del notebook: Shapley por ingreso, misma fecundidad, tipo E histórico y GAM por ingreso (plan §4-Q1, fila "Solo notebook")<a class="anchor-link" href="#Q1-%C2%B7-%C2%A710b-Ap%C3%A9ndice-del-notebook:-Shapley-por-ingreso,-misma-fecundidad,-tipo-E-hist%C3%B3rico-y-GAM-por-ingreso-(plan-%C2%A74-Q1,-fila-%22Solo-notebook%22)">¶</a></h3><p><em>Exploratory (apéndice del notebook, sin hipótesis)</em> · <code>R/02_q1_palancas.R</code> líneas 2275–2465</p>
+<h3 id="Q1-%C2%B7-%C2%A710b-Ap%C3%A9ndice-del-notebook:-Shapley-por-ingreso,-misma-fecundidad,-tipo-E-hist%C3%B3rico-y-GAM-por-ingreso-(plan-%C2%A74-Q1,-fila-%22Solo-notebook%22)-%C2%B7-Shapley-decomposition-%C2%B7-GAM">Q1 · §10b Apéndice del notebook: Shapley por ingreso, misma fecundidad, tipo E histórico y GAM por ingreso (plan §4-Q1, fila "Solo notebook") · <strong>Shapley decomposition · GAM</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A710b-Ap%C3%A9ndice-del-notebook:-Shapley-por-ingreso,-misma-fecundidad,-tipo-E-hist%C3%B3rico-y-GAM-por-ingreso-(plan-%C2%A74-Q1,-fila-%22Solo-notebook%22)-%C2%B7-Shapley-decomposition-%C2%B7-GAM">¶</a></h3><p><em>Exploratory (apéndice del notebook, sin hipótesis)</em> · <code>R/02_q1_palancas.R</code> líneas 2275–2465</p>
 </div>
 </div>
 </div>
@@ -72111,7 +72111,7 @@ EBIQEBAQEBAQEBAQEPxNQQxCAgICAgICAgICAgKCvyn+H45QkWnQAAxFAAAAAElFTkSuQmCC
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q1-%C2%B7-%C2%A711-Contrastes-formales-(familias,-Holm/BH)-y-estado-de-las-hip%C3%B3tesis">Q1 · §11 Contrastes formales (familias, Holm/BH) y estado de las hipótesis<a class="anchor-link" href="#Q1-%C2%B7-%C2%A711-Contrastes-formales-(familias,-Holm/BH)-y-estado-de-las-hip%C3%B3tesis">¶</a></h3><p><em>Familias F1–F3, Holm / BH (solo notebook)</em> · <code>R/02_q1_palancas.R</code> líneas 2466–2586</p>
+<h3 id="Q1-%C2%B7-%C2%A711-Contrastes-formales-(familias,-Holm/BH)-y-estado-de-las-hip%C3%B3tesis-%C2%B7-Multiple-testing:-Holm-and-Benjamini%E2%80%93Hochberg">Q1 · §11 Contrastes formales (familias, Holm/BH) y estado de las hipótesis · <strong>Multiple testing: Holm and Benjamini–Hochberg</strong><a class="anchor-link" href="#Q1-%C2%B7-%C2%A711-Contrastes-formales-(familias,-Holm/BH)-y-estado-de-las-hip%C3%B3tesis-%C2%B7-Multiple-testing:-Holm-and-Benjamini%E2%80%93Hochberg">¶</a></h3><p><em>Familias F1–F3, Holm / BH (solo notebook)</em> · <code>R/02_q1_palancas.R</code> líneas 2466–2586</p>
 </div>
 </div>
 </div>
@@ -73166,7 +73166,7 @@ Universo: <strong>161 países ≥ 1 M</strong> (población 2023), <strong>2023</
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A72-S1-%C2%B7-Scorecard-%22qu%C3%A9-explica-la-fecundidad-sola%22-(H6,-pre-specified)">Q2 · §2 S1 · Scorecard "qué explica la fecundidad sola" (H6, pre-specified)<a class="anchor-link" href="#Q2-%C2%B7-%C2%A72-S1-%C2%B7-Scorecard-%22qu%C3%A9-explica-la-fecundidad-sola%22-(H6,-pre-specified)">¶</a></h3><p><em>Pre-specified (H6)</em> · <code>R/03_q2_un_numero.R</code> líneas 312–519</p>
+<h3 id="Q2-%C2%B7-%C2%A72-S1-%C2%B7-Scorecard-%22qu%C3%A9-explica-la-fecundidad-sola%22-(H6,-pre-specified)-%C2%B7-Adjusted-R%C2%B2-(one-indicator-regressions,-cross-validated)">Q2 · §2 S1 · Scorecard "qué explica la fecundidad sola" (H6, pre-specified) · <strong>Adjusted R² (one-indicator regressions, cross-validated)</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A72-S1-%C2%B7-Scorecard-%22qu%C3%A9-explica-la-fecundidad-sola%22-(H6,-pre-specified)-%C2%B7-Adjusted-R%C2%B2-(one-indicator-regressions,-cross-validated)">¶</a></h3><p><em>Pre-specified (H6)</em> · <code>R/03_q2_un_numero.R</code> líneas 312–519</p>
 </div>
 </div>
 </div>
@@ -79154,7 +79154,7 @@ RU5ErkJggg=="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A73-Escalera-de-R%C2%B2:-identidad-contable-(nota)-vs-prueba-%22fuera-de-tiempo%22">Q2 · §3 Escalera de R²: identidad contable (nota) vs prueba "fuera de tiempo"<a class="anchor-link" href="#Q2-%C2%B7-%C2%A73-Escalera-de-R%C2%B2:-identidad-contable-(nota)-vs-prueba-%22fuera-de-tiempo%22">¶</a></h3><p><em>Descriptive (identidad contable; nota al pie)</em> · <code>R/03_q2_un_numero.R</code> líneas 520–603</p>
+<h3 id="Q2-%C2%B7-%C2%A73-Escalera-de-R%C2%B2:-identidad-contable-(nota)-vs-prueba-%22fuera-de-tiempo%22-%C2%B7-R%C2%B2-ladder-(out-of-time-test)">Q2 · §3 Escalera de R²: identidad contable (nota) vs prueba "fuera de tiempo" · <strong>R² ladder (out-of-time test)</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A73-Escalera-de-R%C2%B2:-identidad-contable-(nota)-vs-prueba-%22fuera-de-tiempo%22-%C2%B7-R%C2%B2-ladder-(out-of-time-test)">¶</a></h3><p><em>Descriptive (identidad contable; nota al pie)</em> · <code>R/03_q2_un_numero.R</code> líneas 520–603</p>
 </div>
 </div>
 </div>
@@ -86567,7 +86567,7 @@ AgICAgICAgKC+xREISQgICAgICAgICAgILhP8f8BUrHGu6jyZ+MAAAAASUVORK5CYII="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A76-R1-%C2%B7-Prueba-de-parecidos-(look-alikes)-%E2%80%94-demostraci%C3%B3n-central-de-P8-(H20)">Q2 · §6 R1 · Prueba de parecidos (look-alikes) — demostración central de P8 (H20)<a class="anchor-link" href="#Q2-%C2%B7-%C2%A76-R1-%C2%B7-Prueba-de-parecidos-(look-alikes)-%E2%80%94-demostraci%C3%B3n-central-de-P8-(H20)">¶</a></h3><p><em>Exploratory (H20)</em> · <code>R/03_q2_un_numero.R</code> líneas 842–1080</p>
+<h3 id="Q2-%C2%B7-%C2%A76-R1-%C2%B7-Prueba-de-parecidos-(look-alikes)-%E2%80%94-demostraci%C3%B3n-central-de-P8-(H20)-%C2%B7-k-nearest-neighbours-(look-alikes)">Q2 · §6 R1 · Prueba de parecidos (look-alikes) — demostración central de P8 (H20) · <strong>k-nearest neighbours (look-alikes)</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A76-R1-%C2%B7-Prueba-de-parecidos-(look-alikes)-%E2%80%94-demostraci%C3%B3n-central-de-P8-(H20)-%C2%B7-k-nearest-neighbours-(look-alikes)">¶</a></h3><p><em>Exploratory (H20)</em> · <code>R/03_q2_un_numero.R</code> líneas 842–1080</p>
 </div>
 </div>
 </div>
@@ -87119,7 +87119,7 @@ AgICAgICAgKC+xREISQgICAgICAgICAgILhP8f8BUrHGu6jyZ+MAAAAASUVORK5CYII="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A77-R2-%C2%B7-PCA-con-el-conjunto-FIJO-de-12-variables-+-an%C3%A1lisis-paralelo-(H7,-H7a)">Q2 · §7 R2 · PCA con el conjunto FIJO de 12 variables + análisis paralelo (H7, H7a)<a class="anchor-link" href="#Q2-%C2%B7-%C2%A77-R2-%C2%B7-PCA-con-el-conjunto-FIJO-de-12-variables-+-an%C3%A1lisis-paralelo-(H7,-H7a)">¶</a></h3><p><em>Pre-specified (H7) · Exploratory (H7a)</em> · <code>R/03_q2_un_numero.R</code> líneas 1081–1354</p>
+<h3 id="Q2-%C2%B7-%C2%A77-R2-%C2%B7-PCA-con-el-conjunto-FIJO-de-12-variables-+-an%C3%A1lisis-paralelo-(H7,-H7a)-%C2%B7-Principal-component-analysis-+-Horn's-parallel-analysis">Q2 · §7 R2 · PCA con el conjunto FIJO de 12 variables + análisis paralelo (H7, H7a) · <strong>Principal component analysis + Horn's parallel analysis</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A77-R2-%C2%B7-PCA-con-el-conjunto-FIJO-de-12-variables-+-an%C3%A1lisis-paralelo-(H7,-H7a)-%C2%B7-Principal-component-analysis-+-Horn's-parallel-analysis">¶</a></h3><p><em>Pre-specified (H7) · Exploratory (H7a)</em> · <code>R/03_q2_un_numero.R</code> líneas 1081–1354</p>
 </div>
 </div>
 </div>
@@ -99872,7 +99872,7 @@ BQUFxXcU/w/zQKp3dDZgbQAAAABJRU5ErkJggg=="/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A78-R3-%C2%B7-%C3%8Dndice-compuesto-(P5)-y-su-fragilidad-(H8,-H8a)">Q2 · §8 R3 · Índice compuesto (P5) y su fragilidad (H8, H8a)<a class="anchor-link" href="#Q2-%C2%B7-%C2%A78-R3-%C2%B7-%C3%8Dndice-compuesto-(P5)-y-su-fragilidad-(H8,-H8a)">¶</a></h3><p><em>Pre-specified (H8, H8a)</em> · <code>R/03_q2_un_numero.R</code> líneas 1355–1587</p>
+<h3 id="Q2-%C2%B7-%C2%A78-R3-%C2%B7-%C3%8Dndice-compuesto-(P5)-y-su-fragilidad-(H8,-H8a)-%C2%B7-Monte-Carlo-composite-index-(2,000-designs,-OECD/JRC)">Q2 · §8 R3 · Índice compuesto (P5) y su fragilidad (H8, H8a) · <strong>Monte Carlo composite index (2,000 designs, OECD/JRC)</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A78-R3-%C2%B7-%C3%8Dndice-compuesto-(P5)-y-su-fragilidad-(H8,-H8a)-%C2%B7-Monte-Carlo-composite-index-(2,000-designs,-OECD/JRC)">¶</a></h3><p><em>Pre-specified (H8, H8a)</em> · <code>R/03_q2_un_numero.R</code> líneas 1355–1587</p>
 </div>
 </div>
 </div>
@@ -108550,7 +108550,7 @@ TkSuQmCC"/>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q2-%C2%B7-%C2%A710-Redundancia-(solo-notebook):-VIF-y-correlaciones-parciales">Q2 · §10 Redundancia (solo notebook): VIF y correlaciones parciales<a class="anchor-link" href="#Q2-%C2%B7-%C2%A710-Redundancia-(solo-notebook):-VIF-y-correlaciones-parciales">¶</a></h3><p><em>Exploratory (solo notebook)</em> · <code>R/03_q2_un_numero.R</code> líneas 1651–1675</p>
+<h3 id="Q2-%C2%B7-%C2%A710-Redundancia-(solo-notebook):-VIF-y-correlaciones-parciales-%C2%B7-VIF-and-partial-correlations">Q2 · §10 Redundancia (solo notebook): VIF y correlaciones parciales · <strong>VIF and partial correlations</strong><a class="anchor-link" href="#Q2-%C2%B7-%C2%A710-Redundancia-(solo-notebook):-VIF-y-correlaciones-parciales-%C2%B7-VIF-and-partial-correlations">¶</a></h3><p><em>Exploratory (solo notebook)</em> · <code>R/03_q2_un_numero.R</code> líneas 1651–1675</p>
 </div>
 </div>
 </div>
@@ -109255,7 +109255,7 @@ Universo: <strong>161 países ≥ 1 M</strong> (población 2023), estimaciones d
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A72-Elecci%C3%B3n-de-k-(simple:-silueta;-rico:-gap,-Mclust)">Q3 · §2 Elección de k (simple: silueta; rico: gap, Mclust)<a class="anchor-link" href="#Q3-%C2%B7-%C2%A72-Elecci%C3%B3n-de-k-(simple:-silueta;-rico:-gap,-Mclust)">¶</a></h3><p><em>Pre-specified (H9, H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 223–255</p>
+<h3 id="Q3-%C2%B7-%C2%A72-Elecci%C3%B3n-de-k-(simple:-silueta;-rico:-gap,-Mclust)-%C2%B7-Silhouette,-gap-statistic-and-Mclust-(choice-of-k)">Q3 · §2 Elección de k (simple: silueta; rico: gap, Mclust) · <strong>Silhouette, gap statistic and Mclust (choice of k)</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A72-Elecci%C3%B3n-de-k-(simple:-silueta;-rico:-gap,-Mclust)-%C2%B7-Silhouette,-gap-statistic-and-Mclust-(choice-of-k)">¶</a></h3><p><em>Pre-specified (H9, H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 223–255</p>
 </div>
 </div>
 </div>
@@ -109410,7 +109410,7 @@ Universo: <strong>161 países ≥ 1 M</strong> (población 2023), estimaciones d
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A73-Partici%C3%B3n-principal-(k-means,-k-=-4)-y-nombres-por-regla">Q3 · §3 Partición principal (k-means, k = 4) y nombres por regla<a class="anchor-link" href="#Q3-%C2%B7-%C2%A73-Partici%C3%B3n-principal-(k-means,-k-=-4)-y-nombres-por-regla">¶</a></h3><p><em>Pre-specified (H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 256–293</p>
+<h3 id="Q3-%C2%B7-%C2%A73-Partici%C3%B3n-principal-(k-means,-k-=-4)-y-nombres-por-regla-%C2%B7-k-means-clustering-(k-=-4)">Q3 · §3 Partición principal (k-means, k = 4) y nombres por regla · <strong>k-means clustering (k = 4)</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A73-Partici%C3%B3n-principal-(k-means,-k-=-4)-y-nombres-por-regla-%C2%B7-k-means-clustering-(k-=-4)">¶</a></h3><p><em>Pre-specified (H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 256–293</p>
 </div>
 </div>
 </div>
@@ -109826,7 +109826,7 @@ Composición por ingreso (FY2027):
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A75-Validaci%C3%B3n-de-los-grupos-(simple--%3E-rico)">Q3 · §5 Validación de los grupos (simple -&gt; rico)<a class="anchor-link" href="#Q3-%C2%B7-%C2%A75-Validaci%C3%B3n-de-los-grupos-(simple--%3E-rico)">¶</a></h3><p><em>Pre-specified (H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 375–603</p>
+<h3 id="Q3-%C2%B7-%C2%A75-Validaci%C3%B3n-de-los-grupos-(simple--%3E-rico)-%C2%B7-Functional-PCA,-Ward,-PAM,-bootstrap-Jaccard-(cluster-validation)">Q3 · §5 Validación de los grupos (simple -&gt; rico) · <strong>Functional PCA, Ward, PAM, bootstrap Jaccard (cluster validation)</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A75-Validaci%C3%B3n-de-los-grupos-(simple--%3E-rico)-%C2%B7-Functional-PCA,-Ward,-PAM,-bootstrap-Jaccard-(cluster-validation)">¶</a></h3><p><em>Pre-specified (H9a)</em> · <code>R/04_q3_caminos.R</code> líneas 375–603</p>
 </div>
 </div>
 </div>
@@ -110361,7 +110361,7 @@ con_cnmr         1  2  3  4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A76-Contig%C3%BCidad-espacial-de-los-caminos-(join-count-y-voto-de-vecinos)">Q3 · §6 Contigüidad espacial de los caminos (join count y voto de vecinos)<a class="anchor-link" href="#Q3-%C2%B7-%C2%A76-Contig%C3%BCidad-espacial-de-los-caminos-(join-count-y-voto-de-vecinos)">¶</a></h3><p><em>Exploratory (H25)</em> · <code>R/04_q3_caminos.R</code> líneas 604–708</p>
+<h3 id="Q3-%C2%B7-%C2%A76-Contig%C3%BCidad-espacial-de-los-caminos-(join-count-y-voto-de-vecinos)-%C2%B7-Join-count-permutation-test">Q3 · §6 Contigüidad espacial de los caminos (join count y voto de vecinos) · <strong>Join-count permutation test</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A76-Contig%C3%BCidad-espacial-de-los-caminos-(join-count-y-voto-de-vecinos)-%C2%B7-Join-count-permutation-test">¶</a></h3><p><em>Exploratory (H25)</em> · <code>R/04_q3_caminos.R</code> líneas 604–708</p>
 </div>
 </div>
 </div>
@@ -110615,7 +110615,7 @@ azar             0.306       0.312         0.038         0.325
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A77-Divergencia-entre-pa%C3%ADses-(P1)">Q3 · §7 Divergencia entre países (P1)<a class="anchor-link" href="#Q3-%C2%B7-%C2%A77-Divergencia-entre-pa%C3%ADses-(P1)">¶</a></h3><p><em>Pre-specified (H10, H11, H11a)</em> · <code>R/04_q3_caminos.R</code> líneas 709–818</p>
+<h3 id="Q3-%C2%B7-%C2%A77-Divergencia-entre-pa%C3%ADses-(P1)-%C2%B7-%CF%83-convergence-(SD,-P90/P10)-+-block-bootstrap-by-UN-subregion">Q3 · §7 Divergencia entre países (P1) · <strong>σ-convergence (SD, P90/P10) + block bootstrap by UN subregion</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A77-Divergencia-entre-pa%C3%ADses-(P1)-%C2%B7-%CF%83-convergence-(SD,-P90/P10)-+-block-bootstrap-by-UN-subregion">¶</a></h3><p><em>Pre-specified (H10, H11, H11a)</em> · <code>R/04_q3_caminos.R</code> líneas 709–818</p>
 </div>
 </div>
 </div>
@@ -111043,7 +111043,7 @@ Q5            DE 1950 116.96 -&gt; 2023 27.07 -&gt; 2050 18.73 (proy.) | CV 52.3
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A78-Curvas-at%C3%ADpicas-(profundidad-funcional,-datos-SIN-suavizar)">Q3 · §8 Curvas atípicas (profundidad funcional, datos SIN suavizar)<a class="anchor-link" href="#Q3-%C2%B7-%C2%A78-Curvas-at%C3%ADpicas-(profundidad-funcional,-datos-SIN-suavizar)">¶</a></h3><p><em>Exploratory</em> · <code>R/04_q3_caminos.R</code> líneas 819–846</p>
+<h3 id="Q3-%C2%B7-%C2%A78-Curvas-at%C3%ADpicas-(profundidad-funcional,-datos-SIN-suavizar)-%C2%B7-Functional-depth-(outlying-curves)">Q3 · §8 Curvas atípicas (profundidad funcional, datos SIN suavizar) · <strong>Functional depth (outlying curves)</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A78-Curvas-at%C3%ADpicas-(profundidad-funcional,-datos-SIN-suavizar)-%C2%B7-Functional-depth-(outlying-curves)">¶</a></h3><p><em>Exploratory</em> · <code>R/04_q3_caminos.R</code> líneas 819–846</p>
 </div>
 </div>
 </div>
@@ -111151,7 +111151,7 @@ Q5            DE 1950 116.96 -&gt; 2023 27.07 -&gt; 2050 18.73 (proy.) | CV 52.3
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Q3-%C2%B7-%C2%A79-Velocidad-en-el-camino:-de-5-a-3-hijos-por-grupo-(Kaplan-Meier)-y-reloj-propio">Q3 · §9 Velocidad en el camino: de 5 a 3 hijos por grupo (Kaplan-Meier) y reloj propio<a class="anchor-link" href="#Q3-%C2%B7-%C2%A79-Velocidad-en-el-camino:-de-5-a-3-hijos-por-grupo-(Kaplan-Meier)-y-reloj-propio">¶</a></h3><p><em>Exploratory</em> · <code>R/04_q3_caminos.R</code> líneas 847–903</p>
+<h3 id="Q3-%C2%B7-%C2%A79-Velocidad-en-el-camino:-de-5-a-3-hijos-por-grupo-(Kaplan-Meier)-y-reloj-propio-%C2%B7-Kaplan%E2%80%93Meier-(5-%E2%86%92-3-children-per-woman,-by-group)">Q3 · §9 Velocidad en el camino: de 5 a 3 hijos por grupo (Kaplan-Meier) y reloj propio · <strong>Kaplan–Meier (5 → 3 children per woman, by group)</strong><a class="anchor-link" href="#Q3-%C2%B7-%C2%A79-Velocidad-en-el-camino:-de-5-a-3-hijos-por-grupo-(Kaplan-Meier)-y-reloj-propio-%C2%B7-Kaplan%E2%80%93Meier-(5-%E2%86%92-3-children-per-woman,-by-group)">¶</a></h3><p><em>Exploratory</em> · <code>R/04_q3_caminos.R</code> líneas 847–903</p>
 </div>
 </div>
 </div>
@@ -170069,7 +170069,7 @@ yrs_medage30_40_recent             32 years                                     
 <h3 id="9.6-Privacidad,-reproducibilidad,-IA-y-correcciones-(D.4,-B.4,-B.5,-F.4,-A.5)">9.6 Privacidad, reproducibilidad, IA y correcciones (D.4, B.4, B.5, F.4, A.5)<a class="anchor-link" href="#9.6-Privacidad,-reproducibilidad,-IA-y-correcciones-(D.4,-B.4,-B.5,-F.4,-A.5)">¶</a></h3><ul>
 <li>No se usan datos personales: todo son agregados nacionales publicados.</li>
 <li>Reproducibilidad: R y paquetes en la sección 10 (<code>sessionInfo()</code>), <code>set.seed(2026)</code> antes de cada remuestreo, SHA-256 de los crudos y del archivo de hipótesis en <code>numbers.json</code>; ejecutar este notebook regenera <code>figures/numbers.json</code>, las tablas <code>data/processed/resultados_q*.parquet</code> y las figuras de revisión.</li>
-<li><strong>Uso de IA:</strong> agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, asistieron el análisis, el código y la producción: escribieron la mayor parte del código, los memos de asesoría, las figuras y los borradores del guion y de las diapositivas. <strong>No hicieron las voces</strong>: narran integrantes del equipo y no se usa voz sintética. Los cuatro integrantes revisaron el output de este notebook y las cifras y comparten igual responsabilidad del trabajo (<code>docs/registro_ia.md</code> §2). <code>verified: true</code> en <code>numbers.json</code> lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: <strong>no es una revisión humana</strong>. La revisión humana va aparte: <strong>los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla el 2026-10-26 a las 11:23 (UTC−5)</strong>, sobre archivos con fecha anterior (<code>docs/verificacion_numeros.csv</code>, <code>docs/QA_stats.md</code> §10 y la clave de metadatos <code>meta_human_check</code>); si una cifra cambia después, se vuelve a comprobar. El registro de uso de IA está en <code>docs/registro_ia.md</code>.</li>
+<li><strong>Uso de IA:</strong> agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, escribieron la mayor parte del código R, los memos, las figuras y el texto de las diapositivas y del guion. <strong>No hicieron las voces</strong>: narran integrantes del equipo y no se usa voz sintética. Los cuatro integrantes revisaron el output de este notebook y las cifras y comparten igual responsabilidad del trabajo (<code>docs/registro_ia.md</code> §2). <code>verified: true</code> en <code>numbers.json</code> lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: <strong>no es una revisión humana</strong>. La revisión humana va aparte: <strong>los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla el 2026-10-26 a las 11:23 (UTC−5)</strong>, sobre archivos con fecha anterior (<code>docs/verificacion_numeros.csv</code>, <code>docs/QA_stats.md</code> §10 y la clave de metadatos <code>meta_human_check</code>); si una cifra cambia después, se vuelve a comprobar (en rc2, 2026-10-27, la única cifra nueva en pantalla es <code>knn_pc1</code>, pendiente de esa comprobación: <code>docs/correcciones.md</code> P-07). Las cifras dentro de las figuras las recalculó ese código independiente, no la revisión a mano. El registro de uso de IA está en <code>docs/registro_ia.md</code>.</li>
 <li>Los errores detectados y corregidos se registran en <code>docs/correcciones.md</code>.</li>
 </ul>
 <h3 id="9.7-Conflictos-de-inter%C3%A9s-y-l%C3%ADmites-de-competencia-(A.1,-A.7)">9.7 Conflictos de interés y límites de competencia (A.1, A.7)<a class="anchor-link" href="#9.7-Conflictos-de-inter%C3%A9s-y-l%C3%ADmites-de-competencia-(A.1,-A.7)">¶</a></h3><ul>
@@ -170089,7 +170089,7 @@ yrs_medage30_40_recent             32 years                                     
 <h2 id="10.-Reproducibilidad">10. Reproducibilidad<a class="anchor-link" href="#10.-Reproducibilidad">¶</a></h2><p><strong>Repositorio:</strong> <a href="https://github.com/DarkNightSoldier/ASA_DataQuest_2026">https://github.com/DarkNightSoldier/ASA_DataQuest_2026</a> (público desde el 29 de octubre de 2026, cuando el equipo sube el código). Código MIT; textos CC BY 4.0.</p>
 <p>Semilla, generador, huellas SHA-256 de las salidas, pruebas de la infraestructura de incertidumbre (<code>R/tests_incertidumbre.R</code>, en un proceso aparte) y la sesión de R completa.</p>
 <blockquote>
-<p><strong>Nota de versión (2026-10-26, agente de IA <em>seguimiento</em>).</strong> Este notebook <strong>no se volvió a ejecutar</strong> después de los últimos cambios: las salidas de las celdas son de la última corrida completa (la que escribió <code>numbers.json</code> con 383 claves y SHA-256 <code>73fded24…</code>; 13,1 min). Después se cambiaron, sin re-ejecutar, el texto de las celdas 0, §7 (lectura de <code>numbers.json</code>), §9.6, §10 y §11 y las celdas de código de <code>R/05_numbers_json.R</code>, que ahora añaden dos claves de <strong>metadatos</strong> (<code>repo</code> y <code>meta_human_check</code>): por eso <code>figures/numbers.json</code> tiene hoy 385 claves y otra huella SHA-256 que la impresa abajo. <strong>Ningún valor ni ningún <code>verified</code> cambió</strong> (comparación campo a campo con <code>git diff</code>; <code>docs/QA_stats.md</code> §10). Para que salidas y código coincidan de nuevo, basta ejecutar el notebook entero (instrucciones en la celda 0).</p>
+<p><strong>Nota de versión (2026-10-26, agente de IA <em>seguimiento</em>; ampliada el 2026-10-27 por el agente de IA <em>cierre-rc2</em>).</strong> Este notebook <strong>no se volvió a ejecutar</strong> después de los últimos cambios: las salidas de las celdas son de la última corrida completa (la que escribió <code>numbers.json</code> con 383 claves y SHA-256 <code>73fded24…</code>; 13,1 min). Después se cambiaron, sin re-ejecutar, el texto de las celdas 0, §7 (lectura de <code>numbers.json</code>), §9.6, §10 y §11 y las celdas de código de <code>R/05_numbers_json.R</code>, que ahora añaden dos claves de <strong>metadatos</strong> (<code>repo</code> y <code>meta_human_check</code>): por eso <code>figures/numbers.json</code> tiene hoy 385 claves y otra huella SHA-256 que la impresa abajo. <strong>Ningún valor ni ningún <code>verified</code> cambió</strong> (comparación campo a campo con <code>git diff</code>; <code>docs/QA_stats.md</code> §10). En rc2 (2026-10-27) cambiaron, también sin re-ejecutar, solo textos: la celda 1 (redacción del gancho), los títulos de sección (técnica en <strong>negrita</strong>), §9.6 y §11 (declaración de IA), y la etiqueta <code>unit</code> de <code>n_territories</code> en una celda de código de Q1 §1 (ya estaba así en <code>R/02_q1_palancas.R</code>; no cambia ningún valor). Para que salidas y código coincidan de nuevo, basta ejecutar el notebook entero (instrucciones en la celda 0).</p>
 </blockquote>
 </div>
 </div>
@@ -170365,7 +170365,7 @@ loaded via a namespace (and not attached):
 </ul>
 <p><strong>Asistencia de IA y reproducibilidad</strong></p>
 <ul>
-<li>AI assistance: Claude Code (Anthropic) AI agents, directed by the team, assisted the analysis, the code and the production (most R code, memos, figures, slide and script drafts), not the voices (team members narrate; no synthetic voice). Every number was recomputed by independent code and checked by the four team members (that code is also AI-written; hand check on 2026-10-26 at 11:23 UTC−5, <code>docs/QA_stats.md</code> §10). The four of us share equal responsibility. Log: <code>docs/registro_ia.md</code>.</li>
+<li>AI assistance: Claude Code (Anthropic) AI agents, directed by the team, wrote most of the R code, the memos, the figures and the slide and script text; team members voice the video (no synthetic voice). Every number in the text and narration was recomputed from the raw UN files by separate code (also AI-written) and checked by hand by the four team members (2026-10-26 at 11:23 UTC−5, <code>docs/QA_stats.md</code> §10); numbers inside figures were recomputed by that code. The four of us share equal responsibility. Log: <code>docs/registro_ia.md</code>.</li>
 <li>Code, notebook, figures and pre-specified hypotheses (SHA-256 <code>83f98f6e1a3d</code>): <a href="https://github.com/DarkNightSoldier/ASA_DataQuest_2026">https://github.com/DarkNightSoldier/ASA_DataQuest_2026</a> (public from 29 Oct 2026). Código MIT; textos CC BY 4.0.</li>
 </ul>
 </div>

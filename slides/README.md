@@ -173,3 +173,9 @@ grabación) salvo `--allow-demo --allow-unverified` (pruebas; oculta los marcado
 - Recuadros de respuesta de 3 líneas a 23 px (el storyboard pide 2 líneas a 28 px; el texto no cabe).
 - Salvaguarda: si `say` ya empieza por "about" y el texto dice "about {x.say}", se elimina el duplicado
   (aviso en consola); lo correcto es `say = "seven in ten"` como define el storyboard.
+- **Etiquetas de técnica (rc2, 2026-10-27; petición del usuario):** `<span class="mtag"><span class="mk">Methods</span><b>Nombre</b> · glosa</span>`.
+  Nombre en negrita y tinta, glosa llana de 7 palabras como máximo, letra ≥ 18 px, sin alto extra: en la fila del chip
+  "Question N" (S1, S4) o en línea al principio del titular de cada figura (S2, S3, fig11; `white-space: nowrap`).
+  "Methods at a glance" (`.cover-methods`, `.glance`) en la portada y en s1.b0. Mismos nombres que la tabla del README
+  y los títulos de sección del notebook (`TECNICAS` en `notebook/construir_notebook.py`). Detalle: `docs/correcciones.md` J-19.
+- Contacto en Referencias: `data-team="contact_email"` (Team Leader, correo institucional; `docs/equipo.json`).

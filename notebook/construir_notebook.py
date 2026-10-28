@@ -281,7 +281,7 @@ TESIS = f"""
 
 **Tesis (una frase).** Ningún indicador cuenta por sí solo la historia de la población de un país; la historia útil para la ONU aparece cuando se leen juntos los tres componentes del balance — nacimientos, defunciones y migración — y se mira cómo se movieron durante 70 años, porque el componente que domina cambia con la etapa de la transición, la región y el nivel de ingreso.
 
-**Gancho (2023, {N('n_countries')} países y áreas).** {N('n_below_replacement_2023')} tienen fecundidad bajo el reemplazo; {N('n_below_repl_growing_2023')} de ellos aún crecen: {N('n_below_repl_natural_growth_2023')} porque nacen más personas de las que mueren y {N('n_grow_only_migration_2023')} solo porque llegan más de las que se van.
+**Gancho (2023, {N('n_countries')} países y áreas).** {N('n_below_replacement_2023')} tienen fecundidad bajo el reemplazo; {N('n_below_repl_growing_2023')} de ellos aún crecen: {N('n_below_repl_natural_growth_2023')} tienen más nacimientos que defunciones y {N('n_grow_only_migration_2023')} crecen solo porque llegan más personas de las que se van.
 
 | # | Pregunta (texto en pantalla) | Preguntas oficiales | Sección |
 |---|---|---|---|
@@ -455,6 +455,24 @@ ETIQUETAS = {
            "13": "Exploratory (recomendaciones: qué vigilar, dónde, cuándo)", "17": "Estado de H9, H9a, H10, H11, H11a, H14a, H23, H25"},
 }
 
+# Técnica estadística de cada sección, en negrita en su título (petición del usuario, rc2 2026-10-27:
+# que se vea qué método responde cada pregunta; mismos nombres que la etiqueta "Methods" de las diapositivas
+# y la tabla "Methods at a glance" del README). Solo secciones con una técnica propia.
+TECNICAS = {
+    "Q1": {"2": "Demographic balance decomposition", "3": "Webb typology (sign of each component)",
+           "4": "Moran's I + LISA (spatial autocorrelation)", "5": "Kaplan–Meier and Turnbull survival analysis",
+           "6": "Curve registration (functional data)", "7": "Fixed-effects panel regression (cluster-robust)",
+           "8": "Correlation over decades (migration memory)", "9": "UN probabilistic projections (80 % and 95 % ranges)",
+           "10b": "Shapley decomposition · GAM", "11": "Multiple testing: Holm and Benjamini–Hochberg"},
+    "Q2": {"2": "Adjusted R² (one-indicator regressions, cross-validated)", "3": "R² ladder (out-of-time test)",
+           "6": "k-nearest neighbours (look-alikes)", "7": "Principal component analysis + Horn's parallel analysis",
+           "8": "Monte Carlo composite index (2,000 designs, OECD/JRC)", "10": "VIF and partial correlations"},
+    "Q3": {"2": "Silhouette, gap statistic and Mclust (choice of k)", "3": "k-means clustering (k = 4)",
+           "5": "Functional PCA, Ward, PAM, bootstrap Jaccard (cluster validation)",
+           "6": "Join-count permutation test", "7": "σ-convergence (SD, P90/P10) + block bootstrap by UN subregion",
+           "8": "Functional depth (outlying curves)", "9": "Kaplan–Meier (5 → 3 children per woman, by group)"},
+}
+
 # Lecturas que van al final de cada sección del script (clave = sección del script).
 LECTURAS = {
     "Q1": {"1": ["1"], "2": ["2"], "3": ["3"], "4": ["4"], "5": ["5"], "6": ["6"], "7": ["7"], "8": ["8"],
@@ -620,7 +638,7 @@ Este análisis sigue los *Ethical Guidelines for Statistical Practice* de la Ame
 ### 9.6 Privacidad, reproducibilidad, IA y correcciones (D.4, B.4, B.5, F.4, A.5)
 - No se usan datos personales: todo son agregados nacionales publicados.
 - Reproducibilidad: R y paquetes en la sección 10 (`sessionInfo()`), `set.seed(2026)` antes de cada remuestreo, SHA-256 de los crudos y del archivo de hipótesis en `numbers.json`; ejecutar este notebook regenera `figures/numbers.json`, las tablas `data/processed/resultados_q*.parquet` y las figuras de revisión.
-- **Uso de IA:** agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, asistieron el análisis, el código y la producción: escribieron la mayor parte del código, los memos de asesoría, las figuras y los borradores del guion y de las diapositivas. **No hicieron las voces**: narran integrantes del equipo y no se usa voz sintética. Los cuatro integrantes revisaron el output de este notebook y las cifras y comparten igual responsabilidad del trabajo (`docs/registro_ia.md` §2). `verified: true` en `numbers.json` lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: **no es una revisión humana**. La revisión humana va aparte: **los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla el 2026-10-26 a las 11:23 (UTC−5)**, sobre archivos con fecha anterior (`docs/verificacion_numeros.csv`, `docs/QA_stats.md` §10 y la clave de metadatos `meta_human_check`); si una cifra cambia después, se vuelve a comprobar. El registro de uso de IA está en `docs/registro_ia.md`.
+- **Uso de IA:** agentes de IA (Claude Code, de Anthropic), dirigidos por el equipo, escribieron la mayor parte del código R, los memos, las figuras y el texto de las diapositivas y del guion. **No hicieron las voces**: narran integrantes del equipo y no se usa voz sintética. Los cuatro integrantes revisaron el output de este notebook y las cifras y comparten igual responsabilidad del trabajo (`docs/registro_ia.md` §2). `verified: true` en `numbers.json` lo marca un agente de IA (QA-stats) que recalcula cada cifra con código independiente desde los archivos crudos de la ONU: **no es una revisión humana**. La revisión humana va aparte: **los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla el 2026-10-26 a las 11:23 (UTC−5)**, sobre archivos con fecha anterior (`docs/verificacion_numeros.csv`, `docs/QA_stats.md` §10 y la clave de metadatos `meta_human_check`); si una cifra cambia después, se vuelve a comprobar (en rc2, 2026-10-27, la única cifra nueva en pantalla es `knn_pc1`, pendiente de esa comprobación: `docs/correcciones.md` P-07). Las cifras dentro de las figuras las recalculó ese código independiente, no la revisión a mano. El registro de uso de IA está en `docs/registro_ia.md`.
 - Los errores detectados y corregidos se registran en `docs/correcciones.md`.
 
 ### 9.7 Conflictos de interés y límites de competencia (A.1, A.7)
@@ -634,6 +652,8 @@ REPRO_INTRO = """
 **Repositorio:** https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (público desde el 29 de octubre de 2026, cuando el equipo sube el código). Código MIT; textos CC BY 4.0.
 
 Semilla, generador, huellas SHA-256 de las salidas, pruebas de la infraestructura de incertidumbre (`R/tests_incertidumbre.R`, en un proceso aparte) y la sesión de R completa.
+
+> **Nota de versión (2026-10-26, agente de IA *seguimiento*; ampliada el 2026-10-27 por el agente de IA *cierre-rc2*).** Este notebook **no se volvió a ejecutar** después de los últimos cambios: las salidas de las celdas son de la última corrida completa (la que escribió `numbers.json` con 383 claves y SHA-256 `73fded24…`; 13,1 min). Después se cambiaron, sin re-ejecutar, el texto de las celdas 0, §7 (lectura de `numbers.json`), §9.6, §10 y §11 y las celdas de código de `R/05_numbers_json.R`, que ahora añaden dos claves de **metadatos** (`repo` y `meta_human_check`): por eso `figures/numbers.json` tiene hoy 385 claves y otra huella SHA-256 que la impresa abajo. **Ningún valor ni ningún `verified` cambió** (comparación campo a campo con `git diff`; `docs/QA_stats.md` §10). En rc2 (2026-10-27) cambiaron, también sin re-ejecutar, solo textos: la celda 1 (redacción del gancho), los títulos de sección (técnica en **negrita**), §9.6 y §11 (declaración de IA), y la etiqueta `unit` de `n_territories` en una celda de código de Q1 §1 (ya estaba así en `R/02_q1_palancas.R`; no cambia ningún valor). Para que salidas y código coincidan de nuevo, basta ejecutar el notebook entero (instrucciones en la celda 0).
 """
 
 REPRO_CODE = r"""
@@ -683,7 +703,7 @@ REFERENCIAS = f"""
 - R (versión en la sección 10); tidyverse, data.table, arrow, sf, rnaturalearth, fixest, survival, fda, fda.usc, cluster, mclust, clue, boot, mgcv, patchwork, ggrepel, magick, IRkernel; Jupyter / nbconvert.
 
 **Asistencia de IA y reproducibilidad**
-- AI assistance: Claude Code (Anthropic) AI agents, directed by the team, assisted the analysis, the code and the production (most R code, memos, figures, slide and script drafts), not the voices (team members narrate; no synthetic voice). Every number was recomputed by independent code and checked by the four team members (that code is also AI-written; hand check on 2026-10-26 at 11:23 UTC−5, `docs/QA_stats.md` §10). The four of us share equal responsibility. Log: `docs/registro_ia.md`.
+- AI assistance: Claude Code (Anthropic) AI agents, directed by the team, wrote most of the R code, the memos, the figures and the slide and script text; team members voice the video (no synthetic voice). Every number in the text and narration was recomputed from the raw UN files by separate code (also AI-written) and checked by hand by the four team members (2026-10-26 at 11:23 UTC−5, `docs/QA_stats.md` §10); numbers inside figures were recomputed by that code. The four of us share equal responsibility. Log: `docs/registro_ia.md`.
 - Code, notebook, figures and pre-specified hypotheses (SHA-256 `{N('hyp_file_sha256_short')}`): https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (public from 29 Oct 2026). Código MIT; textos CC BY 4.0.
 """
 
@@ -705,6 +725,9 @@ def celdas_script(ruta_rel: str, pregunta: str | None, doc: str | None, carpeta_
     for s in secciones:
         etiqueta = etiquetas.get(s["id"])
         enc = f"{nivel} {pregunta + ' · ' if pregunta else ''}§{s['id']} {s['titulo']}"
+        tecnica = TECNICAS.get(pregunta, {}).get(s["id"]) if pregunta else None
+        if tecnica:
+            enc += f" · **{tecnica}**"
         if etiqueta:
             enc += f"\n\n*{etiqueta}* · `{ruta_rel}` líneas {s['lineas'][0]}–{s['lineas'][1]}"
         else:

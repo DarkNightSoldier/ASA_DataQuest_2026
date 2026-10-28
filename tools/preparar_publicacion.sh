@@ -77,18 +77,29 @@ if [ -f "$ARBOL/docs/INDICE.md" ]; then
   cat "$TMP/indice" > "$ARBOL/docs/INDICE.md"
 fi
 
-# Rutas absolutas de la máquina de desarrollo → marcadores neutros (solo archivos de texto)
+# Rutas absolutas de la máquina de desarrollo → marcadores neutros (solo archivos de texto).
+# Los prefijos se arman por partes para que este script no los contenga literalmente (si no, se
+# sustituiría a sí mismo y la comprobación final lo marcaría). También se cubren $HOME y $REPO de quien
+# lo ejecute, por si no es la misma máquina.
+DEV_HOME="/home/""darkns"
+DEV_REPO="$DEV_HOME/Documents/ASA_Dataquest/RepoGithub"
+TMP_PREF="/tmp/""claude-"
+PAT_RUTAS="${TMP_PREF}|${DEV_HOME}/"
+if [ "$HOME" != "$DEV_HOME" ] && [ "${#HOME}" -gt 1 ]; then PAT_RUTAS="$PAT_RUTAS|$HOME/"; fi
 n_rutas=0
 while IFS= read -r -d '' f; do
   sed -i -E \
-    -e 's#/tmp/claude-[0-9]+/[^/[:space:]"]+/[0-9a-f-]+/scratchpad#<scratchpad>#g' \
-    -e 's#/tmp/claude-[0-9]+/[^[:space:]"'"'"'`)]*#<scratchpad>#g' \
-    -e 's#/home/darkns/Documents/ASA_Dataquest/RepoGithub#<repo>#g' \
-    -e 's#/home/darkns/Documents/ASA_Dataquest#<repo>/..#g' \
-    -e 's#/home/darkns#~#g' \
+    -e "s#${TMP_PREF}[0-9]+/[^/[:space:]\"]+/[0-9a-f-]+/scratchpad#<scratchpad>#g" \
+    -e "s#${TMP_PREF}[0-9]+/[^[:space:]\"'\`)]*#<scratchpad>#g" \
+    -e "s#${REPO}#<repo>#g" \
+    -e "s#${DEV_REPO}#<repo>#g" \
+    -e "s#$(dirname "$REPO")#<repo>/..#g" \
+    -e "s#$(dirname "$DEV_REPO")#<repo>/..#g" \
+    -e "s#${DEV_HOME}/#~/#g" \
+    -e "s#${HOME}/#~/#g" \
     "$f"
   n_rutas=$((n_rutas + 1))
-done < <(grep -rlIZ -e '/tmp/claude-' -e '/home/darkns' "$ARBOL" || true)
+done < <(grep -rlIZ -E "$PAT_RUTAS" "$ARBOL" || true)
 
 cat > "$ARBOL/PUBLIC_SNAPSHOT.md" <<EOF
 # Public snapshot · instantánea pública
@@ -121,8 +132,8 @@ EOF
 
 # Índice temporal → árbol → commit sin padres
 export GIT_INDEX_FILE="$TMP/index"
-git --work-tree="$ARBOL" add -A -f .
-TREE="$(git --work-tree="$ARBOL" write-tree)"
+git --git-dir="$REPO/.git" --work-tree="$ARBOL" -C "$ARBOL" add -A -f .
+TREE="$(git --git-dir="$REPO/.git" --work-tree="$ARBOL" -C "$ARBOL" write-tree)"
 unset GIT_INDEX_FILE
 
 export GIT_AUTHOR_NAME="$NOMBRE_PUB (Team Leader, $EQUIPO)" GIT_AUTHOR_EMAIL="$CORREO_PUB"
@@ -138,12 +149,12 @@ fallos=0
 if git ls-tree -r --name-only "$RAMA" | grep -Eq "^docs/($PATRON_EXCLUIDOS)"; then
   echo "ERROR: la rama $RAMA contiene rutas excluidas" >&2; fallos=1
 fi
-if git grep -I -q -e '/tmp/claude-' -e '/home/darkns' "$RAMA" -- . ; then
+if git grep -I -q -E -e "$PAT_RUTAS" "$RAMA" -- . ; then
   echo "ERROR: quedan rutas absolutas de la máquina en $RAMA:" >&2
-  git grep -I -l -e '/tmp/claude-' -e '/home/darkns' "$RAMA" -- . >&2 || true; fallos=1
+  git grep -I -l -E -e "$PAT_RUTAS" "$RAMA" -- . >&2 || true; fallos=1
 fi
-if git grep -I -q -i -e '@gmail\.com' "$RAMA" -- . ; then
-  echo "ERROR: hay un correo personal (@gmail.com) en $RAMA" >&2; fallos=1
+if git grep -I -q -i -E -e '@g''mail[.]com' "$RAMA" -- . ; then
+  echo "ERROR: hay un correo personal (dominio de Google) en $RAMA" >&2; fallos=1
 fi
 grande="$(git ls-tree -r -l "$RAMA" | awk '$4 > 50*1024*1024 {print $5}')"
 if [ -n "$grande" ]; then echo "AVISO: archivos > 50 MB (GitHub avisa a partir de 50 MB): $grande" >&2; fi

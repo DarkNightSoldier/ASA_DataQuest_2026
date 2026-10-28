@@ -50,7 +50,7 @@ than leave. One number cannot explain that. We ask three questions and answer ea
 ## Methods at a glance
 
 Every technique below is in the notebook (`notebook/analisis_wpp2024.html`; sections 3, 4 and 5 hold Questions 1, 2 and 3, and
-their sub-sections carry the technique in bold). On each slide, a **Method** tag next to the figure names the technique.
+their sub-sections carry the technique in bold). On each content slide, a **Methods** tag names the technique in bold with a plain gloss of at most seven words, next to its figure or in the slide header; the cover and the first slide list them all ("Methods at a glance"), and the narration names four of them aloud (survival analysis, panel regression, principal component analysis, k-means).
 
 | Technique | Question (official P) | What it answers | Notebook |
 |---|---|---|---|
@@ -201,7 +201,10 @@ section 6, numbered in their order. Before designing ours, we reviewed, with our
 22 Oct 2026): the 2025 winners TRITICS and QuantaQuartet, and the 2026 repositories ahzasasa/asa-dataquest,
 idiltuzkaya/asa_dataquest and yguzmanm-sys/ASA-DataQuest. From TRITICS we adopted plain-language glosses and a
 simple → richer model comparison; from QuantaQuartet, showing data quality up front and out-of-sample checks; from
-ahzasasa/asa-dataquest, marking each country's group stability on the map (hatching) and labelling results as exploratory.
+ahzasasa/asa-dataquest, fixing our hypotheses before the final run in a dated file with a SHA-256 hash, marking each country's
+group stability on the map (hatching) and labelling results as exploratory. On 27 Oct 2026 we also watched four other
+2025 videos (teams Chartosaur Inferna, INFINITA, VizChiefs and Glorystician); from them we adopted naming the statistical
+technique on every slide, always in the same tag style (our **Methods** tags), and saying it aloud.
 Our notes and screenshots of their work are kept internally and are not published here (they show other people's
 work and, in some frames, faces). The team may adjust this list (`docs/correcciones.md`, P-08).
 
@@ -281,7 +284,7 @@ todas las cifras salen de `figures/numbers.json`):
 ## Métodos de un vistazo
 
 Todas las técnicas están en el notebook (`notebook/analisis_wpp2024.html`; las secciones 3, 4 y 5 son las preguntas 1, 2 y 3, y
-sus subsecciones llevan la técnica en negrita). En cada diapositiva, una etiqueta **Method** junto a la figura nombra la técnica.
+sus subsecciones llevan la técnica en negrita). En cada diapositiva de contenido, una etiqueta **Methods** nombra la técnica en negrita con una glosa llana de siete palabras como máximo, junto a su figura o en la cabecera; la portada y la primera diapositiva las listan todas ("Methods at a glance") y la voz nombra cuatro (análisis de supervivencia, regresión de panel, componentes principales y k-means).
 
 | Técnica | Pregunta (P oficial) | Qué responde | Notebook |
 |---|---|---|---|
@@ -401,8 +404,11 @@ numeradas en su orden. Antes de diseñar el nuestro revisamos, con nuestros agen
 22 de octubre de 2026): los ganadores de 2025 TRITICS y QuantaQuartet, y los repositorios de 2026 ahzasasa/asa-dataquest,
 idiltuzkaya/asa_dataquest y yguzmanm-sys/ASA-DataQuest. De TRITICS adoptamos las glosas en lenguaje llano y la comparación
 de un modelo simple con uno más rico; de QuantaQuartet, mostrar la calidad de los datos al principio y las pruebas fuera de
-muestra; de ahzasasa/asa-dataquest, marcar en el mapa la estabilidad del grupo de cada país (rayado) y rotular los resultados
-como exploratorios. Nuestras notas y capturas de su trabajo se guardan de forma interna y no se publican aquí (muestran
+muestra; de ahzasasa/asa-dataquest, fijar las hipótesis antes de la corrida final en un archivo fechado con huella SHA-256,
+marcar en el mapa la estabilidad del grupo de cada país (rayado) y rotular los resultados
+como exploratorios. El 27 de octubre de 2026 vimos además otros cuatro vídeos de 2025 (equipos Chartosaur Inferna, INFINITA,
+VizChiefs y Glorystician); de ellos adoptamos nombrar la técnica estadística en cada diapositiva, siempre con el mismo estilo
+de etiqueta (nuestras etiquetas **Methods**), y decirla en voz alta. Nuestras notas y capturas de su trabajo se guardan de forma interna y no se publican aquí (muestran
 trabajo ajeno y, en algunos fotogramas, caras). El equipo puede ajustar esta lista (`docs/correcciones.md`, P-08).
 
 **Cómo citar:** UNALSta-R (Kwan, D. C., Merchán, D. S., Mora, J. A. y Higuera, A.) (2026). *One Number Can't Tell 8 Billion Stories: births, deaths and migration in 237 countries and areas (UN World Population Prospects 2024)*. ASA International DataQuest 2026. Ver `CITATION.cff`.
