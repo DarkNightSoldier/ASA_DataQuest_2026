@@ -4,6 +4,8 @@
 # ('members') y no ordena contribuciones. No se registran papeles individuales (docs/registro_ia.md §2). Los cuatro
 # dieron consentimiento escrito para publicar sus nombres (P-05).
 # URL del repositorio = docs/equipo.json → "repo_url" (añadida el 2026-10-26; público desde el 2026-10-29, cuando el equipo sube el código).
+# rc2 (2026-10-27, cierre-rc2): declaración de IA (jurado_etica I-1) y contacto institucional del Team Leader (decisión del
+# usuario). La etiqueta v1.0-submission la crea el equipo sobre la rama pública (tools/preparar_publicacion.sh --tag).
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below. The data are from UN DESA, World Population Prospects 2024 (CC BY 3.0 IGO); cite them as well."
 type: software
@@ -13,10 +15,10 @@ abstract: >-
   non-causal analysis of births, deaths and net migration in the UN World Population
   Prospects 2024 (estimates 1950–2023, medium projection to 2100), with a reproducible
   R notebook, figures, slides and video script. AI agents (Claude Code, Anthropic),
-  directed by the team, assisted the analysis, the code and the production (most of
-  the code and drafts), not the voices: the video is narrated by team members. The
-  four authors share equal responsibility for the work (author order as in
-  docs/equipo.json, not by contribution); see docs/registro_ia.md.
+  directed by the team, wrote most of the code, figures and texts; team members voice
+  the video (no synthetic voice). The four authors share equal responsibility for the
+  work (author order as in docs/equipo.json, not by contribution); see
+  docs/registro_ia.md. Contact: Alejandro Higuera (Team Leader), ahiguerac@unal.edu.co.
 version: v1.0-submission
 license: MIT
 repository-code: "https://github.com/DarkNightSoldier/ASA_DataQuest_2026"
@@ -34,6 +36,7 @@ authors:
   - given-names: "Alejandro"
     family-names: "Higuera"
     affiliation: "Universidad Nacional de Colombia, Bogotá"
+    email: "ahiguerac@unal.edu.co"
 keywords:
   - demography
   - World Population Prospects

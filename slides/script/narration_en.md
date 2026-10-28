@@ -2,9 +2,9 @@
 
 > Generado por `slides/script/build_narration.py` desde `slides/script/narration_en_template.md` con `figures/numbers.json` (solo claves `verified: true`). **No editar a mano**: se cambia la plantilla y se regenera. Fuente única de la voz: `docs/00_storyboard_diapositivas.md` la copia palabra por palabra.
 
-> **596 palabras** (`wc -w`, cifra = 1) · 606 habladas · **17 cifras habladas** · **292.2 s = 4:52.2** (150 ppm + 1,5 s de aire por cifra + 0,6 s por transición; pasos con MP4 ≥ MP4 + 0,3 s) · 32 pasos · 68 bloques de subtítulo.
+> **601 palabras** (`wc -w`, cifra = 1) · 611 habladas · **17 cifras habladas** · **294.2 s = 4:54.2** (150 ppm + 1,5 s de aire por cifra + 0,6 s por transición; pasos con MP4 ≥ MP4 + 0,3 s) · 32 pasos · 71 bloques de subtítulo.
 
-> Gancho: la paradoja se plantea antes de 11.6 s y el giro "Yet 84 are still growing." empieza en 11.6 s.
+> Gancho: la paradoja se plantea antes de 12.0 s y el giro "Yet 84 are still growing." empieza en 12.0 s.
 
 Lectura: una frase por línea `>`; leer sin prisa, ≈ 1,5 s de silencio después de cada cifra (marcadas en la tabla). Nombres: "UNALSta-R" = *u-nal-sta-ar*. Lo que no lleva cifra en voz queda en pantalla.
 
@@ -13,202 +13,203 @@ Lectura: una frase por línea `>`; leer sin prisa, ≈ 1,5 s de silencio despué
 | Paso | Diapositiva | `data-fragment-index` (HTML → reveal) | Inicio–fin | Dur. (s) | Palabras | Cifras habladas | MP4 |
 |---|---|---|---|---|---|---|---|
 | `cover.b1` | Cover | sección | 0:00.0–0:02.7 | 2.7 | 3 | 1 | — |
-| `cover.b2` | Cover | 2 → 0 | 0:02.7–0:11.6 | 8.9 | 14 | 1 | — |
-| `cover.b3` | Cover | 3 → 1 | 0:11.6–0:24.7 | 13.1 | 20 | 3 | — |
-| `cover.b4` | Cover | 4 → 2 | 0:24.7–0:27.3 | 2.6 | 5 | 0 | — |
-| `cover.b5` | Cover | 5 → 3 | 0:27.3–0:29.5 | 2.2 | 4 | 0 | — |
-| `s1.b0` | Slide 1 | sección | 0:29.5–0:47.7 | 18.2 | 44 | 0 | — |
-| `s1.b1` | Slide 1 | 1 → 0 | 0:47.7–0:53.5 | 5.8 | 13 | 0 | — |
-| `s1.b2` | Slide 1 | 2 → 1 | 0:53.5–1:06.4 | 12.9 | 26 | 1 | fig01_growth_components_by_income (12.1 s) |
-| `s1.b3` | Slide 1 | 3 → 2 | 1:06.4–1:09.8 | 3.4 | 7 | 0 | — |
-| `s1.b3b` | Slide 1 | 4 → 3 | 1:09.8–1:15.9 | 6.1 | 10 | 1 | — |
-| `s1.b4a` | Slide 1 | 5 → 4 | 1:15.9–1:20.5 | 4.6 | 10 | 0 | — |
-| `s1.b4b` | Slide 1 | 6 → 5 | 1:20.5–1:23.9 | 3.4 | 7 | 0 | — |
-| `s1.b4c` | Slide 1 | 7 → 6 | 1:23.9–1:28.5 | 4.6 | 10 | 0 | — |
-| `s1.b5a` | Slide 1 | 8 → 7 | 1:28.5–1:32.8 | 4.3 | 7 | 0 | fig02b_lever_map_zoom (4.0 s) |
-| `s1.b5b` | Slide 1 | 9 → 8 | 1:32.8–1:41.3 | 8.5 | 15 | 1 | — |
-| `s2.b0` | Slide 2 | sección | 1:41.3–1:41.9 | 0.6 | 0 | 0 | — |
-| `s2.b1` | Slide 2 | 1 → 0 | 1:41.9–2:00.7 | 18.8 | 38 | 2 | fig04_same_road_registration (18.5 s) |
-| `s2.b2` | Slide 2 | 2 → 1 | 2:00.7–2:13.5 | 12.8 | 19 | 2 | — |
-| `s2.b3` | Slide 2 | 3 → 2 | 2:13.5–2:22.1 | 8.6 | 20 | 0 | — |
-| `s2.b4` | Slide 2 | 4 → 3 | 2:22.1–2:37.1 | 15.0 | 36 | 0 | — |
-| `s3.b0` | Slide 3 | sección | 2:37.1–2:37.7 | 0.6 | 0 | 0 | — |
-| `s3.b1` | Slide 3 | 1 → 0 | 2:37.7–2:52.9 | 15.2 | 29 | 1 | fig07_single_indicator_scorecard (14.9 s) |
-| `s3.b2` | Slide 3 | 2 → 1 | 2:52.9–2:59.8 | 6.9 | 12 | 1 | — |
-| `s3.b3` | Slide 3 | 3 → 2 | 2:59.8–3:09.3 | 9.5 | 20 | 0 | fig09_pca_two_dimensions (9.2 s) |
-| `s3.b4` | Slide 3 | 4 → 3 | 3:09.3–3:33.3 | 24.0 | 51 | 2 | — |
-| `s4.b0` | Slide 4 | sección | 3:33.3–3:33.9 | 0.6 | 0 | 0 | — |
-| `s4.b1` | Slide 4 | 1 → 0 | 3:33.9–4:02.4 | 28.5 | 66 | 1 | fig10_trajectory_groups (28.2 s) |
-| `s4.b2` | Slide 4 | 2 → 1 | 4:02.4–4:07.4 | 5.0 | 11 | 0 | — |
-| `s4.b3` | Slide 4 | 3 → 2 | 4:07.4–4:25.2 | 17.8 | 42 | 0 | — |
-| `s4.b4` | Slide 4 | 4 → 3 | 4:25.2–4:38.6 | 13.4 | 32 | 0 | — |
-| `s4.b5` | Slide 4 | 5 → 4 | 4:38.6–4:49.2 | 10.6 | 25 | 0 | — |
-| `refs` | References | sección | 4:49.2–4:52.2 | 3.0 | 0 | 0 | — |
-| **Total** | | | 0:00.0–4:52.2 | **292.2** | **596** | **17** | |
+| `cover.b2` | Cover | 2 → 0 | 0:02.7–0:12.0 | 9.3 | 15 | 1 | — |
+| `cover.b3` | Cover | 3 → 1 | 0:12.0–0:25.1 | 13.1 | 20 | 3 | — |
+| `cover.b4` | Cover | 4 → 2 | 0:25.1–0:27.7 | 2.6 | 5 | 0 | — |
+| `cover.b5` | Cover | 5 → 3 | 0:27.7–0:29.9 | 2.2 | 4 | 0 | — |
+| `s1.b0` | Slide 1 | sección | 0:29.9–0:47.3 | 17.4 | 42 | 0 | — |
+| `s1.b1` | Slide 1 | 1 → 0 | 0:47.3–0:51.9 | 4.6 | 10 | 0 | — |
+| `s1.b2` | Slide 1 | 2 → 1 | 0:51.9–1:04.8 | 12.9 | 26 | 1 | fig01_growth_components_by_income (12.1 s) |
+| `s1.b3` | Slide 1 | 3 → 2 | 1:04.8–1:08.2 | 3.4 | 7 | 0 | — |
+| `s1.b3b` | Slide 1 | 4 → 3 | 1:08.2–1:14.3 | 6.1 | 10 | 1 | — |
+| `s1.b4a` | Slide 1 | 5 → 4 | 1:14.3–1:18.9 | 4.6 | 10 | 0 | — |
+| `s1.b4b` | Slide 1 | 6 → 5 | 1:18.9–1:22.3 | 3.4 | 7 | 0 | — |
+| `s1.b4c` | Slide 1 | 7 → 6 | 1:22.3–1:26.9 | 4.6 | 10 | 0 | — |
+| `s1.b5a` | Slide 1 | 8 → 7 | 1:26.9–1:31.2 | 4.3 | 7 | 0 | fig02b_lever_map_zoom (4.0 s) |
+| `s1.b5b` | Slide 1 | 9 → 8 | 1:31.2–1:39.7 | 8.5 | 15 | 1 | — |
+| `s2.b0` | Slide 2 | sección | 1:39.7–1:40.3 | 0.6 | 0 | 0 | — |
+| `s2.b1` | Slide 2 | 1 → 0 | 1:40.3–1:59.1 | 18.8 | 38 | 2 | fig04_same_road_registration (18.5 s) |
+| `s2.b2` | Slide 2 | 2 → 1 | 1:59.1–2:12.7 | 13.6 | 21 | 2 | — |
+| `s2.b3` | Slide 2 | 3 → 2 | 2:12.7–2:21.3 | 8.6 | 20 | 0 | — |
+| `s2.b4` | Slide 2 | 4 → 3 | 2:21.3–2:39.1 | 17.8 | 43 | 0 | — |
+| `s3.b0` | Slide 3 | sección | 2:39.1–2:39.7 | 0.6 | 0 | 0 | — |
+| `s3.b1` | Slide 3 | 1 → 0 | 2:39.7–2:54.9 | 15.2 | 29 | 1 | fig07_single_indicator_scorecard (14.9 s) |
+| `s3.b2` | Slide 3 | 2 → 1 | 2:54.9–3:01.8 | 6.9 | 12 | 1 | — |
+| `s3.b3` | Slide 3 | 3 → 2 | 3:01.8–3:12.5 | 10.7 | 23 | 0 | fig09_pca_two_dimensions (10.4 s) |
+| `s3.b4` | Slide 3 | 4 → 3 | 3:12.5–3:36.5 | 24.0 | 51 | 2 | — |
+| `s4.b0` | Slide 4 | sección | 3:36.5–3:37.1 | 0.6 | 0 | 0 | — |
+| `s4.b1` | Slide 4 | 1 → 0 | 3:37.1–4:05.6 | 28.5 | 66 | 1 | fig10_trajectory_groups (28.2 s) |
+| `s4.b2` | Slide 4 | 2 → 1 | 4:05.6–4:10.6 | 5.0 | 11 | 0 | — |
+| `s4.b3` | Slide 4 | 3 → 2 | 4:10.6–4:28.4 | 17.8 | 42 | 0 | — |
+| `s4.b4` | Slide 4 | 4 → 3 | 4:28.4–4:40.6 | 12.2 | 29 | 0 | — |
+| `s4.b5` | Slide 4 | 5 → 4 | 4:40.6–4:51.2 | 10.6 | 25 | 0 | — |
+| `refs` | References | sección | 4:51.2–4:54.2 | 3.0 | 0 | 0 | — |
+| **Total** | | | 0:00.0–4:54.2 | **294.2** | **601** | **17** | |
 
-## Cover — One number can't tell 8 billion stories (0:00.0–0:29.5 · 46 palabras)
+## Cover — One number can't tell 8 billion stories (0:00.0–0:29.9 · 47 palabras)
 
 **`cover.b1`** · inicio de sección · 0:00.0–0:02.7
 
 > Eight billion people.
 
-**`cover.b2`** · fragmento 2 · 0:02.7–0:11.6
+**`cover.b2`** · fragmento 2 · 0:02.7–0:12.0
 
-> In 2023, 130 countries and areas had too few children to replace their parents.
+> In 2023, 130 countries and areas had fertility below the level that replaces each generation.
 
-**`cover.b3`** · fragmento 3 · 0:11.6–0:24.7
+**`cover.b3`** · fragmento 3 · 0:12.0–0:25.1
 
 > Yet 84 are still growing.
 > 66 have more births than deaths; 18 grow only because more people arrive than leave.
 
-**`cover.b4`** · fragmento 4 · 0:24.7–0:27.3
+**`cover.b4`** · fragmento 4 · 0:25.1–0:27.7
 
 > One number can't explain that.
 
-**`cover.b5`** · fragmento 5 · 0:27.3–0:29.5
+**`cover.b5`** · fragmento 5 · 0:27.7–0:29.9
 
 > We are Team UNALSta-R.
 
-## Slide 1 — Question 1: which lever moves each country's population? (0:29.5–1:41.3 · 149 palabras)
+## Slide 1 — Question 1: which lever moves each country's population? (0:29.9–1:39.7 · 144 palabras)
 
-**`s1.b0`** · inicio de sección · 0:29.5–0:47.7
+**`s1.b0`** · inicio de sección · 0:29.9–0:47.3
 
 > Three questions.
-> One: how do births, deaths and migration relate, and differ by region, country and income?
+> One: how do births, deaths and migration relate, by region, country and income?
 > Two: does one indicator tell the whole story, or only several together?
 > Three: do countries share one road at different speeds, and what should the UN watch?
 
-**`s1.b1`** · fragmento 1 · 0:47.7–0:53.5
+**`s1.b1`** · fragmento 1 · 0:47.3–0:51.9
 
-> Population change is bookkeeping: births minus deaths, plus net migration, arrivals minus departures.
+> Population change is bookkeeping: births minus deaths, plus net migration.
 
-**`s1.b2`** · fragmento 2 · 0:53.5–1:06.4 · MP4 fig01_growth_components_by_income 12.1 s
+**`s1.b2`** · fragmento 2 · 0:51.9–1:04.8 · MP4 fig01_growth_components_by_income 12.1 s
 
 > In today's high-income countries, net migration accounted for about seven in ten of the growth since 2000.
 > Elsewhere, growth came almost entirely from births exceeding deaths.
 
-**`s1.b3`** · fragmento 3 · 1:06.4–1:09.8
+**`s1.b3`** · fragmento 3 · 1:04.8–1:08.2
 
 > Blue: more births than deaths, and growing,
 
-**`s1.b3b`** · fragmento 4 · 1:09.8–1:15.9
+**`s1.b3b`** · fragmento 4 · 1:08.2–1:14.3
 
 > including 22 below replacement that grow with no net arrivals.
 
-**`s1.b4a`** · fragmento 5 · 1:15.9–1:20.5
+**`s1.b4a`** · fragmento 5 · 1:14.3–1:18.9
 
 > Light blue: deaths exceed births, but arrivals keep it growing.
 
-**`s1.b4b`** · fragmento 6 · 1:20.5–1:23.9
+**`s1.b4b`** · fragmento 6 · 1:18.9–1:22.3
 
 > Orange: deaths exceed births, and it shrinks.
 
-**`s1.b4c`** · fragmento 7 · 1:23.9–1:28.5
+**`s1.b4c`** · fragmento 7 · 1:22.3–1:26.9
 
 > Purple: births exceed deaths, but net departures make it shrink.
 
-**`s1.b5a`** · fragmento 8 · 1:28.5–1:32.8 · MP4 fig02b_lever_map_zoom 4.0 s
+**`s1.b5a`** · fragmento 8 · 1:26.9–1:31.2 · MP4 fig02b_lever_map_zoom 4.0 s
 
 > Migration is also the least certain lever.
 
-**`s1.b5b`** · fragmento 9 · 1:32.8–1:41.3
+**`s1.b5b`** · fragmento 9 · 1:31.2–1:39.7
 
 > For the Emirates in 2050, the UN's 95 percent range is nine to thirty-three million.
 
-## Slide 2 — Question 1 (cont.): same road, different speed (1:41.3–2:37.1 · 113 palabras)
+## Slide 2 — Question 1 (cont.): same road, different speed (1:39.7–2:39.1 · 122 palabras)
 
-**`s2.b0`** · inicio de sección · 1:41.3–1:41.9
+**`s2.b0`** · inicio de sección · 1:39.7–1:40.3
 
 *(sin voz: transición)*
 
-**`s2.b1`** · fragmento 1 · 1:41.9–2:00.7 · MP4 fig04_same_road_registration 18.5 s
+**`s2.b1`** · fragmento 1 · 1:40.3–1:59.1 · MP4 fig04_same_road_registration 18.5 s
 
 > Set each country's clock to when its fertility fell below four children, and the curves line up.
 > The road is shared; the speed is not.
 > China went from five to three children in 5 years; Egypt took 33.
 
-**`s2.b2`** · fragmento 2 · 2:00.7–2:13.5
+**`s2.b2`** · fragmento 2 · 1:59.1–2:12.7
 
-> Child deaths started falling first in 106 of 109 high-fertility countries.
+> Survival analysis: child deaths started falling first in 106 of 109 high-fertility countries.
 > The gap was typically at least 22 years.
 
-**`s2.b3`** · fragmento 3 · 2:13.5–2:22.1
+**`s2.b3`** · fragmento 3 · 2:12.7–2:21.3
 
-> Within one country, this link is smaller than what comparing countries suggests.
+> A within-country panel regression finds this link smaller than comparing countries suggests.
 > A sequence in time, not proof of cause.
 
-**`s2.b4`** · fragmento 4 · 2:22.1–2:37.1
+**`s2.b4`** · fragmento 4 · 2:21.3–2:39.1
 
 > Question one, answered: child deaths fell first and births followed, at each country's pace; latest in low-income countries.
+> The link is clearest in sub-Saharan Africa.
 > Migration moves on its own, alike among neighbours only in the Gulf, and weighs most in high-income countries.
 
-## Slide 3 — Question 2: does one indicator tell the whole story? (2:37.1–3:33.3 · 112 palabras)
+## Slide 3 — Question 2: does one indicator tell the whole story? (2:39.1–3:36.5 · 115 palabras)
 
-**`s3.b0`** · inicio de sección · 2:37.1–2:37.7
+**`s3.b0`** · inicio de sección · 2:39.1–2:39.7
 
 *(sin voz: transición)*
 
-**`s3.b1`** · fragmento 1 · 2:37.7–2:52.9 · MP4 fig07_single_indicator_scorecard 14.9 s
+**`s3.b1`** · fragmento 1 · 2:39.7–2:54.9 · MP4 fig07_single_indicator_scorecard 14.9 s
 
 > Question two.
 > Fertility alone captures the slow story: about three quarters of the differences in how old populations are.
 > Only part of today's growth, and almost none of migration.
 
-**`s3.b2`** · fragmento 2 · 2:52.9–2:59.8
+**`s3.b2`** · fragmento 2 · 2:54.9–3:01.8
 
 > Fertility alone finds only one in eight of each country's closest look-alikes.
 
-**`s3.b3`** · fragmento 3 · 2:59.8–3:09.3 · MP4 fig09_pca_two_dimensions 9.2 s
+**`s3.b3`** · fragmento 3 · 3:01.8–3:12.5 · MP4 fig09_pca_two_dimensions 10.4 s
 
-> Countries differ in two separate ways.
+> Principal component analysis: countries differ in two separate ways.
 > Fertility tracks the first, the transition to fewer births and deaths, but misses migration.
 
-**`s3.b4`** · fragmento 4 · 3:09.3–3:33.3
+**`s3.b4`** · fragmento 4 · 3:12.5–3:36.5
 
 > Blend indicators into one score: the weights can shift one country in five by more than twenty places.
 > Question two, answered: no.
 > The Emirates and Belarus share the same fertility; one grows almost four percent a year, the other shrinks.
 > The story emerges only when transition and migration are read together.
 
-## Slide 4 — Question 3: one road, four groups — and what to watch on each (3:33.3–4:49.2 · 176 palabras)
+## Slide 4 — Question 3: one road, four groups — and what to watch on each (3:36.5–4:51.2 · 173 palabras)
 
-**`s4.b0`** · inicio de sección · 3:33.3–3:33.9
+**`s4.b0`** · inicio de sección · 3:36.5–3:37.1
 
 *(sin voz: transición)*
 
-**`s4.b1`** · fragmento 1 · 3:33.9–4:02.4 · MP4 fig10_trajectory_groups 28.2 s
+**`s4.b1`** · fragmento 1 · 3:37.1–4:05.6 · MP4 fig10_trajectory_groups 28.2 s
 
 > Question three.
-> Grouped by seventy-year paths, countries form three stretches of one road, plus a migration-led group, mostly Gulf states.
+> K-means groups countries' seventy-year paths into three stretches of one road, plus a migration-led group, mostly Gulf states.
 > Early movers are projected to grow only through migration, or shrink.
 > Fast movers, India, China and Indonesia, are projected to age from 30 to 40 in about 32 years.
 > About as fast as Early movers did, or faster.
 > Recent movers have the highest child mortality today.
 
-**`s4.b2`** · fragmento 2 · 4:02.4–4:07.4
+**`s4.b2`** · fragmento 2 · 4:05.6–4:10.6
 
 > Countries grew closer in life expectancy, but further apart in age.
 
-**`s4.b3`** · fragmento 3 · 4:07.4–4:25.2
+**`s4.b3`** · fragmento 3 · 4:10.6–4:28.4
 
 > Question three, answered: mostly one road, at different speeds.
 > For the UN: watch child survival where it is off pace for the 2030 goal.
 > Watch ageing where fertility is low but populations still grow.
 > Watch migration data where growth depends on arrivals.
 
-**`s4.b4`** · fragmento 4 · 4:25.2–4:38.6
+**`s4.b4`** · fragmento 4 · 4:28.4–4:40.6
 
-> Projections are labelled as scenarios; examples follow a rule; hypotheses were fixed before the final run.
+> Following ASA guidelines, projections are scenarios; hypotheses were fixed before the final run.
 > These are patterns, not causes; every number and our AI use are documented in our notebook.
 
-**`s4.b5`** · fragmento 5 · 4:38.6–4:49.2
+**`s4.b5`** · fragmento 5 · 4:40.6–4:51.2
 
 > One number can't tell eight billion stories.
 > But births, deaths and migration, read together region by region, can tell the UN where to look next.
 
-## References — References (4:49.2–4:52.2 · 0 palabras)
+## References — References (4:51.2–4:54.2 · 0 palabras)
 
-**`refs`** · inicio de sección · 4:49.2–4:52.2
+**`refs`** · inicio de sección · 4:51.2–4:54.2
 
 *(sin voz: referencias en pantalla 3 s)*
 

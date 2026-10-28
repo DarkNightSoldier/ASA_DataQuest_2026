@@ -95,7 +95,7 @@ Todo lo de abajo se instaló en espacio de usuario. Ver también
   TRUE)`) usando el Jupyter del venv de Python (sección 2). Verificado:
   ```bash
   PATH=/ruta/al/venv-jupyter/bin:$PATH jupyter kernelspec list
-  # Available kernels: ir -> /home/darkns/.local/share/jupyter/kernels/ir
+  # Available kernels: ir -> ~/.local/share/jupyter/kernels/ir
   ```
   El `kernel.json` registrado apunta a `/usr/lib/R/bin/R` (el R del sistema,
   correcto). El registro del kernel es independiente del venv: usa el R del

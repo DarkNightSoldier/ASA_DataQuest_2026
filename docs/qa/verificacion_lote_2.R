@@ -26,7 +26,7 @@ suppressPackageStartupMessages({
 })
 RNGkind("Mersenne-Twister", "Inversion", "Rejection")
 SEMILLA <- 2026
-RAIZ <- "/home/darkns/Documents/ASA_Dataquest/RepoGithub"
+RAIZ <- here::here()   # raíz del repositorio (archivo .here); antes, ruta fija de una máquina (jurado_etica I-8)
 SALIDA <- file.path(RAIZ, "docs/qa/verificacion_lote_2_resultados.csv")
 B_BLOQUES <- as.integer(Sys.getenv("B_BLOQUES", "2000"))   # réplicas del bootstrap por bloques
 GOLFO <- c("ARE", "QAT", "KWT", "BHR", "OMN", "SAU")

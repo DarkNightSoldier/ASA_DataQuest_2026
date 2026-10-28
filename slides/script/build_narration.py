@@ -35,6 +35,7 @@ import argparse
 import html.parser
 import json
 import math
+import os
 import re
 import subprocess
 import sys
@@ -132,9 +133,9 @@ def ffmpeg_exe():
         import imageio_ffmpeg  # noqa: F401
         return imageio_ffmpeg.get_ffmpeg_exe()
     except Exception:
-        venv = Path("/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604/"
-                    "scratchpad/venv-jupyter/lib")
-        cand = sorted(venv.glob("python3*/site-packages/imageio_ffmpeg/binaries/ffmpeg-*")) if venv.exists() else []
+        # venv del proyecto en la variable de entorno VENV (ver SETUP.md); sin rutas de esta máquina
+        venv = Path(os.environ["VENV"]) / "lib" if os.environ.get("VENV") else None
+        cand = sorted(venv.glob("python3*/site-packages/imageio_ffmpeg/binaries/ffmpeg-*")) if venv and venv.exists() else []
         return str(cand[-1]) if cand else None
 
 

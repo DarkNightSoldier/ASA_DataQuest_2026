@@ -13,7 +13,14 @@
   "program_en": "Statistics",
   "affiliation_line": "UNALSta-R · Statistics students · Universidad Nacional de Colombia, Bogotá",
   "country": "Colombia",
-  "contact_email": "alejoh1029@gmail.com",
+  "contact_email": "ahiguerac@unal.edu.co",
+  "team_leader": {
+    "name": "Alejandro Higuera",
+    "role": "Team Leader",
+    "email": "ahiguerac@unal.edu.co",
+    "decided": "2026-10-27",
+    "source": "Decision of the user (Alejandro Higuera) reported to the AI agents on 2026-10-27: the public contact is his institutional e-mail, labelled Team Leader"
+  },
   "competition": "ASA International DataQuest 2026",
   "data": "UN World Population Prospects 2024, Medium variant, CC BY 3.0 IGO",
   "repo_url": "https://github.com/DarkNightSoldier/ASA_DataQuest_2026",
@@ -76,6 +83,7 @@
     "world_pop_1950_bn": "Fila Location == 'World', Time == 1950 de data/processed/agregados.parquet: TPopulation1July = 2 493 093 (miles) / 1e6 = 2.49 miles de millones.",
     "are_revision_pct_momentum_years_range_n_census_pre2009": "Pendiente del notebook/etica (docs/04_etica_ASA_aplicada.md); se rellenan desde R/05_numbers_json.R, no a mano.",
     "human_check": "Verificación humana de las cifras (P-01), informada por el usuario el 2026-10-26: los cuatro integrantes comprobaron a mano las cifras habladas del guion v4 y las de pantalla del deck rc1 a las 11:23 (America/Bogota, UTC-5), sobre archivos con fecha anterior a esa hora (comprobado con stat). R/05_numbers_json.R copia este bloque a la clave 'meta_human_check' de figures/numbers.json. Detalle: docs/QA_stats.md §10 y docs/verificacion_numeros.csv.",
-    "consent_authorship_voices": "Información del usuario (2026-10-26, 12:10 America/Bogota): (i) los cuatro integrantes dieron consentimiento ESCRITO para publicar sus nombres; (ii) los cuatro revisaron el output del notebook y las cifras y comparten IGUAL responsabilidad del trabajo (sin papeles individuales: 'individual_roles' = null, no se inventan); (iii) las voces del vídeo son de los integrantes, ninguna sintética. Cierra P-04 y P-05 (docs/correcciones.md). El consentimiento informado cubre los nombres; el correo 'contact_email' no se mencionó (ver P-05)."
+    "consent_authorship_voices": "Información del usuario (2026-10-26, 12:10 America/Bogota): (i) los cuatro integrantes dieron consentimiento ESCRITO para publicar sus nombres; (ii) los cuatro revisaron el output del notebook y las cifras y comparten IGUAL responsabilidad del trabajo (sin papeles individuales: 'individual_roles' = null, no se inventan); (iii) las voces del vídeo son de los integrantes, ninguna sintética. Cierra P-04 y P-05 (docs/correcciones.md). El consentimiento informado cubre los nombres; el correo de contacto lo resolvió el usuario el 2026-10-27 (institucional, ver 'team_leader').",
+    "contact_email_team_leader": "Decisión del usuario (2026-10-27): el contacto público es el correo institucional de Alejandro Higuera, rotulado \"Team Leader\". Sustituye al correo personal anterior, que no debe aparecer en ningún archivo versionado ni publicado (docs/correcciones.md §J, P-05). El consentimiento de P-05 cubre los nombres; el correo lo decidió su propio dueño."
   }
 }

@@ -21,7 +21,7 @@
 set -euo pipefail
 
 REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VENV="${VENV:-/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604/scratchpad/venv-jupyter}"
+VENV="${VENV:-$REPO/.venv}"   # venv del proyecto (README, paso 0); se puede cambiar con export VENV=...
 PY="${PYTHON:-$VENV/bin/python}"
 [ -x "$PY" ] || PY="$(command -v python3)"
 

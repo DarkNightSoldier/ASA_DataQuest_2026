@@ -72,3 +72,5 @@ slides/export/pages/
 slides/dev/screenshots/steps/
 # slides/js/numbers_data.js SÍ se versiona (copia de figures/numbers.json para abrir el deck con doble clic;
 # la regeneran slides/script/build_narration.py y video/export_pdf.sh).
+# carpeta temporal de trabajo (guía de métodos generada el 2026-10-27; no forma parte de la entrega)
+output/

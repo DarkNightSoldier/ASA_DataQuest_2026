@@ -150,10 +150,14 @@ COL_BANDA_PAISES <- "#D5DAE3"
 # r2: había dos formulaciones para la misma banda)
 BANDA_TXT <- "band = middle 80 % of the group’s countries (spread, not uncertainty)"
 
-RUTA_FFMPEG_VENV <- file.path(
-  "/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604",
-  "scratchpad/venv-jupyter/lib/python3.14/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
-)
+# ffmpeg de imageio-ffmpeg dentro del venv del proyecto: variable de entorno VENV (ver SETUP.md);
+# si no está, se usan FFMPEG o el ffmpeg del sistema (ruta_ffmpeg()). Sin rutas de esta máquina.
+RUTA_FFMPEG_VENV <- local({
+  venv <- Sys.getenv("VENV")
+  cand <- if (nzchar(venv)) Sys.glob(file.path(venv, "lib", "python3*", "site-packages", "imageio_ffmpeg",
+                                              "binaries", "ffmpeg-*")) else character(0)
+  if (length(cand)) cand[length(cand)] else ""
+})
 RUTA_TIMINGS <- file.path(RUTA_RAIZ, "slides", "script", "video_timings.json")
 
 # =============================================================================
@@ -1453,7 +1457,7 @@ dibujar_fig11 <- function(version = c("video", "print", "small"), dd = DISP) {
       g <- g + texto_halo(xx[1] + 4, sy(45.3), rotulo_rg[[pn]], TAM$nota, COL_TEXTO_2, hjust = 0)
       avisar_ancho(rotulo_rg[[pn]], TAM$nota, diff(xx) - 6, donde = "fig11 rango DE")
     } else {
-      g <- g + texto_halo(xx[1] + 4, sy(56.5), rotulo_sd[[pn]], TAM$valor, COL_TINTA, hjust = 0, negrita = TRUE)
+      g <- g + texto_halo(xx[2] - 2, sy(56.5), rotulo_sd[[pn]], TAM$valor, COL_TINTA, hjust = 1, negrita = TRUE)
       g <- g + texto_halo(xx[1] + 4, sy(44), "band = middle 80 %", TAM$nota, COL_TEXTO_2)
       g <- g + texto_halo(xx[2] - 2, sy(9.6), "line = median", TAM$nota, COL_TEXTO_2, hjust = 1)
     }
@@ -1464,13 +1468,10 @@ dibujar_fig11 <- function(version = c("video", "print", "small"), dd = DISP) {
     ley <- "band = middle 80 % of countries · line = median · UN estimates, no projection"
     avisar_ancho(ley, TAM$nota, W - paneles$lex[1] - 2, donde = "fig11 leyenda")
     g <- g + texto(paneles$lex[1], y_leyenda, ley, TAM$nota, COL_TEXTO_2)
-  } else {
-    ley <- if (version == "small") "161 countries ≥ 1 M · estimates 1950–2023" else
-      "161 countries ≥ 1 M · UN estimates 1950–2023 · same scale"
-    avisar_ancho(ley, TAM$nota, tira_x[1] - paneles$lex[1] - 12, donde = "fig11p leyenda")
-    g <- g + texto(paneles$lex[1], y_leyenda, ley, TAM$nota, COL_TEXTO_2)
-    g <- g + texto(tira_x[2], y_leyenda, "bars = 95 % ranges", TAM$nota, COL_TEXTO_2, hjust = 1)
   }
+  # impreso / small (jurado viz I-1, 2026-10-27): sin leyenda de universo bajo los paneles (cruzaba
+  # el panel de edad y tocaba "SD 4.7 → 9.7"); "161 countries ≥ 1 M" y "bars = 95 % ranges" van en
+  # la nota HTML (.blk11 > p.fn) y en la franja de método de la S4.
 
   # --- tira: razón P90/P10 de la mortalidad de menores de 5 + brecha absoluta ---
   q5 <- dd$q5 |> arrange(.data$Time)

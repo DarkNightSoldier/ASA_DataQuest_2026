@@ -12,12 +12,12 @@ La fuente única es `docs/equipo.json`; este archivo es su versión legible.
 | Programa (`program`) | Estadística (*Statistics*, `program_en`) |
 | Línea de afiliación para la portada (`affiliation_line`) | UNALSta-R · Statistics students · Universidad Nacional de Colombia, Bogotá |
 | País | Colombia |
-| Contacto | alejoh1029@gmail.com |
+| Contacto (`contact_email`, `team_leader`) | Alejandro Higuera, **Team Leader** · ahiguerac@unal.edu.co (correo institucional; decisión del usuario, 2026-10-27) |
 | Concurso | ASA International DataQuest 2026 |
 | Datos | UN World Population Prospects 2024, Medium variant, CC BY 3.0 IGO |
 | Repositorio (`repo`, `repo_url`) | `DarkNightSoldier/ASA_DataQuest_2026` · https://github.com/DarkNightSoldier/ASA_DataQuest_2026 (público desde el 2026-10-29, `repo_public_from`; el equipo sube el código ese día) |
 | Verificación humana (`human_check`) | Los cuatro integrantes comprobaron a mano las cifras habladas (guion v4) y en pantalla (deck rc1) el 2026-10-26 a las 11:23 (America/Bogota, UTC−5); `R/05` lo copia a `meta_human_check` en `figures/numbers.json` (`docs/QA_stats.md` §10) |
-| Consentimiento (`consent`) | Los cuatro integrantes dieron consentimiento **escrito** para publicar sus nombres (informado por el usuario el 2026-10-26 a las 12:10, America/Bogota; los documentos los guarda el equipo). El correo de contacto no se mencionó (`docs/correcciones.md` P-05) |
+| Consentimiento (`consent`) | Los cuatro integrantes dieron consentimiento **escrito** para publicar sus nombres (informado por el usuario el 2026-10-26 a las 12:10, America/Bogota; los documentos los guarda el equipo). El correo de contacto lo decidió su dueño el 2026-10-27: el institucional del Team Leader (`docs/correcciones.md` P-05, §J) |
 | Autoría (`authorship`) | Los cuatro revisaron el output del notebook y las cifras y **comparten igual responsabilidad del trabajo**; el orden de `members` no ordena contribuciones; sin papeles individuales (no se inventan) |
 | Voces (`voices`) | Las voces del vídeo son de los integrantes; **ninguna sintética** |
 | Fecha límite de entrega | 2026-10-30 (último viernes de octubre) |
@@ -50,6 +50,6 @@ observadores (VAT, PSE). 195 + 42 = 237.
 
 - **Afiliación en la portada (inglés):** `affiliation_line` = "UNALSta-R · Statistics students · Universidad Nacional de Colombia, Bogotá" (equipo de estudiantes de Estadística, sede Bogotá).
 - **Portada de las diapositivas:** `team_name` aparece en "Team UNALSta-R · ASA International DataQuest 2026" y en el pie de página.
-- **README:** sección "Equipo" con `team_name`, integrantes e institución (sin correos).
+- **README:** sección "Equipo" con `team_name`, integrantes, institución y el contacto institucional del Team Leader (ningún correo personal).
 - **Referencias:** el nombre del equipo y el repositorio (`repo`) se citan en la diapositiva de referencias.
 - **Números de las diapositivas:** `team_name`, `repo`, `hyp_file_*`, `n_states`, `n_territories` y `world_pop_1950_bn` se leen de este JSON; las claves en `null` no deben mostrarse hasta que el notebook las produzca.

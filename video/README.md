@@ -42,9 +42,9 @@ python3 -m venv .venv
 export VENV=$PWD/.venv                      # assemble.sh y export_pdf.sh leen esta variable
 ```
 
-En la máquina donde se preparó el deck el venv está en
-`/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604/scratchpad/venv-jupyter`
-(es el valor por defecto de los scripts; en otra máquina use `export VENV=...`).
+Si no se define `VENV`, `export_pdf.sh` y `assemble.sh` usan `.venv` en la raíz del repositorio (en la máquina donde se
+preparó el deck se usó otro venv, fuera del repositorio: basta con `export VENV=...`). Las figuras R buscan el ffmpeg de
+`imageio-ffmpeg` dentro de `$VENV`, o el de la variable `FFMPEG`, o el del sistema.
 
 ## 1. Vídeo mudo (`deck_silent.mp4`)
 

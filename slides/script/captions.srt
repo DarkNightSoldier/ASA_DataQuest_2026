@@ -3,307 +3,319 @@
 Eight billion people.
 
 2
-00:00:02,700 --> 00:00:11,600
-In 2023, 130 countries and areas had too few
-children to replace their parents.
+00:00:02,700 --> 00:00:08,400
+In 2023, 130 countries and areas
 
 3
-00:00:11,600 --> 00:00:15,700
-Yet 84 are still growing.
+00:00:08,400 --> 00:00:12,000
+had fertility below the level
+that replaces each generation.
 
 4
-00:00:15,700 --> 00:00:24,700
+00:00:12,000 --> 00:00:16,100
+Yet 84 are still growing.
+
+5
+00:00:16,100 --> 00:00:25,100
 66 have more births than deaths;
 18 grow only because more people arrive than leave.
 
-5
-00:00:24,700 --> 00:00:27,300
+6
+00:00:25,100 --> 00:00:27,700
 One number can't explain that.
 
-6
-00:00:27,300 --> 00:00:29,500
+7
+00:00:27,700 --> 00:00:29,900
 We are Team UNALSta-R.
 
-7
-00:00:29,500 --> 00:00:30,900
+8
+00:00:29,900 --> 00:00:31,300
 Three questions.
 
-8
-00:00:30,900 --> 00:00:36,900
-One: how do births, deaths and migration relate,
-and differ by region, country and income?
-
 9
-00:00:36,900 --> 00:00:41,700
+00:00:31,300 --> 00:00:36,500
+One: how do births, deaths and migration relate,
+by region, country and income?
+
+10
+00:00:36,500 --> 00:00:41,300
 Two: does one indicator tell the whole story,
 or only several together?
 
-10
-00:00:41,700 --> 00:00:47,700
+11
+00:00:41,300 --> 00:00:47,300
 Three: do countries share one road at different
 speeds, and what should the UN watch?
 
-11
-00:00:47,700 --> 00:00:49,900
-Population change is bookkeeping:
-
 12
-00:00:49,900 --> 00:00:53,500
-births minus deaths, plus net migration,
-arrivals minus departures.
+00:00:47,300 --> 00:00:51,900
+Population change is bookkeeping:
+births minus deaths, plus net migration.
 
 13
-00:00:53,500 --> 00:00:57,300
+00:00:51,900 --> 00:00:55,700
 In today's high-income countries,
 net migration accounted for
 
 14
-00:00:57,300 --> 00:01:02,800
+00:00:55,700 --> 00:01:01,200
 about seven in ten of the growth since 2000.
 
 15
-00:01:02,800 --> 00:01:06,400
+00:01:01,200 --> 00:01:04,800
 Elsewhere, growth came almost
 entirely from births exceeding deaths.
 
 16
-00:01:06,400 --> 00:01:09,800
+00:01:04,800 --> 00:01:08,200
 Blue: more births than deaths, and growing,
 
 17
-00:01:09,800 --> 00:01:15,900
+00:01:08,200 --> 00:01:14,300
 including 22 below replacement
 that grow with no net arrivals.
 
 18
-00:01:15,900 --> 00:01:20,500
+00:01:14,300 --> 00:01:18,900
 Light blue: deaths exceed births,
 but arrivals keep it growing.
 
 19
-00:01:20,500 --> 00:01:23,900
+00:01:18,900 --> 00:01:22,300
 Orange: deaths exceed births, and it shrinks.
 
 20
-00:01:23,900 --> 00:01:28,500
+00:01:22,300 --> 00:01:26,900
 Purple: births exceed deaths,
 but net departures make it shrink.
 
 21
-00:01:28,500 --> 00:01:32,800
+00:01:26,900 --> 00:01:31,200
 Migration is also the least certain lever.
 
 22
-00:01:32,800 --> 00:01:41,300
+00:01:31,200 --> 00:01:39,700
 For the Emirates in 2050, the UN's 95 percent
 range is nine to thirty-three million.
 
 23
-00:01:41,900 --> 00:01:47,300
+00:01:40,300 --> 00:01:45,700
 Set each country's clock to when its
 fertility fell below four children,
 
 24
-00:01:47,300 --> 00:01:49,300
+00:01:45,700 --> 00:01:47,700
 and the curves line up.
 
 25
-00:01:49,300 --> 00:01:52,500
+00:01:47,700 --> 00:01:50,900
 The road is shared; the speed is not.
 
 26
-00:01:52,500 --> 00:02:00,700
+00:01:50,900 --> 00:01:59,100
 China went from five to three
 children in 5 years; Egypt took 33.
 
 27
-00:02:00,700 --> 00:02:08,800
-Child deaths started falling first
-in 106 of 109 high-fertility countries.
+00:01:59,100 --> 00:02:02,500
+Survival analysis:
+child deaths started falling first
 
 28
-00:02:08,800 --> 00:02:13,500
-The gap was typically at least 22 years.
+00:02:02,500 --> 00:02:08,000
+in 106 of 109 high-fertility countries.
 
 29
-00:02:13,500 --> 00:02:18,900
-Within one country, this link is smaller
-than what comparing countries suggests.
+00:02:08,000 --> 00:02:12,700
+The gap was typically at least 22 years.
 
 30
-00:02:18,900 --> 00:02:22,100
-A sequence in time, not proof of cause.
+00:02:12,700 --> 00:02:14,900
+A within-country panel regression
 
 31
-00:02:22,100 --> 00:02:26,700
+00:02:14,900 --> 00:02:18,100
+finds this link smaller
+than comparing countries suggests.
+
+32
+00:02:18,100 --> 00:02:21,300
+A sequence in time, not proof of cause.
+
+33
+00:02:21,300 --> 00:02:25,900
 Question one, answered:
 child deaths fell first and births followed,
 
-32
-00:02:26,700 --> 00:02:29,900
+34
+00:02:25,900 --> 00:02:29,100
 at each country's pace;
 latest in low-income countries.
 
-33
-00:02:29,900 --> 00:02:34,700
+35
+00:02:29,100 --> 00:02:31,900
+The link is clearest in sub-Saharan Africa.
+
+36
+00:02:31,900 --> 00:02:36,700
 Migration moves on its own,
 alike among neighbours only in the Gulf,
 
-34
-00:02:34,700 --> 00:02:37,100
+37
+00:02:36,700 --> 00:02:39,100
 and weighs most in high-income countries.
 
-35
-00:02:37,700 --> 00:02:39,100
+38
+00:02:39,700 --> 00:02:41,100
 Question two.
 
-36
-00:02:39,100 --> 00:02:41,500
+39
+00:02:41,100 --> 00:02:43,500
 Fertility alone captures the slow story:
 
-37
-00:02:41,500 --> 00:02:47,400
+40
+00:02:43,500 --> 00:02:49,400
 about three quarters of the differences
 in how old populations are.
 
-38
-00:02:47,400 --> 00:02:52,900
+41
+00:02:49,400 --> 00:02:54,900
 Only part of today's growth,
 and almost none of migration.
 
-39
-00:02:52,900 --> 00:02:59,800
+42
+00:02:54,900 --> 00:03:01,800
 Fertility alone finds only one in eight
 of each country's closest look-alikes.
 
-40
-00:02:59,800 --> 00:03:02,800
-Countries differ in two separate ways.
+43
+00:03:01,800 --> 00:03:06,000
+Principal component analysis:
+countries differ in two separate ways.
 
-41
-00:03:02,800 --> 00:03:07,200
+44
+00:03:06,000 --> 00:03:10,400
 Fertility tracks the first,
 the transition to fewer births and deaths,
 
-42
-00:03:07,200 --> 00:03:09,300
+45
+00:03:10,400 --> 00:03:12,500
 but misses migration.
 
-43
-00:03:09,300 --> 00:03:11,900
+46
+00:03:12,500 --> 00:03:15,100
 Blend indicators into one score:
 
-44
-00:03:11,900 --> 00:03:18,600
+47
+00:03:15,100 --> 00:03:21,800
 the weights can shift one country
 in five by more than twenty places.
 
-45
-00:03:18,600 --> 00:03:20,200
+48
+00:03:21,800 --> 00:03:23,400
 Question two, answered: no.
 
-46
-00:03:20,200 --> 00:03:23,400
+49
+00:03:23,400 --> 00:03:26,600
 The Emirates and Belarus share the same fertility;
 
-47
-00:03:23,400 --> 00:03:28,900
+50
+00:03:26,600 --> 00:03:32,100
 one grows almost four percent a year,
 the other shrinks.
 
-48
-00:03:28,900 --> 00:03:33,300
+51
+00:03:32,100 --> 00:03:36,500
 The story emerges only when transition
 and migration are read together.
 
-49
-00:03:33,900 --> 00:03:35,300
+52
+00:03:37,100 --> 00:03:38,500
 Question three.
 
-50
-00:03:35,300 --> 00:03:39,700
-Grouped by seventy-year paths,
-countries form three stretches of one road,
+53
+00:03:38,500 --> 00:03:42,900
+K-means groups countries' seventy-year
+paths into three stretches of one road,
 
-51
-00:03:39,700 --> 00:03:42,500
+54
+00:03:42,900 --> 00:03:45,700
 plus a migration-led group, mostly Gulf states.
 
-52
-00:03:42,500 --> 00:03:46,900
+55
+00:03:45,700 --> 00:03:50,100
 Early movers are projected to grow
 only through migration, or shrink.
 
-53
-00:03:46,900 --> 00:03:49,300
+56
+00:03:50,100 --> 00:03:52,500
 Fast movers, India, China and Indonesia,
 
-54
-00:03:49,300 --> 00:03:55,600
+57
+00:03:52,500 --> 00:03:58,800
 are projected to age
 from 30 to 40 in about 32 years.
 
-55
-00:03:55,600 --> 00:03:59,200
+58
+00:03:58,800 --> 00:04:02,400
 About as fast as Early movers did, or faster.
 
-56
-00:03:59,200 --> 00:04:02,400
+59
+00:04:02,400 --> 00:04:05,600
 Recent movers have the highest
 child mortality today.
 
-57
-00:04:02,400 --> 00:04:07,400
+60
+00:04:05,600 --> 00:04:10,600
 Countries grew closer in life expectancy,
 but further apart in age.
 
-58
-00:04:07,400 --> 00:04:11,600
+61
+00:04:10,600 --> 00:04:14,800
 Question three, answered:
 mostly one road, at different speeds.
 
-59
-00:04:11,600 --> 00:04:18,000
+62
+00:04:14,800 --> 00:04:21,200
 For the UN: watch child survival
 where it is off pace for the 2030 goal.
 
-60
-00:04:18,000 --> 00:04:22,000
+63
+00:04:21,200 --> 00:04:25,200
 Watch ageing where fertility
 is low but populations still grow.
 
-61
-00:04:22,000 --> 00:04:25,200
+64
+00:04:25,200 --> 00:04:28,400
 Watch migration data
 where growth depends on arrivals.
 
-62
-00:04:25,200 --> 00:04:29,400
-Projections are labelled as scenarios;
-examples follow a rule;
+65
+00:04:28,400 --> 00:04:31,400
+Following ASA guidelines, projections are scenarios;
 
-63
-00:04:29,400 --> 00:04:32,200
+66
+00:04:31,400 --> 00:04:34,200
 hypotheses were fixed before the final run.
 
-64
-00:04:32,200 --> 00:04:34,200
+67
+00:04:34,200 --> 00:04:36,200
 These are patterns, not causes;
 
-65
-00:04:34,200 --> 00:04:38,600
+68
+00:04:36,200 --> 00:04:40,600
 every number and our AI use
 are documented in our notebook.
 
-66
-00:04:38,600 --> 00:04:42,000
+69
+00:04:40,600 --> 00:04:44,000
 One number can't tell eight billion stories.
 
-67
-00:04:42,000 --> 00:04:46,000
+70
+00:04:44,000 --> 00:04:48,000
 But births, deaths and migration,
 read together region by region,
 
-68
-00:04:46,000 --> 00:04:49,200
+71
+00:04:48,000 --> 00:04:51,200
 can tell the UN where to look next.

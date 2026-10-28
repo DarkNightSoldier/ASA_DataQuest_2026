@@ -129,10 +129,14 @@ COL_EJE     <- "#9A9A9A"
 COL_EJE_PCA <- "#C2C2C2"          # ejes del biplot: más claros que las flechas que caen encima
 COL_RUIDO   <- "#D3D3D3"          # zona de ruido del inset (p95 de las permutaciones)
 
-RUTA_FFMPEG_VENV <- file.path(
-  "/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604",
-  "scratchpad/venv-jupyter/lib/python3.14/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
-)
+# ffmpeg de imageio-ffmpeg dentro del venv del proyecto: variable de entorno VENV (ver SETUP.md);
+# si no está, se usan FFMPEG o el ffmpeg del sistema (ruta_ffmpeg()). Sin rutas de esta máquina.
+RUTA_FFMPEG_VENV <- local({
+  venv <- Sys.getenv("VENV")
+  cand <- if (nzchar(venv)) Sys.glob(file.path(venv, "lib", "python3*", "site-packages", "imageio_ffmpeg",
+                                              "binaries", "ffmpeg-*")) else character(0)
+  if (length(cand)) cand[length(cand)] else ""
+})
 RUTA_TIMINGS <- file.path(RUTA_RAIZ, "slides", "script", "video_timings.json")
 
 # =============================================================================
@@ -1055,7 +1059,7 @@ dibujar_fig09 <- function(t = Inf, version = c("video", "print"), d = PCA, b = T
     ix0 <- 8; ix1 <- 198; itop <- G$H - 57; ibot <- 304
     g <- g + annotate("rect", xmin = ix0, xmax = ix1, ymin = ibot, ymax = itop,
                       fill = "white", colour = "#C8C8C8", linewidth = 0.6)
-    g <- g + texto(ix0 + 8, itop - 14, "Axes vs random noise", TAM$pie, COL_TEXTO, negrita = TRUE)
+    g <- g + texto(ix0 + 8, itop - 14, "Parallel analysis", TAM$pie, COL_TEXTO, negrita = TRUE)
     av <- d$autoval
     yk <- itop - 40 - (0:3) * 24
     bx0 <- ix0 + 26; lmax <- 112

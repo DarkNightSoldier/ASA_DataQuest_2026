@@ -153,7 +153,7 @@ anotar_problema <- function(txt) {
 }
 
 RUTA_TIMINGS <- file.path(RUTA_RAIZ, "slides", "script", "video_timings.json")
-RUTA_VENV <- "/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604/scratchpad/venv-jupyter"
+RUTA_VENV <- Sys.getenv("VENV")   # venv del proyecto con imageio-ffmpeg (ver SETUP.md); vacío = FFMPEG o ffmpeg del sistema
 RUTA_REVISION <- file.path(RUTA_FIG_REVIEW, "slide2")
 
 # =============================================================================

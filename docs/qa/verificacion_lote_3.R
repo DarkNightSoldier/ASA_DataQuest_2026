@@ -29,7 +29,7 @@ suppressPackageStartupMessages({
   library(mclust)
 })
 
-RAIZ <- "/home/darkns/Documents/ASA_Dataquest/RepoGithub"
+RAIZ <- here::here()   # raíz del repositorio (archivo .here); antes, ruta fija de una máquina (jurado_etica I-8)
 RUTA_MEDIUM <- file.path(dirname(RAIZ), "WPP2024_Demographic_Indicators_Medium_csv.gz")
 RUTA_OTRAS  <- file.path(dirname(RAIZ), "WPP2024_Demographic_Indicators_OtherVariants_csv.gz")
 RUTA_LOOKUP <- file.path(RAIZ, "data/processed/lookup_regiones.csv")

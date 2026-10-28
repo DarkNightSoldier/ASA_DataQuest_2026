@@ -644,3 +644,59 @@ html:not(.is-print) .watch col.c3 { width: 32%; } html:not(.is-print) .watch col
 html:not(.is-print) .watch col.c5 { width: 8%; }
 html:not(.is-print) .watch td { padding: 2px 8px; }
 html:not(.is-print) .watch { line-height: 1.13; }
+
+/* =============================================================================
+   CIERRE rc2 (agente cierre-rc2, 2026-10-27; docs/correcciones.md §J)
+   ============================================================================= */
+/* Petición del usuario: que se note la técnica. Etiqueta "Method" junto a cada figura:
+   nombre de la técnica en negrita y en tinta (no gris) + glosa llana; nada por debajo de 18 px. */
+.mtag { display: block; width: fit-content; max-width: 100%; margin: 0 0 6px; padding: 2px 12px 3px 3px;
+  border: 1.5px solid var(--ink); border-radius: 8px; background: #fff;
+  font-size: 19px; font-weight: 400; line-height: 1.25; color: var(--ink); letter-spacing: 0;
+  text-transform: none; text-wrap: pretty; }
+.mtag b, .glance b, .cover-methods b, .mname { font-weight: 900; color: var(--ink); }
+.mk { display: inline-block; background: var(--ink); color: #fff; font-size: 18px; font-weight: 900;
+  letter-spacing: .07em; text-transform: uppercase; border-radius: 5px; padding: 0 8px; margin-right: 10px;
+  line-height: 1.35; vertical-align: 1px; }
+/* S1 b0: "Methods at a glance" bajo la tarjeta de datos */
+.qcards { grid-template-rows: minmax(0, 1fr) auto auto; row-gap: 22px; }
+.glance { font-size: 22px; line-height: 1.35; color: var(--ink); }
+/* Portada: "Methods at a glance" (vídeo b5 y PDF) */
+.cover-methods { font-size: 22px; line-height: 1.35; color: var(--ink); max-width: 1560px; }
+html.is-print .cover-methods { font-size: 20px; }
+/* Sin alto extra: en la fila del chip "Question N" (S1, S4) o en línea al principio del titular de
+   cada figura (S2, S3, fig11); la etiqueta no se parte. En la S4, la técnica (k-means) queda siempre
+   visible en la cabecera; la línea .method (variables de entrada) sigue plegándose en b3 del vídeo. */
+.hdr-row .mtag { display: inline-block; white-space: nowrap; margin: 0 0 0 10px; }
+.head > .mtag, .metric > .mtag, .ck > .mtag { display: inline-block; white-space: nowrap; margin: 0 10px 0 0;
+  vertical-align: 1px; font-weight: 400; }
+.ck > .mtag { letter-spacing: 0; }
+/* la etiqueta en línea no agranda la línea del titular */
+.head > .mtag, .metric > .mtag, .ck > .mtag { padding: 0 10px 0 2px; line-height: 1.15; }
+.head > .mtag .mk, .metric > .mtag .mk, .ck > .mtag .mk { line-height: 1.2; }
+html.is-print .hdr-row .mtag .print-only { display: inline !important; }
+.p5strip > .mtag { flex: none; margin: 0; white-space: nowrap; }
+.s4 .method { color: var(--ink); }
+/* fig11 desde s4.b3 (vídeo): el titular se retira pero la etiqueta de método se queda */
+html:not(.is-print) .s4.ge-3 .blk11 > .head.print-hide { display: block; }
+html:not(.is-print) .s4.ge-3 .blk11 > .head .htxt { display: none; }
+/* jurado viz I-2: fig07 (respuesta a P8) entra como héroe en s3.b1 y vuelve a 3 columnas en b2 */
+.s3 .row-main { transition: grid-template-columns .9s ease, column-gap .9s ease; }
+html:not(.is-print) .s3:not(.ge-2) .row-main { grid-template-columns: minmax(0, 1fr) minmax(0, 0fr) minmax(0, 0fr); column-gap: 0px; }
+/* jurado viz I-3: en s3.b4 se atenúa lo ya narrado y se resalta lo que nombra la voz (índice + gemelos;
+   la respuesta al final); en s4.b4 la fila de figuras ya narrada baja al 45 % frente a la ética */
+html:not(.is-print) .s3.ge-4 .blk07 > *, html:not(.is-print) .s3.ge-4 .blk08 > .fragment:not(.twins) > *,
+html:not(.is-print) .s3.ge-4 .blk09 > * { opacity: .4; transition: opacity .6s ease; }
+html:not(.is-print) .s3[data-cue="s3.b4:5"] .blk09 > * { opacity: 1; }
+html:not(.is-print) .s4.ge-4 .row-top { opacity: .45; transition: opacity .6s ease; }
+
+/* Referencias (rc2: más texto de IA, agradecimientos y P1–P8): sin franja de subtítulos (el paso no
+   tiene voz) y letra de 20 px (mínimo 18) para que quepan en vídeo y PDF */
+.refs .frame { grid-template-rows: auto minmax(0, 1fr) auto 0px auto; }
+.refs li { font-size: 20px; line-height: 1.28; margin: 0 0 6px; }
+.refs h3 { font-size: 20px; margin: 0 0 6px; }
+.refs ul { margin: 0 0 16px; }
+/* PDF p. 5 (rc2): la fila 5 de la tabla ocupa 3 líneas → tabla impresa a 18 px (mínimo del storyboard) */
+html.is-print .s4 .watch { font-size: 18px; }
+/* los nombres de técnica no se parten entre líneas */
+.cover-methods b, .glance b { white-space: nowrap; }

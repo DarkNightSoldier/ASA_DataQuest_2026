@@ -148,10 +148,14 @@ PALETA_TIPO <- c(AB = COL_NAC, A = COL_NAC, B = COL_NAC, C = COL_MIG, D = COL_DE
 COL_ATENUADO     <- "#DCDCDC"
 COL_ATENUADO_NAC <- "#BDBDBD"
 
-RUTA_FFMPEG_VENV <- file.path(
-  "/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604",
-  "scratchpad/venv-jupyter/lib/python3.14/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
-)
+# ffmpeg de imageio-ffmpeg dentro del venv del proyecto: variable de entorno VENV (ver SETUP.md);
+# si no está, se usan FFMPEG o el ffmpeg del sistema (ruta_ffmpeg()). Sin rutas de esta máquina.
+RUTA_FFMPEG_VENV <- local({
+  venv <- Sys.getenv("VENV")
+  cand <- if (nzchar(venv)) Sys.glob(file.path(venv, "lib", "python3*", "site-packages", "imageio_ffmpeg",
+                                              "binaries", "ffmpeg-*")) else character(0)
+  if (length(cand)) cand[length(cand)] else ""
+})
 RUTA_TIMINGS <- file.path(RUTA_RAIZ, "slides", "script", "video_timings.json")
 RUTA_TIMINGS_PLANTILLA <- file.path(RUTA_RAIZ, "slides", "dev", "video_timings.template.json")
 

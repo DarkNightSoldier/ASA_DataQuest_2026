@@ -147,7 +147,7 @@ Los `id` son los `data-step` (32 estados: `cover.b1…b5`, `s1.b0…b5b`, `s2.b0
 
 ## 6. Grabar, exportar, probar
 
-Venv con Playwright + pypdf: `VENV=/tmp/claude-1000/-home-darkns-Documents-ASA-Dataquest/18220abc-2d13-436d-8acc-df8f607b6604/scratchpad/venv-jupyter`
+Venv con Playwright + pypdf: `export VENV=$PWD/.venv` (por defecto los scripts usan `.venv` en la raíz; en la máquina de desarrollo se usó otro venv, fuera del repositorio)
 (Chromium del sistema `/usr/bin/chromium`; Playwright necesitó `playwright install ffmpeg` para grabar).
 
 ```bash

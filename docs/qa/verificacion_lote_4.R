@@ -20,7 +20,7 @@ suppressPackageStartupMessages({
   library(clue); library(jsonlite)
 })
 
-RAIZ <- "/home/darkns/Documents/ASA_Dataquest/RepoGithub"
+RAIZ <- here::here()   # raíz del repositorio (archivo .here); antes, ruta fija de una máquina (jurado_etica I-8)
 PADRE <- dirname(RAIZ)
 SEMILLA <- 2026
 t0 <- Sys.time()
