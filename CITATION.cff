@@ -16,8 +16,10 @@ abstract: >-
   Prospects 2024 (estimates 1950–2023, medium projection to 2100), with a reproducible
   R notebook, figures, slides and video script. AI agents (Claude Code, Anthropic),
   directed by the team, wrote most of the code, figures and texts; team members voice
-  the video (no synthetic voice). The four authors share equal responsibility for the
-  work (author order as in docs/equipo.json, not by contribution); see
+  the video (no synthetic voice). Every number in the text and narration was recomputed
+  from the raw UN files by separate code (also AI-written) and checked by hand by the four
+  authors; numbers inside figures were recomputed by that code. The four authors share
+  equal responsibility for the work (author order as in docs/equipo.json, not by contribution); see
   docs/registro_ia.md. Contact: Alejandro Higuera (Team Leader), ahiguerac@unal.edu.co.
 version: v1.0-submission
 license: MIT

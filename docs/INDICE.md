@@ -56,14 +56,11 @@ Los escribieron los agentes de análisis con las cifras reales de la corrida ofi
 
 Los 60 hallazgos de `QA_ethics`, `QA_slides` y `QA_viz` se aplicaron en la sección H de [`correcciones.md`](correcciones.md) (agente corrector-final, 2026-10-25/26).
 
-**Jurado final (2026-10-27, cuatro jueces de IA sobre el commit `5ec1bd6`; aplicados en la sección J de [`correcciones.md`](correcciones.md), agente cierre-rc2). Son revisiones internas: no se publican (`tools/preparar_publicacion.sh`).**
-
-| Archivo | Juez | Qué contiene |
-|---|---|---|
-| [`jurado_insight.md`](jurado_insight.md) | *Best Statistical Insight* (8,5/10) | Cobertura de P1–P8, 3 imprescindibles (fila 5 de la tabla, "variation" en vez de "gaps", mejor número único `knn_pc1`) y mejoras |
-| [`jurado_viz.md`](jurado_viz.md) | *Best Data Visualization* (8,4/10) | 4 imprescindibles (rótulos de fig11, fig07 héroe, estados finales de S3/S4, códigos P1–P8) y comparación con TRITICS |
-| [`jurado_etica.md`](jurado_etica.md) | *Best Consideration of Ethics* (8,0/10) | 8 imprescindibles (declaración de IA, crédito a otros equipos, material de terceros, licencias y correo, rastro de la verificación humana, lenguaje, reproducibilidad de la verificación) |
-| [`jurado_completitud.md`](jurado_completitud.md) | Completitud (8,0/10) | Pregunta por pregunta (P1–P8), 7 imprescindibles (voz y tiempo, región en P4/P7, cajas "answered", P1–P8, cifras de figuras, repositorio, "165") |
+- **Jurado final** (2026-10-27): cuatro jueces de IA sobre el commit `5ec1bd6`, aplicados en la sección J de [`correcciones.md`](correcciones.md) (agente cierre-rc2); son revisiones internas y no se publican (`tools/preparar_publicacion.sh` quita estas líneas): [`jurado_insight.md`](jurado_insight.md) · [`jurado_viz.md`](jurado_viz.md) · [`jurado_etica.md`](jurado_etica.md) · [`jurado_completitud.md`](jurado_completitud.md).
+  - [`jurado_insight.md`](jurado_insight.md) — *Best Statistical Insight* (8,5/10): cobertura de P1–P8, 3 imprescindibles (fila 5 de la tabla, "variation" en vez de "gaps", mejor número único `knn_pc1`) y mejoras.
+  - [`jurado_viz.md`](jurado_viz.md) — *Best Data Visualization* (8,4/10): 4 imprescindibles (rótulos de fig11, fig07 héroe, estados finales de S3/S4, códigos P1–P8) y comparación con TRITICS.
+  - [`jurado_etica.md`](jurado_etica.md) — *Best Consideration of Ethics* (8,0/10): 8 imprescindibles (declaración de IA, crédito a otros equipos, material de terceros, licencias y correo, rastro de la verificación humana, lenguaje, reproducibilidad de la verificación).
+  - [`jurado_completitud.md`](jurado_completitud.md) — completitud (8,0/10): pregunta por pregunta (P1–P8), 7 imprescindibles (voz y tiempo, región en P4/P7, cajas "answered", P1–P8, cifras de figuras, repositorio, "165").
 
 ### `qa/` — código y tablas de la verificación independiente
 

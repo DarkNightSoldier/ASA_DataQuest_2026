@@ -254,39 +254,39 @@
     "intro": {
       "step": "s2.b3",
       "w": 1021,
-      "h": 139,
-      "aspect": 7.33
+      "h": 110,
+      "aspect": 9.29
     },
     "final": {
       "step": "s2.b4",
       "w": 1021,
-      "h": 139,
-      "aspect": 7.33
+      "h": 110,
+      "aspect": 9.29
     },
     "print": {
       "w": 1021,
-      "h": 187,
-      "aspect": 5.45
+      "h": 158,
+      "aspect": 6.47
     }
   },
   "fig07_single_indicator_scorecard": {
     "slide": 3,
     "intro": {
       "step": "s3.b1",
-      "w": 572,
-      "h": 282,
-      "aspect": 2.02
+      "w": 1792,
+      "h": 403,
+      "aspect": 4.45
     },
     "final": {
       "step": "s3.b4",
       "w": 572,
-      "h": 282,
-      "aspect": 2.02
+      "h": 298,
+      "aspect": 1.92
     },
     "print": {
       "w": 572,
-      "h": 487,
-      "aspect": 1.17
+      "h": 429,
+      "aspect": 1.33
     }
   },
   "fig09_pca_two_dimensions": {
@@ -294,19 +294,19 @@
     "intro": {
       "step": "s3.b3",
       "w": 624,
-      "h": 402,
-      "aspect": 1.55
+      "h": 344,
+      "aspect": 1.81
     },
     "final": {
       "step": "s3.b4",
       "w": 624,
-      "h": 402,
-      "aspect": 1.55
+      "h": 344,
+      "aspect": 1.81
     },
     "print": {
       "w": 624,
-      "h": 510,
-      "aspect": 1.22
+      "h": 452,
+      "aspect": 1.38
     }
   },
   "fig10_trajectory_groups": {
