@@ -227,7 +227,7 @@ Only people can do these (full list with reasons: `docs/correcciones.md`, "Pendi
 **P-04** ✅ done (reported 2026-10-26, 12:10 UTC−5): the four members reviewed the notebook output and the numbers and share equal responsibility; no individual roles (`docs/registro_ia.md` §2, `CITATION.cff`);
 **P-05** ✅ done (same date): written consent of the four members to publish their names; the voices are the members' own, none synthetic; public contact = the Team Leader's institutional e-mail (decided by him on 2026-10-27);
 **P-06** ✅ resolved: the WPP 2024 files were given by the DataQuest organisers (timestamps 2026-10-02; `data/README.md`);
-**P-07** hand-check the number added on screen in rc2 (`knn_pc1` = 20 %) and fill the empty columns of `docs/verificacion_numeros.csv` (who, when, value checked, against what);
+**P-07** ✅ done (reported 2026-10-27, 23:40 UTC−5): the four members hand-checked the number added on screen in rc2 (`knn_pc1` = 20 %); signed in `docs/verificacion_numeros.csv`;
 **P-08** confirm the Acknowledgements list (and add the professor if he guided Questions P7–P8).
 
 ---
@@ -424,5 +424,5 @@ Solo los pueden hacer personas (lista completa con motivos: `docs/correcciones.m
 **P-04** ✅ hecho (informado el 2026-10-26, 12:10, UTC−5): los cuatro revisaron el output del notebook y las cifras y comparten igual responsabilidad; sin papeles individuales (`docs/registro_ia.md` §2, `CITATION.cff`);
 **P-05** ✅ hecho (misma fecha): consentimiento escrito de los cuatro para publicar sus nombres; las voces son de los integrantes, ninguna sintética; contacto público = correo institucional del Team Leader (lo decidió él el 2026-10-27);
 **P-06** ✅ resuelto: los archivos WPP 2024 los entregaron los organizadores del DataQuest (fecha de los archivos 2026-10-02; `data/README.md`);
-**P-07** comprobar a mano la cifra que rc2 añadió en pantalla (`knn_pc1` = 20 %) y rellenar las columnas vacías de `docs/verificacion_numeros.csv` (quién, cuándo, valor comprobado y contra qué);
+**P-07** ✅ hecho (informado el 2026-10-27, 23:40, UTC−5): los cuatro comprobaron a mano la cifra que rc2 añadió en pantalla (`knn_pc1` = 20 %); firmada en `docs/verificacion_numeros.csv`;
 **P-08** confirmar la lista de Agradecimientos (y añadir al profesor si orientó las preguntas P7–P8).
