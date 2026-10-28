@@ -29,6 +29,9 @@ Fuentes de verdad: `slides/script/narration_en.md` (guion, generado; no se edita
 `slides/script/captions.srt` (los mismos subtítulos, en SRT). Las tres se regeneran juntas con
 `slides/script/build_narration.py` a partir de `slides/script/narration_en_template.md`.
 
+Guion para leer al grabar, en PDF A4 (`slides/script/narration_en.pdf`): se regenera con
+`python slides/script/export_guion_pdf.py` (requiere `pip install markdown` y Chromium) cada vez que cambie `narration_en.md`.
+
 ## 0. Requisitos (una vez)
 
 - Python ≥ 3.10 y Chromium (`/usr/bin/chromium`; Playwright usa el suyo si está instalado).

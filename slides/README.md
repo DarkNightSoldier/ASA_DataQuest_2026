@@ -20,6 +20,7 @@ Texto en pantalla en inglés; este README y los comentarios en español.
 | `abrir.sh` | Abre el deck con un servidor local (`python3 -m http.server` en un puerto libre + `xdg-open`) |
 | `js/iso_codes.js` | ISO3 → ISO2 (flag-icons) y nombres WPP; se regenera con `Rscript slides/dev/gen_iso_codes.R` |
 | `script/fill_numbers.py` | Sustituye `{clave}` / `{clave.say}` / `{clave.campo}` en un markdown (guion); `--check-html`, `--emit-js` |
+| `script/export_guion_pdf.py` | Guion de la voz en PDF A4 para leerlo al grabar (`script/narration_en.pdf`, 6 páginas; frases a 14 pt). Regenerar tras cada `build_narration.py`: `python slides/script/export_guion_pdf.py` (requiere `pip install markdown` y Chromium) |
 | `dev/numbers_demo.json` (+ `.js`) | **10 claves inventadas, `"demo": true`**, solo para probar el render (muestra la cinta *Demo numbers · not real*) |
 | `dev/screenshots.py` | Prueba visual: capturas de los 6 finales y de los 32 estados + `dev/figure_slots.json` + `dev/deck_report.json` |
 | `dev/video_timings.template.json` | Plantilla de tiempos con las duraciones del storyboard v2.1 (4:50 + 3 s) |
