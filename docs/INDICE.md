@@ -2,6 +2,8 @@
 
 Equipo **UNALSta-R** · ASA International DataQuest 2026 · UN World Population Prospects 2024 · versión candidata `submission-2026-10-30-rc2` (2026-10-27; rc1 = 2026-10-26).
 
+**▶ Vídeo de entrega (5 min): <https://www.youtube.com/watch?v=Mh-TSMhnjDs>** (YouTube, publicado el 2026-10-30).
+
 Este índice dice **qué es cada documento, de qué fecha es y si manda o es solo historia**. Los documentos están en español; los textos que salen en pantalla y en el vídeo, en inglés. Casi todos los documentos los escribieron **agentes de IA** (Claude Code, de Anthropic) dirigidos por el equipo: el detalle y lo que falta por revisar está en [`registro_ia.md`](registro_ia.md).
 
 ## Qué manda cuando dos documentos se contradicen
@@ -15,7 +17,7 @@ Este índice dice **qué es cada documento, de qué fecha es y si manda o es sol
 
 | Archivo | Qué es | Fecha |
 |---|---|---|
-| [`correcciones.md`](correcciones.md) | Registro de correcciones (ASA B.5): 46 correcciones de C-01 a C-46, los 32 cambios H-01 a H-32 que respondieron a los 60 hallazgos de QA, los cambios de seguimiento S-01 a S-08 (§I, 2026-10-26), los del jurado final J-01 a J-23 (§J, rc2, 2026-10-27, con la tabla de cifras que cambian respecto al deck verificado a mano); lista de hallazgos no aplicados con su motivo y los **pendientes para el equipo** (P-01 a P-08; P-01, P-04, P-05, P-06, P-07 y P-08 hechos; pendientes finales: P-02 publicar el 29-oct y P-03 lectura cronometrada). Lo citan el notebook y el README | 2026-10-22 a 26 |
+| [`correcciones.md`](correcciones.md) | Registro de correcciones (ASA B.5): 46 correcciones de C-01 a C-46, los 32 cambios H-01 a H-32 que respondieron a los 60 hallazgos de QA, los cambios de seguimiento S-01 a S-08 (§I, 2026-10-26), los del jurado final J-01 a J-23 (§J, rc2, 2026-10-27, con la tabla de cifras que cambian respecto al deck verificado a mano); lista de hallazgos no aplicados con su motivo y los **pendientes para el equipo** (P-01 a P-08; P-01, P-04, P-05, P-06, P-07 y P-08 hechos; P-02 publicado el 2026-10-30 17:05; pendiente final: P-03 lectura cronometrada). Lo citan el notebook y el README | 2026-10-22 a 26 |
 | [`registro_ia.md`](registro_ia.md) | Registro de uso de IA (ASA A.5, B.2): qué hizo cada agente, por fase y con su commit; §2 lo que hizo el equipo según informó el usuario (los cuatro revisaron el output del notebook y las cifras y comparten igual responsabilidad; consentimiento escrito; voces de los integrantes, ninguna sintética) | 2026-10-25/26 |
 | [`decisiones_de_datos.md`](decisiones_de_datos.md) | Registro vivo de decisiones de datos D-01 a D-21 (archivo base, países vs agregados, ingreso, umbral de 1 M, año base de la palanca…) con alternativas, sensibilidad y punto ASA | 2026-10-26 |
 | [`verificacion_numeros.csv`](verificacion_numeros.csv) | Una fila por cifra mostrada o dicha (108): valor, si sale en pantalla o en voz, verificación por IA y **firma humana**: `verificado_por` = "4 integrantes", `verificado_en` = 2026-10-26T11:23-05:00, `ok` = "sí (global, informado)" (P-01; `QA_stats.md` §10); la fila nueva de rc2, `knn_pc1`, firmada por los 4 integrantes el 2026-10-27T23:40-05:00 con `ok` = "sí (informado)" (P-07) | 2026-10-25/26 |

@@ -1,5 +1,7 @@
 # Vídeo del equipo UNALSta-R (ASA DataQuest 2026)
 
+**▶ Vídeo publicado (5 min): <https://www.youtube.com/watch?v=Mh-TSMhnjDs>** (YouTube, «UNALSta-R Group 1 UNAL Bogota ASA DataQuest»; publicado el 2026-10-30).
+
 Vídeo de entrega: **≤ 5:00**, 1920×1080, en inglés, con la voz del equipo sobre el deck de
 `slides/index.html`. Se produce en tres pasos:
 
@@ -176,8 +178,8 @@ La grabación manual depende de la mano de quien avanza: respete las duraciones 
 - [ ] `video/final/UNALSta-R_DataQuest2026.mp4` dura ≤ 5:00 (lo comprueba `assemble.sh`), 1920×1080.
 - [ ] Voz y subtítulos dicen lo mismo; ninguna cifra fuera del guion.
 - [x] P-01 firmado (cifras habladas y en pantalla, 2026-10-26 11:23; `docs/QA_stats.md` §10).
-- [ ] P-02: el código subido el 29-oct y https://github.com/DarkNightSoldier/ASA_DataQuest_2026 público
-      (Referencias da esa URL), con `LICENSE` y `LICENSE-texts`.
+- [x] P-02: https://github.com/DarkNightSoldier/ASA_DataQuest_2026 público (2026-10-30 17:05, UTC−5; Referencias da esa URL),
+      con `LICENSE` y `LICENSE-texts`; vídeo en https://www.youtube.com/watch?v=Mh-TSMhnjDs.
 - [x] P-05: consentimiento escrito de los cuatro (nombres); voces de los integrantes, ninguna sintética (2026-10-26).
 - [ ] El PDF (`slides/export/slides.pdf`, 6 páginas) es del mismo estado del deck que el vídeo.
 

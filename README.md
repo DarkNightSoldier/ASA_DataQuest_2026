@@ -4,6 +4,8 @@
 
 **English** · [Español](#versión-en-español)
 
+**▶ Video (5 min): <https://www.youtube.com/watch?v=Mh-TSMhnjDs>**
+
 Entry of **Team UNALSta-R** to the **ASA International DataQuest 2026**.
 Deliverables: a video of at most 5:00 (ours: 4:54) and a PDF with a cover, four content slides and references.
 
@@ -12,7 +14,8 @@ Deliverables: a video of at most 5:00 (ours: 4:54) and a PDF with a cover, four 
 > `video/record_slides.py` (the file is about 70 MB, so it is not versioned). The four team members checked the spoken and
 > on-screen numbers of rc1 by hand on 2026-10-26 (11:23, UTC−5); one new on-screen number of rc2 still needs that check.
 > Still to do by people of the team before 2026-10-30 (hand check of the new number, timed read-through and voice
-> recording, publishing the repository on 29 Oct 2026): see [Open items](#open-items-for-the-team).
+> recording): see [Open items](#open-items-for-the-team). **Published on 2026-10-30:** the video on YouTube (link above) and this
+> repository (public snapshot `v1.0-submission`).
 
 ## Team
 
@@ -222,7 +225,7 @@ UN WPP 2024 data: CC BY 3.0 IGO · World Bank Country and Lending Groups: CC BY 
 
 Only people can do these (full list with reasons: `docs/correcciones.md`, "Pendientes para el equipo"):
 **P-01** ✅ done on 2026-10-26 (11:23, UTC−5): the four members checked the spoken and on-screen numbers by hand (`docs/verificacion_numeros.csv`); if a number changes after that, check it again;
-**P-02** on 29 Oct 2026 run `bash tools/preparar_publicacion.sh --tag` and push the branch `public` as `main` of <https://github.com/DarkNightSoldier/ASA_DataQuest_2026> (no agent pushes); it leaves out other teams' material and machine paths; `LICENSE` (MIT) and `LICENSE-texts` (CC BY 4.0) are already in the repository;
+**P-02** ✅ published on 2026-10-30 17:05 (UTC−5): the one-commit branch `public` (made by `bash tools/preparar_publicacion.sh --tag`, without other teams' material and machine paths) is `main` of <https://github.com/DarkNightSoldier/ASA_DataQuest_2026>, with tag `v1.0-submission`; video: <https://www.youtube.com/watch?v=Mh-TSMhnjDs>; `LICENSE` (MIT) and `LICENSE-texts` (CC BY 4.0) are in the repository;
 **P-03** timed read-through of the script (it fits in 4:54 at 150 words per minute; the cuts to make if it is slower are listed there);
 **P-04** ✅ done (reported 2026-10-26, 12:10 UTC−5): the four members reviewed the notebook output and the numbers and share equal responsibility; no individual roles (`docs/registro_ia.md` §2, `CITATION.cff`);
 **P-05** ✅ done (same date): written consent of the four members to publish their names; the voices are the members' own, none synthetic; public contact = the Team Leader's institutional e-mail (decided by him on 2026-10-27);
@@ -236,6 +239,8 @@ Only people can do these (full list with reasons: `docs/correcciones.md`, "Pendi
 
 [English](#one-number-cant-tell-8-billion-stories) · **Español**
 
+**▶ Vídeo (5 min): <https://www.youtube.com/watch?v=Mh-TSMhnjDs>**
+
 Repositorio de **UNALSta-R** para el **ASA International DataQuest 2026**, con los datos de *World Population Prospects 2024*
 (UN DESA, Population Division). Entrega: vídeo de hasta 5:00 (el nuestro dura 4:54) y un PDF con portada, cuatro
 diapositivas de contenido y referencias, antes del viernes 2026-10-30. Texto en pantalla, guion y subtítulos van en
@@ -245,8 +250,9 @@ inglés; el código, los comentarios y la documentación interna, en español.
 > notebook, figuras, diapositivas (PDF) y guion están listos, y el vídeo mudo de prueba (4:54) se regenera con
 > `video/record_slides.py` (pesa ≈ 70 MB y no se versiona). Los cuatro integrantes comprobaron a mano las cifras habladas y en
 > pantalla de rc1 el 2026-10-26 (11:23, UTC−5); una cifra nueva de rc2 aún necesita esa comprobación. Faltan pasos que solo
-> hacen personas del equipo (comprobar la cifra nueva, lectura cronometrada y grabación de la voz, publicar el repositorio el
-> 29 de octubre de 2026): ver [Pendientes del equipo](#pendientes-del-equipo).
+> hacen personas del equipo (comprobar la cifra nueva, lectura cronometrada y grabación de la voz):
+> ver [Pendientes del equipo](#pendientes-del-equipo). **Publicado el 2026-10-30:** el vídeo en YouTube (enlace arriba) y este
+> repositorio (instantánea pública `v1.0-submission`).
 
 ## Equipo
 
@@ -419,7 +425,7 @@ trabajo ajeno y, en algunos fotogramas, caras). El equipo confirmó esta lista e
 
 Solo los pueden hacer personas (lista completa con motivos: `docs/correcciones.md`, "Pendientes para el equipo"):
 **P-01** ✅ hecho el 2026-10-26 (11:23, UTC−5): los cuatro integrantes comprobaron a mano las cifras habladas y en pantalla (`docs/verificacion_numeros.csv`); si una cifra cambia después, se vuelve a comprobar;
-**P-02** el 29 de octubre de 2026, ejecutar `bash tools/preparar_publicacion.sh --tag` y subir la rama `public` como `main` de <https://github.com/DarkNightSoldier/ASA_DataQuest_2026> (ningún agente hace `git push`); deja fuera el material de otros equipos y las rutas de esta máquina; `LICENSE` (MIT) y `LICENSE-texts` (CC BY 4.0) ya están en el repositorio;
+**P-02** ✅ publicado el 2026-10-30 17:05 (UTC−5): la rama de un solo commit `public` (hecha con `bash tools/preparar_publicacion.sh --tag`, sin el material de otros equipos ni las rutas de esta máquina) es `main` de <https://github.com/DarkNightSoldier/ASA_DataQuest_2026>, con la etiqueta `v1.0-submission`; vídeo: <https://www.youtube.com/watch?v=Mh-TSMhnjDs>; `LICENSE` (MIT) y `LICENSE-texts` (CC BY 4.0) están en el repositorio;
 **P-03** lectura cronometrada del guion (cabe en 4:54 a 150 palabras por minuto; allí están los recortes si va más lento);
 **P-04** ✅ hecho (informado el 2026-10-26, 12:10, UTC−5): los cuatro revisaron el output del notebook y las cifras y comparten igual responsabilidad; sin papeles individuales (`docs/registro_ia.md` §2, `CITATION.cff`);
 **P-05** ✅ hecho (misma fecha): consentimiento escrito de los cuatro para publicar sus nombres; las voces son de los integrantes, ninguna sintética; contacto público = correo institucional del Team Leader (lo decidió él el 2026-10-27);

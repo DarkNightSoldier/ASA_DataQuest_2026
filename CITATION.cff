@@ -25,6 +25,10 @@ version: v1.0-submission
 license: MIT
 repository-code: "https://github.com/DarkNightSoldier/ASA_DataQuest_2026"
 url: "https://github.com/DarkNightSoldier/ASA_DataQuest_2026"
+identifiers:
+  - type: url
+    value: "https://www.youtube.com/watch?v=Mh-TSMhnjDs"
+    description: "Video presentation"
 authors:
   - given-names: "Daniela C."
     family-names: "Kwan"
@@ -53,7 +57,7 @@ references:
       - name: "United Nations, Department of Economic and Social Affairs, Population Division"
     year: 2024
     url: "https://population.un.org/wpp/"
-    license: CC-BY-3.0-IGO
+    notes: "Licence: CC BY 3.0 IGO (not in the SPDX list of the CFF 1.2.0 schema, so it is given here as a note)."
   - type: generic
     title: "Ethical Guidelines for Statistical Practice"
     authors:
