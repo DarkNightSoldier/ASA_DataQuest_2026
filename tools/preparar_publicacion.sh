@@ -112,7 +112,7 @@ This repository is a **one-commit snapshot** of the team's internal repository a
 
 - \`docs/referencia_ganadores/\` — screenshots of other teams' public videos and repositories (some show faces);
 - \`docs/01_analisis_ganadores_2025.md\`, \`docs/01b_otros_equipos_2025_2026.md\`, \`docs/01c_otros_videos_2025.md\` —
-  our internal notes on other teams' work (what we adopted from them is credited in README → Acknowledgements);
+  our internal notes on other teams' work (what we adopted from them is credited in \`docs/correcciones.md\`, J-12);
 - \`docs/jurado_*.md\` — internal reviews of our own draft.
 
 Absolute paths of the development machine were replaced by \`<repo>\`, \`<scratchpad>\` and \`~\` in $n_rutas text files
